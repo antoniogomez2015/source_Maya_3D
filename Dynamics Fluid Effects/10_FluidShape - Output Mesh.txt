@@ -1,0 +1,26 @@
+
+
+DETALLES:
+
+
+tenemos la posibilidad de crear fuidos a "mano", para así, poder que crear una estado inicial de las partículas "Initial State",
+
+de esta manera podemos "Pintar", con la herramienta "Paint Fluids Tool", diferentes atributos específicos de los sistemas
+
+de fludos, como densidad, combustible, velocidad, tmeperatura, color, otros, 
+
+así, al comenzar la somulación, esta comenzará a partir del estado inicial "Initial State", que creamos a manos con el "Paint fluids Tool"
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	
+Output Mesh:
+___________
+
+
+	_primero seleccionamos el contenedor respectivo
+
+
+

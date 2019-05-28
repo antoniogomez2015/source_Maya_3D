@@ -1,0 +1,89 @@
+
+
+DETALLES:
+
+
+las opciones de  "fluidShape1/Lighting", de los sistemas de fluids effects/fluidShapes, nos permiten
+
+agregar parámetros de iluminación al sistema de simulación de fluidos, de esta manera este gana en
+
+profundidad y definición así, como complejidad, otros
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+fluidShape/Shading:
+____________________
+
+	
+	Lighting:
+	_________
+
+
+	_Self Shadow:
+
+		permite agregar auto sombra dinámica sientra se crea y se simulan los fluidos
+
+
+	_Hardware Shadow:
+
+		permite agregar sombra a través, de la tarjeta de video
+
+	_Shadow Opacity:
+
+		permite configurar la opacidad ó dureza de la sombra
+
+	_Shadow Diffusion:
+
+		permite ajustar la amplitud ó difusión de la sombra
+
+	_Light Type:
+
+		permite escoger el tipo de iluminación a utilizar
+
+	_Light Brightness:
+
+		permite ajustar el brillo de la iluminación
+
+	_Light Color:
+
+		permite ajustar ó agregar un color a la iluminación
+
+	_Ambient Brightness:
+
+		permite agregar luz ambiental a la simulación
+
+	_Ambient Diffusion:
+
+		permite ajustar la difusión ó dispersión de la iluminación ambiental
+
+	_Ambient Color:
+
+		permite agregar un color a la iluminación ambiental
+
+	_real Light:
+
+		podemos activar la luces que existan en l escena
+
+	_Directional light:		
+		
+		podemos ajustar la dirección de la iluminación en caso de que esta sea 
+
+		"Light Type/Directional Light"
+
+	_Point Light:
+
+		podemos ajustar la dirección de la iluminación en caso de que esta sea 
+
+		"Light Type/Point"
+
+	_Point Light Decay:
+
+		podemos ajustar el criterio del decaimiento de la iluminación
+	
+
+
+
+
+

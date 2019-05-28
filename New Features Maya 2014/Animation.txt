@@ -1,0 +1,197 @@
+
+
+
+DETALLES:
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+Viewport 2.0, y Direct 11:
+__________________________
+
+
+	Bounding Box:
+	_____________
+
+
+	1_ahora disponimos de la opción para convertir las geometrías densas en proxis "Bounding Box",
+
+	_para esto seleccionamos los elementos mesh, deseados y vamos ha "Modify/Convert
+
+	/Geometry to Bounding Box/Options"
+
+
+	así, nos dará opciones de conservar la geometría original como también, las animaciones existentes 
+
+	en las meshes, otros
+
+_____________________________________________________________________________________________________________
+
+
+
+	File Path Editor:
+	_________________
+
+
+	2_ahora tenemos la opción de editar y personalizar de forma dinámica las rutas y directorios de las
+
+	texturas, archivos generados y del sistema, otros, para poder así, ajustar rutas de archivos perdidos
+
+	ó descolocado al hacer cambios en el sistema
+
+	_para esto seleccionamos la mesh/motive, y con esta seleccionada vamos ha "Window/General Editors
+
+	/File Path Editor"
+
+
+	_así, el editor nos mostrará las rutas de los archivos de texturas las condiciones de su relacionamientos
+
+	a través de un sistema de tabs, donde "verde", esta correcto, y "rojo", esta incorrecto
+
+_____________________________________________________________________________________________________________
+
+
+
+
+	Outliner:
+	_________
+
+
+	3_el panel outliner, ha sido optimizado, haciendolo más pequeño y funcional para un mejor rendimiento
+
+_____________________________________________________________________________________________________________
+
+
+
+
+	Node Editor:
+	____________
+
+
+	4_el panel Node Editor, ha sido optimizado para un mejor desempleño:
+
+
+	_para esto vamos ha "Window/Node Editor"
+
+	
+	_ahora los nodos son representados por color para identificar su tipo
+
+
+	_podemos intercambiar la descripción del nodo en el panel; entre el nombre del nodo y tipo de nodo,
+
+	esto es posible a través de "5"
+
+
+	_ahora las conexiones input/output, entre los nodos también relacionan por colores
+
+
+	_desplegando las opciones de los nodos disponemos de un search/búsqueda, para poder filtrar así,
+
+	las opciones que deseamos de forma rápida
+
+_____________________________________________________________________________________________________________
+
+
+
+	Character Set:
+	______________
+
+
+	5_este sistema ha sido optimizado, este ahora soporta character, con mayor complejidad
+
+
+	_mejorar en el encaje y alineamiento de los clips
+
+
+	_reconocimiento de objetos raíz
+
+	_visualización de más poses a través de clip ghohs
+
+
+
+_____________________________________________________________________________________________________________
+
+
+
+	Trax Editor:
+	____________
+
+
+	6_ahora el trax editor, dispone de una opción con la cuál podemos cargar todos los clips, de la escena 
+
+	en el panel, así, no tengamos seleccionado al elemento animado que lo creó
+
+
+	_para esto vamos ha "Window/Animation Editors/Trax Editor/View/" "Frame All Scene Clips", así, se nos
+
+	mostrarían todos los clips, juntos
+
+
+_____________________________________________________________________________________________________________
+
+
+
+	Graph Editor:
+	_____________
+
+
+	7_ha sido mejorar la herramienta de Retime Tool, dentro del gragh Editor
+
+
+	_para esto vamos ha "Window/Animation Editors/Graph Editor/"
+
+
+	_así, primero seleccionamos el mesh/motive
+
+
+	_luego en el graph editor, activamos la herramienta "Retime"
+
+
+	_luego con la herramienta Retime, seleccionada hacemos doble click, en los puntos deseados donde
+
+	queremos hacer time remapping
+
+
+	_ya con los puntos de control creados podemos moverlos y ajustar el "time"
+
+
+	_y la novedad en esta versión es que seleccionando los puntos de control + "Controls"
+
+
+_____________________________________________________________________________________________________________
+
+
+
+	Skeleton sistem:
+	________________
+
+
+	8_se han agregado nuevas funcionalidades de aplicación en el workflow, de la aplicación de los sistemas
+
+	de skeleton/joint chains
+
+
+	_primero activammos la opción "Snap to Proyected Center", en la barras de íconos superior
+
+
+	_ahora vamos ha "Animation/Skeleton/Joint Tool", y en esta versión tenemos la novedad de que podemos
+
+	aplicar cadenas/chains, de jonts/articulaciones directamente el viewport, perspective, sobre/dentro
+
+	del personaje/character, sin que los joints, se desproporcionen por la perspectiva estos, ya que ahora
+
+	gracias al "Snap to Proyected Center", los joints, se irán ajustando al centro de zona de la mesh, más cercana
+
+
+	_si entramos a las opciones de "Animation/Skeleton/Joint Tool/Options/Joint Setting/", podremos ver 
+
+	la opción de "Simetry", la cuál podremos activar e indicar la cordenada de reflejo de las chains/cadenas,
+
+	este proceso nos permitirá ahorrar tiempo y ganar en precisión y prescindir del proceso de "Mirrow joints"
+
+
+

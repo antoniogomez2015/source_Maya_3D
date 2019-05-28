@@ -1,0 +1,20 @@
+
+
+	Snap:
+
+		1_C: Snap a Curves (especialmente útil para crear splines, conectadas a otras splines), para esto cargamos una herramienta de creación de splines,
+
+		como EP Curve Tool; luego hacemos snap, shortcur (C), "C + Mouse Left + Draw", sobre la spline, en la cuál desemos aplicar el snap, así, aparecerá sobre la spline,
+
+		en la cuál desemos aplicar el snap, un punto de referencia el cuál se moverá indicándonos donde se realizará el punto de snap con la nueva spline, generada
+
+		a partir de ese punto, luego de decidir el punto de creación con el snap, debemos soltar la opción de snap, soltanto el shortcut (C), luego debemos ir a una
+
+		proyecciíon axonométrica, ej; "Top", para crear la proyección de la nueva spline que se generará a partir del punto de snap, señido a la spline existente.
+
+		
+		para hacer snap, de sub elementos como points, y splines, debemos seleccionar el sub elementos ej, un "point", de una spline, luego debemos aplicar snap (C),
+
+		y luego hacemos "Mouse Midle Click + Draw", sobre la spline, en la cuál deseamos hacer snap, entre esta spline, el point, seleccionado, hacer este proceso
+
+		repetidas veces hasta hacer coincidir el segmento más cercano que logre unir point, con point

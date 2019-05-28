@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Contextual Menu - Tool Face Mode:
+    _________________________________
+
+                       
+
+    Face Mode: 
+    __________     
+
+    _Shift + Mouse Right Click (con sub elementos seleccionados)
+
+        _Merge Face to Center:
+
+            _ésta opción nos permitirá colapzar las faces, seleccionadas al centro del viewport, ó grid
+
+            _hasta hacerlas converger en un único vertex, como mínima expresión de sub elemento posible
+
+
+        _Poke Face:
+
+            _ésta opción nos permitirá dividir uno ó más faces, seleccionadas en cuatro triads, ó triángulos cada uno respectivamente
+
+            _de ésta manera, cada triads, creado estará apuntando hacia adentro del face, original
+
+            _generando así, un nuevo vertex, colateral en el centro del face, original
+
+
+        _Face Normals:
+
+            _Reverse Propagate:
+
+                _ésta opción invertirá el sentido de las normales del insland, respectivo en su totalidad sin importar la selección previa de faces
+
+                _de ésta manera, las faces, que tienen las normales en un sentido hacia afuera ahora tomarán el sentido hacia adentro
+
+                _más las normales que tenían un sentido hacia afuera ahora tomarán un sentido hacia adentro
+
+            _Reverse Normals:
+
+                _ésta opcíon invertirá el sentido de las normales de sólo las faces, seleccionadas previamente
+
+            _Conform Normals:
+
+                _ésta opción analizará todas las faces, de un insland, respectivo e invertirá todas las normales que apunten hacia adentro 
+                
+                _para que a partir de éste punto, todas las normales del island, respectivo ahora apunten hacia afuera en su totalidad
+
+                _para lo cuál, sólo tendremos que seleccionar un face, cualquiera del island, respectivo, esté el face, seleccionado invertido ó no
+
+                _mientras que a su vez, una vez terminado el proceso; el sistema nos seleccionará todas las faces, que han sido cambiadas ó modificadas ó invertidas 
+                
+                _en éste caso, con sus normales invertidas para que de esta manera, tengamos un estatus de los cambios realizados
+
+            _Toogle Face Normals Display:
+
+                _ésta opción nos permitirá visualizar la dirección de las normales de cada polígono ó face, respectivamente
+
+
+        _Extrude Face:
+
+            _ésta opción nos permitirá extruir faces, seleccionadas para que así, podamos crear nueva geometría
+
+
+        _Wedge Face:
+
+            _
+
+        
+        _Multi-Cut Tool:
+
+            _ésta opción nos permitirá agregar edges entre vertex de forma interactiva asi como también, edge loops, completos
+
+
+        _Paint Select Face:
+
+            _ésta opción nos permitirá seleccionar face, a través, del tool de paint sub elements
+
+            _de ésta manera, podremos seleccionar faces, más cómodamente y de forma interactiva a través, de la herramienta de pintura
+
+            _a la cuál, podremos graduar su tamaño a través, del shortcut, "B" + mouse left click and drag left/right 
+
+
+        Generales:
+        __________
+
+            _Smooth Faces:
+
+                _ésta opcíón nos permitirá sub dividir faces, seleccionadas en cuatro nuevas faces, respectivamente por cada face, seleccionada previamente
+
+                _mientras que a su vez la morfología es suavizada a través del estiramiento de la tesselation 
+                
+                _lo cuál, es configurable en las opciones de la herramineta
+
+
+            _Assign Invisible Faces:
+
+                _ésta opción nos permitirá hacer invisibles las faces, seleccionadas previamente a las acciones de render
+
+                _de ésta manera, las faces, seleccionadas seguirán siendo visibles en el viewport, más éstas faces, serán descartadas por el motor de render, respectivo
+
+
+            _Add Division to Faces:
+
+                _ésta opción es idéntica a la opción de "Smooth Faces", más con la única diferencia que la opción de
+
+                _"Add Division to Faces", no suavizará la topología del objeto tratando de cambiar la tesselation, de los sub elementos
+
+
+            _Connect Component:
+
+                _ésta opción nos permitirá dividir las faces, seleccionadas en dos nuevos faces, partidas a la mitad en la misma posición que el original
+
+                _de ésta manera, cada face, será divido justo a la mitad en el sentido de la selección contigua de las demás faces, seleccionadas
+
+                _es decir, si se ha realizado una selección vertical de faces, la división de las faces, se realizará verticalmente
+
+                _más si la selección de las faces, contiguas que se ha realizado es horizontalmente, entonces la división ha realizar sobre las faces, seleccionadas se hará horizontalmente
+
+                _y con parámetro de configuración en el "chaneel box", dispondremos de la opción de "Adjust Edge Flow"
+
+                _a través, de la cuál, podremos configurar los grados del arco de elevación ha generar si desiamos uno
+
+                NOTA: ésta opción es idéntica ha "Connect Component", de las opciones del menú contextual de "Edges"
+
+
+            _Triangulate Face:
+
+                _ésta opción nos permitirá poder dividir una ó más faces, seleccionadas en dos triángulos
+
+                _dividiendo el face, original en dos mitades a la mitad conformando así, dos triángulos
+
+                _de ésta manera, podremos cambiar la topología de un objeto convirtiéndola ha triads, ó elementos de tres vertex
+
+
+            _Quadrangulate Face:
+
+                _ésta opción nos permitirá unificar dos faces, que conforman triads, en una única face, que ahora estará conformada por quads
+
+                _de ésta manera, podremos cambiar la topología de un objeto convirtiéndola ha quads, ó elementos de cuatro vertex
+
+
+            _Reduce Faces:
+
+                _ésta opción nos permitirá recudir en proporción una cantidad de faces, seleccionados previamente
+
+                _de ésta manera, podremos simplicar la topología de un objeto manteniendo lo máximo posible su morfología
+
+                _de ésta manera, en las opciones de la herramienta dispondremos de las opciones de reducción, preservación de quads, y algoritmos, otros
+
+
+            _Bridge Faces:
+
+                _ésta opción nos permitirá unir faces, contiguas en una selección determinada
+
+                _de ésta manera, las faces, fusionadas desaparecerán dejando el espacio vacío tras su funcionamiento
+
+                _lo cuál, equivale ha eliminar las faces, directamente seleccionadas
+
+                _más en las opciones de ésta herramineta dispondremos de opciones de suavizado, path, y curves, otros
+
+
+            _Bridge Tool:
+
+                (Indeterminado)
+
+
+            _Extract Faces:
+
+                _ésta opción nos permitirá extraer faces, seleccionadas previamnte a un nuevo objeto totalmente independiente del objeto original
+
+
+            _Duplicate Faces:
+
+                _ésta opción nos permitirá duplicar faces, seleccionadas previamente
+
+                _de ésta manera, generaremos nueva geometría duplicada la cuál, ocupará la misma posición que las faces, originalmente seleccionadas
+
+                _para que así, podamos mover y editar las faces, duplicadas para conformar nuevos elementos otros
+
+
+            _Transform Component:
+
+                _ésta opción nos pemritirá disponer de las opciones de transformación grupal por sub elementos seleccionados
+
+                _de ésta manera, podremos re orientar y editar elementos como si fuesen un sólo elemento
+
+                _de ésta manera, podremos mover, escalar y rotar elementos a través, de diferentes orientaciones y criterios
+
+
+            _Bevel Tool: 
+
+                _ésta opción nos pemritirá dividir un edge, que seleccionemos
+
+                _de ésta manera, podremos dividir un edge, respectivo en dos ó más edges, de forma dinámica para reforzar la morfología del motivo
+
+                NOTE: Bevel Tool: (interactive), nos pemritirá motificar dinámicamente sobre cualquier sub elemento del motivo
+                
+
+            _Connect Tool:
+
+                _ésta opción nos pemritirá activar la herramienta de connect tool, a través, de la cuál, podremos crear nuevos edges, a partir de la selección de dos ó más vertex previamente
+
+                NOTE: Connect Tool: (interactive), nos pemritirá motificar dinámicamente sobre cualquier sub elemento del motivo
+
+            _Extrude Tool:
+
+                _ésta opción nos pemritirá extruir un sub elementos sobre el cuál, nos posemos
+
+                NOTE: Extrude Tool: (interactive), nos pemritirá motificar dinámicamente sobre cualquier sub elemento del motivo
+
+
+            _Target Weld Tool:
+
+                _ésta opción nos permitirá fusionar ó simplificar ó elimiar faces, a través, de la unificación de vertex, que conforman determinadas faces, de interés
+
+                _de ésta manera, podremos arrastrar un vertex, sobre otro para que así, el sistema rellene y re acomode las faces, manteniendo la morfología del objeto original
+
+                _de ésta manera, podremos ajustar, editar y cambiar la topología de un objeto de forma interactiva
+
+
+            Mapping:
+
+                _ésta opciones nos permitirán hacer proyecciones UVs, de faces, seleccionadas previamente
+
+                _Planar Map XYZ:
+
+                    _ésta opción nos pemritirá hacer una proyección uv, en relación a un cordenada axis determinada
+
+                _Cylindrical Map:
+
+                    _ésta opción nos pemritirá hacer una proyección uv, en relación a un envolvente cilíndrica sobre las faces, seleccionadas previamente
+
+                _Spherical Map:
+
+                    _ésta opción nos pemritirá hacer una proyección uv, en relación a un envolvente esférica sobre las faces, seleccionadas previamente
+
+                _Automatical Map:
+
+                    _ésta opción nos pemritirá hacer una proyección uv, en relación a un algoritmo automático sobre las faces, seleccionadas previamente
+
+
+            _Polygons Display:
+
+                _ésta opción nos pemritirá disponer de todos los modos de visualización de los polígonos
+
+                _Toogle Backface Culling:
+
+                    _ésta opción nos pemritirá ocultar las caras del motivo que se encuentre en la parte tracera del motivo
+
+                    _para que así, éstas caras ya no sean visibles en el viewport, y pasen ha ser un segundo plano lo que hará más ligera la escena
+
+
+                _Toogle Face Centers:
+
+                    _ésta opción nos pemritirá visualizar el centro de las faces, a través, de un vertex, virtual
+
+                    _lo cuál, es especialmente útil para hacer snap, sobre el centro de una face, entre otros procesos dinámicos, otros
+
+
+                _Toogle Face Normals:
+
+                    _ésta opción nos permitirá visualizar la dirección de las normales en relación a la dirección de los polígonos del motivo
+
+
+                _Toogle Face Numbers:
+
+                    _ésta opción nos pemritirá visualizar la numeración asignadas a las faces
+
+                    _de ésta manera, podremos tener un idea del volúmen geométrico generado por las faces
+
+                    _lo cuál, es especiamente útil en procesos dinámicos, otros
+
+
+                _Toogle Border Edges:
+
+                    _ésta opción nos permitirá visualizar los bordes más resaltados y gruesos en áreas abiertas ó con agujeros
+
+                    _Toogle Texture Border Edges:
+
+                    _ésta opción nos permitirá visualizar los bordes más resaltados y gruesos en áreas abiertas ó con agujeros y que a su vez estén texturizados
+
+                
+                _Toogle Hidden Triangles:
+
+                    _ésta opción nos permitirá visualizar como se vería la geometría compuesta de triads
+
+                    _a través, de segmentos punteados los cuáles conformarían los triads, ha generar posteriormente
+
+                    
+                _Reset Polygon Display:
+
+                    _ésta opción nos pemritirá resetear la visualización de los polígonos y la geometría en general a su visualización normal ó por defecto
+            
+
+
+
+
+
+
+
+
+                        
+-->
+</body>
+</html>

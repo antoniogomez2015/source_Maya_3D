@@ -1,0 +1,237 @@
+
+DESCROPCIÖN:
+
+
+Animation/Skin
+
+
+	_Smooth Bind:
+
+		Esta toma como criterios para hacer el proceso de skinning, el bone/hueso respectivo más la influencia
+	
+	de los huesos contiguos ó cercanos al hueso respectivo influyendo así, todos estos huesos sobre dicha 
+	
+	sección la mesh, respectiva
+
+
+	_Rigid Bind:
+
+		Esta opción sólo toma el hueso respectivo asígnado para el proceso de deformación de la maya/mesh, 
+
+	para el proceso de akinning, sin tomar en cuenta los huesos contiguos ó cercanos, para aplicar este vamos
+
+	al menú Animation/Skin/Bind Skin/"Rigid Skin"
+
+
+
+	_Interactive Skin Bind:
+
+		Esta opción permite aplicar el proceso de skin, de forma particular ó limitada por sección
+
+	a través de zonas de influencia a través de limitadores en forma de cápsulas, cilindros, esperas, para
+
+	aplicar este vamos al menú Animation/Skin/Bind Skin/"Interactive Skin Bind", también esta herramienta
+
+	con una opción para la edición, en Menú Animation/Skin/Edit Smooth Skin/"Interactive Skin Bind Tool"
+
+	si entramos en las opciones de la herramienta "Interactive Skin Bind Tool", podremos seleccionar los 
+
+	huesos en los cuales insidirá la herramienta.
+
+	Este ajuste del alcance limitado de skin, tendremos que hacerlo para cada uno de los bones/huesos
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CRITERIOS DE LOS PANELES:
+
+
+
+Opciones generales del panel "Smooth/Interactive" de Skin:
+
+
+	_Bind to: (a que queremos que aplique el skin)
+
+		_Joint hierachy:
+
+			aplica el skin, ha las cadenas de bones/huesos
+
+		_Selected Joints:
+
+			aplica el skin, sólo a los bones/huesos seleccionados
+
+		_Object hierachy:
+
+			aplica el skin, a la gerarquía de objectos en caso de que el character contenga
+
+			 varios meshes ó elementos
+
+
+	_Bind method: (método ó asignación)
+
+		_Closset in hierachy:
+
+			cerrado a la gerarquía
+
+		_Closset distance:
+
+			cerrado a la distancia
+
+		_Heat Map:
+
+			indeterminado
+
+
+
+
+Opciones generales del panel "Rigid Bind" de Skin:
+
+
+	_Bind to: (a que queremos que aplique el skin)
+
+		_Complete skeleton:
+
+			aplica el skin, a todo el esqueleto
+
+		_Selected joints:
+
+			aplica el skin, a bones/huesos, seleccionados
+
+		_Force all:
+
+			aplica el skin, forzado a todo
+
+
+
+	_Coloring:
+
+		esta opción permite colorear las articulaciones asignadas
+
+
+
+	_Bind method:
+
+		_Closset point:
+
+			método a través de los puntos más cercanos
+
+
+		_Partition set:	
+
+			método a través de los sets, de particiones
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+APLICACIÖN:
+
+
+
+	_Smooth Bind / Rigid Bind / Interactive Skin Bind:
+
+		_primero seleccionamos el mesh, que conforma el character
+
+		_luego seleccionamos el sistema de skeleton, este este en una sola parte ó en varias partes
+
+		_luego vamos al menú Animation/Skin/Smooth Bind - Rigid Bind, así, el mesh, respectivo obedecerá al movimiento
+
+		del skeleton respectivamente
+
+
+
+	/////////////////////////////////
+
+	_Go to Bind Pose: 
+
+		esta opción permite reestablecer la posición del chcaracter la cuál tenía al momento
+
+	de aplicarse el skin, y la aplicamos yendo al menú Animation/Skin/"Go to Bind Pose"
+
+	(aplica solo ha deformaciones hechas a la posición inicial del esqueleto), no a las deformaciones 
+
+	realizadas al esqueleto a través de sistemas de IK, kinemática invertica, "iKHandles"
+
+
+
+	/////////////////////////////////
+
+	_Detach Skin:
+
+		Esta opción permite quitar elementos cargados al proceso del skin, para esto seleccionamos el
+
+	conjungo de bones/huesos y luego el mesh, ó parte a quitar el proceso de skinning, y vamos al menú
+
+	Animacion/Skin/"Detach Skin"
+
+
+
+	/////////////////////////////////	
+
+	_mirrow skin weights:
+
+		Esta opción nos permite reflejar el trabajo que hayamos realizado en uno de los lados del mapa
+
+	de weights ó pesos deh character, si entramos a las opciones de esta herramienta podremos ejegir las
+
+	cordenadas deseadas entre otras consideraciones pertinentes, para eso vamos al menú Animation/Skin/"Edit Smooth Skin"
+
+
+
+	/////////////////////////////////
+
+	_Copy Skin Weights:
+
+		Esta opción nos permite copiar el mapa generado de skin, entre una mesh, y otra incorporadas dentro del proceso 
+
+	de skinning, previamente;
+
+		_primero seleccionamos la mesh, la cuál ya posee un mapa de skin creado y editado
+
+		_luego seleccionamos la mesh, a la cuál deseamos transferirle una copia del mapa de skin
+
+		_por últimos vamo al menú Animaition/Skin/Edit Smooth Skin/Copy Skin Weights, así se transferirá
+
+		los mismos parámetros del mapa de skin editado, heredando esta segunda mesh, sus valores de edición
+
+
+	/////////////////////////////////
+
+	_Smooth Skin Weights:
+
+		Esta opción nos permite suavizar fácilmente un grupo de vertices seleccionados
+
+			_entramos al modo de sub elementos vertex, y seleccionamos los vertex, deseados a suavizar
+
+			_luego con los vertex, seleccionamos vamos al menú Animate/Skin/Edit Smooth Skin/Smooth Skin Weights,
+
+			así, los vertices seleccionados se suavizarán proporcionalmente a la fuerza que les influencia 
+
+			por igualación de los vertces
+
+
+	/////////////////////////////////
+
+	_Copy vertex weights / paste vertex weights:
+
+		Esta opción nos permite intercambiar los valores de weights, de área de vertex, ha otra
+
+		_con la mesh/character seleccionada
+
+		_luego vamos la herramienta Animation/Skin/Edit Smooth skin/Paint Skin Weight tool
+
+		_luego al "Mode:Paint Selet", y seleccionamos los vertex deseados a intercambiar ó copiar
+			
+		_luego vamos al menú Animation/Skin/Edit Smooth skin/Copy vertex weights
+
+		_ahora seleccionamos los vertex en los cuales deseamos pegar ó intercambiar el weight
+
+		_luego vamos al menú Animation/Skin/Edit Smooth skin/paste vertex weights
+		
+
+	/////////////////////////////////
+
+	_Prune  Small Weights:
+
+		Esta opción permite refinar los residuos ó partes mínimas libres de skin 
+
+		

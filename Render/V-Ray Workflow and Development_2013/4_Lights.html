@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<!--
+
+
+	V-Ray Workflow:
+	_______________
+
+	_area light: "create/lighs/V-ray rect light"
+
+		_el tipo de luz área light, no debe de escalarse en la representación de la escena si no en sus propiedades, estas son: Basic parameter/U size Vsize, esto incrementarán la ganancia y fuerza de la luz exmita ya que aumenta el área
+
+		_podemos cambiar el aspecto del color de la luz indicando el color directamente ó trabajando con un factor de la temperatura del color
+
+		_intensity multiplier: nos permite graduar directamente la intensidad de la luz
+
+		_Sampling/Subdivs: permite controlar la resolución de la sombra proyectada, entre mayor el valor de subdivisiones mayor será la calidad de la sombra proyectada
+		
+		_light cut-off threshold: permite graduar el umbral (alcance y posterizado) de precisión y detalle de la sombra, entre menor sea el valor mayor será la calidad y detalle de la sombra generada
+
+		_Shadows/Shado bias: valores cercanos a "1", limitan la proyección de la sombra sobre los modelos, valores cercanos a "0", amplian el alcance de penetración de la luz y sombra
+
+		_Texture: permite cargar un textura para que esta sera proyectada por la luz y sombras
+
+
+	
+
+	_IES Light: "Create/Lights/V-ray IES light"
+
+		NOTA: este tipo de iluminación de fabrica y profesional esta hecho para trabajar reflejada sobre una superficie para que así, esta emile la refracción de una lámpara real
+
+		_cargamos el archivo de extensión .IES
+
+		_escalar la representación de la luz en la escena no modificará ni el tamaño ni la acción de la iluminación en la escena
+
+		_podemos cambiar el color como temperatural del color si así, lo deseamos
+
+		_la intensidad también la podemos calibrar como Intensity:, la intensidad de este tipo de luces es demasiado fuerte por lo general trabajan a intensidades bajas como "0.010"
+
+		_complementario a la intendity, tenemos el filter color: este nos permite controlar el alcance ó frute force, de la luz despedida, para así, controlar el tamaño, entensión e intensidad de la luz resultante
+
+
+
+
+
+
+
+-->
+</body>
+</html>
+
+
+

@@ -1,0 +1,62 @@
+
+
+DETALLES:
+
+
+en los sistemas de contenedores de fluidos, podemos ajustar las características que tendrá los
+
+emisores que accionarán dentro de el contenedor, así, podremos activar ó desactivar opciones
+
+y características de emisión
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+NOTA: esta opción esta disponible cuando seleccionamos "Basic Emitter Attributes/Emitter Type/"
+
+"Volume"
+
+
+
+FuidEmitter1:
+_____________
+
+	
+	Volume Emitter Attributes:
+	__________________________
+
+
+	_Volume Shape:
+
+		podemos indicar una forma geométrica predeterminada para usarla como emisor, entre
+
+		las cuales tenemos Cube / Sphere / Cylinder/ Cone / Torus
+
+
+	_Volume Offset:
+
+		podemos indicar un valor de desface en cordenadas X,Y,Z, para el emisor
+
+
+	_Volume Sweep:
+
+		podemos indicar un área graduable permitral para el emisor
+
+	
+	_Section Raduis:
+
+		podemos indicar un área ragial al rededor del emisor
+
+
+	_Normalized Dropoff:
+
+		podemos estandarizar el comportamiento de los punto de simulación al rededor
+	
+		del emidor y las áreas de reserva creadas, para lograr un mejor flujo
+	
+
+
+		
+
+

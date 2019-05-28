@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Contour Contrast Function Levls Node:
+    _____________________________________
+    
+
+    Características:
+    ________________
+
+    _éste nodo nos permitirá activar el efecto toon, de forma general en el sistema
+        
+    _para que así, posteriormente podamos agregar materiales de tipo toon, a una geometría 
+        
+    _para luego, activar en el material de la geometría a través, de sus nodos relacionales que renderize "Contours"
+
+    
+    NOTA: al cargar el nodo "Contour Contrast Function Levls Node", dentro de la sección "Custom Shaders", lo desactivará las opciones de "Draw Property Difference", de la sección "Features"
+
+
+
+    Workflow:
+    _________
+
+    1_para lo cuál, primeramente debemos abrir el panel de configuraciones de render 
+        
+    _yendo ha "Windows/Rendering Editors/", y una vez allí, debemos darle a la opción de "Render Settings"
+
+
+    2_para a continuación en las opciones de "render settings", ir hasta el tag de "Features"
+
+    _y una vez allí, debemos de ubicar la sección de "Contours"
+
+    _la cuál, debemos de activar a través, de la opción de "Enable Contor Rendering"
+
+
+    3_para posteriormente en el mismos tag "Features", bajar un poco más hasta las opciones de "Custom Shaders"
+
+    _y una vez allí, debemos de ubicar la sección de "Contrast Shader"
+
+    _y en la cuál, podremos abrir el panels de shader, por medio del cuál, podremos ubicar el nodo de "Contour_Contrast_Funion_Levels_Node"
+
+
+
+    Toons:
+    ______
+
+    _de ésta manera, ahora podremos ir a las pestaña de "Toons", en la parte superior del viewport
+
+    _y una vez allí, proceder ha asignar uno de los materiales de tipo toon, que disponemos como presets
+
+    
+    Hypershade:
+    ___________
+
+    _para posteriormente abrir el panel Hypershade, yendo ha "Windows/Rendering Editors", y una ve allí, ejecutamos el "Hypershade"
+    
+    _y en el cuál, procederemos ha seleccionar el material de tipo toon, que le hemos agregado a la geoemetría respectiva
+
+    _para luego en el panel hypershade, darle al botón "Input and Outpus Conections", para que así, nos aparezcan todos los nodos relacionales con el nodo de tipo toons, que hemos seleccionado
+
+    _de ésta manera, ahora podremos seleccionar el nodo "rampShader1SG", por ejemplo e ir a sus opciones hasta encontar "Contours"
+
+    _en la cuál, debemos de activar "Enable Contour Rendering"
+
+    _para que así, éste elemento y éste material se renderize con las propiedades toons
+
+    
+
+    Node Parameters:
+    ________________
+
+    _Zdelta:
+
+        _(indeterminado)
+
+    _Ndelta:
+
+        _éste parámetro nos permitirá variar el umbral ó grado de penetración del efecto toons, en los contornos de la geometría
+
+        _de ésta manera, con un valor bajo, podremos limitar la peneración o re presentación de los contornos del efecto toons, y viceversa
+
+
+    _Diff Mat:
+
+        _ésta parámetro nos permitirá aplicar el efecto toons, a todos los materiales en la escena y no sólo al material de tipo toons
+
+        _por lo general cuando se aplica ésta opción, se desactiva la opción de "Diff Lebel"
+
+    _Diff Label:
+
+        _ésta parámetro nos permitirá aplicar el efecto toon, sólo al material de tipo toons, el cuál, hemos aplicado
+
+    _Diff Index:
+
+        _éste parámetro nos permitirá hacer que el efecto toon, se aplique sólo a los contornos de la geometrí
+
+        _ya que sin ésta opción aplicada el efecto toons, se aplicará a cada arista ó edges, de conforman la geoemetría respectiva
+
+    _Contrast:
+
+        _éste parámetro nos permitirá incorporar el efecto toons, también a las áreas de sonbra dentro de la forma de la geometría respectiva
+
+        _ampliando así, las posibilidades de representación de la forma sin tener que renderizar todas las aristas ó edges, de la geometría base
+
+    _Min Level:
+
+        _(indeterminado)
+
+    _Max Level:
+
+        _(indeterminado)
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

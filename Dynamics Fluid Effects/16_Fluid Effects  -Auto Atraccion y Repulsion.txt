@@ -1,0 +1,79 @@
+
+
+DETALLES:
+
+
+las opciones de los sistemas de "Fluid Effects", podemos agregar parámetros de auto atracción y repulsión
+
+para agregar simulaciones virulentas y más dinámicas como iniciones, explosiones gaseosas, otras
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Self Attraction and Repulsion:
+______________________________
+
+
+
+	Self Force:	
+
+
+		_Off(Zero):
+
+			_podemos activar ó desactivar las opciones de "Self Attraction and Repulsion"
+
+		
+		_Density:
+
+			_podemos hacer "Self Attraction and Repulsion", a través, de la densidad
+
+
+		_temperatura:
+
+			_podemos hacer "Self Attraction and Repulsion", a través, de la temperatura
+
+
+	_Self Attract:
+
+		_la opción de auto atracción permite hacer simulaciones virulentas y explosivas con 
+
+		valores cercanos ó superiores a "3", y, con un valor de "Equilibrium Valude", de entre "6"
+
+
+	_Self Repel:
+
+		_la opción de auto respulsión permite hacer una simulación más dinámica que la opción de
+
+		auto atracción en relación a simulaciones virulentas y explisivas
+
+
+		_la opción de auto repulsión funciona bien con calores cercanos ha "1", ó superiores y, 
+
+		con un valor de "Equilibrium Valude", de entre "1", ha "0", donde "0", sería la mayor
+
+		dispersión virulenta y explosiva, al contrario del modo de auto atracción donde un valor
+
+		más alto seria la reacción más virulenta y explosiva
+
+
+
+	_equilibrium Value:
+
+		_esta opción nos permite ajustar la magnitud ó intensidad de como interactúan los demás
+
+		elementos de la "Self Attraction and Repulsion", así, habrá una mayor interacción con
+
+		valore más bajos cercanos a "0"
+
+
+	_Force Distance:
+
+		_este valor permite ajustar la suavidad ó intensidad resultante a través, de la distancia
+
+		de colisión entre las fuerzas existentes de atracción ó repulsión
+
+		

@@ -1,0 +1,148 @@
+
+
+DETALLES:
+
+
+
+podomos cambiar las caracerísticas de visualización de las simulaciones creadas en los contenedores de fluid effects
+
+de esta manera podemos incluso hasta visualizar por característica específica como por ejemplo: ver sólo la
+
+simulación de la característica del fuego, fluid, temperatura, colision, densidad, otros
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Display:
+________
+
+
+	_primero seleccionamos el contenedor respectivo
+
+
+	_luego con el contenedor seleccionado vamos ha ej: "attribute editor/fluidShape1/Display/Shaded Display/"
+
+	en la cuál, podremos escoger lo que deseados visualizar 
+
+
+	_por defecto biene la opción de "As Rneder", ó una aproximación de la visualización en render
+
+
+	_Slice per voxel:
+
+		_para mejorar la visualización de forma personaliza
+
+
+	_Voxel Quality:
+
+		_podemos escoger entre un presset, de visualización entre "Faster", y "Better"
+
+
+	Boundary Draw:
+
+		_esta nos permite visualizar los detalles del contenedor en sí, y su funcionamiento a través
+
+		de las siguientes opciones:
+
+
+		_Bottom:
+
+			opción por defecto solo muestra la grilla de resolución en la parte inferior
+
+
+		_Reduced:
+
+			opción que muestra la grilla de forma dinámica en tres caras del contenedor
+
+		
+		_Outline:
+
+			opción que muestra la grilla en todas las caras del contenedor
+
+
+		_Full:
+
+			opción que muestra la grilla en todas las caras del contenedor más las partículas 
+
+			que conforman la simulación
+
+
+		_BoundingBox:
+
+			opción que muestra solo el contorno perimetral del contenedor sin grilla ó partículas
+
+
+		_None_
+
+			opción que no mustra el contenedor si este no esta seleccionado más si se ven 
+
+			la simulaciones generadas en este
+
+
+	_Numeric Display:
+
+
+		_también podemos tener una visualización numérica, esta opción biene desactivada por defecto "Off"
+
+
+			_Density:
+
+				podemos visualiar de forma numérica la densidad de la simulación
+
+
+			_Temperature:
+
+				podemos visualiar de forma numérica la temperatura de la simulación
+
+
+			_Fuel:
+
+				podemos visualiar de forma numérica el combustible de la simulación
+
+
+
+	_Wareframe Display:
+
+
+		_también disponemos de una visualización alámbrica de la simulación
+
+
+			_Particles:
+
+				opción de visualización de partículas alámbricas
+
+
+			_Rectangles:
+
+				opción de visualización de partículas como rectángulos alámbricos
+
+
+	
+	_Velocity Draw:
+
+		_tenemos también la posibilidad de la visualización de la velocidad y ubicación del flujo
+
+		de la simulación y partículas
+
+		
+			_Velocity Draw Skip:
+
+				opción que nos permite variar el flujo ó cantidad de los elementos de la visualización
+
+	
+			_Draw Lengh:
+
+				opción que nos permite variar la longitud de los vectores que representan el flujo
+
+
+	_Draw Arrodhead:
+
+		_podemos también activar la opción de la dirección de los vectores ó particulas del flujo de la simulación
+		
+
+
+
+
+
+

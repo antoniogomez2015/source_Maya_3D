@@ -1,0 +1,39 @@
+
+
+DETALLES:
+
+
+también disponemos de la opción de la creación de sistemas de partículas precostruidos para las soluciones más
+
+comúnes como lo son, fuego, humo, rayos, otros, las cuales podemos modificar y hasta personalizar a fondo
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Fire:
+_____
+
+
+	_primero creamos una mesh/motive, que hará de emitter, ó emisor de las partículas de fuego
+
+	y lo ubicamos según la lógica de la escena
+
+
+	_luego, con esta mesh/motive, seleccionada vamos ha "Dynamics/Effects/Crete Fire/Options", para así,
+
+	entrar en las opciones de creación del sistema de fuego:
+
+
+		_Object on fire:
+
+
+			este parámetro indicará que elemento mesh/motive, se tomará para aplicar el fuego
+
+
+		_tenemos la posibilidad de configurar el fuego antes de crearlo, de forma resumida todos los parámetros
+
+		de todos los elementos implicados en el proceso, como el sistema de partículas, su emisor y, fields
+
+		/ó fuerzas implicadas

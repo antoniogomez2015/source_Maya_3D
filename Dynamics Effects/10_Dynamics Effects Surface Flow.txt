@@ -1,0 +1,282 @@
+
+
+DETALLES:
+
+
+también disponemos de la opción de la creación de sistemas de partículas precostruidos para las soluciones más
+
+comúnes, en este caso la creación de sistemas de partículas sobre superficies "NURBS", para así, poder
+
+controlar el fujo, volumen, dirección a través de UVS, de las surfaces nurbs, y demás podemos ajustar 
+
+características y personalizar a fondo
+
+así, se generará un sistema de partículas el cuál es generico, por que no tiene ningún preset, aplicado para
+
+así, estar disponible para la configuración que desiemos para las partículas
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Surface Flow:
+_____________
+
+
+	_primero creamos debemos crear una sueprficie nurbs, sea esta persinalizada ó genérica, luego la 
+
+	ubicamos según la lógica de la escena
+
+
+		_es consejable borrar la hitoria de la esta superficie
+
+
+	_luego con la suerficie nurbs, seleccionada vamos ha "Dynamics/Effects/Create Surface Flow/Options"
+
+
+----------------------------------------------------------------------------------------------------------------------
+	
+	/Flow Along Curves
+
+
+		_Flow group name:
+
+			podemos asignarle un nombre al sistema de partículas generado
+
+
+	/Flow Creation Controls
+
+
+		_Create particles:
+
+			podemos activar la creación de partículas (por defecto)
+
+
+		_Create particles per flow:
+
+			podemos crear las partículas por flujo
+
+
+		_Manipulators along:
+
+			podemos manipular la dirección del flujo de las partículas en relación a las cordenadas
+
+			posibles en la superficie (u/-u), y (v/-v)
+
+
+		_Control resolution:
+
+			podemos ajustar la cantidad de detalle ó resolución en relación a la superficie
+
+
+		_Sub-control resoluion:
+
+			podemos ajustar los valor de la densidad relativa a la resolución general
+
+
+		_manipulator resolution:
+
+			podemos ajustar la cantidad de resolución que tendrán los handles de visualización y edición
+
+
+	/Flow Attribute Controls
+
+
+		_Emission Rate:
+
+			podemos indicar la rate/ó cantidad de partículas generadas
+
+
+		_Particle livespan:
+
+			podemmos indicar la vida que tendrán las partículas en el sistema
+
+
+		_Goal weight:
+
+			podemos indicar los pesos de atracción de las partículas
+
+
+		_Min age ratio:
+
+			podemos ajustar el rango mínimo de vida de las partículas
+
+
+		_Max age ratio:
+
+			podemos ajustar el rango máximo de vida de las partículas
+
+
+	por últimos hacemos "Apply", ó "Create", para crear el sistema de partículas deseado
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+NOTA:
+
+para una correcta visualización es aconsejable ir ha "Preferences/Time Slider/Playback/Playback speed", 
+
+y colocar "Play every frame", para ver una reproducción dedicada
+
+
+
+	_así, se generará un nuevo group, en el outliner, "SurfaceFlow1", el cuál contendrá los grupos de control
+
+
+	_a parte se agregará el sistema de particulas "particle1", correspondiente al surface-flow
+
+
+	_
+
+
+	_podemos ajustar y personalizar las partículas yendo al outliner/particle1, y luego vamos 
+
+	al attribute editor, para controlar sus características de visualización render	
+
+
+	_también disponemos de atributos de control tanto los disponiamos en el momentos de creación del sistema
+	
+	de partículas como extras, para tener un control completo y workflow
+
+
+		_para esto, vamos y seleccionamos en el "outliner/SurfaceFlow/"
+
+		
+		_luego con el elementos SurfaceFlow, seleccionamos vamos al "Attributo Editor/Flow/Extra Attributes/"
+
+
+
+			_Reference Flow Surface
+
+				indica la surface a la cuál se ha aplicado el sistema de partículas
+
+
+			_Actual Flow Surface:
+
+				indica la actual superficie utilizada para el flujo de las partículas
+
+
+			_Surface Flow Object:
+
+				podemos asignar un mapa para indicar el flujo de las partículas
+
+
+			_Display Sub Manips:
+
+				podemos mostrar lossub-manipuladores ó intermedios
+
+
+			_Show Treu Manips Shape:
+
+				podemos mostrar los manipuladores simplificados
+
+
+			_Smooth Sub Manips:
+
+				podemos suavizar los sub-manipuladores
+
+
+			_Display Min Loft:
+
+				podemos mostrar la mínima superficies de proyección de las partículas
+
+
+			_Display Max Loft:
+
+				podemos mostrar la máxima superficie de proyección de las partículas
+
+			
+			_Display Edge Loft:
+
+				podemos mostrar el borde lateral de la proyección de las partículas
+
+
+			_Emitter Rate:
+
+				podemos ajustar la cantiddad del flujo de las partículas
+
+
+			_Random Speed:
+
+				podemos ajustar el rango de la velocidad aleatorio del flujo de las partículas
+
+
+			_Random Radius:
+
+				podemos ajutar a un radio aleatorio de las partículas 
+
+
+			_U Location:
+
+				podemos
+
+
+			_Min V 0:
+
+				podemos ajustar la velocidad mínia del flujo de las partículas en relación 
+
+				de un punto ó nivel de control ha otro
+
+
+			_Max V 0:
+
+				podemos ajustar la velocidad máxima del flujo de las partículas en relación 
+
+				de un punto ó nivel de control ha otro
+
+
+			_Min Distance 0:
+
+				podemos ajustar la distancia mínima del flujo de las partículas en relación 
+
+				de un punto ó nivel de control ha otro
+
+			_Max Distance 0:
+
+				podemos ajustar la distancia máxima del flujo de las partículas en relación 
+
+				de un punto ó nivel de control ha otro
+
+			
+			_Ramp Count:
+
+				(valor seteado)
+
+		
+			_Surface Flow Tag:
+
+				indica la etiqueta de la superficie del flujo de las partículas
+
+
+			_Surface Flow Emitter:
+
+				indica la relación del flujo con el sistema de partículas indicado
+
+		
+			_Surface Flow Goal:
+
+				indica la superficie de atracción del flujo de partículas a través de un locator
+
+
+			_Min Age Ratio1:
+
+				podemos indicar una rango mínimo para la vida ó edad de las partículas
+
+
+			_Max Age Ratio1:
+
+				podemos indicar una rango maximo para la vida ó edad de las partículas
+
+
+			_Goal Weight1
+
+				podemos indicar un peso de atracción para las partículas sobre la superficie
+			
+
+		
+	_también podemos editar los sub-elementos que conforman la superficie nurbs, para cambiar así, su forma,
+
+	de esta manera también podemos animar la superficie, entre otros
+

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+
+    Mesh Menu: (Maya 2015)
+    __________
+
+        Subdiv Proxy:
+        _____________
+
+            Reduce:
+
+                _ésta opción nos permitirá crear una instancia adicional de la geometría base u orinal 
+                
+                _la cuál, será en alta resolución a través, de la cuál, podremos visualizar el comportamiento de la geometría tras el proceso de modelado ó creación de la forma final
+
+                _de ésta manera, podremos ir visualizando al momento como se comportarán la forma resultantes tanto en baja como en alta resolución
+
+                _disponiendo así, de ambas geometrías la vez y de forma superpuesta, de ésta manera, ésta es un buena opción para tener a la vista ambos modelos, tanto el de baja resolución como el modelo de alta resolución
+
+                _más también, dispondremos de las siguientes opciones de configuración para un desempeño personalizado:
+
+
+
+                    Inherit Smooth Mesh Preview:
+
+                        _ésta opción nos permitirá indicarle al sistema que éste mantenga y respete las opciones de previsualización y tesselation, de la geometría en el comportamiento por defecto maya
+
+
+                        NOTA: las opción "Inherit Smooth Mesh Preview", en sus opciones suprime las opciones de "Smoothing..", y de " OpenSubdiv Carmull-Clark"
+
+
+                        Subdivision Method:
+
+                            NOTA: las opciones de "Subdivision Method", sólo estarán disponibles cuando la opción de "Inherit Smooth Mesh Preview", esté desactivada
+
+
+                            _Exponential:
+
+                                _ésta opción contemplará el control de niveles de subdivisiones automática a través, de algoritmos personalizables por nosotros hasta cierta medida
+
+                                _de ésta manera, dispondremos de las siguientes opcioens de configuración para los algoritmos
+
+
+                                Exponential Smoothing Controls:
+
+                                    _Division Levels:
+
+                                        _ésta opción consolida tanto los niveles de sibdivisión con los de suavizado y de teselación
+
+                                        _de ésta manera, podremos indicar un valor de subdivisión y densidad y suavidad a la vez en relación a nuestras necesidades
+
+                                    _Subdivision Type:
+
+                                        _Maya Catmull-Clark:
+
+                                            _Boundary rules:
+
+                                                _Legacy:
+
+                                                    _
+
+                                                _Crease All:
+
+                                                    _
+
+                                                _Crease edges:
+
+                                                    _
+
+                                            _Continuity:
+
+                                                _
+
+                                                Smooth UVs:
+
+                                                    _
+
+                                                _Propagate Edge Hardness:
+
+                                                    _
+
+                                            _Map Borders:
+
+                                                _Do not smooth:
+
+                                                    _
+
+                                                _Smooth Internal:
+
+                                                    _
+
+                                                _Smooth All:
+
+                                                    _
+
+                                            _Preserve:
+
+                                                _Geoemtry borders:
+
+                                                    _
+
+                                                _Hard edges:
+
+                                                    _
+
+
+                                        _OpenSubdiv Catmull-Clark
+
+                                            _Vertex Boundary:
+
+                                                _Sharp edges and corners:
+
+                                                    _
+
+                                                _Sharp edges:
+
+                                                    _
+
+                                            _UV Boundary:
+
+                                                _No Interpolation:
+
+                                                    _
+
+                                                _Smooth (sharp edges and corners):
+
+                                                    _
+
+                                                _Smooth (sharp edges):
+
+                                                    _
+
+                                                _Smooth (All Sharp):
+
+                                                    _
+
+                                                _Propagate UV Corners:
+
+                                                    _
+
+                                                _Smooth Triangles:
+
+                                                    _
+
+                                            _Crease Method:
+
+                                                _Normal:
+
+                                                    _
+
+                                                Chaikin:
+
+                                                    _
+
+
+
+
+                            _Linear:
+
+                                NOTA: las opción "Linear", en sus opciones suprime las opciones de " OpenSubdiv Carmull-Clark"
+
+                                Linear Smoothing Controls:                         
+
+                                    _Subdivision Levels:
+
+                                        _
+
+                                    _Divisions Per Face:
+
+                                        _
+
+                                    _Push Strength:
+
+                                        _
+
+                                    _Roundness:
+
+                                        _                   
+
+
+                OpenSubdiv Carmull-Clark:
+
+                    Vertex Boundary:
+
+                        _Sharp edges and corners:
+
+                            _
+
+                        _Sharp edges:
+
+                            _
+
+
+                    UV Boundary:
+
+                        _No Interpolation:
+
+                            _
+
+                        _Smooth (sharp edges and corners)
+
+                            _
+
+                        _Smooth (sharp edges):
+
+                            _
+
+                        _Smooth (all sharp):
+
+                            _
+
+                        _Propagate UV Corners:
+
+                            _
+
+
+                    Crease Method:
+
+                        _Normal:
+
+                            _
+
+                        _Chaikin:
+
+                            _
+
+                Setup:
+
+                    _Mirror Behavior:
+
+                        _None:
+
+                            _
+
+                        _Full:
+
+                            _
+
+                        _Half:
+
+                            _
+
+                    _Mirror Direction:
+
+                        _Cordenades:
+
+                            _
+
+                        _Merge Vertex Tolerance:
+
+                            _
+
+                        _Share Transform Mode:
+
+                            _
+
+                        _Taggle Subdiv Proxy:
+
+                            _
+
+
+                Display Settings:
+
+                    _Subdiv Proxy Shader:
+
+                        _Remove:
+
+                            _
+
+                        _Keep:
+
+                            _
+
+                        _Transparent:
+
+                            _
+
+                    _Subdiv Proxy Transparency:
+
+                        _
+
+                    _Subdiv Proxy Renderable:
+
+                        _
+
+                    _Subdiv Proxy in Layer:
+
+                        _
+
+                    _Smooth Mesh in Layer:
+
+                        _
+
+                    _Smooth Layer Display:
+
+                        _Normal:
+
+                            _
+
+                        _Template:
+
+                            _
+
+                        _Reference:
+
+                            _
+
+
+
+
+
+                
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

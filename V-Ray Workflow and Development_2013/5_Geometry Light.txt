@@ -1,0 +1,14 @@
+
+	
+	para hacer que una mesh ó geometría emita luz a través de ella y de su forma debemos hacer lo siguiente;
+
+
+	1_yendo ha: "Create/V-ray/Mesh light/Turn selection into lights (apply single VRayLightMesh)"
+
+	2_seleccionando la mesh a la cuál se hemos asignado que emita luz vray, veremos que se ha agregado la "tag/vrayLightMeshProperties1", en la cuál podremos controlar la amisión de luz de forma identica a una "V-ray rect light"
+
+	3_pudiendo así, controlar el color, intensididad, las susdivisiones de las sombras, otros
+
+	4_para eliminar las opciones de emisión de luz V-ray, de una mesh, con esta seleccionada debemos ir ha "Create/V-Ray/Mesh light/Remove light modifiers from selection", así, las mesh volverá a su estado original en el cuál no emite luz
+
+

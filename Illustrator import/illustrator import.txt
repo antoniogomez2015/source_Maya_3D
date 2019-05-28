@@ -1,0 +1,60 @@
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+CREACIÖN DEL ARTE:
+
+
+_primero creamos el diseño en Illustrator, lo rellenamos de color puro/black-negro
+
+
+_posteriormente lo guardamos en formato illustrator versión "3"
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+IMPORTAR EL ARTE EN MAYA:
+
+
+_luego vamos a maya/file/import, y en las opciones de formato elegimos "illustrator"
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+RECONSTRUIR EL ARTE EN MAYA:
+
+
+
+_si la representación de las splines, que conforman el diseño se representan deficientemente ó en baja resolución
+
+podemos recostruirlas para suavizarlas y que representen mejor el diseño inicial, para esto seleccionamos
+
+las splines que deseamos recostruir y vamos al menú Surfaces/Edit Curves/Rebuild Curve/options
+
+
+_Rebuild Curve:
+
+	_Rebuild type: "uniforme" permite mantener la misma disposición inicial de los puntos que conforman el diseño
+
+	_Parameter range: 0 to #Spans (esta opción indica que se guíe por los spans)
+
+	_keep: le indicamos que guarde los "Ends", (finales de las curvas), y conserve las tangentes "Tangets"
+
+	_Number of spans: aquí indicamos la cantidad de spans ó resolución que tendrá las aplines resultantes
+
+	_Degree: "Linear", ofrece los mejores resultados por defecto
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+EXTRUIR 3D EL ARTE EN MAYA:
+
+
+_seleccionamos la spline, a estruir, y vamos al menú Surfaces/Surface/Bavel Plus/opitions

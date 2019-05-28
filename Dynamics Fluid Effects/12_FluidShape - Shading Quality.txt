@@ -1,0 +1,57 @@
+
+
+DETALLES:
+
+
+las opciones de  "fluidShape1/Shading Quality", de los sistemas de fluids effects/fluidShapes, nos 
+
+permitirá ajustar la calidad de general de visualización y de render de las propiedades de Shading
+
+ó representación de material volumétrico del sistema de fluidos, otros
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+fluidShape/Shading Quality:
+___________________________
+
+	
+	Shading Quality:
+	________________
+
+
+	_Quality:
+
+		permite aumentar la capidad de representar el detalle entre mayor sea el valor,
+
+		valores muy bajos aumentan el posterizado
+
+
+	_Contrast Tolerance:
+
+		permite ajustar la suavidad e interpolación general de los fuidos
+
+
+	_Sample Method:
+
+		permite
+
+			_Adaptative Jitlered
+
+			_Adaptative
+
+			_Jitlered
+
+			_Unifirm
+
+
+	_Render Interpolator:
+
+		permite ajustar concretamenta al interpolación de render para aumentar la calidad
+
+			_Linear
+
+			_Smooth
+
+

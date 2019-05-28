@@ -1,0 +1,63 @@
+
+
+DETALLES:
+
+
+también disponemos de la opción de la creación de sistemas de partículas precostruidos para las soluciones más
+
+comúnes como lo son, fuego, humo, rayos, otros, las cuales podemos modificar y hasta personalizar a fondo
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+FireWorks:
+__________
+
+
+	_no es requerido crear fireworks, a partir de una geometría, por ende vamos directamente ha
+
+	"Dynamics/Effects/Create Fireworks/Option":
+
+
+		_Firworks name: podemos indicar un nombre para el sistema de fuegos artificiales
+
+
+		_tenemos la posibilidad de configurar los fuegos artificiales antes de crearlo, de forma resumida 
+
+		todos los parámetros de todos los elementos implicados en el proceso, como el sistema de partículas, 
+
+		su emisor y, fields /ó fuerzas implicadas, otros
+
+
+	_también luego de creado el sistema de fireworks, modificar y personalizar el mismo
+
+
+		_podemos modificar el modo de render de los sistemas en partículas de cada "cohete", como el de
+
+		cada explosión, para esto, seleccionamos un sistema de partículas, ej: "FireworksBurstSparks
+
+		/Render Attribute/Particle render Type/", y all,í escogemos el tipo de partículas deseadas
+
+
+		_también podemos cambiar las instancias que representan cada explosión, las cuales por defecto 
+
+		están conformadas por "conos", podemos crear nuestras propias instancias y cargarlas de forma
+
+		individual ó a través de la creación de "Groups/grupos"
+
+		
+			_para esto, vamos la outliner, y seleccionamos el sistema de "Instancer particles", deseado
+
+			ej: "FireworksBurstSparksInstancer/Instancer/Add Selection", así, podremos cargar las 
+
+			instancias a través de mesh/motives, seleccionados y creados previamente por nosotros,
+
+			así, al cargas nuevas instancias personalizadas podemos borrar las existentes por defecto,
+
+			no tendremos que modificar nada más por que la programación de scripts, ya esta realizada
+
+
+
+

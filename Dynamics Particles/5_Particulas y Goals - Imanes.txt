@@ -1,0 +1,106 @@
+
+
+DTALLES: "Goals/imánes"
+
+
+esta opción permite crear sistemas de atracción para atraer ó influir sobre los sistemas de partículas, para que así,
+
+las lpartículas respondan a la interacción de fuerza y movimiento de los "Goals", ó imánes, otros
+
+
+
+	_primero creamos un sistemas de partículas, "particle1" sea a través de un emisor ó particles/brush
+
+
+	_luego creamos meshes, los cuales harán de "Goals/imánes", para a través de éstos atraer a las partículas generadas
+
+
+	_ahora tendremos que relacionar el sistma de partículas creado con el objecto que hará de "Goals-imán":
+
+
+		_primero seleccionamos el sistema de partículas, sea en el viewport, ó en el outliner "particle1"
+
+		
+		_a continuación seleccionamos la mesh, que hará de "Goals-imán"
+
+
+		_y con ambos elementos seleccionados vamos ha "Dynamics/Particles/Goal", así, al reproducir y generar
+
+		las partículas, éstas se verán atraídas por el "Goals-imán"
+
+
+		_por otra parte también se habrá agregado y activado las opciones de "Goals", en el sistema de partículas:
+
+
+			_así, en el "Attribute Editor", en las opciones de "particle1/particleShape1/", estarán activadas y disponibles las opciones
+
+			de "/Goal Weights and Objects", con los siguientes atributos:
+
+
+				_Goal Smoothness: suavisa ó interpola el sistema de atracción y flujo de las partículas
+
+
+				_pTorusShape1: peso/fuerza, ó influencia de la atracción generada "Goal Weight:"
+
+
+				_Goal Active: activa el sistema de atracción
+
+
+				_PParticle Goal Weights / Create Goal Weight 0 PP:
+
+
+				_Goal Point Positions / Create Goal World Position 0 PP:
+
+
+				_Goal Point Normals / Create Goal World Normal 0 PP
+
+				
+				_Goal point TangentUs / Create Goal Tangent U 0 PP
+
+				
+				_Goal Point TangentVs / Create Goal World Tangen V 0 PP
+
+
+				_UV Set / Use Current UV Set:
+
+
+
+			_y en el "Channel Box/particleShape1", estarán activadas y creadas las siguientes opciones, 
+
+			estas son las más relevantes:
+
+
+
+				_Lifespan Mode: modadlidad de la vida ó duración de la partículalive 
+
+					_forever: vida indefinida ó siempre
+
+					_constant: vida constante ininterrumpida
+
+					_random range: rango de vida aleatorio
+
+					_ifSpanPP only: vida condicional
+
+
+				_LifeSpan Random: vida aleatoria de las partículas
+
+
+				_Dynamics Weight: influencias ejercias de las fuerzas/fields, sobre las partículas
+
+
+				_Conserve: conservación de las partículas
+
+
+				_Start Frame: momento de inicio de emisión de las partículas en el tiempo
+
+
+				_Goal Smoothness: suavisa ó interpola el sistema de atracción y flujo de las partículas
+
+	
+				_Goal Weight: peso/fuerza, ó influencia de la atracción generada "pTorusShape1:"
+
+
+				_Goal Active: activar ó desactivar el sistemas de atracción "Goals"
+
+
+				

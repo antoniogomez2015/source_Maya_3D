@@ -1,0 +1,120 @@
+
+
+DETALLES:
+
+
+tenemos la posibildad de generar partículas a través de la información obtenida a través de un mapa de textura, esta
+
+información puede ser la información ó la información de luminancia de la misma
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Partículas por mapas de texturas de color:
+__________________________________________
+
+
+
+	_primero creamos un mesh/motive, al cuál desemos que emita partículas
+
+
+	_luego con el mesh/motive, seleccionado vamos ha "Dyanamics/Particles/Emit from Object", así,
+
+	el mesh/motive, emitirá partículas a través de su topología
+
+
+	_ahora seleccionamos las partículas/particle1, emitter1/Basic Emitter Attributes/Emitter Type/,
+
+	y elegimos "Surface", este paso impresindible para que las partículas tomen las información de las texturas
+
+
+	_luego seleccionamos las partículas/particle1, y vamos ha "particle1/particleShape1/Add Dynamics Attributes
+
+	/Color/Add Per Particles Attribute", así, aparecerá en "particle1/particleShape1/Per Particle (Array) Attribute",
+
+	el atributo de "RGB PP", ó valores en "RGB por partícula"
+
+
+	_luego volvemos de particle1/emitter1/Texture Emission Attributes (NURBS/Poly Surfaces only)/Particle Color:
+
+
+		_Particle Color: aquí debemos indicar el mapa de textuas a utiliar, por lo general utilizaremos
+
+		el mismo mapa utilizado en mapear el mesh/motive. 
+
+			_para esto vamos ha "Window/Rendering Editors/Hypershades/textures",
+
+			_y en la sección de textures del Hypershade, hacemos "mouse midle click", sobre la imágen
+
+			deseada y la arrastramos hasta el atributo "Particle Color", así, la texure, deseada
+
+			quedará relacionada con el sistema de partículas, con su atributo de color
+
+
+			_Inherit Color: luego tentremos que activar la textura, para lo cuál deberemos activar esta opción
+
+
+	_así, veremos que al reproducir el sistema de partículas, éste tomará la información de color de la textura
+
+	de imágen que le hemos indicado como color por partícula
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Partículas por mapas de texturas de Luminancia:
+_______________________________________________
+
+
+
+	_primero creamos un mesh/motive, al cuál desemos que emita partículas
+
+
+	_luego con el mesh/motive, seleccionado vamos ha "Dyanamics/Particles/Emit from Object", así,
+
+	el mesh/motive, emitirá partículas a través de su topología
+
+
+	_ahora seleccionamos las partículas/particle1, emitter1/Basic Emitter Attributes/Emitter Type/,
+
+	y elegimos "Surface", este paso impresindible para que las partículas tomen las información de las texturas
+
+
+	_luego seleccionamos las partículas/particle1, y vamos ha "particle1/particleShape1/Add Dynamics Attributes
+
+	/Color/Add Per Particles Attribute", así, aparecerá en "particle1/particleShape1/Per Particle (Array) Attribute",
+
+	el atributo de "RGB PP", ó valores en "RGB por partícula"
+
+
+	_luego volvemos de particle1/emitter1/Texture Emission Attributes (NURBS/Poly Surfaces only)/Particle Color:
+
+
+		_Texture Rate: aquí debemos indicar el mapa de textuas a utiliar, por lo general utilizaremos
+
+		el mismo mapa utilizado en mapear el mesh/motive. 
+
+			_para esto vamos ha "Window/Rendering Editors/Hypershades/textures",
+
+			_y en la sección de textures del Hypershade, hacemos "mouse midle click", sobre la imágen
+
+			deseada y la arrastramos hasta el atributo "Texture Rate", así, la texure, deseada
+
+			quedará relacionada con el sistema de partículas, con su atributo "Opacity"
+
+
+			_Enable Texture Rate: dendremos que activar la textura, para eso activamos esta opción
+
+
+	_así, veremos que al reproducir el sistema de partículas, éste tomará la información de luminancia 
+
+	de la textura de imágen que le hemos indicado como opacidad por partícula
+
+

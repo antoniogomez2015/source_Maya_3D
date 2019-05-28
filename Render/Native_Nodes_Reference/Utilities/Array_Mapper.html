@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Utilities Array Mapper:
+    _______________________
+
+        _éste nodo nos permitirá controlar mapas de densidad ó volúmen principalmente en sistemas dinámicos y de partículas, otros
+
+        _a través, de un nodo tipo vector a través, del cuál, podremos graduar la cantidad y control de diferentes elementos
+
+
+        Aplicación:
+        ___________
+
+        _de ésta manera, por ejemplo; podremos crear un sistema de partículas y en el cuál, podremos controlar el color de las partículas emitiras a través, de un nodo "Array Mapper"
+
+        _para lo cuál, primeramente vamos ha al Stack, de "Dynamics/Particles/", y una vez allí, aplicamos "Create Emitter"
+
+        _para que así, podamos visualizar el sistema de partículas a través, del shortcut, "Alt + V", para que así, se reproduzca el timeline
+
+        _de ésta manera, podremos seleccionar el sistema de partículas generado, específicamente las partículas emitidas
+
+        _y con éstas seleccionadas debemos abrir el panel "Attribute Editor", shortcut, "Control + A"
+
+        _y en el cuál, debemos de ubicar el tag "particleShape1"
+
+        _en el cuál, debemos de ubicación la sección de "Add Dynamic Attribute"
+
+        _y en la cuál, debemos de seleccionar el botón de "Color"
+
+        _para que así, nos aparezca un panel contextual en el cuál, debemos de seleccionar la opción de "Add Per Particle Attribute"
+
+        _para que así, sea agregada la nueva propiedad llamada "RGB PP", ó (RGB por partícula) a la sección "Per Particle (Array) Attribute"
+
+        _para que así, posteriormente en el campo vacío de ésta nueva propiedad hagamos "Mouse Right Click"
+
+        _y proceder ha seleccionar la opción de "Create Ramp", para que así, sea agregado el nodo "<-arrayMapper1 outColorPP->"
+
+        _para que así, podamos posteriormente hacer "Mouse Right Click", sobre ésta nomenclatura para que así, nos aparezca un menú contextual en el cuál, debemos de seleccionar la opción de "Edit Ramp"
+
+        _para que así, de ésta manera, estemos utilizando y modificando el mapa de color aplicado al sistema de partículas generado previamente
+
+        _a través, del nodo "Array Mapper"
+
+
+
+
+        Parámetros:
+        ___________
+
+
+        Ramp Attributes:
+
+            Type:
+
+                V Ramp:
+
+                    _ésta opcíon nos permitirá generar un mapa degradado con una orientación vertical
+
+                U Ramp:
+
+                    _ésta opcíon nos permitirá generar un mapa degradado con una orientación horizontal
+
+                Giagonal Ramp:
+
+                    _ésta opcíon nos permitirá generar un mapa degradado con una orientación diagonal u oblicua
+
+                Radial Ramp:
+
+                    _ésta opcíon nos permitirá generar un mapa degradado con una orientación radial en 360 grados
+
+                Circular Ramp:
+
+                    _ésta opcíon nos permitirá generar un mapa degradado con una orientación circular de adentro hacia afuera
+
+                Box Ramp:
+
+                    _ésta opcíon nos permitirá generar un mapa degradado con una orientación cuadrática de adentro hacia afuera
+
+                UV Ramp:
+
+                    _ésta opcíon nos permitirá generar un mapa degradado con una orientación cuadrática de adentro hacia afuera aunque en relación a los uvs del motivo
+
+                For Corner Ramp:
+
+                    _ésta opcíon nos permitirá generar un mapa degradado con una orientación equidistante a las cuatro esquinas
+
+                Tartan Ramp:
+
+                    _ésta opcíon nos permitirá generar un mapa degradado con una orientación ha modo de patrón que fusiona todos los colores por igual
+
+
+            Interpolation:
+
+                None:
+
+                    _ésta opción no aplicará suvizado de los colores seleccionados dentro del degradado
+
+                Linear:
+
+                    _ésta opción aplicará un suvizado básico y equidistante entre los colores seleccionados dentro del degradado
+
+                    _logrando así, la mayor homogeneidad entre los coloes evitando la acutancia entre los colores respectivos
+
+                Exponential Up:
+
+                    _ésta opción aplicará un suvizado comprimido hacia arriba entre los colores seleccionados dentro del degradado
+
+                Exponential Down:
+
+                    _   ésta opción aplicará un suvizado comprimido hacia abajo entre los colores seleccionados dentro del degradado             
+
+                Smooth:
+
+                    _ésta opción aplicará un suvizado para cada color entre los colores seleccionados dentro del degradado
+
+                    _lo cuál, creará un poco de acutancia entre los colores
+
+                Bump:
+
+                    _ésta opción es similar ha la opción de "Smooth", más la opción "Bump", comprimitirá un poco los colores hacia arriba
+
+                Spike:
+
+                    _ésta opción es similar ha la opción de "Smooth", más la opción "Spike", comprimitirá un poco los colores hacia abajo
+
+
+            Selected Color:
+
+                _ésta opción nos permtirá hacer un desface ó virado de color en relación a un color continguo
+
+                _de ésta manera, un valor medio de "0.5", corresponderá al color seleccionado
+
+                _más si colocamos un valor cercano ha "0", entonces el color se tornará del color contiguo izquierdo más cercano
+
+                _más si colocamos un valor cercano ha "1", entonces el color se tornará del color contiguo derecho más cercano
+
+            Select Position:
+
+                _ésta opción nos pemritirá desplazar literalmente un color dentro del degradado lo que nos permitirá hacer ajustes de un color determinado
+
+                _incluso podremos intercambiar la posición de color por la de otro color dentro del degradado de color generado
+
+            U Wave:
+
+                _ésta opción nos permitirá aplicar el efecto "wave", u ondulaicón en el sentido horizontal sobre el sistema del degradado de color generado
+
+                _lo cuál, nos permitirá influenciar en el comportamiento de los colores a través, del tiempo dentro del sistema de colores generados
+
+            V Wave:
+
+                _ésta opción nos permitirá aplicar el efecto "wave", u ondulaicón en el sentido vertical sobre el sistema del degradado de color generado
+
+                _lo cuál, nos permitirá influenciar en el comportamiento de los colores a través, del tiempo dentro del sistema de colores generados
+
+            Noise:
+
+                _ésta opción nos permitirá agregar ruido de tipo distorsión sobre el degradado de color generado
+
+                _lo cuál, nos permitirá generar de forma colateral diferentes efectos como fuego, otros
+
+            Noise Freq:
+
+                _ésta opción nos permitirá indicar la complejidad ó amplitud del ruido aplicado en el parámetro anterior
+
+                _de ésta manera, con un valor de "0", el ruido será imperceptible más con valores cercanos ha "1", el efecto será muy cusado y complejo
+
+
+        HSV Color Noise:
+
+            Hue Noise:
+
+                _
+
+            Sat Noise:
+
+                _
+
+            Val Noise:
+
+                _
+
+            Hue Noise Freq:
+
+                _
+
+            Sat Noise Freq:
+
+                _
+
+            Val Noise Freq:
+
+                _
+
+
+        Color Balance:
+
+            Default Color:
+
+                _
+
+            Color Gain:
+
+                _
+
+            Color Offset:
+
+                _
+
+            Alpha Gain:
+
+                _
+
+            Alpha Offset:
+
+                _
+
+
+        Effects:
+
+            Invert:
+
+                _
+
+            Color Ramp:
+
+                _
+
+
+        UV Coordinates:
+
+            Uv Coord:
+
+                _
+
+
+        Mode Behavior:
+
+            Catching:
+
+                _
+
+            Node State:
+
+                Normal:
+
+                    _
+
+                HasNoEffect:
+
+                    _
+
+                Blocking:
+
+                    _
+
+                Waiting-Normal:
+
+                    _
+
+                Waiting-HasNoEffect:
+
+                    _
+
+                Waiting-Blocking:
+
+                    _
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

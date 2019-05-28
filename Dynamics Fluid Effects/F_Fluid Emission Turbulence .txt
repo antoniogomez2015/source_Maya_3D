@@ -1,0 +1,94 @@
+
+
+DETALLES:
+
+
+en los sistemas de contenedores de fluidos, podemos ajustar las características que tendrá los
+
+emisores que accionarán dentro de el contenedor, así, podremos activar ó desactivar opciones
+
+y características de emisión
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+FuidEmitter1:
+_____________
+
+	
+	Emission Speed Attributes:
+	__________________________
+
+
+	_Speed Method:
+
+		podemos elegir el tipo de velocidad ó prescindir de ella, estas son las opciones
+
+
+			_No Emission:
+
+				podemos prescindir del atributo de velocidad activando esta opción
+
+
+			_Add:
+
+				podemos agregar a una velocidad existente en el contenedor
+
+
+			_Replace:
+
+				podemos reemplazar un velocidad exsitente en el contenedor
+
+
+	_Inheit Velocity:
+
+		podemos indicar un valor para la velocidad implícita por defecto en el contenedor
+
+
+	_Normal Speed:
+
+		podemos indicar un valor de la velocidad a través, de las normales del emisor
+
+
+	_Tangent Speed:
+
+		podemos indicar un valor de la velocidad a través, de la tangent del emisor
+
+
+	_Along Axis:
+
+		podemos indicar un valor de la velocidad a través, del axis, el emisor
+
+
+	_Aroung Axis:
+
+		podemos indicar un valor de la velocidad al rededor del axis, del emidor
+
+
+	_Directional Speed:
+
+		podemos indicar un valor de la velocidad cuando usamos cordenadas de dirección
+
+	
+	_Direction X:
+
+		podemos indicar una cordenada (X) de dirección de la velocidad de las partículas
+
+	
+	_Direction Y:
+
+		podemos indicar una cordenada (Y) de dirección de la velocidad de las partículas
+
+
+	_Direction Z:
+
+		podemos indicar una cordenada (Z) de dirección de la velocidad de las partículas
+	
+		
+
+
+		
+
+

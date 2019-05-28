@@ -1,0 +1,73 @@
+
+
+DETALLES:
+
+
+para ediciones más avanzadas y personalizadas de creación de fluidos a través, de objetos 
+
+personalizados dentro de un contenedor "fluid effects", podemos hacerlo con meshes/motives,
+
+personalizadas de nuestros proyectos prescindiendo así, el emisor básico que trae un contenedor
+
+compuesto, más ahora podemos includir una textura para que esta actúe de filtro ante los atributos
+
+del fluido, específicamente como un mapa de la densidad de emisión, de esta maenra, este mapa
+
+insidirá por medio de sus valores de luminancia en las áreas de amisión
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+fluidShape/Emisor personalizado:
+________________________________
+
+	
+	Emisor personzalizado:
+	______________________
+
+
+	_primero creamos un contenedor vacío, osea, sin emisor dentro por defecto, para esto vamos
+
+	ha "Dynamics/Fuid Effects/Create 3D Container"
+
+
+	
+	_creamos un emisor personalizado para más realismo de los requerimientos de la escena, para 
+
+	esto, creamos la mesh/motive, que hará de emisor luego la colocamos dentro del contenedor, 
+
+	posteriormente seleccionamos la mesh/motive, que hará de emisor y luego seleccionamos el 
+
+	contenedor y, con ambos seleccionados vamos ha "Dynamics/Fluid Effects/Add-Edit
+
+	/Emot from Object/Options"
+
+
+		_luego de haber agregado un emisor personalizado debemo primero seleccionar el
+
+		contenedor y luego ir ha "Attribute Editor/fluidEmitter1/fluid Attributes
+
+		/Density-Voxel-Sec", y subir el valor ya que este valor se coloca en "0",
+
+		al agregar un emisor personzalizado y al colocar su valor en "0", el emisor
+
+		no emite ó no se ve la densidad de la simulación
+
+
+	repitiendo este paso, podemos agregar todos los emisores personalizados que necesitemos
+
+	dentro de un contenedor
+
+
+	_más, seleccionando el contenedor, podemos ir a las opciones de "Attribute Editor
+
+	/fluidEmitter1/Fluid Attributes/Density Emission Map", allí, podemos seleccionar un
+
+	mapa de texturá del cuál, se tomarán los valores de luminancia como parámetros 
+
+	de la emisión de la densidad de la simulación dentro del contenedor
+
+
+

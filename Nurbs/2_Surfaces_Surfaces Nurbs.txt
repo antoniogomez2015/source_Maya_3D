@@ -1,0 +1,92 @@
+
+
+Canal de Youtube:
+https://www.youtube.com/channel/UCe5wjrJTSsW6f7cKuVpmVOQ
+
+Tutorial:
+3D Autodesk Maya 009 Modelado curvas y superficies Nurbs 002:	https://www.youtube.com/watch?v=zSgI_4NmrX4
+
+
+
+
+	Nota: Las superficies Nurbs, son creadas a través de curvas paramétricas
+
+
+	Menú/Surface
+
+		1_Revolve:
+
+			esta opción nos permite crear "surfaces", a través de una proyección radial en grados de una spline, en unos de sus ejes/axis, ej; (Y),
+
+			para así, proyectar la spline, 360, grados por ejemplo para lograr formas complejas con una sola spline en revolución radial
+
+		2_Loft:
+
+			esta opción nos permite hacer una extrusión lineal de "Surface", a través de varias splines, para esto seleccionamos varias splines
+
+			creadas en diferentes ubicaciones y formas, seleccionando primero la spline, en la cuál deseamos donde comiense la extrusión y luego las
+
+			otras splines, hasta llegar hasta la última spline, donde desemos que termine la extrusión, luego aplicamos "Surface/Loft", así, se generará
+
+			una nueva "Surface", la cuál tomará la forma de la forma de las splines, que la conforman como una sumatoria de las mismas
+
+		3_Planar:
+
+			esta opción nos permite crear "Surfaces", a través de 3 ó 4 splines, creadas en un mismos plano, por ejemplo; creadas desde la vista "Top",
+
+			las cuatro splines, deben estar interceptadas en sus extremos, luego aplicamos "Surface/Planar", así, se generara un surface, con la forma que
+
+			que conforman las splines en su conjunto como un todo, luego podemos deformar la surface, nodificando las splines, en su mismo plano ó cordenada,
+
+			ó, entrar al modo de sub elementos de la surface, y eliminar la historia la eliminar la relación con las splines, originales
+			
+
+		4_Extrude:
+
+			esta opción nos permite crear "Surfaces", a través de la extrución de dos splines, para esto creamos una splines con la forma del módulo que deseamos extruir,
+
+			luego creamos la spline con la forma longitudinal del trayecto el cuál desemos que siga la forma modular que creamos previamente, luego debemos seleccionar 
+
+			primero la forma ó spline, que será extruida y lugo la forma ó spline que hará de trayecto de la extrución, luego aplicaremos "Surface/Extrude", así, se generará
+
+			ó creará una "Surface", a través de una extrución con la forma del módulo creado proyectado sobre el "path", ó trayecto generado
+
+		5_Birail / 1,2,3:
+
+			esta opción nos permite crear "Surfaces", a través de splines estructurados, entre splines de "forma", y splines de "trazados", luego aplicamos "Surface/Birail/", 
+
+			y luego debemos seleccionar primero la spline, de forma y leugo las splines de trazados.
+
+			los splines, de trazados deben de tener la misna cantidad de points, en su confirmación para que así pueda hacerse el proceso deBirail
+
+				Birail 1: esta opción nos pide una spline, de "forma" y dos splines de "trazados" conectadas, luego aplicamos "Surface/Birail/Birail 1 Tool", 
+
+				así, al aplicar la herramienta se generará una surface, con la forma sugerida a través de la spline de "forma"
+
+				Birail 2: esta opción nos pide dos splines, de "forma", y dos splines, de "trazados", conectadas, luego aplicamos "Surface/Birail/Birail 1 Tool",
+
+				así, al aplicar la herramienta se generará una surface, con la forma sugerida a través de la spline de "forma" 
+
+				Birail 3: esta opción nos pide tres ó más splines, de "forma", y dos splines, de "trazados", conectadas, luego aplicamos "Surface/Birail/Birail 1 Tool",
+
+				así, al aplicar la herramienta se generará una surface, con la forma sugerida a través de la spline de "forma"
+
+		6_Boundary:
+
+			esta opción nos permite crear "Surface", a través de cuatro Splines, interceptadas muy similar al Birail (menos suavizada)
+
+		7_Square:
+
+			esta opción nos permite crear "Surface", a través de cuatro Splines, interceptadas muy similar al Birail (menos suavizada)
+
+		8_Bavel/ Babel Plus:
+
+			esta opción nos permite crear "Surfaces", a través de una spline cerrada/close, esta puede ser texto ó un módulo generado por nosotros,
+
+			luego aplicamos "Surface/Bavel ó Bavel Plus", para así, extruir la spline, creando una surface con la forma de la spline más un grosor ó espezor
+
+
+
+
+
+			

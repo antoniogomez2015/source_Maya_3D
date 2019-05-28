@@ -1,0 +1,128 @@
+
+
+
+	RIGGING CONFERENCIA COMPLETA
+
+		https://www.youtube.com/watch?v=Fc_m4dHoIdU
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Spline:
+_______
+
+	_primero debemos de crear una spline, con la forma de la cadena de cambios ha emular, la cuál, debemos de crear
+
+	con alta resolución ó cantidad de sub-elementos de tipo vertex, en la spline
+
+
+	_ésta spline, la podemos realizar siguiendo la forma de la cadena de cambios ó creando una forma básica como un
+
+	"circle", el cuál, lo podremos deformar con un deformador de tipo "Lattice", hasta hacerlo coincidir con la 
+	
+	forma de la cadena de cambios
+
+
+	_la ventaja de hacerlo a través, de un "circle", es que al rotar la forma del "circle", dentro de lattice, éste
+
+	rotará con la forma de la cadena de cambios más con el pivot, y el comportamiento del "circle"
+
+
+
+Joints/Bones:
+_____________
+
+	_ahora debemos de crear un chain, ó cadena de bones, ó huesos y articulaciones ó joints, a través, de la 
+
+	trayectoria de la spline, que hemos creado, creando así, la cantidad de bones, en relación a la cantidad de 
+
+	eslabones ha crear
+
+
+	_éste proceso lo podemos hacer de forma manual ó a través, de un script "Bone On Curve", para que así, éste
+
+	script, nos permite configurar la cantidad de bones, deseados que el sistema cree sobre la spline, ó curva
+
+
+
+
+Eslabón:
+________
+
+	_ahora debemos de tomar uno de los eslabones de la cadena de cambios el cuál, vamos ha modular sobre la 
+
+	trayectoria que hemos creado de la cadena de cambios a través, de la spline, que hemos creado previamente
+
+
+	_para lo cuál, debemos seleccionar el respectivo eslabón y luego debemos seleccionar también, la spline, y con
+
+	ambos seleccionados vamos a las opciones de "Animation/Constraints/Motions Paths/Attack To Motion Path", para
+
+	que así, podamos configuarar éste para que de ésta manera, el respectivo eslabón se siña a la spline, respectiva
+
+	y siga el movimiento de forma dinámica
+
+
+
+Modulación: (Maya 2016)
+___________
+
+	_ahora debemos modular el respectivo eslabón para que así, éste se replique sobre toda la spline, para lo cuál,
+
+	debemos de seleccionar el respectivo eslabón y con éste seleccionado vamos a las opciones de 
+
+	"Animation/Visualize/Create Animation Snapshot"
+
+
+	_de ésta manera, la opción de "Create Animation Snapshot", creará una instancia del motivo ó elemento por cada 
+
+	vez que el elemento se mueva ó anime en el espacio
+
+
+
+Animation: (Maya 2016)
+__________
+	
+
+	_para a continuación ir a las opciones de "Rigging/Skeleton/Create IK Spline Handle", para que así, procedamos ha
+
+	entrar a las opciones de configuración de éste panel
+
+
+	_y en las opciones del panel "Create IK Spline Handle", debemos de desactivar la opción de "Auto Create Curve", por
+
+	que ya disponemos de una curva creada y personalizada en el sistema de la cadena de rodamiento
+
+
+	_y continuación debemos de ir al outliner, en el cuál, debemos de desplegar los sub-elementos de la
+
+	chains, de bones, que conforma el sistema para que así, procedamos ha seleccionar el primer bone, ó root, y el 
+
+	último bone, para a continuación conjuntamente seleccionar la spline, que conforma la trayectoria de la cadena
+
+	del sistema y con ambos elementos seleccionados le damos ha "Apply", en el panel "Create IK Spline Handle"
+
+
+
+Skinning:
+_________
+
+	_ahora debemos de seleccionar todos los eslabones generados ó replicados anteriormente más la cadena ó chain, de
+
+	bones, y joints, del sistema y con todos los elementos seleccionados vamos a las opciones de 
+
+	"Rigging/Skin/unBind Skin", para que así, los eslabones, reciban la deformación realizada por el chain, del 
+
+	sistema
+
+
+	_para que así, al rotar la spline, rote todo el sistema del rodamiento de la cadena de cambios de forma dinámica
+
+
+
+
+
+
+

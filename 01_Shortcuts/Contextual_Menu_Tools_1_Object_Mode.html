@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Contextual Menu - Tool Object Mode:
+    ___________________________________
+
+                       
+
+        Object Mode: 
+        ____________     
+
+        _Shift + Mouse Right Click (con sub elementos seleccionados)
+
+            _Merge:
+
+                _de ésta manera, podremos acceder a las herramientas:
+
+                    _Merge Edge Tool
+                        _Merge Vertex Tool
+
+                _para que así, podamos unificar éstos tipos de sub elementos
+
+            _Cut Faces Tool:
+
+                _ésta herramienta nos permitirá hacer divisiones edge loops de forma albitraria sobre toda la geometría
+
+            _Append to Polygon Tool:
+
+                _ésta herramienta nos permitirá
+
+            _Softten/Hardten Edges:
+
+                _de ésta manera, podremos acceder a las herramientas
+
+                    _Soften Edge:
+
+                        _ésta opción nos permitirá suavizar la visualización de las caras ó faces de un motivo
+
+                    _Soften/Harden:
+
+                        _ésta opción nos pemritirá hacer variaciones sobre el suavizado y dureza de las faces, de un motivo para su visualización
+
+                    _Harden Edge:
+
+                        _ésta opción nos permitirá perfilar ó hacer duras las faces, de un motivo para su visualización
+
+                    _Toogle Soft Edge Display:
+
+                        _ésta opción nos permitirá una vez suavizado las faces, de un motivo 
+                            
+                        _para que así, procedamos ha hacer "toogle soft edge display" 
+                            
+                        _para que así, los bordes aparezcan punteados y sugeridos en la visualización del motivo temporalmente
+                
+
+            _Insert Edge Loop Tool:
+
+                _ésta opción nos permitirá agregar loops, completos para definir las formas ha crear
+
+            _Multi-Cut Tool:
+
+                _ésta opción nos permitirá agregar edges entre vertex de forma interactiva asi como también, edge loops, completos
+
+            _Sculpt Geometry Tool:
+
+                _ésta opción nos permitirá disponer de la herramienta de escultura para que así podamos deformar la geometría de forma orgánica
+
+
+            Generales:
+            __________
+
+                _Offset Edge Loop Tool:
+
+                    _ésta opción nos permitirá agregar edgeloops al rededor de un edge loops, sobre el cuál, nos posemos dinámicamente
+
+                    _para que así, podamos reformar una forma determinada
+
+                _Smooth:
+
+                    _ésta opción nos permitirá sub dividir la geometría y suavizarla a la vez de forma personalizada
+
+                _SubDiv Proxy:
+
+                    _ésta opción nos permitirá poder crear una geometría proxi de alta resolución para así, dispongamos ahora de dos geometrías
+
+                    _una en alta resolución y otra de baja resolución sobre la cuál, podremos modelar y hacer edición
+
+                    _de ésta manera, podremos visualizar su comportamiento en alta resolución a la vez
+                    
+                _Crease Tool:
+
+                    _ésta opción nos permitirá hacer variaciones sobre la tensión generada por un edge ó edge loops, en relación de los demás edges
+
+                _Project Curve on Mesh:
+
+                    _ésta opción nos pemritirá proyectar proyectar un spline, sobre una geometría en relación a la vista de la cámara
+
+                    _para lo cuál, primeramente debemos de seleccionar la spline, respectiva para posteriormente seleccionar la geometría
+
+                    _para luego aplicar el comando "project curve on mesh"
+
+                _Split Mesh with Projected Curve:
+
+                    _ésta opción nos permitirá agregar edges, ó nuevas divisiones a partir de la forma de la spline, proyectada sobre el motivo
+
+                    _de ésta manera, podremos podremos modelar y crear formas complejas a través, de formas proyectadas sobre el motivo
+
+                    _para lo cuál, debemos de seleccionar tanto las spline, poryectada como el motivo a la vez, para posteriormente aplicar el comando "Split Mesh with Projected Curve"
+
+                _Mirror Polygons:
+
+                    _éstas opciones nos permitirán disponer de las opciones de
+
+                        _Mirror Cut
+                        _Mirror Geometry
+
+                    _dentro de las mismas opciones disponibles ha modo de lista con todas sus sub opciones
+
+                _Mapping:
+
+                    _ésta opción nos pemritirá disponer de las opciones de proyeción de UVs, tanto planar como ciíndricas en sus diferentes coordenadas
+
+                _Triangulate:
+
+                    _ésta opción nos permitirá convertir a triads, todos los polygons, existentes en el motivo
+
+                _Quadrangulate:
+
+                    _ésta opción nos permitirá convertir a quads, todos los polygons, existentes en el motivo
+
+                _Separate:
+
+                    _ésta opción nos pemritirá separar en dos elementos u objetos diferentes ha objeto que previamente han sido unificados
+
+                    _como también, nos pemritirá separar elementos de tipo geoemtría que se encuentren en diferentes islands dentro de un mismo elemento u objeto
+
+                _Combine:
+
+                    _ésta opción nos pemritirá fusionar dos elementos de tipo geometría en uno sólo para que así, podamos unificar diferentes elementos que contengan geometría
+
+                _Booleans:
+
+                    _ésta opción nos pemritirá disponer de las opcioenes de booleands, tanto en sus opciones de: 
+                            
+                        _Union 
+                        _Diference
+                        _Interception
+
+                _Reduce:
+
+                    _ésta opción nos permitirá reducir la cantidad de geometría ó sub elementos que conforman al motivo manteniendo la forma ó morfología del motivo
+
+                    _más sin mantener la topología del objeto original
+
+                _Cleanup..:
+
+                    _ésta opción nos permitirá abrir las opciones de cleanup
+
+                    _para que así, podamos limpiar y optimizar la geometría resultante de comportamientos inesperados
+
+                _Bevel Tool: 
+
+                    _ésta opción nos pemritirá dividir un edge, que seleccionemos
+
+                    _de ésta manera, podremos dividir un edge, respectivo en dos ó más edges, de forma dinámica para reforzar la morfología del motivo
+
+                    NOTE: Bevel Tool: (interactive), nos pemritirá motificar dinámicamente sobre cualquier sub elemento del motivo
+
+                _Bridge Tool:
+
+                    _ésta opción nos pemritirá activar la herramienta de bridge, para poder rellenar áreas abiertas ó a través, de dos edges, seleccionados previamente
+
+                    NOTA: ésta opción nos es muy útil, ya que el sistema no detecta selecciones previas realizadas sobre edges
+
+                    NOTE: Bridge Tool: (interactive), nos pemritirá motificar dinámicamente sobre cualquier sub elemento del motivo
+
+                _Connect Tool:
+
+                    _ésta opción nos pemritirá activar la herramienta de connect tool, a través, de la cuál, podremos crear nuevos edges, a partir de la selección de dos ó más vertex previamente
+
+                    NOTE: Connect Tool: (interactive), nos pemritirá motificar dinámicamente sobre cualquier sub elemento del motivo
+
+                _Extrude Tool:
+
+                    _ésta opción nos pemritirá extruir un sub elementos sobre el cuál, nos posemos
+
+                    NOTE: Extrude Tool: (interactive), nos pemritirá motificar dinámicamente sobre cualquier sub elemento del motivo
+
+                _Quad Draw Tool:
+
+                    _ésta opción nos pemritirá activar las opciones de retopología para crear nueva geometría en un área vacío ó sobre otra geometría
+
+                    _a partir de la creación de como mínimo 3, nuevos vertex
+
+                    _para posteriormente rellevar éstos a través, del shortcut, "Shift + Mouse Left Click", para generar así, nuevo polygons
+
+                    NOTE: Quad Draw Tool: (interactive), nos pemritirá motificar dinámicamente sobre cualquier sub elemento del motivo
+
+                _Target Weld Tool:
+
+                    _ésta opción nos permitirá de forma intectiva unir vertex y edges
+
+                    _para lo cuál, debemos de halar un tipo de sub elemento sobre otro sub elemento del mismo tipo para unificar éstos
+
+                _Polygons Display:
+
+                    _ésta opción nos pemritirá disponer de todos los modos de visualización de los polígonos
+
+                    _Toogle Backface Culling:
+
+                        _ésta opción nos pemritirá ocultar las caras del motivo que se encuentre en la parte tracera del motivo
+
+                         _para que así, éstas caras ya no sean visibles en el viewport, y pasen ha ser un segundo plano lo que hará más ligera la escena
+
+                    _Toogle Border Edges:
+
+                        _ésta opción nos permitirá visualizar los bordes más resaltados y gruesos en áreas abiertas ó con agujeros
+
+                    _Toogle Texture Border Edges:
+
+                        _ésta opción nos permitirá visualizar los bordes más resaltados y gruesos en áreas abiertas ó con agujeros y que a su vez estén texturizados
+
+                    _Toogle Face Normals:
+
+                        _ésta opción nos permitirá visualizar la dirección de las normales en relación a la dirección de los polígonos del motivo
+
+                    _Toogle  Verter Normals:
+
+                        _ésta opción nos permitirá visualizar la dirección de las normales en relación a la dirección de los polígonos del motivo 
+                            
+                        _pero en específicamente a partir de los vextex del motivo
+
+                    _Toogle Face Centers:
+
+                        _ésta opción nos pemritirá visualizar un punto dentral para las faces, del motivo
+
+                        _lo cuál, es especialmente útil para centrar elementos en una face, específica, otros
+
+                    _Toogle Hidden Triangles:
+
+                        _ésta opción nos permitirá visualizar como se vería la geometría compuesta de triads
+
+                        _a través, de segmentos punteados los cuáles conformarían los triads, ha generar posteriormente
+
+                    _Toogle Vertex
+
+                        _ésta opción nos pemritirá visualizar los vertex que conforman la geometría de forma permanente
+
+                        _lo cuál, es útil para diferentes procesos de producción y para la creación de efectos dinámicos, otros
+
+                    _Reset Polygon Display:
+
+                        _ésta opción nos pemritirá resetear la visualización de los polígonos y la geometría en general a su visualización normal ó por defecto
+            
+
+
+
+
+
+                        
+-->
+</body>
+</html>

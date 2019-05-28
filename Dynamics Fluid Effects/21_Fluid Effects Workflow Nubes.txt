@@ -1,0 +1,67 @@
+
+
+DETALLES:
+
+
+las opciones de los sistemas de "Fluid Effects", a continuación comenzaremos ha realizar una serie
+
+de workflow, de los requerimientos y situaciones más comúnes en el desarrollo profesional para ver
+
+los detalles y generalidades a tener en cuenta para tales fines
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Nubes/ Cluods:
+______________
+
+
+
+	_primero creamos un contenedor con un emisor con una resolución base de X = 50, Y = 5, Z = 50,
+
+	y con un tamaño de X = 50, Y = 5, Z = 50,
+
+
+	_el sistema de fluidos para crear cluods/nubes, se realiza a través, del uso de texturas, por lo
+
+	se requiere el modo de visualización de texturas "6", ó le damos al ícono de ver texturas en el 
+
+	viewport
+
+
+	_en "Contents Methods", colocamos "Density - Velocity - Temperature . Fuel", en "Off(zero)", 
+
+	dejando solo "Color Method", con un valor de "Use Shading Color"
+
+
+	_en shading/color, agregamos otro nuevi pin de color para generar un degradado de blanco a grid
+
+	con un alto valor de acutancia y, cambiamos el "color input/Y"
+
+
+	_en shading/opacity, desplazamos el splider hasta la midad y creamos nuevos puntod de control 
+
+	hasta convertir esa recta un curva y, colocamos el "opacity input/constant"
+
+
+	_ahora en "Texture", activamos las opciones de "Texture Color", y la opción de "Txture Opacity",
+
+	así, esta textura modificará el volúmen de partículas generado previamente
+
+
+	_así, a través, de los parámetros de las opciones de texturas podemos controla ó personalizar
+
+	el modo de visualización y las características del sistema de clouds, "activar el atributo de
+
+	(Inflection), permite mejores resultados para este tipo de requerimiento"
+
+
+	_
+
+
+	
+------------------------------------------------------------------------------------------------------
+

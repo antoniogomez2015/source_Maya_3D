@@ -1,0 +1,36 @@
+
+
+NOTA:
+
+	1_es aconsejable utilizar ambos modos; tanto el Primary bounces, como el Secundary bounces, así, sea que ambos utilicen por ejemplo el mismo algoritmo, ej: Brute Force en ambos
+
+	2_el resultado general de la definición y resolución resultante del render de GI, es proporcional a los demás factores en relación a sus valores de Subdivs: (subdivisión), Threshold: (umbral), Amound: (cantidad), entre otros,
+	estos pueden ser: luces, sombras, AO, meshlights, otros
+
+	3_es recomendable mantener un workflow de calidad en relación a los nuveles de subdivisión de los elementos que insiden en la escena, como por ej; que si en GI Brute force, estemos utilizando un valor de subdivs, de 16, 
+	en las luces, sombras y AO, entre otros también utilicemos el valor de subvis, para que así, se garantice el mismo valor de resolución de igual manera para el Threshold (umbral)
+
+
+
+Photon Map: (iluminación emulada a la realidad)
+
+		1_Bounces: 10, es un valor estandar para los rebotes de rayos, que a su vez influye directamente en el numero general de samples a calcular en la escena; en Mode: indica la cantidad de samples a calcular en la escena ej:392758 samples taking...
+		y esto va en relación a la cantidad de photones emitidos por las fuentes de luces ej: si un VRayLightrect/Photon emission/Photon sibdivs: 500
+
+		2_Max photons: la cantidad de photones es lo que permite representar la escena, a mayor cantidad de photones mejor será la definición de la escena, este parámetro va relacionado directamente con "Search Distance", osea la distancia que tienen que recorrer los rayos para alcanzar al motivo
+
+		3_Prefilter: es aconsejable activar la opción prefilter por que esta aumenta la definición del renders, así como en los rebotes de la luz y las reflexiones y refracciones. Entre mayor sea el valor de prefilter samples, mejor será el resultado, es recomendado trabajar con un rango de valor de "10"
+
+		4_Convex Hull Estimate: permite una mayor definición de las sombras y ganancia en la peneración de la iluminación en los vertices ó esquinas así, como en los luegares más alejados de la escena, ganando en una mayor definición y alcance de la iluminación, es recomendable trabajar un rango no mayor a "10"
+
+		5_Store Direct light: es econsejable en gran manera dejar desactivada es opción, ya que así, los photones se interpolarán dejando la escena sin brumos ni ruidos logrando una definición total
+
+		6_Auto search dist: es aconsejable dejar esta opción activada a menos que sepamos la distancia que tendrán que recorrer los photones en la escena hasta llegar al motivo
+
+		7_Multiplier: permite incrementar ó decrementar el valor de GI, intensidad de la luz irradiada en la escena
+
+		8_Retrace threshould: entre más bajo sea el valor del umbral mayor será la definición de la escena, es recomendable dejar este bajor en "0", ó cercano a cero
+
+		9_Max Density: la densidad permite reforzar la interpolación y suavidad de los photones entre si mejorando considerablemnte la escena, valores cercanos a "1", aumentan la calidad de la escena (NOTA: este parámetro afecta en detrimento la proyección de las reflexiones del motivo)
+
+

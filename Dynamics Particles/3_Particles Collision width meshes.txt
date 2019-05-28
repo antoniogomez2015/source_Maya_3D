@@ -1,0 +1,92 @@
+
+
+DETALLES:
+
+también tenemos la posibilidad de hacer colisionar las partículas generadas con cualquiera de las herramientas y modos
+
+de las sección de "Dynamics", con las superficies creadas "Meshes", a continuación se muestra el proceso de este:
+
+
+
+
+	_primero creamos un emisor ó pintado/brush, de partículas deseadas en el vewport
+
+
+	_luego creamos y ubicamos las superficies que deseamos que sirvan de colisionadoras de las partículas
+
+	así, estas supercies harán de resistencias y serán a su vez conductoras de las partículas
+
+	
+	_luego tendremos que relacionar ambos elementos en el sistema de partículas:
+
+
+		_para esto seleccionamos primero las particulas creadas, tanto el viewport, con el outliner "particle1",
+
+		ha menos que le hayamos puesto un nombre personalizado al momentos de crear el sistema de partículas
+
+
+		_luego seleccionamos la mesh, que deseamos sea ó sirva de colisionador de las partículas
+
+
+		_con ambos elementos seleccionados vamos "Dynamics/Particles/Make Collide", así, veremos que ha
+
+		agregado las siguientes tags:
+
+
+			_a la mesh, que hace de colisionador se ha agregado el tag, de opciones "geoConnector1"
+
+			_al sistema de partículas "particle1", se ha agregado el tag, de opciones "geoConnector1"
+
+
+		_el tag, de opciones "geoConnector1", en este caso sive para gestionar la interacción y fuerza
+
+		ejercida colisionadora sobre el sistema de partículas, a través de los siguientes atributos:
+
+
+
+
+			_Tessellation Factor: 
+
+				este es un factor de modulación el cuál permite agregar un grado aleatoriedad 
+
+				en las partículas, (apreciación sutíl)
+
+
+			_Resilence: 
+
+				al haber una mayor cantidad de resistencia en la superficie esto causará por ente
+
+				una mayor repelencia de las partículas sobre la supercie causando que las partículas
+
+				sean despedidas de las superficie con una mayor fuerza ó velocidad.
+
+
+				_Por ende si deseamos que las partículas se deslicen sobre la superficie, 
+
+				es recomendable colocar un valor bajo, cercanos a "0"
+
+
+				_por lo contrario, si deseamos que las partículas reboren en demasía, ó que éstas
+
+				sean despedidas de la sueprficie, entonces es recomendable colocar un calor alto "10"
+
+
+			_Friction: 
+
+				resistencia que ofrece la superficie al contacto con las partículas en el desplazamiento
+
+				sobre las superficies, el valos máximo es "1"
+
+				Valores mayores que "1", harán que las partículas se desplacen en sentido contrario
+
+				al sentido en el que se desplazan sobre las superficies
+
+			
+			_Offset: 
+
+				separación de las partículas y la superficie colisionadora
+
+
+
+
+	_también se activan en "particle1/particleShape1", las opciones de "Collision Attributes/Trace Depth:"

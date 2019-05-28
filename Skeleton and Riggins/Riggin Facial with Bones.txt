@@ -1,0 +1,26 @@
+
+
+_seleccionamos la mesh/head, y vamos al menú Modify/Make Live, así la geometría pasará a un estado pasivo más
+
+si permitirá contruir sobre esta en forma de snap
+
+
+_luego vamos al menú Animation/Skeleton/Create Joints, y procedemos a crear joints, en los puntos deseados 
+
+del rostro, pero sólo creando un solo hueso/bone, por control de rig, quedando así, sólo la cabeza del hueso
+
+más no la extensión del hueso la cuál en este caso es innecesaria
+
+
+_luego vamo al menú Modify/Make Live, y desactivamos la opción de Make Live
+
+
+_luego de haber terminado vamos al panel Window/Outliner, y 
+
+	_seleccionamos todos los bones, creados sobre el rostro
+
+	_y luego seleccionamos el mesh/head-rostro
+
+	_posteriomente vamos al menú Animation/Skin/Bind Skin/Smooth Bind, así al mover cualquiera del bones,
+
+	sobre el rostro, estos deformarán a la mesh/head-rostro

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<!--
+
+
+	V-Ray Workflow:
+	_______________
+
+
+	NOTA: _es aconsejable utilizar ambos modos; tanto el Primary bounces, como el Secundary bounces, así, sea que ambos utilicen por ejemplo el mismo algoritmo, ej: Brute Force en ambos
+
+	_el resultado general de la definición y resolución resultante del render de GI, es proporcional a los demás factores en relación a sus valores de Subdivs: (subdivisión), Threshold: (umbral), Amound: (cantidad), entre otros,
+	estos pueden ser: luces, sombras, AO, meshlights, otros
+
+	_es recomendable mantener un workflow de calidad en relación a los nuveles de subdivisión de los elementos que insiden en la escena, como por ej; que si en GI Brute force, estemos utilizando un valor de subdivs, de 16, 
+	en las luces, sombras y AO, entre otros también utilicemos el valor de subvis, para que así, se garantice el mismo valor de resolución de igual manera para el Threshold (umbral)
+
+
+
+	Irradiance map: (iluminación indirecta similar a "Final Ghater", de mental ray)
+	
+
+		_Min rate: este parámetro permite configurar la mínima cantidad de muestreo que realizará el renders en forma de pases
+
+		_Max rate: este parámetro permite configurar la máxima cantidad de muestreo que realizará el renders en forma de pases
+
+		_Subdivs: las subdivisiones controlan la interpolación y mezclado de los rayos de luz en la escena logrando una mayor definición y resolución de la escena
+
+		_Interp. samples: este parámetro aumento el grado de la interpolación ayudando a las subdivs, en el mejoramiento y definición de la imagen resultante
+
+		_Interp.frames: este parámetro controla la interpolación entre fotogramas, especialmente útil para animación, este parámetro esta intimamente ligado ha "Advance options/Interpolation type", y "Mode/Mode/presset"
+
+		_Detail enhancement: esta opción aumentar de forma exponencial la calidad del render ó imágen resultante
+
+			_Detail scale: podemos escoger entre una escala de detalle entre modo de screen ó world, osea tramado ó independiente (screen da mejores resultados considerablemente)
+
+			_Detail radius: se refiere a la cantidad de detalle incremental agregado
+
+			_Detail subdivs mult: se refiere al índice ó factor multiplicador que será aplicado
+
+
+		_Advanced options/Interpolation type: este control permite elegir el tipo de interpolación deseado
+
+			_Delone triangulation (good/exact); este es un modo deficiente deja bruma y una escena poca definida
+
+			_Wighted average (good/robust), muy buena calidad aunque diplica en relación el tiempo de render (efecta en detrimento la refracciones)
+
+			_Least squares fit (good/smoth), mejor resultado "Wighted average", y no afecta la refracción, mejor calidad (ESTE MÉTODO ES EL QUE OFRECE MEJORES RESULTADOS GENERALES Y NO AUMENTA EL TIEMPO DE RENDER)
+
+			_Least squares w/voronoi weights, buena calidad aunque también va en detrimento de las refracciones de la escena y diplica el tiempo de render
+
+
+		_Advanced options/Sample lookup:
+
+			_Density-based (best), da muy buenos resultados generales (este es el método más recomendado a nivel general)
+
+			_Overlapping (very good/fast), da mejores resultados en las sombras y en las refracciones
+
+			_Quad-balanced (good), va un poco en detrimento de las sombras y reflexiones
+
+			_Nearest (draf), da muy buenos resultados a nivel general
+
+
+		_Advanced options/Multipass, mantener activada esta opción ayuda a una mejor representación de las reflexiones y refracciones en la escena
+
+		_Advanced options/Ramdomize samples: esta opción activada ayuda a una mejor representación de las reflexiones y refracciones en la escena
+
+		_Advanced options/Cal. interp samples: aumenta el valor de muestreo del calculo de la interpolación aumenta la calidad general de la escena aunque dispara exponencialmente el tiempo de render (manejar este parámetro con precaución)
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

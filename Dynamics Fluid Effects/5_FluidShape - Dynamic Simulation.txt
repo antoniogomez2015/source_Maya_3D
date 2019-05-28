@@ -1,0 +1,197 @@
+
+
+DETALLES:
+
+
+
+dentro las propiedades de los fluid effects, tenemos las opciones de Dynamics Simulation, las 
+
+cuales nos permiten configurar las propiedades físicas que tendrá el contenedor así como su
+
+comportamiento ante calidad por que gran parte de la calidad de configura en esta sección
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	
+Dynamic Simulation:
+___________________
+
+
+	_primero seleccionamos el contenedor respectivo
+
+
+	_luego con este seleccionado vamos ha "fluidShape1/Dynamic Simulation/", donde tendremos
+
+	las siguientes opciones
+
+
+		_Gravity:
+
+			podemos indicar la fuerza ó influencia de la gravedad que tendrá el fluido,
+
+			por lo general los líquidos funcionan con la gravedad hacia abajo más los 
+
+			efectos ó con candela, otros y la mayoría de los fluidos funcionan con la
+
+			gravedad hacia arriba
+
+
+		_Viscocity:
+
+			podemos indicar la fuerza de la velocidad que tendrá el fluido en su libre
+
+			movimiento ó resistencia en el ambiente
+
+
+		_Friction:
+
+			podemos idicar la fuerza de resistencia de la fricción que tendrá el fluido
+
+			con el mismo fluido y con los demás elementos de colisión en el contenedor
+
+
+		_Damp:
+
+			podemos indicar la fuerza de humedad que tendrá el fluido, donde con un 
+
+			valor más alto cercano a uno "1", el cluido irá más hacia arriba y, con
+
+			un valor más bajo cercanos a cero "0", el fluido irá hacia arriba
+
+
+
+---------------------------------------------------------------------------------------------------
+
+NOTA: las siguientes opciones son mejoras en la capacidad de cálculo y representación, no tanto en
+
+la visualización en si
+
+---------------------------------------------------------------------------------------------------
+
+
+
+		_Solver:
+
+			podemos ajustar el criterio que usará el solucionador, estos son;
+
+				_None:
+
+					podemos desactivar las opciones de calculo para sistema
+
+					de colisión
+
+				_Navier-Stokes:
+
+					esta es la opción pode defecto que ofrece mejores resultados
+
+				_Spring Mesh:
+
+					esta opción crea una serie de muelles/springs, sobre todo
+
+					el contenedor pero modifica ha estos muelles todo la 
+
+					simulación generada
+
+
+		_High Ditail Solve:
+
+			podemos ajustar el alto detalle que tendrá el cálculo por cada elemento 
+
+			agregado al contenedor, las opciones son las siguientes:
+
+
+				_Off:
+
+					podemos
+
+
+				_All Grids Except Velocity
+
+					podemos indicar un alto detalle en todos los grids ó
+
+					"Method Contents" excepto "Velocity"
+
+	
+				_Velocity Only
+
+					podemos indicar un alto detalle del grid "Method Contents",
+
+					sólo en el "Velocity"
+
+
+				_All Grids
+
+					podemos indicar un alto detalle en todos los grids 
+
+					"Method Contents", (esta es la más recomendada), aunque
+
+					aumenta el proceso
+
+
+		_Substep:
+			
+			podemos aumenta ó incluir sub - pasos de muestreo intermedios para así,
+
+			aumentar la calidad aunque también aumentarán los cálculos
+
+
+		_Solver Quality:
+
+			podemos incrementar el valor de calidad de cálculo del solucionador
+
+
+		_Grid Interpolator:
+
+			podemos seleccionar el criterio de interpolación del cálculo del grid,
+
+			de como se interpolan lo puntos que conforman la simulación
+
+
+		_Start Frame;
+
+			podemos indicar un "Frame", de inicio para que a partir de allí, 
+
+			o de ese valor comience la reproducirse la simulación
+
+
+		_Simulation Rate Scale:
+
+			podemos indicar el tamaño del entorno donde se realizará la sumulación
+
+
+		_Forward Advection:
+
+			podemos activar ó desactivar ""Adversión hacia a delante", lo que indica
+
+			es como se propaga determinado elemento dentro del fluido
+
+		
+		_Conserve Mass:
+
+			podemos activar ó desactivar conservar la masa
+
+
+		_Use Collisions:
+
+			podemos activar ó desactivar utilizar colisiones
+
+
+		_Use Emission:
+
+			podemos activar ó desactivar las emisiones generales
+
+
+		_Use Fields:
+
+			podemos activar ó desactivar las fuerzas
+
+	
+		_Emit in Substeps:
+
+			podemos activar ó desactivar emitir desde sub pasos activados
+
+
+
+

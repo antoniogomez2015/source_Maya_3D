@@ -1,0 +1,192 @@
+
+
+Canal de Youtube:
+https://www.youtube.com/channel/UCe5wjrJTSsW6f7cKuVpmVOQ
+
+Tutorial:
+3D Autodesk Maya 009 Modelado curvas y superficies Nurbs 002:	https://www.youtube.com/watch?v=zSgI_4NmrX4
+
+D Autodesk Maya 013 Modelado curvas y superficies Nurbs 003.mp4: https://www.youtube.com/watch?v=84jQ1XZuXQw
+
+
+
+
+
+	Nota: Edición de superficies Nurbs
+
+
+	Menú/Surface/Edit NURBS
+
+
+		1_Duplicate NURBS Patches: (duplicar caras)
+
+			esta opción permite duplicar módulos de la geometría surface seleccionados, para esto, vamos al modo de sub elementos, haciendo "Mouse right click",
+
+			sobre esta y seleccionamos la opción de "Surface Path", luego aplicamos "Duplicate NURBS Patches", así, se duplicarán los patches, seleccionados como otra surface mesh
+
+
+		2_Proyect Curve on Surface: (proyectar curvas en superficie)
+
+			esta opción nos permite proyecta uns spline, sobre una surface, a través de un proyección por lo general axinométrica, para esto nos vamos a una vista axonométrica, ej; "Top"
+
+			y creamos un spline, luego colocamos la spline, sobre la surface, a continuación seleccionamos la spline, que hemos creado y luego a la suface, en la cuál deseamos hacer la proyección
+
+			luego aplicamos "Proyect Curve on Surface", así, se creará una nueva spline, la cuál estará señida de forma interactiva sobre la surface prevista, de esta forma si movemos
+
+			la spline original se moverá la spline, generada sobre la superficie manteniendo la forma de la surface de forma continua ó dinámica
+
+
+		3_Intersect Surface: (crear spline entre dos surfaces)
+
+			esta opción nos permie interceptar dos surface para crear en sus punto de intercepción una spline, con la forma permimetral de la intercepción, esta es otra forma de generar una spline, sobre un surface, utilizando otra surface,
+
+			si eliminamos ó borramos una de las surfaces ó las dos, nos quedará la spline resultante con la forma coincidentre emtre ambas surfaces, para crear esto, debemos seleccionar una surface, y luego seleccionar la otra surface,
+
+			luego debemos aplicar "Inserct Surface", para que así se genere la spline, resultante entre ellas
+
+
+		4_Trim Tool: (recortar dos surfaces)
+
+			esta opción nos permite recortar una surface a través de una spline proyectada sobre la surface, para esto creamos una spline, sobre surface, en una vista axonométrica y le aplicamos "Proyect Curve on Surface", para que así,
+
+			la spline, se siña a la forma de la surface, luego vamos al menú "Surface/Edit Nurbs/Trim Tool", con la herramienta "Trim Tool", seleccionada debemos hacer "Mouse Left + Click", una vez sobre la surface,
+
+			así, la surface, cambiará a una vista wareframe, especial, en la cuál, tendremos que volver hacer Mouse left + click, para seleccionar el área que deseamos conservar, luego tendremos de aplicar "Keyboard/Enter", para que así,
+
+			se elimine el área que "no", seleccionamos quedando visible sólo el área que seleccionamos. si movemos la spline original se moverá toda el área de recorte en relación al movimiento de la spline, original y la forma de la surface original
+
+
+		5_Untrim Surface: (des recortar dos surfaces)
+
+			esta opción nos permite recuperar surfaces a las cuales le hemos aplicado el procedo de "Trim", para esto seleccionamos una surface a la cuál, le hayamos aplicado "Trim", y luego vamos al 
+
+			"Menú/Surfaces/Edit Nurbs/Untrim Surfaces", a´si, la surface recuperará la forma original (revelada)
+
+
+		6_Booleans/ Union Tool/ Diference Tool/ Intersection Tool: (interceptar y unir superficies)
+
+			esta opción nos permite recortar ó fusionar dos surfaces, para generar una tercera surface, resultante, para eso, debemos tener creadas dos surfaces, luego vamos al "Menú/Edit nurbs/Booleans/",
+
+			con la herramienta "Booleans/", seleccionada debemos hacer "Mouse Left + Click", sobre le surface a la cuál deseamos hacer "intersección/unión/recorte", la otra surface, luego de haber hecho mouse left + click, sobre esta, debemos aplicar "Keyboard + Enter",
+
+			luego debemos seleccionar la otra surface, haciendo "Mouse Left + Click", sobre esta segunda surface, de esta manerá esta segunda surface, se Unirá/interceptará/recortará, con la surface inicial
+
+
+		7_Attach Surfaces: (crear geometrías resultantes)
+
+			esta opción también nos permite fusionar dos surfaces, en una tercera surface resultante, la cuál tomará la forma resultante entre las dos surfaces preliminares, para eso, debemos tener dos surfaces creadas, luego
+
+			debemos entrar en el modo de sub elementos de una surface, y seleccionar la opción de "Isaparm", y seleccionar una isoparm, que indique que a partir allí, es donde deseamos que se una esta surface con la otra, luego
+
+			debemos seleccionar la otra surface, y entrar a sus opciones de sub elementos y seleccionar "Isoparm", y seleccionar con "Shift", una isoparm, que indique que a partir de allí, es donde deseamos que se una con la otra surface,
+
+			luego aplicamos "Menú/Surface/Edit SurfaceAttach Surfaces", de esta manera se creará una tercera surface resultante con la forma residual de la dos surfaces uniciales ó preliminares, conservando las surfaces existentes previamente
+
+
+		8_Attach Without Moving: (fusionar geometrias)
+
+			esta opción al igual que la herramienta anterior nos permite fusionar dos surfaces, la diferencia es que en este caso no se creará una tercera surface resultante, si no, que se fusionarán las dos surfaces existentes a partir de las dos isoparm,
+
+			seleccionados haciendo una extrusión interpolada para unir las dos surfaces en una sola, para eso, repetimos los pasos de selección de isoparms, del paso anterior y aplicamos "Attach Without Moving"
+
+
+		9_Detach Surfaces: (dividir geometrias)
+
+			esta opción nos permite segmentar ó dividir una surface, en dos surfaces, para esto seleccionar una surface y entramos a sus opciones de sub elementos y seleccionamos una "Isoparm", indicando con esta donde deseamos hacer
+
+			la división de la surface, luego aplicamos "Detach Surfaces", así, se dividirá la surface en surfaces diferentes a partir isoparm indicada
+
+
+		10_Align Surface: (señir geometria)
+
+			esta opción nos permite hacer un snap, avanzado entre una surface y otra, de esta manera una surface se unirá a otra los mejor posible y de forma dinámica, así, si la primera surface se mueve, la otra se moverá también, ajustandose
+
+			y deformándose para mantenerse unida a la otra de forma cambiante ó dinámica, para esto, seleccionamos una isoparm en cada surface, como en los pasos anteriores y aplicamos "Align Surfaces", así, se unirán ambas surfaces de forma dinámica
+
+
+		11_Open/Close Surfaces: (abrir y cerrar geometrias)
+
+			esta opción nos permite abrir ó cerrar surfaces abiertas ó cerradas previamente, para eso seleccionamos la surface, deseada y aplicamos "open/Close Surface", así, sebrirá ó cerrará la surface
+
+
+		12_Move Seam: (signar geometria)
+
+			esta opción nos permite mover el signado por defecto que trae un surface, el cuál indica por donde se abrirá una surface, para eso seleccionamos la surface deseada y entramos a sus opciones de sub elementos y seleccionamos la opción de "Isoparm",
+
+			luego seleccionamos una área de isoparm donde deseamos que se abra la surface, (al plicar el "open/Close Surface", posteriormente), luego de haber seleccionado ó creado la isoparm, deseada aplicaremos "Mode Seam", así, la surface,  tendrá un nuevo signado
+
+
+		13_Insert Isoparms: (insertar aristas)
+
+			esta opción nos permite aumentar la definición de la geometría al permitirnos poder agregar más isoparm, de las que ya posee el objeto, para esto seleccionamos la surface deseada y entramos a sus opciones de sub elementos y seleccionamos "isoparm", 
+
+			luego debemos crear una isoparm un área deseada y luego debemos aplicar "Inser Isoparms", para que así, se agrege una nueva isoparm, en el área indicada
+
+
+		14_Extended Surfaces: (extender geometria)
+
+			esta opción nos permite extender la longitud de una surface abirta, para esto seleccionamos la surface deseada y aplicamos "Extended Surface/Options", en sus opciones podemos configurar si deseamos que extienda la surface en su inicio/fin/both, otros
+
+
+		15_Offset Surfaces: (clonación paralela de geometria)
+
+			esta opción nos permite hacer un duplicado de una surface, pero escalado, esto no es útil para crear surfaces compuestas con volúmen ó espesor, para esto, seleccionamos la surface deseada y aplicamos "offset Surfaces", así, se creará una surface paralela a la original pero escalada
+
+
+		16_Round Tool: (redondeado de biseles)
+
+			esta opción nos permite redondear los bordes ó biseles de una surface, para esto seleccionamos le surface deseada y aplicamos "Round Tool", también es posible selecciona le herramienta y lugo seleccionar una arista haciendo draw, así, nos aparecerán dos handles con los cuales podremos 
+
+			indicar el grado del biselado ó suavizado, luego de estar satisfecho aplicamos "Keyboard/Enter", para aplicar los cambios
+
+
+		17_Surface Fillet/Circular Fillet/ Freeform Fillet/ Fillet Blend Tool: (extrusión interactiva de splines)
+
+			esta opción nos permite hacer fundido ó biselado entre dos surface, genrando una tercera surface, la hará de soldadura entre las dos surfaces iniciales, para esto, debemos tener creadas dos surfaces 
+
+				17.1_Surface/Circular Fillet:
+
+				debemos seleccionar la surface deseada, luego debemos entrar en las opciones de sub elementos y seleccionar la opción de "isoparm", y leugo debemos seleccionar ó crear la isoparm, deseada, 
+
+				luego debemos seleccionar la isoparm, deseada en la otra surface para luego aplicar "Surface Fillet/Circular Fillet", así, se generará una nueva surface que integrará visualmente la dos surfaces ya existentes, 
+
+				para ver el resultado debemos seleccionar la primera surface e ir a sus opciones de "rbfSrf1", el lightbox, editor y jugar con los valores de "Primary Raius", y "Secundary Radius", para que así, la geometría resultante sea visible
+
+
+				17.2_Surface/Freeform Fillet:
+
+				esta opción nos permite extruir dos splines, las cuales han sido proyectadas en dos diferentes surfaces, una en cada surface, para eso debemos seleccionar la surface deseada, luego debemos entrar en las opciones de sub elementos y seleccionar la opción de "Surface Path", y leugo debemos seleccionar la spline, proyecta sobre la surface,
+
+				luego debemos seleccionar la spline, "Surface Path", deseada en la otra surface, para luego aplicar "Surface Fillet/Freeform Fillet", así, se generará una tercera surface, proyectada ó extrudida a partir de ambas splines, proyectadas en ambas surfaces
+
+
+				17.3_ Surface/Fillet BLend Tool:
+
+				esta opción nos permite fusionar partes de una misma surface, para esto seleccioanamos la herramienta "Fillet Blend Tool", y luego con esta hacemos Mouse Left + Click, sobre dos ó más aristas en secciones abiertas de la spline, para así, extruir la geometría a partir de estas selecciones
+
+
+
+		18_Stitch Surface Point/ Stitch Edge Tool/ Global Stitch: (coser vertex/edges)
+
+				estas opciones nos permiten unir ó coser partes de una geometría de diferentes surface, a partir de la unión de vertex, ó edges ó general, podemos seleccionar los sub elementos deseados entre ambas surfaces, ó activar la herramienta deseada e interactuar con los sub elementos de las surfaces en el viewport
+
+				18.1_Stitch Surface Point:
+
+				esta opción nos permite unir dos surfaces a través de dos vertex, debemos seleccionados entre ambas surfaces, para eso selecciona la primera surface y vamos a sus opciones de sub elementos y seleccionamos "VSurface Point", y seleccionamos una vertex, por ej; el de un extremo de una plano,
+
+				luego hacemos lo mismos más "Shift", en la otra surface y aplicamos "Stitch Surface Points", así ambos puntos quedarán unidos dinamicamente
+
+				18.2_Stich Edges Tool:
+		
+				esta opción nos permite fusionar los edges ó aristas de dos surfaces, para esto debemos seleccionar le herramienta y luego interactuar con los edges, de ambas surfaces, seleccionando el una  surface, y luego el de la otra deseado, así,
+
+				quedarán ambas surfaces, unidas interactivamente a través, de los edges seleccionados, esta herramienta también tiene un handle, que hacer de cierre el cuál puede ir abriendo ó cerrando de forma interactiva el área de longitud de contacto entre ambas edges/surfaces
+
+				18.3_Global Stitch:
+
+				
+
+
+
+			
+

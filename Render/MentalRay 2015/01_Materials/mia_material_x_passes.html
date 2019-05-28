@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Mia Material X Passes:
+    ______________________
+
+    _el nodo "Mia Material X passes", es idéntico al nodo "Materials/mia_material_x"
+
+    _con las únicas diferencias de que el nodo "mia material x passes"
+
+    _contempla la salida de múltiples pases de render como salidas independientes a través, de gestos de pases de render nativo de maya
+
+    _de ésta manera, el nodo de "Mia Material X Passes", contempla y soporta los siguientes pases:
+
+        _Beauty
+        _Diffuse
+        _Direct Irradiance (iluminaciona directa)
+        _Indirect (final gathering y global illumination)
+        _Reflection
+        _Refraction
+        _Specular
+        _Translucence (efectos translúcidos)
+
+
+
+    Passes:
+    _______
+    
+    _de ésta manera, primeramente tendremos que abrir el panel de opciones de render de maya
+
+    _donde primeramente debemos de ir ha "Windows/Rendering Editors/", y una vez allí abrir el panel de "Render Settings"
+
+    _para que así, una vez allí, debemos ubicar el tag, ó pestaña de "Passes"
+
+    _para posteriormente ubicar en lado derecho el botón de "Create New Render Pass"
+
+    _para que así, nos aparezca una panel contextual ha modo de lista de los posibles pases posibles ha realizar sobre la escena y los mateirales existenten en ella
+
+    _de ésta manera, podremos seleccionar cualquiera de los pases soportados por el material "Mia Material X Passes"
+
+    _para que así, los pases seleccionados nos aparezcan listados para que posteriormente podamos seguidamente 
+    
+    _darle al botón de "Associate Selected Passes With Current Render Layer"
+
+    _para que éstos respectivos pases estén listos y disponibles para su renderiación
+
+
+    Settings:
+    _________
+
+    _para posteriormente estando aún en el módulo de "Render Settings"
+
+    _ir al tag, ó pestaña de "Common", y una vez allí, ubicar la sección de "File Output"
+
+    _para que así, podamos dar un nombre al los render ha realizar
+
+    _de ésta manera, lo más recomendable es indicar un prefijo ej; "Render_"
+
+    _para posteriormente hacer "Mouse Right Click", para que así, nos aparezca un menú contextual 
+    
+    _en el cuál, podremos seleccionar "Insert Pass Name", de ésta manera, el nombre de cada pase realizado será agregado seguidamente del prefijo que hemos indicado 
+    
+    _de ésta manera, obtendremos una render pass con nombres totalmente descriptivos
+
+    _así, como también, en la opción seguidamente de "Image Format", podremos cambiar el formato de salida de archivo para los renders, ha realizar
+
+    _donde uno de los formatos más recomendados para los render pass, es el formato "Windows Bitmap (bmp)"
+
+
+    Render:
+    _______
+
+    _de ésta manera, ahora tendremos entrar al stack de rendering 
+    
+    _para lo cuál, debemos de hacer "H + Mouse Left Click", en cualquier área del viewport, de la interface, de maya
+
+    _para que así, nos aparezca un menú contextual en el cuál, podremos seleccionar "Rendering" 
+    
+    _para que así, maya pase al stack de "Rendering", en la parte superior de la interface
+
+    _de ésta manera, ahora podremos ir ha "Render/", y una vez allí, darle al botón de "Batch Render" 
+    
+    _para que así, los pases de render configurados previamente comiencen ha realizarse
+
+
+    Uso:
+    ____
+
+    _de ésta manera, podremos utilizar éste nodo para nuestra escena en cualquier situación 
+    
+    _en las que necesitemos hacer multipases controlados según las especificaciones y soporte del nodo ó material
+
+
+      
+
+
+    
+        
+        
+
+
+
+
+    Nodes Complementarios:
+    ______________________
+
+        _para ver los nodes, alternativos relacionados con el nodo en éste caso"Mia Material X", debemos ir ha "Windows/Rendering Editors", y una vez allí, debemos de abrir el panel "Hypershade"
+
+        _y una vez allí, debemos seleccionar el manterial "Mia Material X", y posteriormente darle al botón de "Input and Output Conections"
+
+        _para que así, podamos ver los nodos relacionados al material respectivo, de ésta manera, podremos ver en éste caso el nodo "mia_mateiralxSG"
+
+        _a través, del cuál, podremos configurar los atributos relacionados de "Surface Material", "Volumen Material", y "Displacement Mat", "Contours", entre otros shaders, posibles disponibles
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

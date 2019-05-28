@@ -1,0 +1,12 @@
+
+
+
+	Proceso para crear y configurar una Phisical Camara
+
+		1_seleccionamos la cámara, para esto vamos en el viewport a "View/select camara"
+
+		2_con la cámara seleccionada vamos ha "Attributes/Vray/Phisical Camara"
+
+		3_ahora vamos a los atributos que se crearon en "Select Camara/Extra VRay Attributes", y activamos "Treat as VRay Physical camara"
+
+		

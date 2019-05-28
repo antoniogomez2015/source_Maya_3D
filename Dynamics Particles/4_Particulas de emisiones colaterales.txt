@@ -1,0 +1,129 @@
+
+
+DETALLES:
+
+podemos crear partículas a través de otros sistemas de partículas, para que a su vez, estas partículas creadas
+
+al colisionar con geometrías/meshes, creen en esos puntos de colisión otras partículas a través de otros sistema
+
+de partículas generado colateralmente en este proceso
+
+
+
+	_primero creamos un emisor de partículas ó brush/partículas, y lo colocamos en la ubicación deseada
+
+
+	_luego creamos las mehses, que harán de colosionadores y las colocamos en la ubicación deseada
+
+
+	_luego tendremos que integrar la meshes, que harán de colisionador al sistema de partículas, para esto:
+
+	
+		_primero seleccionamos el sistema de partículas, sea en el viewport, o en el outliner "particle1"
+
+		
+		_luego seleccionamos la meshes, que harán de colisionadores
+
+
+		_y con ambos elementos seleccionados vamos ha "Dynamics/Particles/Make Collide", así, al reproducir
+
+		las partículas éstas colisionarán sobre las superficies mesh/colisionadoras
+
+
+
+	_posteriormente vamos ha "Dynamics/Particle/Particle Collision Event Editor", para así, abrir el panel
+
+	de eventos de colisión de partículas, no es preciso tener elementos seleccionados para este paso.
+
+	A continuación presentamos las opciones disponibles en el panel "Particle Collision Event Editor"
+
+
+		Selection:
+		__________
+
+
+			_Objects: aquí podemos escoger ele sistema de partículas a utilizar
+
+
+			_Events: los eventos generados previa y posteriormente
+
+
+			_UpDate Object List: actualizar la lista eventos
+
+
+			_Select Object: al seleccionar el sistema de partículas en "Objects:" se cargará esta opción
+
+
+			_Seleted event: (evento seleccionado creado previamente)
+
+
+			_Set event name: podemos asígnarle un nombre al evento a crear
+
+
+			_New Event: botón para crear un nuevo eventos con las características indicadas
+
+
+			_All collisions: si deseamos asignar el evento a todas las colisiones que se realicen ó a un
+
+			número determinado, para indicar el número debemos desactivar la opción para que nos permita
+
+			indicar una cantidad determinada por nosotros
+
+
+
+		Event type:
+		___________
+
+
+			_Emit: de tipo emisión de partículas
+
+
+			_Split: de tipo de partícas separadas ó fraccionadas
+
+
+		al seleccionar uno de estos tipos de eventos "Event type/ Emit - Split", tenemos las siguientes opciones disponibles:
+
+			
+			_Random # particles: partículas aleatorias en proporción
+
+			
+			_Num particles: número de partículas colaterales deseadas
+
+
+			_Spread:  dispersión de las partículas colaterales 
+
+
+			_Target particle: nombre del sistema de partículas colateral
+
+
+			_Inherit veolocity: velocidad inherente a las partículas colaterales
+
+			
+			_Event actions/original particle dies: (indeterminado)
+
+
+			_Event Procedure: (indeterminado)
+
+
+		_Create Event: para crea el evento
+
+
+		_Delete Event: borrar un evento
+
+		
+		_Close: cerrar el panel de eventos
+
+
+
+
+Así, veremos que al reproducor el timeline se generarán las partículas de el sistema "particle1", y al éstas colisionar 
+
+sobre las meshes, colisionadoras probocarán la generación de nuevas partículas colaterales a partir de éstos puntos 
+
+de colisión a través del sistema "partcle2", el cuál fue generado al momento de crear el "Particle Collision EventEitor" 
+			
+
+
+
+
+

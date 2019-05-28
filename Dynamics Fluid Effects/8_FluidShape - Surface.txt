@@ -1,0 +1,99 @@
+
+
+DETALLES:
+
+
+tenemos la posibilidad de cambiar ó de elegir el modo en el cuál se representan la simulaciones 
+
+de esta manera podemos elegir entre diferentes representaciones an el render como "Volume Render",
+
+esta tiene una características más volumétricas y detalladas aunque es más pesada y compleja
+
+y "Surface Render", esta es una representacion más hacia el "Metaball", aunque también posee una
+
+opción mixta, entre volumétrica y metabolica
+
+
+las opciones de "Surface Rneder", son especialmente útiles para procesos de ej, cremas, helados,
+
+gelatinas, gomas otros
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	
+Surface:
+________
+
+
+	Volume Render: (volumétrico)
+	______________
+
+
+		_Surface Threshold:
+
+			permite ajustar el umbar que conforma la superficie volumétrica
+
+			NOTA: no activa las opciones siguientes de Enviroment
+
+
+
+	Surface Rneder: (metabólico)
+	_______________
+
+
+		_Hard Surface:
+
+			permite seleccionar la opción metabólica directa ó dura
+
+		
+		_Soft Surface:
+
+			permite seleccionar la opción metabólica mixta con la volumétrica
+
+
+		_Surface Threshold:
+
+			permite indicar un valor para el umbral que representará la superficie
+
+			metabólica
+
+
+		_Surface Tolerance:
+
+			permite indicar un valor ó rango de interpolación de la calidad del umbral
+
+			de la supercie metabólica
+
+
+		_Specular Color:
+
+			permite indicar un color para el efecto especular
+
+
+		_Cosine Power:
+
+			permite indicar un valor no (indefinido)
+
+
+		NOTA: las opciones de "Surface Rneder" activan las opciones siguientes de Enviroment
+
+
+			
+-----------------------------------------------------------------------------------------------
+
+
+NOTA: 
+
+	los detalles y configuraciones realizadas en la sercción "fluidShape1/Surface", tienen 
+
+	relación directa con la sección "Output Mesh"
+
+
+
+
+
+
+		
+

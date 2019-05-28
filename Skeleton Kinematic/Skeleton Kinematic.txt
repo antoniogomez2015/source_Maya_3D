@@ -1,0 +1,90 @@
+
+
+_Animation/Skeleton/Joint Tool
+
+
+	_bone root: seleccionamos la base del bone/joint, y vamos ha Animation/Skeleton/Reroot Skeleton
+
+
+	_mirrow joint: para reflejar de forma duplicada en una codenada determinada (codeandas en las opciones 
+
+	de la herramienta), seleccionamos una cadena de huesos y vamos ha Animation/Skeleton/Mirrow Joint
+
+
+	_mover bones: para mover huesos independientemente de su cadena ó gerarquía "Insert + drag"
+
+
+_IK Handle Tool: (kinematica inversa), ver opciones
+
+
+		DATO: antes de aplicar un IK control, podemos hacer mouse right click/Set Preference ANgle,
+
+		ó Animation/Skeleton/Set Preference ANgle, en el extremo del último bone, ha aplica el "IK", 
+
+		en una vista axonométrica, para que así, la flexión realizada por IK, handle, la realiza 
+
+		tomando el ángulo que nosotros nos interesa
+
+		
+
+
+		_iKSCsolver: éste nos permite realizar tanto la rotación como la translación a través del mismo 
+
+		controlador de la cinemática inversa
+
+			_con la herramienta seleccionada aplicamos como punto de control la cabeza de hueso 
+
+			más cercana al root, de la cadena/chain, y como segundo punto un handle ó bone más elejado del root
+
+			debe de dejarse un bone, de por media en la cadena para que éste haga la fección de la kinemática inversa
+
+
+		_iKRPsolver: éste nos permite realizar el pole vector no permite rotación del controlador
+
+		_IK estras: window/Setting-Preferences/Plug-in-Manager/, y activamos "iK2Bsolver.mll", y "iKSpringSolver.mll", 
+
+		luego para que estas opciones sean activadas debemos escribir en la barra "MEL", lo siguiente "ikSpringSolver"/Enter
+
+		así, aparecerán las opciones activas en las opciones de la herramienta "IK Handle Settings", 
+
+		tutortial: https://www.youtube.com/watch?v=_iFCNLF0B68
+
+
+		_ik Spline Handle Tool: este permite configurar columnas espinales así, como tentáculos, otros
+
+
+
+_límites:
+
+
+	_Window/General Editor/Channel Control: (bloquear, desbloquear, mostrar u ocultar canales y propiedades)
+
+
+	_Límites de joints: select joint/Attribute Editor/Limit Information/Translate-Rotate-Scale
+
+
+
+_Add Atributes:
+
+	_primero seleccionamos el elemento al cuál deseamos agregarle un atributo
+
+	_luego vamos al panel chanel box/edit/Add Atribute, así, aparecerá un panel en el cuál podremos indicar
+
+	el nombre del atributo, tipo, propiedades, controles y límites, otros
+
+	_para asignar valores a los atributos creados vamos ha Window/General Editor/Connection Editor; así,
+
+	en la sección "left", del panel cargamos el elemento al cuál deseamos tomar un atributo y, en la sección
+
+	"right", cargamos el elemento al cuál deseamos asignarle la propiedad específicamente en un atributo
+
+
+
+_FK Blend: esta propiedad aparace en el chanel box cuando aplicamos kinemática inversa y nos permite intercambiar 
+
+entre "IK/FK", (invert Kinematic y Direct Kinematc), y ejercer un peso de acción cuando animamos bones/huesos con 
+
+kinemática directa, este peso permite restaurar ó hacer volver los huesos a la posición del handle de la kinemática 
+
+inversa, donde "0", esta pasivo y "1", esta activo ejerciendo fuerza ó peso sobre los huesos
+

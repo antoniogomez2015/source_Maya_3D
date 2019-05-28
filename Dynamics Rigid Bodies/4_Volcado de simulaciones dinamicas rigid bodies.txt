@@ -1,0 +1,181 @@
+
+
+
+DETALLES:
+
+
+tenemos la posibilidad de hacer un volcado de la interacción de un mesh/motive, con rigid bodies, dentro de la escena
+
+y en su relación con los demás elementos mesh/motive, con rigid bodies, y así, como son las fuerzas/fields, y demás
+
+elementos dinámicos de la escana en un tiempo determinado del timeline
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	_primero creamos la escena, conpuesta de rigid bodies, con  meshes/motives, "actives" y "passives", como
+
+	también fuerzas/fields, aplicadas a los elementos "actives"
+
+
+	_luego procedemos a reproducir la simulación a través del timeline, para que se realiza la animación/simulación
+
+
+	_lueugo seleccionamos el mesh/motive, con rigid bodies, de la escena del cuál desemos realizar el volcado 
+
+	de animación, extraido de la simulación de este con los demás elementos y configuraciones implícitas
+
+
+	_luego con el elemento deseado seleccionamos vamos ha "Edit/Keys/Bake Simulation/Options", así, se abrirá el panel
+
+	de "Bake Simulation Options", en el cuál encontramos las siguientes opciones:
+
+
+
+		_Hierachy: Selected / Below:
+
+			si el elemento tiene gerarquías ó emparentamientos podemos volcar la animación sobre estas
+
+			"Bellow", ó solo sobre el elemento seleccionado "Selected"
+
+
+		_Channels: All Keyable / From Channel Box:
+
+			la animación puede ser volcada en todos los canales disponibles para animación 
+
+			en el channel box, ó los tengamos seleccionados ó animados en el channel box
+
+
+		_Driven Channels:
+
+			si desemos hacer un volcado de animación conducida "Set Driven Key"
+
+
+		_Control Points:
+
+			(indeterminada)
+
+		
+		_Shapes:
+
+			volvado de animación sobre las mesh/formas
+
+
+		_Time range: Time Slider / Start-End:
+
+			hacer el volvado de animación sobre toda la longitud del tiemeline, ó sobre 
+
+			una longitud especificada por nosotros
+
+
+		_Bake to: BaseAnimation / New Layer:
+
+			volcar la animación en la capa base ó estandar ó en una nueva capa
+
+
+		_Delete Baked Channels:
+
+			borrar ó limpiar los canales con volcados previos
+
+
+		_Sample by:
+
+			esta opción permite indicar el intervalo de keyframes, si colocamos "20", entonces
+
+			cada 20, fotogramas colocará un keyframe, por ende es recomentable colocarlo en "1"
+
+
+		_Smart Bake:
+
+			(indeterminada)
+
+
+		_Increase Fidelity:
+
+			(indeterminada)
+
+
+		_Fidelity Keys Tolerance:
+
+			(indeterminada)
+
+
+		_Keep unbacked Keys:
+
+			(indeterminada)
+
+
+		_Sparse curve bake:
+
+			(indeterminada)
+
+
+		_Disable implicit control:
+
+			(indeterminada)
+
+
+		_Unraoll Rotation:
+
+			(indeterminada)
+
+
+		_Bake:
+
+			hacer el volcado y cerrar la ventana
+
+
+		_Apply:
+
+			hacer el volcado
+
+
+		_Close:
+
+			cerrar la ventana sin realizar la operación
+
+
+		
+	_al realizar un volcado de animación a partir de una simulación de rigid Bodies, es recomendable
+
+	eliminar de el mesh/motive, el sistema de rigid Bodies, y solver, agregados a este para que así,
+
+	estos sistemas no interfieran con la animación ya volcada en keyframes sobre el elemento
+
+
+		_seleccionamos el mesh/motive, con rigid Bodies, y vamos ha "Edit/Delet by Type/Rigid Body"
+
+
+
+	de esta menera se habrán roto las relaciones dinámicas con el elemento y así, podremos hacer a través,
+
+	del timiline y keyframes: 
+
+		
+		_inversión de fotogramas para una reproducción inversa 
+
+
+		_así, como timewarp, 
+
+
+		_Time Repapping, otros
+
+		
+		así, como también hacer copiado de propiedades de animación entre elementos 
+
+		de baja resolución a elementos de alta resolucion, ya que de esta manera se evita el
+
+		congestionamineto y colapso del sistema al trabajar dinamicos con altas resoluciones
+
+
+		_otra opción de hacer "constraint", entre elementos con rigid bodies, de baja resolución
+
+		a elementos con alta resolución, ya que de esta manera se evita el
+
+		congestionamineto y colapso del sistema al trabajar dinamicos con altas resoluciones
+
+		(esta opción no requiere necesariamente el proceso de volcado ha keyframes)
+

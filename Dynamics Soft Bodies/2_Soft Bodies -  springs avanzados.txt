@@ -1,0 +1,177 @@
+
+
+
+DETALLES:
+
+
+podemos agregar un elemento de tipo proxi/colisionador, el cuál tendrá la forma relativa de la mesh/motive,
+
+con el objetivo de realizar una reserva del mismo más, un sistema de springs, adicional
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+	_primero procedemos a crear la mesh/motive, que hará de soft body, y debe ser colocarla según la lógica 
+
+	de la escena (borramos su historia)
+
+
+		_la mesh/motive, debe de tener una alta resolución relativa
+
+		
+		_luego la seleccionamos y vamos ha "Dynamics/Particles/Make Collide", para hacerla un elemento
+
+		colisionable dinámicamente
+
+		
+
+	_luego creamos la mesh/proxi, la cuál hará de colisionador interno limitando la mesh, soft body,
+
+	esta mesh, proxi, deberá quedar por dentro de la mesh, soft body
+
+
+		_luego la seleccionamos y vamos ha "Dynamics/Particles/Make Collide", para hacerla un elemento
+
+		colisionable dinámicamente
+
+
+	_ahora seleccionamos la mesh, que hará de soft body, y vamos ha "Dynamics/Soft-Rigid Bodies
+
+	/Create Soft Body/Options", para entrar en sus opciones:
+
+
+		_Creation options: escogemos "Make soft"
+
+
+		_lo demás lo dejamos igual ó indiferente
+
+
+		_luego hacemos "Apply", ó "Create", para crear el sistema de soft body
+
+
+
+	_luego seleccionamos en el outliner, el sistema de partículas que conforma el sistema soft body,
+
+	y vamos ha "Dynamics/Fields/ej: Turbulence", ó cualquier fuerza deseada
+
+
+	_ahora seleccionamos la mesh/motive, con el soft body, y con esta seleccionada vamos ha "Dynamics
+
+	/Soft -Rigid Bodies/Create Springs/Options:"
+
+
+		_Sping name:
+
+
+		_Spring Methods:
+
+
+			_Creation method: escogemos "Wireframe"
+
+
+			_Wire walk lengh: aplicamos "2"
+
+
+			_las demás opciones las dejamos por defecto
+
+
+
+	_ahora seleccionamos la mesh/proxi, que hará de colisionador limitador al sistema soft body,
+
+	y con este seleccionado vamos ha "Dynamics/Particles/Make Collide"
+
+
+	_luego vamos ha "Window/Relationship Editor/Dynamic Relationship", así, se abrirá el panel 
+
+	"Dynamic Relationship editor"
+
+
+		_y en el outliner, del panel "Dynamic Relationship editor", seleccionaremos el sistema
+
+		de partículas que conforma el soft body
+
+
+		_luego vamos a la pestaña de "Collision", y seleccionamos el elemento mesh/proxi, 
+
+		y la propia mesh, que conforma el soft body
+
+
+	_ahora vamos ha agregar un sistema de "Springs", alterno al existente ó adicional que el creado en
+
+	el proceso inicial, para esto:
+
+
+		_primero seleccionamos la mesh/motive, con el soft body, luego seleccionamos el "Spring", 
+
+		existente en este ejemplo: "basea", y con ambos seleccionados vamos ha "Dynamics
+
+		/Soft-Rigid Bodies/Create Springs/Options:"
+
+
+			_Spring name: ej: "Alter"
+
+
+			_Spring Methods:
+
+			
+				_Add to existent spring: "activamos esta opción"
+
+
+				_Creation method: elegimos "Wireframe"
+
+
+				_Wire Wald Lengh: elegimos "2"
+
+
+				_las demás opciones las dejamos por defecto
+
+
+			_luego hacemos "Apply", ó "Create", para crear el nuevo sistema de springs
+
+
+
+
+
+
+
+
+
+		_ahora para ajustar la distancia entre las diferentes partículas debemos agregar un controlador
+
+			de tipo "Spring", ó muelles ó limitadores por geometría
+
+			
+
+					_Spring Attributes:
+
+
+						_Use per-spring stffness: (indeterminado)
+
+
+						_Use per-spring damping: (indeterminado)
+
+
+						_Use per-spring restlenghth: (indeterminado)
+
+	
+						_Stiffness: 
+
+							en este caso un valor entre "1", nos permitirá mantener
+
+							una buena interpolación de la mesh, soft body, al tratar
+
+							de mantenerse sobre la mesh/proxi (variar al valor)
+
+
+						_Damping:
+
+							con un valor más alto "2", nos permitirá en este caso mantener ó conservar 
+
+							la mesh, del soft body, sobre el elemento mesh/prixi
+
+
+						

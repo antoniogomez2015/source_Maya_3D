@@ -1,0 +1,99 @@
+
+
+DETALLES:
+
+
+cuando se crea un sistema de partículas se generan dos elementos en el outliner, estos son:
+
+
+	_"emitter": nodo/emisor,  Tags: emiter/particleShape
+
+
+	_"particle": nodo/partículas,  Tags: particle/particleShape/emitter/lamber/time/initialParticleSE
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Node/Emitter:
+_____________
+
+
+este nodo hace referencia a la posición física del elemento emisor y a la forma como este emite las partículas,
+
+así, como también, los valores intríncicos de las partículas como tag, agregada "particleShapes"
+
+
+
+
+este consta de las siguiente tags:
+
+
+	_"Tag/Emitter", expresadas en el "2_Create Emitter - amisores de partículas.txt"
+
+
+	_"Tag/particleShape1", la cuál se expresará en "8_particleShapes.txt"
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+
+
+Emitter:
+________
+
+
+este nodo hace referencia a las partículas en sí, y a todos los elementos y sistemas que son agregados a éstas, los
+
+básecos ó por defecto son los siugiente:
+
+
+
+	_particle:
+
+		este brinda valores de la ubicación en el espacio del emisor de partículas así, como
+
+		povote, display/visualización y opciones de render
+
+
+	_particleShape:
+
+		este brinda las opciones de control general y destalla de las partículas ó núcleo
+
+
+	_emitter:
+
+		este ofrece la misma tag, que en "Node/Emitter:", 
+
+		"Tag/Emitter", expresadas en el "2_Create Emitter - amisores de partículas.txt"
+
+
+	_lamber:
+
+		esta expresa el material asignado por defecto al sistema de partículas
+
+
+	_time:
+
+		esta expresa atributos de tiempo, node behavios y atributos extras
+
+
+	_initialParticleSE:
+
+		esta expresa atributos de "shadingENgine", ó materiales volumétricos, así, como
+
+		shading groups atributos como opciones de render
+
+
+
+tambien pueden ser agregados más tags, de sistemas agregados posteriormente al sistema de partículas,
+
+como sistemas de "Collision", ó "Goals", ó "Fields/fuerzas", otros
+

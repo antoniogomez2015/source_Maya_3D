@@ -1,0 +1,103 @@
+
+
+DETALLES:
+
+
+las opciones de en los sistemas de "Fluid Effects", de amitir a través, de una spline/curve, para que
+
+esta sirva de path/trayectoria, del fluido, para así, poder controlar el fluido de forma más controlada
+
+en requerimiento concretos, otros
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Curve Flow:
+___________
+
+	
+
+	_primero debemos crear un contenedor con un emisor
+
+	
+	_luego, en una de las vistas axonométricas procedemos a crear una spline/curve, la cuál, servirá
+
+	de path/trayectoria para el fluido, esta spline, la renombramos
+
+
+	_luego procedemos a vincular ambos elementos, tanto el contenedor como la spline/path, para esto,
+
+	seleccionamos el contenedor deseado y luego, seleccionamos la spline, deseada y con ambos elementos
+
+	seleccionados vamos ha "Dynamics/Fluid Effects/Add-Edit COntents/With Curve/Options", y, en las 
+
+	opciones podremos seleccionar los atributos que desemos que el sistema de "curve flow", contenga,
+
+	estos atributos son:
+
+
+		_Density - Velocity - Temperature - Fuel - Color - Falloff, 
+
+
+		_así, como también, el tipo de operación como agregar/Add, ó reemplazar/Replace, 
+
+		es recomendable colocar "Replace"
+
+
+		_también, debemos escoger la resolución ó fidelidad del fluido sobre la spline/path,
+
+		
+		-también, debemos escoger al radio ó amplitud de fluido sobre la spline/path
+
+	
+		_Curvature - Based Velocity:
+
+			_curvatura delfluido a través, de la spline/path basada en la velocidad
+
+
+		_Set Initial State:
+
+			_hacer de esta acción curve flow, un initial state (es recomendable activar este valor)
+
+
+	NOTA:	es recomendable colocar sólo un valor ó atributo, por ej; "Velocity", para controlar
+
+		así, los demás atributos a través, del contenedor y sólo la dirección y velocidad a traves,
+
+		del sistema curve flow
+
+
+----------------------------------------------------------------------------------------------------
+
+	NOTA:	estos atributos asignados al sistema "curve flow", son independientes con los atributos
+
+		que ya posee el sistema del contenedor/container, así, que muchos de estos valores chocarán
+
+		entre sí, así, que habra en muchos casos que desactivar algunos valores símiles en el 
+
+		contenedor para que sólo sean aplicados los atributos del sistema curve flow
+
+
+	_así, en este caso que sólo estamos utilizando en este ejemplo el atribute "Velocity", para el
+
+	sistema del curve flow, entonces debemos desactivar el atributo en "fluidShape1/Contents method/"
+
+	la rejilla de "Velocity", colocándola en "Off()Zero"
+
+
+	_de esta manera al reproducir la simulación el fluido seguirá la trayectoria de la spline relacionada
+
+	y seteada con un "initial state"
+
+
+	_también, tenemos la posibilidad de agregar más de una curva relacionada dentro de un contenedor, esto
+
+	tiene sentido al incorporar varias curvas con diferetes atributos cada una, ej: una curva para la densidad,
+
+	otra para la velocidad, otros..
+
+
+
+
+	

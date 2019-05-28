@@ -1,0 +1,85 @@
+
+
+DETALLES:
+
+
+también disponemos de la opción de la creación de sistemas de partículas precostruidos para las soluciones más
+
+comúnes como lo son, fuego, humo, rayos, otros, las cuales podemos modificar y hasta personalizar a fondo
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Lighting:
+_________
+
+
+	_primero creamos dos mesh/motive, las cuales interactuarán con el sistema de electricidad, estas meshes,
+
+	las colocamos a un distancia en relación a la lógica de la escena
+
+
+	_luego, seleccionamos consecutivamente ambas meshes, y vamos ha "Dynamics/Effects/Crete Lighting/Options", 
+
+	para así, entrar en las opciones de creación del sistema de fuego:
+
+
+		_Lighting name: podemos asignarle un nombre el sistemas de lightig
+
+
+
+
+		_Curve segments: 
+
+			resolución de la curva (por defecto funciona bien)
+
+
+		_Thickness:
+
+			grosor de los rayos eléctricos
+
+
+		_Max spread: 
+
+			amplitud ó dispersión de los rayos
+
+
+		_Ligunting star:
+
+			área de reserva y creación del "Locator", manejador, en relación de la mesh/motive, más
+
+			cercana hasta el centro del sistema, en este punto comenzarán lo rayos
+
+
+
+		_Ligunting end:
+
+			área de reserva y creación del "Locator", manejador, en relación de la mesh/motive, más
+
+			cercana hasta el centro del sistema, en este punto terminarán lo rayos
+
+
+
+		_Lighting glow intensity:
+
+			intensidad del efecto glow, sobre el sistema
+
+
+
+		_podemos modificar los valores de las luces agregadas para modificar su intensidad, color, otros
+
+			_seleccionándola en el outliener, ej: "pointLight1/pointLightShape1/Extra Attributes/",
+
+			así, entrando a los "Atributos Extras", del elemento podemos encontrar todos los atributos
+
+			para hacer modificaciones en la light
+
+
+		_más si seleccionamos en el outliner, el sistema completo generado ej: "Lighting1", podemos ir
+
+		ha "Lighting1/Extra Attributes/", y acceder a todos sus controles, tanto los disponibles en el
+
+		proceso de creación, como otros muchas más agregados
+

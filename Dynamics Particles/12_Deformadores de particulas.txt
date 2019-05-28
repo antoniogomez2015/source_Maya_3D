@@ -1,0 +1,33 @@
+
+
+DETALLES:
+
+al igual en el proceso de animación y modelado, podemos utlizar los mismos deformadores para modificar el volúmen general
+
+ó área de las partículas/particles, emitidas como un todo, como si fuesen un elemento de geometría ó similar
+
+
+
+	_primero creamos un sistema de partículas, a partir de un emisor ó particles/brush
+
+
+	_luego con el sistema de partículas/particle1, seleccionado vamos ha "Animation/Crete Deformes/", así,
+
+	podremos utilizar los deformadores como los siguientes:
+
+
+		_Lattice:
+
+		NonLinear:
+
+			_Bend:
+
+			_Flare:
+
+			_Sine:
+
+			_Squash
+
+			_Twist:
+
+			_Wave:

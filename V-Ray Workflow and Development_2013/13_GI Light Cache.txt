@@ -1,0 +1,22 @@
+
+
+	1_los criterios de Light Cache, son los siguientes: (Light cache, es recomendado utilizarlo como secundary bounce)
+
+		1_Number of passes: esto quiere decir la cantidad de pases de registro que realizará el render, entre mayor cantidad de pases mayor calidad del render
+
+		2_Subdivs: este tiene directa relación el tamaño ó formato de estandar de salida, dicha dimensión en ancho y alto expresa la siguiente relación para obtener el valor a aplicar en "Subdivis"
+		
+		Ancho X Alto = resultado, y a resultado le sacamos la raíz cuadrada, ej; 1280x720 = 921600, y su raíz cuadrada es: 960, entonces este será el valor que colocaremos en "Subdivs"
+
+		3_Sample size: entre menor sea este valor cercanos a cero, mayor será la definición y resolución de la escena, ya que este valor disminuye el tamaño de la muestra aumentando así, la calidad de la escena
+		es recomendable utilizar para configuración y muestreo valor entre (0.100, y 0.050), y para producción valores entre (0.020, y 0.01)
+
+		4_Store direct light: desactivar esta opción ayuda a mejor representación de las sombras en la escena
+
+		5_Reconstruction parameters:
+
+			5.1_Nearest: es recomendable para Secundary Bounce, ó configuración y desarrollo
+
+			5.2_Fixed: es recomendable para Primary Bounce, ó producción de alta calidad
+
+		

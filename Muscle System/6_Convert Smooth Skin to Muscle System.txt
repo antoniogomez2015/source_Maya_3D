@@ -1,0 +1,48 @@
+
+
+DETALLES:
+
+tenemos la posibilidad de convertir un character al cuál ya le hayamos creado un sistema esquelético y un proceso
+
+de skinning, en un character con un sistema de músculos, a continuación nostramos el proceso:
+
+
+
+
+	_primero seleccionamos la mesh/motive, que ya poseé un skeleton, y el proceso de "Animation/Skin/Bind Skin/Smooth Bind"
+
+	_luego con la mesh/motive, seleccionada vamos ha "Animation/Muscle/Skin Setup/Convert Smooth Skin to Muscle System", así,
+
+	aparecerá una ventana con las siguientes opciones:
+
+
+		_Delete: borrar el skin cluster, que tene del proceso de "Animation/Skin/Bind Skin/Smooth Bind"
+
+		_Disable: desactivar el skin cluster, que tene del proceso de "Animation/Skin/Bind Skin/Smooth Bind"
+
+		_Cancel: cancelar la operación en proceso
+
+
+	_luego nos aparecerá un ventana "Joint to Capsule Conversion", preguntándonos la cordenada de proyección de los huesos
+
+	para el muscle system, así, al terminar el proceso, el skeleton será convertido en el muscle system, y la mesh/motive,
+
+	responderá al muscle system, prescindiendo del proceso de skinning, "skin cluster"
+
+
+
+así, ya con el muscle system creado y sin problemas, podemos agregar simple muscles, deseados sobre la estructura de msucle system
+
+de forma convencional
+
+
+	_si nos da algún problema de desface entre los elementos del character, podemos seleccionar el skeleton/muscle system, e ir
+
+	ha Animation/Skin/"Go to Bind Pose", para así, llevar a la mesh/motive a la posición original en la cuál le fué asignado
+
+	el proceso de skinning
+
+
+
+
+	

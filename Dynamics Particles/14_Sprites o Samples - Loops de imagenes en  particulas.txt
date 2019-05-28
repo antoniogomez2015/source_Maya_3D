@@ -1,0 +1,186 @@
+
+
+DETALLES:
+
+
+tenemos la posibilidad de también animar un sample de una imágen ó un loops, de imágenes creadas previamente a través
+
+de un sistema de partículas creado, de esta manera podemos instanciar imágenes a través de partículas en maya
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	Sample de una imágen:
+	_____________________
+
+
+		_primero debemos tener creada la imágen en un formato que soporte transparencia si esta es requrida
+
+
+		_luego creamos un sistema de partículas sea a través de un emisor ó a través de particle/brush
+
+
+		_ahora con las particulas seleccionadas "particle1", vamos ha "Dynamics/Particles/Sprite Wizard...",
+
+		así, se abrirá un panel "Sprte Wizard particleShape1", guiado con diferentes opciones, las cuales son:
+
+			
+			_Sprite File: aquí nos pide que ingresemos la ruta del archivo a utilizar, y le damos a continuar
+
+			al ser un sistema de "Sprite", con un sólo sample de imágen estático los siguientes pasos re reducen
+
+
+			_así, al darle a continue, nos arrojará un resumen "Summary", y nos pedirá que le demos "Apply",
+
+			para terminar con el proceso de creación del sistema de "Sprite"
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	Loops de una secuencia de imágen:
+	_________________________________
+
+
+			
+		_primero debemos tener preparada previamente una secuencia de imágenes en un formato que permita
+
+		transparencia si ésta es necesaria
+
+
+		_luego debemos de crear un sistema de partículas, sea a través de un emisor ó a través de particle/brush
+
+
+		_luego seleccionamos las particulas/particle1, y vamos ha "Dynamics/Particles/Sprite Wizard...", así
+
+		se abrirá el panel de "Sprte Wizard particleShape1", guiado con las siguientes opciones:
+
+
+			_Sprite File: aquí podremos indicar la ruta de la secuencia de imágenes, al seleccionar una 
+
+			secuencia de imágenes nos pedirá que indiquemos un rando de acción, ej: 0 - 100, luego 
+
+			y hacemos "Continue"
+
+
+			_Image Asignament:
+
+
+				_No animation. Use a single image for each particle:
+
+					sin animación, usará una imágen estática para cada partícula
+
+
+				_Cyle through a images for each particle:
+
+					un ciclo de imágenes para cada partícula
+
+
+				_Use existing setup with new images
+
+					usar una existente configuración con cada nueva imágen
+
+				
+				_lugo le damos ha "COntinue"
+
+
+			_Selected tecnique used:
+
+		
+				_use the first image in the secuence:
+
+					utilizar la primera imágen de la secuencia de imágenes
+
+
+				_Use each particles "particle-ID", value:
+
+					utilizar el valor del "ID", de cada partícula
+
+
+				_Random:
+
+					utilizar in orden aleatorio
+
+
+				_Custom Start:
+
+					configurar ó personalizar el comienzo
+
+
+				_Use a ramp:
+
+					utiliza un rango/trama
+
+
+				_lugo le damos ha "COntinue"
+
+
+
+			_Cycles form animation:
+
+
+				_Linearly Increasing:
+
+					incremento lineal
+
+
+				_Ease - In/Ease - Out Increasing:
+
+					incremento de entrada y de salida
+
+
+				_Linearly Increasing and Decreasing:
+
+
+					incremento lineal y decremento lineal
+
+				
+				_Ease - In/Ease - Out Increasing and Decreasing:
+
+					incremento de entrada y de salida así, como decrementos e incrementos
+
+
+				_Use a ramp:
+
+					utilizar un rango/rampa
+
+
+				_Invert Ramp:
+
+					invertir una rampa ó un rango utilizado
+
+
+				_Custom Cycling:
+
+					cinfigurar un uso cíclico
+
+
+				_Cycle only once during lifespan:
+
+					un sólo ciclo durante la vida de la partícula
+
+					
+					_Cycle Lenghth in Frames:
+
+						ciclo en la longitud del fotograma
+
+
+				_invert Cycle
+
+					inversión del ciclo
+
+
+			_por último nos da un resumen "Summary", y nos pide que le demos ha "Apply", para finalizar
+
+			el proceso de creación del sistema de sprites/instancias
+
+			

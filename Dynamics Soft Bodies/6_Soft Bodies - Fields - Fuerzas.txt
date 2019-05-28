@@ -1,0 +1,73 @@
+
+
+DETALLES:
+
+
+tenemos la posibilidad de interactuar a través de los sistemas de partículas que conforman los soft bodys,
+
+con las diferentes Fields/fuerzas, para que así, estar fuerzas actúen como deformadores sobre la mesh/motive,
+
+que porta el sistema de soft body, en sus diferentes modos ó métdos
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	_primero creamos la mesh/motive, que portará el sistema de soft body, y la ubicamos según la lógica 
+
+	de la escena (y borramos su historial)
+
+
+	_luego con la mesh/motive, que hará de soft body, seleccionada vamos ha "Dynamics/Soft-Rigid Bodies
+
+	/Create Soft Body", y escogemos el modo deseado, entre normal ó con goals, y lo aplicamos
+
+
+	_ahora vamos ha "Window/Relationship Editors/Dynamics Relationships Editor", así, se abrirá el panel
+
+	"Dynamic Relationships Editor", para relacionar el sistema de partículas de soft body, con los sistemas
+
+	de Field/ó fuerzas
+
+
+		_en el outliner del panel elegimos el sistema de partículas creado dentro de la mesh, soft body
+
+
+		_luego vamos a la pestaña de "Fields", y seleccionamos la fuerza deseada a relacionar
+
+
+
+	_y ahora para controlar los sistemas y graduar la intensidad del efecto deseado disponemos 
+
+	de los siguientes controles:
+
+
+		_primero vamos al outliner, y seleccionamos la Fields, deseaca como ej: "vortexFiedl1",
+
+		y vamos a sus propiedades en "Attribute Editor/Vortex Field Attributes"
+
+
+			_Magnitude: intensidad de la fuerza
+
+
+			_Attenuation: suavizado de la fuerza
+
+
+			_Axis: cordenadas de trabajo ó influencia
+
+
+		_como también podemos controlar las propiedades del sistema de partículas que conforma el soft body:
+
+
+			_primero seleccionamos el sistema partículas que conforma el soft body, y vamos ha
+
+			"Attribute Editor/ej: copyOfSphere1ParticleShape/Goal Weights and Objects"
+
+
+				_Goal Smoothness: suavizado ó deformación de la mesh, para ampliar las deformaciones
+
+
+				_ongBaseShape: capacidad de mantener la forma original de mesh, ante deformaciones
+

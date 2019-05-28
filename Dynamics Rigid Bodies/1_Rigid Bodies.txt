@@ -1,0 +1,206 @@
+
+
+
+DETALLES: 
+
+
+(animación transferida ó que no hacemos nosotros)
+
+
+
+estas son opciones que nos ofrece maya para aportar un entorno de físicas a los objetos/meshes, dentro de la escena, 
+
+a continuación expresaremos las consideraciones y reglas que aplican dentro de los rigid bodies, estas son:
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+consideraciones/reglas:
+_______________________
+
+
+	_solamente se puede agrgar un cuerpo rígido por elemento ó grupo de elemento no más de uno
+
+
+	_solamente unas de las superficies de ese cuerpo rígido puede colisionar con el resto de elementos
+
+	según las dirección de las normales
+
+
+	_los sistemas de rigid bodies, funciones en mesh/motives, en los cuales se enfrenten sus "normals/normales"
+
+
+	_no se pueden animar la escala u otras deformaciones de un cuerpo rígido (o no de se debería)
+
+
+	_una curva, spline, locators, y similares no pueden ser rigid bodies
+
+
+	_una superficie de subdivision no puede ser un rigid bodies
+
+
+
+
+Rigid Bodies:
+_____________
+
+
+	_Active Rigid Body:
+
+		_sobre los objetos "active ridig body", se permiten translaciones por ende éste podrán transladarse
+
+		en el entorno
+
+
+		_éstos podrán ser afectados por fuerzas físicas como "gravity, air, otras"
+
+
+		_Active: en los objectos "Active ridig body", esta opción estará activada en: "Mesh/rigidBody1
+
+		/Rigid Body Attributes/", "Active"
+
+
+	_Passive Rigid Body:
+
+		_éstos permanecen estáticamente en el entorno ó escena
+
+		
+		_más estos interactúan con los objetos "Passive rigid body", proveyendo interacción de colisiones 
+
+		entre ellos
+
+		
+		_Active: en los objectos "Passive ridig body", esta opción estará desactivada en: "Mesh/rigidBody1
+
+		/Rigid Body Attributes/", "Active"
+
+
+	al convertir una mesh/motive, en un elemento rigid bodies, active ó passive, ha éste se le agregarán las "Tabs"
+
+	"rigidBody1", y "rigidSolver", en las cuales podremos controlar todas las características de los sistemas
+
+
+	Tenemos la posibilidad de porder hacer un byPass, con el proceso de rigid Bodies, en elementos determinados
+
+	permitiéndonos indicar el segmento de tiempo en el timeline, donde deseado que sí interactúe el modo de rigid bodies,
+
+	así, también desactivar el modo de rigid bodies, en determinadas áreas del timeline, para hacer animaciones con dicho
+
+	elemento mesh/motive, rigid body, seleccionado como si fuera un elemento convencional dentro de la escene y, si deseamos
+
+	podemos volver en cualquier momento volver activar el modo rigid bodies, en el elemento para que continúa interactuando
+
+	con las fuerzas/fields, y los demás elementos rigid bodies, en la escena y demás elementos dinámicos, a continuación
+
+	presentamos el proceso de workflow, de como interactuar en el sistemas de rigid bodies ó físicas y modo de animación:
+
+
+
+		_Set Active Key:
+
+
+			1_primero seleccionamos un mesh/motive, con rigid bodies, aplicado como "Active Rigid Body"
+
+
+			2_ahora colocamos el cabezal del timeline, en el punto donde deseamos que comience el modo 
+
+			"rigid bodies"
+
+
+			3_luego con este mesh/motive, con rigid bodies, seleccionado y el cabezal del timeline, ubicado 
+
+			vamos ha "Dynamics/Soft-Rigid Bodies/", y hacemos "Set Active Key", así, veremos que se crea
+
+			en el timeline un "keyframe", donde hemos colocado el cabezal
+
+
+			4_luego avanzamos el cabezal del timeline, a el punto donde deseamos que termine el procedo 
+
+			de "rigid Bodies"
+
+
+			5_luego con este mesh/motive, con rigid bodies, seleccionado y el cabezal del timeline, ubicado 
+
+			vamos ha "Dynamics/Soft-Rigid Bodies/", y hacemos "Set Passive Key", así, veremos que se crea
+
+			en el timeline un "keyframe", donde hemos colocado el cabezal
+
+
+			_luego de hacer indicado el deteminiento ó byPass, del modo rigi Bodies, podemos proceder ha
+
+			realizar el proceso de animación del elementos con cualquier otro, frame to frame...
+
+			
+			_luego de haber terminado de realizar el proceso de animación frame to frme, u otro, podemos
+
+			volver a repetir el proceso anterior del paso "1", en adelante, tomando en cuenta que el proceso
+
+			de rigid Bodies, ó físicas comenzará a partir de donde haya quedado el elemento mesh/motive, 
+
+			rigid Bodies, en el punto de la finalización del proceso de animación frame to frame, anterior
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Creación de Rigid Bodies:
+_________________________
+
+
+
+	_primero cremos los mesh/motives, que harán de "active rigid body"
+
+
+	_luego creamos los elementos que harán de "passive rigid body"
+
+
+	_luego seleccionamos todos los elementos que harán de "active rigid body", y con éstos seleccionados
+
+	vamos ha "Dynamics/Soft-Rigid Bodies/", y aplicamos "Create Active Rigid Body"
+
+
+	_luego seleccionamos todos los elementos que harán de "passive rigid body", y con éstos seleccionados
+
+	vamos ha "Dynamics/Soft-Rigid Bodies/", y aplicamos "Create Passive Rigid Body"
+
+
+	_ahora tenemos que aplicar fuerzas/fields, a los cuerpos activos para que éstos interactúen con los demás
+
+
+		_primero seleccionamos los mesh/motives, a los cuales le hemos aplicado "Create Active Rigid Body",
+
+
+		_y con estos seleccionados vamos ha "Dynamics/Fields/", y aplicamos fuerzas como "Gravity", otros,
+
+
+	para que así, los elementos rigid bodies, interactúen entre sí, y con las fuerzas/fields, implícitas
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Delet Rigid Bodies:
+____________________
+
+
+	_para eleminar propiedades de rigid bodies, seleccionamos la mesh/motive, y vamos ha "Edit/Delete by Type/Rigid Bodies",
+
+	así, le serán eliminadas las propiedades de cuerpos rígidos al elemento mesh/motive
+
+
+
+	_para borrar todas las propiedades de rigid bodies, de todos los elementos de la escena vamos ha "Edit/Delete All by Type/Rigid Bodies"
+
+

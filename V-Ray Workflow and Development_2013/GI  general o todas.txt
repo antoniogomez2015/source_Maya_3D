@@ -1,0 +1,128 @@
+
+	
+	NOTA:
+
+	1_es aconsejable utilizar ambos modos; tanto el Primary bounces, como el Secundary bounces, así, sea que ambos utilicen por ejemplo el mismo algoritmo, ej: Brute Force en ambos
+
+	2_el resultado general de la definición y resolución resultante del render de GI, es proporcional a los demás factores en relación a sus valores de Subdivs: (subdivisión), Threshold: (umbral), Amound: (cantidad), entre otros,
+	estos pueden ser: luces, sombras, AO, meshlights, otros
+
+	3_es recomendable mantener un workflow de calidad en relación a los nuveles de subdivisión de los elementos que insiden en la escena, como por ej; que si en GI Brute force, estemos utilizando un valor de subdivs, de 16, 
+	en las luces, sombras y AO, entre otros también utilicemos el valor de subvis, para que así, se garantice el mismo valor de resolución de igual manera para el Threshold (umbral)
+
+
+
+
+	Brute force GI: (fuerza bruta de iluminación directa de una fuente de luz)
+
+		1_Subdivs: permite indicar el valor de subdivisiones las cuales aumentan la capacidad de detalle y resolución del render resultante
+
+		2_Depth: se refiere al grado de penetración ó alcance de la luz indirecta dentro de la escena
+
+
+
+
+	Photon Map: (iluminación emulada a la realidad)
+
+		1_Bounces: 10, es un valor estandar para los rebotes de rayos, que a su vez influye directamente en el numero general de samples ó calcular en la escena; en Mode: indica la cantidad de samples a calcular en la escena ej:392758 samples taking...
+		y esto va en relación a la cantidad de photones emitidos por las fuentes de luces ej: si un VRayLightrect/Photon emission/Photon sibdivs: 500
+
+		2_Max photons: la cantidad de photones es lo que permite representar la escena, a mayor cantidad de photones mejor será la definición de la escena, este parámetro va relacionado directamente con "Search Distance", osea la distancia que tienen que recorrer los rayos para alcanzar al motivo
+
+		3_Prefilter: es aconsejable activar la opción prefilter por que esta aumenta la definición del renders, así como en los rebotes de la luz y las reflexiones y refracciones. Entre mayor sea el valor de prefilter samples, mejor será el resultado, es recomendado trabajar con un rango de valor de "10"
+
+		4_Convex Hull Estimate: permite una mayor definición de las sombras y ganancia en la peneración de la iluminación en los vertices ó esquinas así, como en los luegare más alejados de la escena, ganando en una mayor definición y alcance de la iluminación, es recomendable trabajar un rango no mayor a "10"
+
+		5_Store Direct light: es econsejable en gran manera dejar desactivada es opción, ya que así, los photones se interpolarán dejando la escena sin brumos ni ruidos logrando una definición total
+
+		6_Auto search dist: es aconsejable dejar esta opción activada a menos que sepamos la distancia que tendrán que recorrer los photones en la escena hasta llegar al motivo
+
+		7_Multiplier: permite incrementar ó decrementar el valor de GI, intensidad de la luz irradiada en la escena
+
+		8_Retrace threshould: entre más bajo sea el valor del umbral mayor será la definición de la escena, es recomendable dejar este bajor en "0", ó cercano a cero
+
+		9_Max Density: la densidad permite reforzar la interpolación y suavidad de los photones entre si mejorando considerablemnte la escena, valores cercanos a "1", aumentan la calidad de la escena (NOTA: este parámetro afecta en detrimento la proyección de las reflexiones del motivo)
+
+
+
+
+	Irradiance map: (iluminación indirecta similar a "Final Ghater", de mental ray)
+
+		1_Min rate: este parámetro permite configurar la mínima cantidad de muestreo que realizará el renders en forma de pases
+
+		2_Max rate: este parámetro permite configurar la máxima cantidad de muestreo que realizará el renders en forma de pases
+
+		3_Subdivs: las subdivisiones controlan la interpolación y mezclado de los rayos de luz en la escena logrando una mayor definición y resolución de la escena
+
+		4_Interp. samples: este parámetro aumento el grado de la interpolación ayudando a las subdivs, en el mejoramiento y definición de la imagen resultante
+
+		5_Interp.frames: este parámetro controla la interpolación entre fotogramas, especialmente útil para animación, este parámetro esta íntimamente ligado ha "Advance options/Interpolation type", y "Mode/Mode/presset"
+
+		6_Detail enhancement: esta opción aumentar de forma exponencial la calidad del render ó imágen resultante
+
+			6.1_Detail scale: podemos escoger entre una escala de detalle entre modo de screen ó world, osea tramado ó independiente (screen da mejores resultados considerablemente)
+
+			6.2_Detail radius: se refiere a la cantidad de detalle incremental agregado
+
+			6.3_Detail subdivs mult: se refiere al índice ó factor multiplicador que será aplicado
+
+
+		7_Advanced options/Interpolation type: este control permite elegir el tipo de interpolación deseado
+
+			7.1_Delone triangulation (good/exact); este es un modo deficiente deja bruma y una escena poca definida
+
+			7.2_Wighted average (good/robust), muy buena calidad aunque diplica en relación el tiempo de render (efecta en detrimento la refracciones)
+
+			7.3_Least squares fit (good/smoth), mejor resultado "Wighted average", y no afecta la refracción, mejor calidad (ESTE MÉTODO ES EL QUE OFRECE MEJORES RESULTADOS GENERALES Y NO AUMENTA EL TIEMPO DE RENDER)
+
+			7.4_Least squares w/voronoi weights, buena calidad aunque también va en detrimento de las refracciones de la escena y diplica el tiempo de render
+
+
+		8_Advanced options/Sample lookup:
+
+			7.5_Density-based (best), da muy buenos resultados generales (este es el método más recomendado a nivel general)
+
+			7.6_Overlapping (very good/fast), da mejores resultados en las sombras y en las refracciones
+
+			7.7_Quad-balanced (good), va un poco en detrimento de las sombras y reflexiones
+
+			7.8_Nearest (draf), da muy buenos resultados a nivel general
+
+
+		9_Advanced options/Multipass, mantener activada esta opción ayuda a una mejor representación de las reflexiones y refracciones en la escena
+
+		10_Advanced options/Ramdomize samples: esta opción activada ayuda a una mejor representación de las reflexiones y refracciones en la escena
+
+		11_Advanced options/Cal. interp samples: aumenta el valor de muestreo del calculo de la interpolación aumenta la calidad general de la escena aunque dispara exponencialmente el tiempo de render (manejar este parámetro con precaución)
+
+
+
+
+
+	Light Cache
+
+
+		los criterios de Light Cache, son los siguientes: (Light cache, es recomendado utilizarlo como secundary bounce)
+
+		1_Number of passes: esto quiere decir la cantidad de pases de registro que realizará el render, entre mayor cantidad de pases mayor calidad del render
+
+		2_Subdivs: este tiene directa relación el tamaño ó formato de estandar de salida, dicha dimensión en ancho y alto expresa la siguiente relación para obtener el valor a aplicar en "Subdivis"
+		
+		Ancho X Alto = resultado, y a resultado le sacamos la raíz cuadrada, ej; 1280x720 = 921600, y su raíz cuadrada es: 960, entonces este será el valor que colocaremos en "Subdivs"
+
+		3_Sample size: entre menor sea este valor cercanos a cero, mayor será la definición y resolución de la escena, ya que este valor disminuye el tamaño de la muestra aumentando así, la calidad de la escena
+		es recomendable utilizar para configuración y muestreo valor entre (0.100, y 0.050), y para producción valores entre (0.020, y 0.01)
+
+		4_Store direct light: desactivar esta opción ayuda a mejor representación de las sombras en la escena
+
+		5_Reconstruction parameters:
+
+			5.1_Nearest: es recomendable para Secundary Bounce, ó configuración y desarrollo
+
+			5.2_Fixed: es recomendable para Primary Bounce, ó producción de alta calidad
+
+		
+
+
+
+

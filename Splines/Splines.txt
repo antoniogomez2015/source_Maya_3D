@@ -1,0 +1,82 @@
+
+desarrollo de nurbs en maya a través de splines
+
+
+la inición más básica ó primitiva y altamente editable de la tecnología Nurbs, son las splines, ó curvas vectoriales
+
+
+Tiops de Splines: existen varias tecnologías y cretios para creación de splines, por ende a continuación conoceremos las diferentes tecnologías disponibles en maya
+
+	CV Curve Tool
+
+		1.para crear CV Curve Tool, vamos el menú Create/CV Curve Tool, luego hacemos left+click and draw, y agregamos points de fuerza para generar la curva deseada
+	
+		2.esta tecnología requiere crear 4 point, para poder proyectar la curva resultante
+
+		3.las splines CV Curve Tool, se componen de sub elementos, estos son:
+
+			3.1.haciendo right+click/Control Vertex, éstos permiten editar los point de fuerza resultante que conforman la curva, y modificando estos modificaremos la curva spline
+
+			3.2.haciendo right+click/Curve Point, ésta opción es equivalente a isoparm, de las surfaces nurbs, la cuál permite crear puntos de referencia para diferentes procesos agregar point, splits, atatch, detatch, otros
+
+			3.3.haciendo right+click/Edit Point, permite editar la posición exacta de los puntos creados que conforman la curva
+
+			3.4.haciendo right+click/Hull, ésta opción nos permite seleccionar el loops, de todo un trayecto de la spline ó la spline completa sea el caso
+
+	EP Curve Tool
+
+		1.para crear EP Curve Tool, vamos el menú Create/EP Curve Tool, luego hacemos left+click and draw, y agregamos points en los cuales se representará la curva a través de arcos en grados que suavisan ó interpolan entre las posiciones de los puntos
+
+		2.en esta tecnología de splines, la curva se generará exactamente en los puntos que hemos creado
+
+		3.las splines EP Curve Tool, se componen de los mismo sub elementos que los de las splines "CV Curve Tool", del paso anterior
+
+
+	Beizer Curve Tool
+
+		1.para crear beizer Curve Tool, vamos el menú Create/bezier Curve Tool, luego hacemos left+click, y agregamos points para hacer líneas rectas, para realizar líneas curvas ó suavizadas hacemos left+click and draw, también podemos alternar ambos métodos en una misma spline creada
+
+		2.esta tecnología permite crear curvas splines a través de los puntos que vamos creando con la diferencia que la edición de los mismos éstos contemplan dezieres ó manejadores ó handles con los cuales podemos graduar la durección de curva de la línea así, la influencia de la fuerza hacia los puntos contiguos
+
+		3.las splines Bezier Curve Tool, se componen de sub elementos, estos son:
+
+			3.1.haciendo right+click/Control Vertex, éstos permiten directamente manipular cambiar la posición del punto de la curva más la acción de los handles ó manejadores bezieres
+
+			3.2.haciendo right+click/Curve Point, ésta opción es equivalente a isoparm, de las surfaces nurbs, la cuál permite crear puntos de referencia para diferentes procesos agregar point, splits, atatch, detatch, otros
+
+			3.3.haciendo right+click/Hull, ésta opción nos permite seleccionar el loops, de todo un trayecto de la spline ó la spline completa sea el caso
+
+
+
+edición de las splines
+
+	1.para intercambiar entre sub elementos seleccionados vextes de una splines, haciendo arrow left/right/top/button, en cualquiera de estas acciones podremos pasar de un vertex a otro
+
+	
+	2.para mover de forma proporcional un área de una spline, vamos al menú Surfaces/Edit Curves/Curve Editing Tool, así, podremos mover un grupo de vertex y su influencia a la vez
+
+		2.1.si movemos el axis central de la herramienta modevemos la posición de la edición proporcional
+
+		2.2.si hacemos left+click, en cualquier parte de la spline cambiaremos la posición de la herramienta sobre la spline y su acción
+
+		2.3.el diamante del axis, permite cambiar la posición de la herramienta sobre de la spline de forma señida y gradual sobre la misma spline
+
+		2.3.el diamante de la extensión de la herramienta hace de beizer, y permite graduar la acción de la influencia entre vextes
+
+		2.4.al cuadrado del extremo de la extensión de la herramienta permite cambiar el ángulo ó dirección que toma como criterio de acción la herramienta
+
+	3.extraer splines; para esto, seleccionamos el elemento nurbs surface deseado, y hacemos right+click/Isoparm, y proyectamos la forma a duplicar de la nurb a spline para extraer y duplicarla, luego, vamos al menú Surfaces/Edit Curves/Duplicate Surface Curves, 
+
+	4.dividir splines; para esto, seleccionamos la splines que deseamos dividir y hacemos right+click/Curve Point, ya hacemos left+click and draw en el lugar donde deseamos dividir la spline, luego vamos al menú Surfaces/Edit Curves/Detach Curves
+
+	5.unir splines; para esto, seleccionamos ambas splines a unir y vamos al menú Surfaces/Edit Curves/Attach Curves, se creará una curva resultante y se conservarán las curvas iniciales
+
+	6.abrir y cerrar splines; es conbeniente al crear splines cerradas ó en loops, crearlas abiertas y luego cerrarlas con este método, para esto, seleccionamos la spline deseada y vamos al menú Surfaces/Edit Curves/Open/Clouse Curve
+
+	7.offset de splines; para esto, seleccionamos la splines deseada y vamos al menú Surfaces/Edit Curves/Offset/Offset Curve
+
+	8.
+
+
+
+		

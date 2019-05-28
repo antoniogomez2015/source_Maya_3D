@@ -1,0 +1,330 @@
+
+
+
+DETALLES:
+
+
+tenemos la posibilidad de agregar a la escena elementos conectivos constraints, a los elementos mesh/motives,
+
+deseados en la escena, para que éstos a su véz, tengan más relaciones ó interacciones a parte de las fuerzas/
+
+fields, físicas implícitas en la escena y los demás elementos con rigid bodies, más ahora también, 
+
+la interacción con los sistemas de constraints dinámicos.
+
+
+no es preciso que le tengamos que aplicar un mesh/motive, el proceso de rigid bodies, en modo de "active" 
+
+ó "passive", también podríamos directamente aplicar un constraint, dinámico a un mesh/motive, directamente
+
+y éste a su vez, aplicará automáticamente un sistema de rigid Bodies/Active, y un solver, al objeto mesh/motive
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	_Nail Constraint:
+	_________________
+
+
+		DETALLES:
+
+
+		este tipo de constraint, "Nail", permite hacer un efecto de contrapeso ó palanca, a su vez,
+
+		también hace el efecto de balancín, con el cuál podemos balancer ó suspender elementos
+
+		mientras éstos interactúan con las fuerzas/fields, implícitas y los demás elementos 
+
+		en la escena.
+
+		el elementos mesh/motive, podrá pivotear a cualquiera de las cordenadas a través del pivote
+
+		y extensión de su handle
+		
+
+
+
+		_primero seleccionamos el mesh/motive
+
+
+		_luego vamos ha "Dynamics/Soft-Rigid Bodies/", y hacemos "Create Nail Constraint"
+
+
+		_así, aparecerá un handle "rigidNailConstraint1", posiblemente éste quede oculto dentro 
+
+		de la topología de la mesh/motive, por esto es recomendable seleccionar este handle 
+
+		a través del panel "Outliner/rigidNailConstraint1"
+
+
+		_con el handle "rigidNailConstraint1", podemos reubicarlo en el punto donde deseamos que
+
+		éste ejerza fuerza de palanza ó contrapeso sobre la mesh/motive, rigid bodies
+
+
+
+
+	_Pin Constraint:
+	________________
+
+
+
+		DETALLES:
+
+		
+		esta tipo de constraint "Pin", permite relacionar objectos de forma consecutiva equidistantes
+
+		el uno del otro, esto es posible ya que el handle, y su extensión se extiende y se relaciona
+
+		es de un elemento a otro, permitiendo así, que sea la inercia del uno la que afecte la del otro
+
+		permitiendo así, las fuerzas cintrífuga y centrípetas en cadena
+
+
+		y a su vez, estos elementos podrán estas dividivos entre elementos rigid Bodies, "Passives",
+
+		y "Actives", de esta manera, los elementos "Passives", harán de palanca ó contrapesos a los
+
+		actives, ya que éstos estarán sometivos las fuerzas residuales centrífugas y centrípetas,
+
+		así, como de las fuerzas/fields, de físicas y de collisions
+
+
+
+
+		_primero creamos los elementos mesh/moives, los cuales debemos colocarlos en la ubicación
+
+		deseada que los relacionará según la lógica de las físicas que interactuarán con ellos
+
+
+		_leugo debemos seleccionarlos e ir ha "Dynamics/Soft-Rigid Bodies/", y hacemos "Create Active Rigid Body",
+
+		para que así, estos cobre propiedades de rigid Bodies, y solvers
+
+
+		_y a continuación con estos mismos elementos mesh/motives, seleccionados les aplicamos 
+
+		fuerzas/fields, deseadas, ej: "Gravity"
+
+
+		_ahora debemos relacionar los elementos creados rigid bodies, deseados y aplicarles el
+
+		constraint "Pin", a continuación explicamos las opciones disponible para esta modalidad:
+
+
+			_primero seleccionamos el primer elemento rigid bodies, por lo general es recomendado
+
+			seleccionar primero el de uno de los extremos de la cadena de elementos ha relacionar
+
+			entre sí, de los cuales uno tirará de los otros y luego seleccionamos el elemento 
+
+			mesh/motive, contiguo y vamos ha "Dynamics/Soft - Rigid Bodies/", y hacemos 
+
+			"Create Pin Constraint",
+
+
+			_posteriormente debemos repetir el paso anterior, seleccionando al último elemento
+			
+			mesh/motive, al cuál le hemos aplicado el "Create Pin Constraint", para a continuación
+
+			seleccionar el próximo elemento contiguo siguiente y repetir el proceso de seguir 
+
+			aplicado "Create Pin Constraint",, consecutivamente hasta finalizar la change/cadena
+
+
+		_ahora podemos relacionar esta cadena de elementos relacionados dinámicamente con una mesh,
+
+		la cuál puede ser culaquier elemento de la escena sin rigid bodies, para que así, las fuerzas
+
+		implícitas en la cadena y fuerzas/fields, en la escena y demás elementos dinámicos en la escena
+
+		halen y tiren de la mesh, estática relacionada
+
+
+			_primero creamos el elemento mesh/estático que será arrastrado por la cadena dinámica
+
+
+			_para esto, seleccionamos la mesh, estática a relacionar con la cadena dinámica
+
+			
+			_luego seleccionamos el mesh/motive, con rigid bodies, y el constraint "Pin", aplicado
+
+			
+			_ahora con ambos elementos seleccionados vamos ha "Dynamics/Soft - Rigid Bodies/",
+
+			y hacemos "Create Pin Constraint", así, al reproducir la animación veremos como la cadena
+
+			de elementos dinámicos arrastrará al elemento mesh/estático
+
+
+
+		_también podemos relacionar esta cadena con elementos rigid bodies, "passives", de esta manera éstos
+
+		elementos harán de pivotes ó palancas que tirarán ó generarán tensiones sobre la cadena a través,
+
+		de diferentes fuerzas/fields, implícitas y colaterales, entre otroas
+
+
+			_primero creamos el elemento mesh/motive, rigid bodies/", y le aplicaremos 
+
+			"Create Pssive Rigid Body"
+
+
+			_luego seleccionaremos este elemento "mesh/motive, rigid bodies/Passive", y luego el 
+
+			elemento del extremo de la cadena con rigid bodies/Active, más cercano ó a conectar
+
+			con el elemento rigid bodies/Passive
+
+
+			_y con ambos elementos seleccionados vamos ha "Dynamics/Soft - Rigid Bodies/",
+
+			y hacemos "Create Pin Constraint", así veremos que al reproducir la simulación que 
+
+			la cadena responderá a las fuerzas/fields, de contracción e inercia generada por la 
+
+			condición estática e inamovible del elemento rigid bodies/Passive
+			
+			
+			
+
+
+
+
+	_Hinge Constraint:
+	__________________
+
+
+		
+		DETALLES:
+
+
+	
+		el contraint "Hinge", su trabajo es similar al contraint "Nail", más este se limita a trabajar
+
+		sólo en una cordenada determinada por nosotros, haciendo la función como de visagra
+
+
+
+			_primero creamos los elementos mesh/motives, rigid bodies, Actives, y Passives, deseados
+
+
+			_a los elementos rigid bodies/actives, les aplicamos fuerzas/fields, deseadas
+
+			
+			_luego seleccionamos el mesh/motive, con rigid bodies, active, y vamos ha 
+
+			"Dynamics/Soft - Rigid  Bodies", y aplicamos "Create Hinge Connstraint"
+
+			
+			_ahora el handle, del constraint, lo seleccionamos en el viewport, ó en el outliner,
+
+			y lo colocamos en la ubicación deseada
+
+			
+			_así este sistema de constraint, ascilará en relación a una de las cordenadas limitando
+
+			las otroas dos cordenadas restantes
+	
+
+
+
+
+
+	_Spring Constraint:
+	___________________
+
+
+
+		DETALLES:
+
+
+	
+		el contraint "Spring", su trabajo es similar a un elástico, lo cuál permite expresar las fuerzas
+
+		cinéticas, centrífugas y centrípetas, este constraint, se estira y en relación a esa fuerza, luego
+
+		contrae en proporción a la fuerza anterior aplicada
+
+
+
+
+			_primero creamos los elementos mesh/motives, rigid bodies, Actives, y Passives, deseados
+
+
+			_a los elementos rigid bodies/actives, les aplicamos fuerzas/fields, deseadas
+
+			
+			_luego seleccionamos el mesh/motive, con rigid bodies, active, y vamos ha 
+
+			"Dynamics/Soft - Rigid  Bodies", y aplicamos "Create Spring Connstraint"
+
+			
+			_ahora el handle, del constraint, lo seleccionamos en el viewport, ó en el outliner,
+
+			y lo colocamos en la ubicación deseada
+
+			
+			_así, este sistema de constraint "Spring", aplicará fuerzas sobre el elemento en relación 
+
+			a la fuerza contraria, ejercerá tirones elásticos en busca del equilibrio generando así, 
+
+			una serie de fuerzas implícitas explicadas anteriormente
+
+
+
+
+	_Barrier Constraint:
+	____________________
+
+
+
+
+		DETALLES:
+
+
+	
+		el contraint "Barrier", su trabajo es hacer de superfies colisionadora invisible e independiente
+
+		de cualquier sistema estático ó dinámico, este constraint de superficie colisionadora funciona
+
+		en cualquier cordenada y ángulo de inclinación y se extiende ó proyecta de forma indefinida no 
+
+		teniendo dimensiones definidas, esto es especialmente útil para aplicar un sistema de colosión
+
+		provisional ó temporal ha un elemento complejo como partículas, algunos dinámicios y demás elementos
+
+		que presenten incompatibilidad con el sistema de dinamics, rigid bodies, otros
+
+
+
+
+
+			_primero creamos los elementos mesh/motives, rigid bodies, Actives, y Passives, deseados
+
+
+			_a los elementos rigid bodies/actives, les aplicamos fuerzas/fields, deseadas
+
+			
+			_luego seleccionamos el mesh/motive, con rigid bodies, active, y vamos ha 
+
+			"Dynamics/Soft - Rigid  Bodies", y aplicamos "Create Barrier Connstraint"
+
+			
+			_ahora el handle, del constraint, lo seleccionamos en el viewport, ó en el outliner,
+
+			y lo colocamos en la ubicación deseada
+
+			
+			_así, este sistema de constraint "Barrier", aplicará fuerzas las fuerzas/fields, aplicadas
+
+			al mesh/motive, más las interacciones con otros elementos rigid bodies, más la acción del
+
+			constraint, el cuál tiene un plano limitador el cuál hará de solisionar, este plano se
+
+			expresa en unas cordenadas y ángulo determinado por nosotros
+
+

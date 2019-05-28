@@ -1,0 +1,50 @@
+
+
+DETALLES:
+
+
+las opciones de los sistemas de "Fluid Effects", tenemos la posibilidad de agregar elemento sólidos
+
+como geometrías para que éstas interactúen colisionando con el fluido de la simulación, aumentando
+
+así, las posibilidades de interacción con el resto de elementos de la escena lo cuál, permite relizar
+
+diferentes procesos de producción
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Mike Collide:
+_____________
+
+
+
+	_primero creamos un contenedor con un emisor
+
+
+	_luego creamos una geometría la cuál, hará de elemento colisionable del sistema de fluidos
+
+
+	_luego seleccionamos ambos elementos para relacionarlos, seleccionando primero el contenedor y,
+
+	luego seleccionamos el elementos mesh/motive, de geometría que hará de colisionador y, con ambos
+
+	seleccionados vamos ha "Dynamics/Fluid Effects/", y seleccionamos la opción "Mike Collider"
+
+
+	_así, como también, disponemos de la posibilidad de poder relacionar elementos "Collider", ó
+
+	colisionables con un sistema fluidos ó contenedor, para esto vamos ha "Wndow/Relationship Editors/",
+
+	y seleccionamos la opción de "Dynamics Relationships", así podremos seleccionar en este, el sistema
+
+	de fluiddos deseado y luego ir a la sección "Collider", y activar los elementos que deseamos estén
+
+	activos como elementos colisionadores del fluido ó nó
+
+
+	
+		

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Utilities Bump 3D:
+    __________________
+
+        _éste nodo nos permitirá controlar el nivel del efecto de bump map, en materiales nativos 3d de maya
+
+        _de ésta manera, éste nodo nos permitirá brindarle soporte a nodos especiales de materiales en 3d
+
+
+        Aplicación:
+        ___________
+
+        _de ésta manera, por ejemplo; podremos crear una nodo de tipo "blinn", yendo ha "Hypershade/Surface/Blinn"
+
+        _al cuál, a su vez, le conectamos un nodo de textura 3d, ejmplo; un nodo de "Hypershade/3D Texture/brownian"
+
+        _para que así, sean agregado el nodo "bump 3d"
+        
+        _de ésta manera, podremos ahora controlar el efecto bump 3d, a través, del nodo "Bump 3D"
+
+
+        Parámetros:
+        ___________
+
+        2D Bump Attributes:
+
+            _Bump Value: (parámetro de entrada)
+
+                _éste parámetro corresponde a la conexión con la textura ó nodo 3d, que proporciona la información para la generación del efecto
+
+            _Bump Depth:
+
+                _ésta opción nos pemritirá indicar el umbral ó valor para la generación del efecto
+
+                _de ésta manera, podremos graduar la intensidad del efecto
+
+                _éste parámetro también, permite valores negativos
+
+
+            Effects:
+
+                _Bump Filter:
+
+                    _ésta opción nos pemritirá mejorar el resultado ó la calidad del efecto resultante
+
+                    _de ésta manera, con valores cercanos ha "0", el efecto será más perfilado y refinado y con menos artefactos
+
+                    _más con valores superiores ha 0.5, el efecto será más imperfecto y con más artefactos, otros
+
+                _Bump Filter Offset:
+
+                    _ésta opción nos pemritirá desfazar el efecto, y con valores superiores ha "0", puede desaparecer el efecto hasta inverter partes de la aplicación del efecto en ciertos casos
+
+            
+
+            Node Behavior:
+
+                _Caching:
+
+                    _(indeterminado)
+
+                _Node State:
+
+                    _Normal:
+
+                        _(indeterminado)
+
+                    HasNoEffect:
+
+                        _(indeterminado)
+
+                    _Blocking:
+
+                        _(indeterminado)
+
+                    _Waiting-Normal:
+
+                        _(indeterminado)
+
+                    _Waiting-HasNoEffect:
+
+                        _(indeterminado)
+
+                    _Waiting-Blocking:
+
+                        _(indeterminado)
+
+
+
+    Multiples Bump 2D:
+    __________________
+
+        _más también, tendremos la posibilidad de conectar la información de más de un nodo bump 2d, y de varias texturas a la vez
+
+        _de ésta manera, podremos agregar una nueva textura conectada a un nuevo nodo "Bump 2d"
+
+        _para posteriormente arrastrar el nodo "bump 2d_2", adicional sobre el nodo "bump2d_1"
+
+        _para que así, nos aparezca un menú contextual en el cuál, debemos de seleccionar la opción de "Other"
+
+        _para que así, nos aparezca el panel "Connection Editor", a través, del cuál, podremos personalizar las relaciones entre ambos nodos
+
+        _donde primeramente debemos de ir ha "Connection Editor/Right Display/", y una vez allí, activar la opción de "Show Hidden"
+
+        _de ésta manera, podremos visualizar todas las opciones del nodo de la derecha en éste caso del nodo "bump 2d"
+
+        _para que así, podamos seleccionar la opción del lado izquierdo de "OutNormal"
+
+        _y en el nado derecho del panel "Connection Editor", podamos seleccionar la opción de "NormalCamara"
+
+        
+    _de ésta manera, ahora tendremos ambas influencias de bump map, sobre el material y motivo respectivo
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+
+DETALLES:
+
+
+para ediciones más avanzadas y personalizadas de creación de fluidos a través, de objetos 
+
+personalizados dentro de un contenedor "fluid effects", tenemos también, la opción de unir
+
+tecnologías como la de un emisor de "Dynamics/Particles/Create Emiter", con un contenedor 
+
+de partículas, de esta manera lo que realmente podemos relacionar nos es tanto el emisor de
+
+partículas si no, el sistema de partículas que este emisor emite, con el contenedor fluid effects
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+fluidShape/Emisor Particles System:
+___________________________________
+
+	
+	Emisor personzalizado:
+	______________________
+
+
+	_primero creamos un contenedor vacío, osea, sin emisor dentro por defecto, para esto vamos
+
+	ha "Dynamics/Fuid Effects/Create 3D Container"
+
+
+	
+	_creamos un emiador convencional de partículas, yendo ha "Dynamics/Particles
+
+	/Create Emiters", que hará de emisor luego, la colocamos dentro del contenedor,
+
+	
+	_luego seleccionamos el emisor que hemos creado y vamos a "Attribute Editor/Emitter1
+
+	/Basic Emitter Attributes/Rate Particles - Sec", y colocamos por lo general un valor
+
+	bajo, entre "30", ya que estas serán las partículas que representarán al sistema
+
+	de fluid effects
+
+	
+	_a continuación reproducimos la simulación para que así, se reproduscan las partículas
+
+	del emisor que creamos y se cree el sistemas de partículas del emisor en el viewport,
+
+	para que de esta manera podamos seleccionarlo
+
+
+	_posteriormente seleccionamos el "sistema de partículas", del emisor que hará de emisor y 
+
+	luego seleccionamos el contenedor y, con ambos seleccionados vamos ha 
+
+	"Dynamics/Fluid Effects/Add-Edit/Emot from Object/Options"
+
+	
+	NOTA: otra opción de seleccionar el sistema de partículas del emisor es seleccionarlo 
+
+	a través, del outliner/particle1, sin la necesidad de reproducir la simulación para poder
+
+	seleccionar las partículas generadas en el viewport
+
+
+		_luego de haber agregado un emisor personalizado debemo primero seleccionar el
+
+		contenedor y luego ir ha "Attribute Editor/fluidEmitter1/fluid Attributes
+
+		/Density-Voxel-Sec", y subir el valor ya que este valor se coloca en "0",
+
+		al agregar un emisor personzalizado y al colocar su valor en "0", el emisor
+
+		no emite ó no se ve la densidad de la simulación
+
+
+	repitiendo este paso, podemos agregar todos los emisores personalizados que necesitemos
+
+	dentro de un contenedor
+
+
+	así, podremos ver que al reproducir la simulación se reproducirán las partículas del
+
+	emisor y estas a su vez, activarán la sumulación del fluid effects
+

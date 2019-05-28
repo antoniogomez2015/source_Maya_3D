@@ -1,0 +1,64 @@
+
+
+NOTA:
+
+	1_es aconsejable utilizar ambos modos; tanto el Primary bounces, como el Secundary bounces, así, sea que ambos utilicen por ejemplo el mismo algoritmo, ej: Brute Force en ambos
+
+	2_el resultado general de la definición y resolución resultante del render de GI, es proporcional a los demás factores en relación a sus valores de Subdivs: (subdivisión), Threshold: (umbral), Amound: (cantidad), entre otros,
+	estos pueden ser: luces, sombras, AO, meshlights, otros
+
+	3_es recomendable mantener un workflow de calidad en relación a los nuveles de subdivisión de los elementos que insiden en la escena, como por ej; que si en GI Brute force, estemos utilizando un valor de subdivs, de 16, 
+	en las luces, sombras y AO, entre otros también utilicemos el valor de subvis, para que así, se garantice el mismo valor de resolución de igual manera para el Threshold (umbral)
+
+
+
+Irradiance map: (iluminación indirecta similar a "Final Ghater", de mental ray)
+
+		1_Min rate: este parámetro permite configurar la mínima cantidad de muestreo que realizará el renders en forma de pases
+
+		2_Max rate: este parámetro permite configurar la máxima cantidad de muestreo que realizará el renders en forma de pases
+
+		3_Subdivs: las subdivisiones controlan la interpolación y mezclado de los rayos de luz en la escena logrando una mayor definición y resolución de la escena
+
+		4_Interp. samples: este parámetro aumento el grado de la interpolación ayudando a las subdivs, en el mejoramiento y definición de la imagen resultante
+
+		5_Interp.frames: este parámetro controla la interpolación entre fotogramas, especialmente útil para animación, este parámetro esta íntimamente ligado ha "Advance options/Interpolation type", y "Mode/Mode/presset"
+
+		6_Detail enhancement: esta opción aumentar de forma exponencial la calidad del render ó imágen resultante
+
+			6.1_Detail scale: podemos escoger entre una escala de detalle entre modo de screen ó world, osea tramado ó independiente (screen da mejores resultados considerablemente)
+
+			6.2_Detail radius: se refiere a la cantidad de detalle incremental agregado
+
+			6.3_Detail subdivs mult: se refiere al índice ó factor multiplicador que será aplicado
+
+
+		7_Advanced options/Interpolation type: este control permite elegir el tipo de interpolación deseado
+
+			7.1_Delone triangulation (good/exact); este es un modo deficiente deja bruma y una escena poca definida
+
+			7.2_Wighted average (good/robust), muy buena calidad aunque diplica en relación el tiempo de render (efecta en detrimento la refracciones)
+
+			7.3_Least squares fit (good/smoth), mejor resultado "Wighted average", y no afecta la refracción, mejor calidad (ESTE MÉTODO ES EL QUE OFRECE MEJORES RESULTADOS GENERALES Y NO AUMENTA EL TIEMPO DE RENDER)
+
+			7.4_Least squares w/voronoi weights, buena calidad aunque también va en detrimento de las refracciones de la escena y diplica el tiempo de render
+
+
+		8_Advanced options/Sample lookup:
+
+			7.5_Density-based (best), da muy buenos resultados generales (este es el método más recomendado a nivel general)
+
+			7.6_Overlapping (very good/fast), da mejores resultados en las sombras y en las refracciones
+
+			7.7_Quad-balanced (good), va un poco en detrimento de las sombras y reflexiones
+
+			7.8_Nearest (draf), da muy buenos resultados a nivel general
+
+
+		9_Advanced options/Multipass, mantener activada esta opción ayuda a una mejor representación de las reflexiones y refracciones en la escena
+
+		10_Advanced options/Ramdomize samples: esta opción activada ayuda a una mejor representación de las reflexiones y refracciones en la escena
+
+		11_Advanced options/Cal. interp samples: aumenta el valor de muestreo del calculo de la interpolación aumenta la calidad general de la escena aunque dispara exponencialmente el tiempo de render (manejar este parámetro con precaución)
+
+

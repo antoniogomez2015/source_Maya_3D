@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Mesh Tool Menu: (Maya 2015)
+    _______________
+
+        Modeling Toolkit:
+        _________________
+
+            Hide/Show Modeling Toolkit:
+
+                _éstas opciones nos permitirá activar ó desactivar la visualización del panel "Modeling Tool"
+
+                _de sección junto al "Channel Box", y al "Attribute Editor"
+
+            NOTA: la mayoría de las herramienta de éste menú están relacionadas con el panel "Nodelin Toolkit", y consolidan múltiples herramientas en una sóla para un mejor workflow
+
+
+        Edit:
+        _____
+
+            Append to Polygon Tool:
+
+                _ésta opción nos pemritirá poder rellenar un área vacía entre dos edges, donde exista un "hueco", dentro de un mismo elemento
+
+                _creando entre ambos edges, una nueva face, ha modo de "Bridge"
+
+                _de ésta manera, podremos crear nueva geometría para creación de elementos complejos y compuestos
+
+            Bevel Tool:
+
+                _ésta opción nos pemritirá hacer bevel, de cualquier sub elementos seleccionado
+
+                _sea éste un vertex, un edge, ó  un face, de ésta maenra, la herramienta tendrá un comportamiento interactivo y práctico que consolida éstas tres herramientas en una sóla
+
+            Bridge Tool:
+
+                _ésta opción nos pemritirá poder hacer "Bridge", entre dos edges, separados por una área vacía en un mismo objeto
+
+                _de ésta manera, podremos cerrar agujeros ó unir partes separaas de entre dos "inslands", de geometría parte de un mismo objeto en maya
+
+                _de ésta manera, podremos utilizar ésta herramienta en vez de la herramienta "Append to Polygon Tool", ó de la herramienta "Polygons/Edit Mesh/Face/Bridge"
+
+            Connect Tool:
+
+                _ésta opción nos permitirá conectar ó unir una serie de sub elemetos seleccionados previamente
+
+                _al igual que la herramienta: "Polygons/Edit Mesh/Connect Components"
+
+                _con la diferentes de que ahora la herramienta es interactiva y sencible
+
+                _de ésta manera, ahora tiene aplicaciones de "Slice", y pude aplicar atravezando todo el insland, de una geometría dividiendo a los sub, elementos seleccioanados en ese proceso
+
+                _también, aplicará a sub elementos que vayamos seleccionando a través, del tiempo y de forma interactiva
+
+
+            Crease Tool:
+
+                _ésta opción nos permitirá extender la tensión ó fuerza ejecida de uno ó más edges, seleccionados sobre los demás edges, contiguos
+
+                _lo cuál, emilará la tensión existente de más edge loops, contiguos y paralelos a los seleccionados
+
+                _de ésta manera, podremos influenciar ó cambiar la morfología de un elemento sin cambiar ó alterar su densidad y topología
+
+            Create Polygon Tool:
+
+                _ésta opción nos permitirá crear geometría poligonal de forma libre
+
+                _de ésta manera, podremos crear nuevos polígonos sobre diferentes superficies y con diferentes topologías
+
+                _pudiendo así, crear nuevos polygons, a modo de "triads", "quads", ó "engons"
+
+                _de ésta manera, podremos crear formas bases y formas complejas de forma rápida y personalizada
+
+            Cut Faces Tool:
+
+                _ésta opción nos permitirá poder agregar nuevos edges loops, de forma libre sobre la geometría y los propios loops
+
+                _ha modo de "Cuchilla", ésta herramienta nos permitirá cortas todo el modelo con un nuevo edge loop, que atravezará todo el modelo en una dirección determinada
+
+            Extrude Tool:
+
+                _ésta opción nos permitirá hacer extrusiones de sub elementos de forma interactiva
+
+                _es decir, que a través, de ésta opción podremos extruir tanto vertex, como edges, y faces, seleccionadas previamente
+
+                _de ésta manera, ésta herramienta hace lo mismo que las opciones del menú "Edit Mesh/Vertex-Edges-Faces/Extrude"
+
+            Insert Edge Loop Tool:
+
+                _ésta opción nos permitirá poder agregar edge loops, ó un "ring" de edges, completos sobre la geometría activa
+
+                _de ésta manera, podremos modelar y definir formas más fácilmente
+
+            Make Hole Tool:
+
+                _
+
+            Merge Vertex Tool:
+
+                _ésta opción nos permitirá fusionar dos vertex, de forma interactiva
+
+                _de ésta manera, con ésta herramienta seleccionada podremos posarnos sobre un vertex dejando pulsado "Mouse Left Click"
+
+                _para posteriormente arrastras hasta la ubicación del otro vertex con el cuál, deseamos fusionar el vertex que seleccionamos previamente
+
+                _para que así, nos aparezca una línea de color rija indicándonos la fusión que se realizará entre ambos vertex
+
+                _la cuál, su resultado se ubicará en la posición del último vertex seleccionado
+
+            Merge Edge Tool:
+
+                _
+
+
+            Multi-Cut Tool:
+
+                Cut Faces:
+                __________
+
+                _ésta opción nos permitirá agregar edges, independientes para dividir "faces", ha modo de "cuchillo", para crear elementos complejos conectando vertex por medio edges, nuevos
+
+                Slice:
+                ______
+
+                _para lo cuál, tendremos que crear una línea imaginaria entre dos puntos fuera del contorno del mesh, general del elemento ó motivo, haciendo clicks, en áreas vacías de del viewport
+
+                Cut Slice:
+                __________
+
+                _más también, podremos aumentar las posibilidaddes de ésta opcion ampliándolas a la acción concreta de "Cut"
+
+                _para lo cuál, debemos de repetir la acción anterior más en las opciones de la herramienta ó activando el panel "Modeling Tools"
+
+                _en la cuál, podremos activar las opcoines de "Slice Tool"
+
+                _para que así, podamos activar las opciones de "Extract Faces"
+
+                _por medio de la cuál, podremos dividir la geometría en dos partes diferentes pero dentro de un mismo objeto a partir de la línea signada por nosotros
+
+                _de ésta manera, tendremos opciones y campos a través, de los cuáles, podremos indicar la distancia de separación de las formas resultantes en las cordenadas deseadas
+
+                Trim Slice:
+                ___________
+
+                _más también, dispondremos de la opción de "Delete Faces", en el panel "Modeling Tool"
+
+                _a través, de la cuál, haremos la función de "Trim", sobre la parte de la geometría opuesta de la línea signada por nosotros 
+                
+                _la cuál, se comprimirá ó será suprimida del modelo ó motivo tras aplicar el efecto
+
+                Edge Loops:
+                ___________
+
+                _como también, nos permitirá agregar loops, completos aplicando la herramiento con "Control"
+
+                _y con "Shift", pulsado tendremos más precisión en el proceso ya que haremos "Snap", sobre los sub elementos del objeto
+
+                _así, como también, con "Shift", pulsado haremos rotación en grados de las ociones de "Slice"
+
+                _y con "Control + Shift", haremos que el nuevo loop, agregado se siña más a la forma del loop, contiguo exisntente y de referencia
+
+                NOTA: ésta herramienta sustituye y expande la herramienta de "Split Polygons Tools"
+
+
+            Offset Edge Loop Tool:
+
+                _ésta opción nos pemritirá crear edges loops, contiguos ha otro edge loop, exitente
+
+                _de ésta manera, podemos modicar la tensión de los edge loops, de forma fácil y rápida
+
+                _lo cuál, es similar a lo conseguido con la herramienta de "Bevel Tool"
+
+
+            Quad Draw Tool:
+
+                _ésta opción nos permitirá poder crear nueva geometría y objetos conformados específicamente "quads" 
+                
+                _de forma manual y totalmente personalizable entre otras opciones de edición y creación de nueva geometría
+
+                Vertex:
+                _______
+
+                _de ésta manera, podremos ir creando puntos entre dos y cuatro puntos dependiento si partimos de una superficie contigua ó no creada previamente
+
+                Faces:
+                ______
+
+                _para a continuación rellenar los vertex creados para conformar un nuevo face, a través, del comando "Shift + Mouse Left Click", sobre el área comprendida entre los vertex creados preciamente
+
+                Move:
+                _____
+
+                _una vez hemos creado faces, nuevas podremos mover éstos para lo cuál, debemos de aplicar el siguiente comando: "Mouse Left Click and Drag"
+
+                _sobre cualquiera de las faces, creadas ó existentes previamente
+
+                Relax:
+                ______
+
+                _así, como también, si nos posamos sobre cualquier sub elementos podremos suvizar su comportamiento con el resto de desmás sub elementos
+
+                _para lo cuál, igualmente debemos de aplicar el comando "Shift + Mouse Left Click", sobre el grupo de sub elementos respectivamente
+
+                _de ésta manera, iremos relajando las tensiones existente entre los sub elementos respectivos
+
+                Edge Loop:
+                __________
+
+                _más también, dispondremos de una sub herramienta de "Edge Loop Tool", a través, de la cuál, podremos crear nuevos edge loops, paralelos a los edges, sobre los cuáles, apliquemos ha herramienta
+
+                _para lo cuál, debemos de aplicar el siguiente comando: "Control + Mouse Left Click"
+
+                _para que así, a través, de una línea punteada el sistema nos indique la posición donde será agregado el nuevo edge loop
+
+                Extended Edge:
+                ______________
+
+                _más también, si nos posamos sobre un edge, y aplicamos la tecla "Tabulador", podremos hacer "Mouse Left Click and Drag"
+
+                _para exturir ó extender el respectivo edge, creando así, una nueva face
+
+                _la cuál, podremos situar de forma contigua a una face, circundante la cuál, se señirá y soldará automáticamente a la más cercana
+
+                _más si aplicamos "Mouse Midle Click and Drag", podremos extruir todo un edge loop, completo
+
+                Delete:
+                _______
+
+                _más también tendremos la posibildiad de eliminar faces, creadas previamente como también, edge loops, completos
+
+                _para lo cuál, tendremos que posarnos sobre un face, ó edge loop, y aplicar el comando: "Control + Shift + Mouse Left Click"
+
+                _para que así, el face, respectivo sea eliminado
+
+                _éstas herramientas de creación manual son especialmente útiles para la creación de geometría sobre superficies como modelos ó characters, ó sobre el grid, haciendo uso de las ociones de "snap", para hacer retopología
+
+                _de ésta manera, ésta herramienta se asemeja a la herramienta de "Create Polygon Tool", más con la diferencia de que en éste caso la geometría generada siempre estará conformada por quads, y nunca por triads, ó engons
+
+                _también, se podría decir que éstas opciones se asemejan a las opciones de "Topology Tool", de "ZBrush", ó al sistema de generación de geometría convencional de Blender
+
+
+            Sculpt Geometry Tool:
+
+                _ésta opción nos permitirá esculpir sobre geometría especialmente si ésta geometría tiene una alta densidad
+
+                _para que así, podamos crear formas más personalizadas y orgánicas
+
+                _de ésta manera, ésta herramienta cuenta con un panel de opciones a través, del cuál, podremos controlar tanto el brush
+
+                _así, como los comportamientos de la herramienta, entendiendo así, que podremos tanto agregar como sustraer geometría, otros
+
+                Brush Size:
+
+                    _B + Mouse Left CLick and Drag
+
+
+                _con "Control", sustraeremos geometría y con "Shift", suavizaremos lo realizados
+
+            Side Edge Tool:
+
+                _ésta opción nos permitirá desplazar edges, seleccionados sobre los propios edges, sobre los cuáles están construidos los edges, seleccionados previamente
+
+                _de ésta manera, podremos mantener la morfología del objeto mientras cambiamos su topología, distribución y tensión de los sub elementos que lo componen
+
+                _para lo cuál, con los edges, respectivos seleccionados debemos aplicar "Mouse Midle Click and Drag", para desplazarlos
+
+            Target Weld Tool:
+
+                _ésta opción nos permitirá eliminar cualquier sub elemento de forma individual y manual sea éste de tipo vertex, ó edge
+
+                _más nunca eliminando las faces, sobre las cuáles están conformados los vertex,  edges, respectivamente
+
+                _para lo cuál, con la herramienta seleccionada sólo tengamos que posamos sobre el sub elementos respectivo y hacer "Mouse Left Click", para que así, el sub, elemento respectivo sea suprimido
+
+                _para que así, nunca sea afectada la morfología del objeto más si tu topología
+
+
+        Paint:
+        ______
+
+            Paint Reduce Weights Tool:
+
+                _
+
+            Paint Transfer Attributes Weights Tool:
+
+                _
+
+            
+            
+
+            
+
+
+
+
+
+
+
+-->
+</body>
+</html>

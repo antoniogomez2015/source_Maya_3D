@@ -1,0 +1,20 @@
+
+
+_Animation/
+
+
+	_Curve/Pre Infinity y Post Infinity: (permiten agregar ciclos de animación tanto antes 
+
+	del loops/sample, ó después de este, Pre/post), ej:
+
+
+	_Curves/Post Infinity/Cycle: para hacer ciclos de animación que repiten indefinidamente
+
+
+	_Curves/Post Infinity/Cycle with offset: para hacer ciclos incrementados exponenciales 
+
+	con el últimos valor del último keyframe de la curva de animación
+
+
+	_CurvesSimplify Curve: para simplificar la densidad de fotogramas en una curva (especialmente útil para motion capture, otros)
+

@@ -1,0 +1,154 @@
+
+
+DETALLES:
+
+
+en los sistemas de contenedores de fluidos, podemos ajustar las características que tendrá los
+
+emisores que accionarán dentro de el contenedor, así, podremos activar ó desactivar opciones
+
+y características de emisión
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+FuidEmitter1:
+_____________
+
+	
+	Basic Emitter Attributes:
+	_________________________
+
+
+	_Emitter Type:
+
+		podemos seleccionar el tipo de emisor entre los cuales tenemos
+
+			_Omni:
+
+				podemos seleccionar un emisor de tipo multi-direccional ó de punto
+
+				este es el más general ó de uso estandar y convencional para todo 
+
+				tipo de emisiones
+
+
+			_Surface:
+
+				podemos seleccionar un emisor de superficie, este es el más 
+
+				recomendado para emisores personalizados de geometría
+
+
+			_Curve:
+
+				podemos seleccionar un emisor de apline/cuve, para emisiones
+
+				a través, de paths/trazados, como emisores
+
+
+			_Volumen:
+
+				podemos seleccionar un emisor de volúmen para emisores de 
+				superficies volumétricas geométricas ó personalizadas por nosotros
+
+				como también para la opción de "Fill Object"
+
+
+	_Start Frame Emission:
+
+		podemos elegir la modalidad de emisión entre las cuales tenemos
+
+
+			_Off:
+
+				podemos elegir la modalidad en "Off", ó libre, de esta forma
+
+				la simulación se reproducirá de forma indefinida ó libre
+
+
+			_Start and All Frames:
+
+				podemos elegir la modalidad de todos los fotogramas así, la
+
+				simulación se reproducirá en todos los fotogramas del timeline
+
+
+			_Start Frame Only:
+
+				podemos elegir la modalidad de emitir sólo en fotograma actual,
+
+				esta opción es especialmente útil para vaciar partículas de dentro
+
+				de emisores de sueprficie ó personalizados de geometría con la
+
+				opción de Fill Object, activada
+
+
+	_Rate (Percent):
+
+		podemos elegir la cantidad de partículas de emisión, entre mayor el número mayor la 
+
+		cantidad de partículas
+
+
+	_Use Per-Point Rates (ratePP):
+
+		podemos utilizar un taza de cálculo por puntos de partículas
+
+
+	_Use Per-Point Raduis (radiusPP):
+
+		podemos utlizar un taza de cálculo por punto por radio
+
+
+	_Cycle Emission:
+
+		podemos elegir entre cliclos de emisión de los puntos de la simulación, estos son
+
+			
+			_Frme (timeRandom on):
+
+				podemos elegir un ciclo de emisión con un tiempo alternado entre
+
+				emisión y emisión
+
+	
+			_Node (timeRandom off):
+
+				podemos elegir un ciclo de emisión con un tiempo no alternado entre
+
+				emisión y emisión
+
+
+	_Cycle interval:
+
+		podemos elegir un intervalor del ciclo de emisión para aumentar su frecuencia
+
+
+	_Use Distance:
+
+		podemos activar usar distancia para el cálculo general de los ciclos de emisión
+
+
+	_Min Distance:
+
+		podemos también indicar una mínima distancia
+
+
+	_Max Distance:
+
+		podemos también indicar una máxima distancia
+
+
+	_Fill Object
+
+		podemos activar la opción de fill objecto, para emitir a partir del volúmen del 
+		emisor
+
+
+
+
+

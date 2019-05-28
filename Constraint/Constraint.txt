@@ -1,0 +1,185 @@
+
+Animation/Constrin/
+
+	
+	_point (posición): esta opción permite subordinar la propiedad de "Position", de un elemento a otro
+
+		_primero seleccionamos el elemento que hará de handle ó controlador
+
+		_segundo seleccionaremos el elementos que será controlado
+
+		_luego vamos ha Animaition/Contrain/Point, así, el elemento controlado irá hacia 
+
+		la posición del elemento controlador
+
+		_si deseamos que el elemento controlado mantenga su posición en relación al elemento controlador
+
+		debemos entrar e las opciones del contrain/point, y activar la opción "Maintain offset"
+
+
+
+	_orient (rotación): esta opción permite subordinar la propiedad de "Rotaion", de un elemento a otro
+
+		_primero seleccionamos el elemento que hará de handle ó controlador
+
+		_segundo seleccionaremos el elementos que será controlado
+
+		_luego vamos ha Animaition/Contrain/Orient, así, el elemento controlado irá hacia 
+
+		la posición del elemento controlador
+
+		_si deseamos que el elemento controlado mantenga su posición en relación al elemento controlador
+
+		debemos entrar e las opciones del contrain/orient, y activar la opción "Maintain offset"
+
+
+	_Aim (orientación ó dirección/track/seguimiento): esta opción permite subordinar la propiedad de "Orientación", de un elemento a otro
+
+		_primero seleccionamos el elemento que hará de handle ó controlador
+
+		_segundo seleccionaremos el elementos que será controlado
+
+		_luego vamos ha Animaition/Contrain/Aim, así, el elemento controlado irá hacia 
+
+		la posición del elemento controlador
+
+		_si deseamos que el elemento controlado mantenga su posición en relación al elemento controlador
+
+		debemos entrar e las opciones del contrain/Aim, y activar la opción "Maintain offset"
+
+
+
+	_Scale (escala): esta opción permite subordinar la propiedad de "Scale", de un elemento a otro
+
+		_primero seleccionamos el elemento que hará de handle ó controlador
+
+		_segundo seleccionaremos el elementos que será controlado
+
+		_luego vamos ha Animaition/Contrain/Scale, así, el elemento controlado irá hacia 
+
+		la posición del elemento controlador
+
+		_si deseamos que el elemento controlado mantenga su posición en relación al elemento controlador
+
+		debemos entrar e las opciones del contrain/Scale, y activar la opción "Maintain offset"
+
+
+	_Parent (translación/escala/rotación): esta opción permite subordinar la propiedad de "Trtanslate/Scale/Rotation", de un elemento a otro
+
+		_primero seleccionamos el elemento que hará de handle ó controlador
+
+		_segundo seleccionaremos el elementos que será controlado
+
+		_luego vamos ha Animaition/Contrain/Parent, así, el elemento controlado irá hacia 
+
+		la posición del elemento controlador
+
+		_si deseamos que el elemento controlado mantenga su posición en relación al elemento controlador
+
+		debemos entrar e las opciones del contrain/Parent, y activar la opción "Maintain offset"
+
+
+	_Geometry (Moving Snap): esta opción permite subordinar la propiedad de "Space", de un elemento a otro
+
+		_primero seleccionamos el elemento que hará de handle ó controlador
+
+		_segundo seleccionaremos el elementos que será controlado
+
+		_luego vamos ha Animaition/Contrain/Geoemtry, así, el elemento controlado irá hacia 
+
+		la posición del elemento controlador
+
+		_si deseamos que el elemento controlado más olgura en relación al elemento controlador
+
+		debemos entrar e las opciones del contrain/weight
+
+
+	_Normal (Orient to Normal): esta opción permite subordinar la propiedad de "Orient", de un elemento a otro
+
+		_primero seleccionamos el elemento que hará de handle ó controlador
+
+		_segundo seleccionaremos el elementos que será controlado
+
+		_luego vamos ha Animaition/Contrain/Normal, así, el elemento controlado irá hacia 
+
+		la posición del elemento controlador
+
+		_si deseamos que el elemento controlado más olgura en relación al elemento controlador
+
+		debemos entrar e las opciones del contrain/weight
+
+
+	_Tangent (seguir trazados): esta opción permite subordinar la propiedad de "Orient", de un elemento a otro
+		
+		_primero seleccionamos el elemento "Spline", que hará de handle ó controlador
+
+		_segundo seleccionaremos el elementos que será controlado
+
+		_luego vamos ha Animaition/Contrain/Tangent, así, el elemento controlado irá hacia 
+
+		la posición del elemento controlador
+
+		_si deseamos que el elemento controlado más olgura en relación al elemento controlador
+
+		debemos entrar e las opciones del contrain/weight, y "Up Vector", nos permite indicar la cordenada de trabajo
+
+
+	_Point On Poly (posicionar elemento a vertex): esta opción permite subordinar la propiedad de "Orient", de un elemento a otro
+		
+		_primero seleccionamos el sub-elemento vertex, en modo de edición que hará de handle/target ó controlador
+
+		_segundo seleccionaremos el elementos que será controlado aún en el modo de sub elemento con shift
+
+		_luego vamos ha Animaition/Contrain/Point On Poly, así, el elemento controlado irá hacia 
+
+		la posición del elemento controlador "Vertex"
+
+		_si deseamos que el elemento controlado más olgura en relación al elemento controlador
+
+		debemos entrar e las opciones del contrain/weight, así, cordenada de trabajo
+
+
+	_Closest Point (Obtener información de elemento): esta opción permite subordinar la propiedad de "cordenadas", de un elemento
+		
+		_primero seleccionamos elemento del cuál se obtendrá la información
+
+		_luego vamos ha Animaition/Contrain/Closest Point
+
+		_así, se creará un elemento de tipo "Locator", al lado del elemento para tener un representación visual del constrain
+
+
+	_Pole Vector (orienta de IK): para articulaciones de rigging de kinemática invertida
+
+		_primero seleccionamos el elemento que hará de controlador, por lo general un spline referencial
+
+		_luego seleccionamos el handle de un "IkRpSolver"
+
+		_posteriormente vamos ha Animation/Constrain/Pole Vector, así, al accionar la "Translation", en el elemento controlador
+
+		modificará la rotación el elemento skeleton
+
+
+	_remove Targer (elemina contraint asignado a elemento):
+
+
+	_Set Rest Position (reinicia la posición original en la cuál fué creado el contraint en el elemento)
+
+
+
+_Active/Inactive: la mayoría de las opciones constrain, tiene atributos de "agarrar y soltar";
+
+	_Node State, acción estandar u otras
+
+	_Offset: desfaces para reajustar a un posición más convenniente de la default de la acción del efecto constrain
+
+	_IK Hnadle Into (ó similar): este atributo permite activar ó desactivar la acción del efecto contrain, permitiéndonos
+
+	hacer animaciones y diferentes interactividades haciendo flexible el efecto constrain 
+
+		
+
+
+
+
+
+

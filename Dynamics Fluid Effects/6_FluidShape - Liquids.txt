@@ -1,0 +1,296 @@
+
+http://www.xnxx.com/video9708708/big_ass_white_milf_kendra_lust
+
+http://es.xhamster.com/movies/1813049/sneaky_creampie_and_anal_casting.html
+
+http://es.xhamster.com/movies/4420509/oso_submissive_slut_assfucking.html
+
+Ass And Cock 
+
+DETALLES:
+
+
+tenemos la posibilidad de los sistemas de fluidos, tenemos la posibilidad de configurar líquidos
+
+con diferentes desidades y características para lograr así, diferentes tipos de simulaciones con deferentes
+
+requerimientos ´técnicos como fluidos viscosos, ó muy fluidos como agua ó cualquier otro tipo de producto
+
+a partir de líquidos
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Workflow:
+_________
+
+
+	_primero creamos las geometrías las cuales serán colisionadoras del sistema de fluidos según
+
+	la lógica de la escena
+
+
+	_luego creamos el contenedor y lo ubicamos en relación a la lógica de la escena, en este 
+	configuramos una resolución base, baja entre "20"
+
+
+	_ahora debemos relacionar los elementos que serán colisionadores con el contenedor de fluidos
+
+	para esto seleccionamos el contenedor y luego, los elementos que serán colisionadores y, con
+
+	ambos seleccionados vamos ha "Dynamics/Fluid Effects/Make Collider"
+
+
+	_por los general los fluidos discurren hacia abajo, por el peso de la gravedad sobre estos, 
+
+	por esto vamos ha "fluidShape1/Dynamic Simulation/Gravity", y colocamos un valor negativo 
+
+	ej: "-9.800", así, el fluido caerá con naturalidad
+
+
+
+-----------------------------------------------------------------------------------------------------
+
+
+	
+Liquidos:
+_________
+
+
+	_primero creamos un contenedor con un emisor en relación a la lógica de la escena
+
+
+	_luego vamos ha "fluidShape1/Liquids/", y activar la opción de "Enable Liquid Simulation", 
+
+	en la cuál, disponemos de los siguiente parámetros:
+
+
+		_Liquid Method:
+
+			_Liquid and Air:
+
+				_ll
+
+
+			_Density Based Mass:
+
+				_ll
+
+
+		_Liquid Min Density:
+
+			_ll
+
+
+		_Liquid Mist Fall:
+
+			_ll
+
+		
+		_Mass Range:
+
+			_ll
+
+
+		_Density Tension:
+
+			_ll
+
+
+		_Tension Force:
+
+			_ll
+
+
+		_Density Pressure:
+
+			_ll
+	
+
+-----------------------------------------------------------------------------------------------------
+
+
+Performance:
+____________
+
+
+	para mejoar la visualización y comportamiento de los fluidos podemos contemplar las siguientes
+
+	variantes de configuración para los sistemas líquidos:
+
+	-----------------------------------------------------------------------------------------------
+
+
+	_Descripción: para optener un mejor resultado del fluido en el render
+
+
+	_vamos ha "fluidShape1/Surface/", y cambiamos el modo de visualización "Surface Render", en el cuál
+
+	diponemos de las suiguientes opciones:
+
+
+		_Surface Threshold:
+
+			_esta opción permite ajustar el umbral de la superficie del líquido del fluido
+
+			permitiendo así, contraer ó retraer el líquido aumendando ó disminuyendo su
+
+			volúmen así, como su aspecto, al aumentar el valor del umbral ej "0.300", 
+
+			el líquido tomará un aspecto más retraido y viscoso, otros
+
+
+		_Surface Tolerance:
+
+			_esta opción permite ajstar cuan poligonizado ó suavizado se verá el fluido
+
+			resultante así, al aumentar el valor ej: ha "3", la geometría que conformará
+
+			la simulación se representará en el conenedor de forma suavizada y agradable
+		
+
+
+		_Specular Color:
+
+			_ll
+
+
+		_Cosine Power:
+
+			_ll
+
+
+
+	-----------------------------------------------------------------------------------------------
+
+
+
+	_Descripción: para obtener una mejor visualización de la densidad y el volúmen del fluido 
+
+	y su calidad como líquido
+
+
+	_vamos ha "fluidShape1/Shading", y ajustamos el valor de "Transparency"
+
+
+
+	-----------------------------------------------------------------------------------------------
+
+
+
+	_Descripción: para obtener una mejor visualización del fluido y su calidad
+
+
+	_ahora vamos ha "fluidShape/Shading Quality", y ajustamos los siguientes parámetros:
+
+
+		_Quality:
+
+			_podriamos por ejemplo color un valor de "3"
+
+
+		_Render interpolator:
+
+			_en el modo de interpolación podriamos colocar "Smooth", para obtener un render
+
+			mejorado
+
+
+	-----------------------------------------------------------------------------------------------
+	
+
+	_Descripción: para obtener mejores resultados y una mayor rendimiento del contenedor en relación
+
+	a la capacidad de este de representar el fluido líquido
+
+
+	_ahora vamos "fluidShape1/Dynamic Simulation/High Detail Solver", y elegimos la opción de
+
+
+		_High Detail Solver: 
+
+			_colocamos "All Grids"
+
+		
+		_SubSteps: 
+
+			_lo subimos ejemplo ha "2"
+
+		
+		_Solver Quality:
+
+			_podemos varia la calidad del sistema para mejorar la calidad de la representación
+
+
+	-----------------------------------------------------------------------------------------------
+
+
+	_Descripción: para aumenta la calidad de la geometría que conforma el fluido y su aspecto en general
+
+
+	_vamos ha "fluidShape/Output Mesh", donde dinsponemos de las siguientes opciones:
+
+
+		_Mesn Method:
+
+
+			_"Triangle Mesh", es la opción que da mejores resultados con mejor peso ó densidad
+
+			de geometría poligonal
+
+			
+		Mesh Resolution:
+
+			_aumentar este valor aumenta la resolución del fluido líquido, teniendo ganancia
+
+			así, en la capacidad de representar el detalle más aumenta su peso considerablemente
+			
+			de la simulación pero permite una extensión superior del volúmen en sus
+ 
+			interacciones al colisionar con los demás elementos
+
+
+		_Mesh Smoothing Iterations:
+
+			_esta opción permite aumentar la interpolación del suavizado en la iteración 
+
+			en cada vez que se actuliza ó cambia el fluido líquido en cada paso/frame, 
+
+			de la simulación
+
+
+	-----------------------------------------------------------------------------------------------
+
+
+	_Descripción: la resolución base del contenedor no solo determinará la resolución del fluido líquido
+
+	si no también, la capacidad del líquido de representar propiedades físicas como la densidad 
+
+	de las gotas, y su dispersión de las mismas así, como la interacción y capacidad de penetración
+
+	sobre otros elementos, otros
+
+
+	_vamos ha "fluidShape1/Container Properties/", y ajustamos el valor de resolución base,
+
+	del contenedor
+
+
+	-----------------------------------------------------------------------------------------------
+
+
+	_Descripción: podemos tener un visualización general mejorar del sistema de fluidos líquidos
+
+
+	_vamos ha "fluidShape1/Display/"
+
+
+		_Voxel Quality:
+
+			_escogemos la opción "Better"
+			
+
+	
+

@@ -1,0 +1,283 @@
+
+
+DETALLES:
+
+este es un modo de emisión de partículas contínuas, a través de diferente métodos espresados a continuación:
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Crear partículas: "Dynamics/Particles/..."
+__________________________________________
+
+
+
+
+
+
+Emitter type: Omni: (emisión de punto)
+___________________
+
+
+	Emitter name: indicar un nombre al sistema de partículas que vamos a crear
+
+
+	Basic Emitter Attributes:
+	_________________________
+
+
+	_Rate (particles/sec): número de partículas emitidas por segundo
+
+	
+	_Cycle emission: en tiempo aleatorios de fotogramas
+
+		_None (timeRandom off), sin tiempo aleatorio
+
+		_Frame (timeRandom on), con tiempo aleatorio
+
+
+	Cycle interval: si en "Cycle emission:", hemos elegido el ciclo "Frame (timeRandom on)", tendremos que indicar
+
+	el intervalo del ciclo de emisión "Cycle interval:"
+
+	
+
+	Distance/Direction Attributes:
+	______________________________
+
+	
+	_Max distance: máximo alcance ó vida de la partícula
+
+
+	_Min distance: mínima distancia a partir se comenzará a crear la partícula
+
+
+
+	Basic Emission Spped Attributes:
+	________________________________
+
+	
+	_Speed: velocidad que tendrán las partículas
+
+
+	_Speed random: aliatoriedad que tendrán las partículas en su emisión
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+Emitter type: Directional: (emisión direccional)
+__________________________
+
+
+
+	Emitter name: indicar un nombre al sistema de partículas que vamos a crear
+
+
+	Basic Emitter Attributes:
+	_________________________
+
+
+	_Rate (particles/sec): número de partículas emitidas por segundo
+
+
+	_Cycle emission: en tiempo aleatorios de fotogramas
+
+		_None (timeRandom off), sin tiempo aleatorio
+
+		_Frame (timeRandom on), con tiempo aleatorio
+
+
+	Cycle interval: si en "Cycle emission:", hemos elegido el ciclo "Frame (timeRandom on)", tendremos que indicar
+
+	el intervalo del ciclo de emisión "Cycle interval:"
+
+
+
+	Ditance/Direction Attributes:
+	_____________________________
+
+
+
+	_Max distance: máximo alcance ó vida de la partícula
+
+
+	_Min distance: mínima distancia a partir se comenzará a crear la partícula
+
+
+	_Direction X: emisión de las partículas en la cordenada "X"
+
+
+	_Direction Y: emisión de las partículas en la cordenada "Y"
+
+
+	_Direction Z: emisión de las partículas en la cordenada "Z"
+
+
+	_Spread: dispersión de las partículas
+
+
+
+	Basic Emission Speed Attribures:
+	________________________________
+
+
+	_Speed: velicidad de emisión de las partículas
+
+	_Speed random: velocidad aleatoria de amisión de las partículas
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+Emitter type: Volume: (emisión de formas geométricas)
+_____________________
+
+
+
+	Emitter name: indicar un nombre al sistema de partículas que vamos a crear
+
+
+
+	Basic Emitter Attributes:
+	_________________________
+
+
+	_Rate (particles/sec): número de partículas emitidas por segundo
+
+
+	_Cycle emission: en tiempo aleatorios de fotogramas
+
+		_None (timeRandom off), sin tiempo aleatorio
+
+		_Frame (timeRandom on), con tiempo aleatorio
+
+
+	Cycle interval: si en "Cycle emission:", hemos elegido el ciclo "Frame (timeRandom on)", tendremos que indicar
+
+	el intervalo del ciclo de emisión "Cycle interval:"
+
+
+
+	Ditance/Direction Attributes:
+	_____________________________
+
+
+
+	_Direction X: emisión de las partículas en la cordenada "X"
+
+
+	_Direction Y: emisión de las partículas en la cordenada "Y"
+
+
+	_Direction Z: emisión de las partículas en la cordenada "Z"
+
+
+	
+
+	Basic Emission Speed Attribures:
+	________________________________
+	
+
+	_Speed random: velocidad aleatoria de amisión de las partículas
+
+
+
+	Volume Emitter Attributes:
+	__________________________
+
+
+	_Volume shape: esta opción permite emitor partículas a través del volúmen de una 
+
+	forma geométrica prediseñada, estas son:
+
+
+		_Cube/Sphere/Cylinder/Cone/Torus: estas son las formas disponibles para la
+
+		emisión de partículas a través de formas geométricas disponibles en el programa
+
+		_dependiendo de la forma escogida podremos configurar sus características
+
+	
+
+	Volume Speed Attributes:
+	________________________
+
+
+	_Away from axis: amisión de partículas siempre de cordenadas
+
+	_Along axis: amisión de partículas a lo largo de las cordenadas
+
+	_Around axis: amisión de partículas alrededor de las cordenadas
+
+	_Random direction: dirección aleatorio de la emisión de partículas
+
+	_Directional speed: velocidad de la dirección de la emisión de las partículas
+
+	_Scale speed by size: escalar la velocidad de las partículas por el tamaño de éstas
+
+		
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+Emitter from Object: (emisión de formas/mesh, personalizadas)
+____________________
+
+
+
+	Emitter name: indicar un nombre al sistema de partículas que vamos a crear
+
+
+
+	Basic Emitter Attributes:
+	_________________________
+
+
+	_Rate (particles/sec): número de partículas emitidas por segundo
+
+	
+	_Cycle emission: en tiempo aleatorios de fotogramas
+
+		_None (timeRandom off), sin tiempo aleatorio
+
+		_Frame (timeRandom on), con tiempo aleatorio
+
+
+	Cycle interval: si en "Cycle emission:", hemos elegido el ciclo "Frame (timeRandom on)", tendremos que indicar
+
+	el intervalo del ciclo de emisión "Cycle interval:"
+
+	
+
+	Distance/Direction Attributes:
+	______________________________
+
+	
+	_Max distance: máximo alcance ó vida de la partícula
+
+
+	_Min distance: mínima distancia a partir se comenzará a crear la partícula
+
+
+
+	Basic Emission Spped Attributes:
+	________________________________
+
+	
+	_Speed: velocidad que tendrán las partículas
+
+
+	_Speed random: aliatoriedad que tendrán las partículas en su emisión

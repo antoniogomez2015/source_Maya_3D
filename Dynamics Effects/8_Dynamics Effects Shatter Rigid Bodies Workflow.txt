@@ -1,0 +1,285 @@
+
+
+DETALLES:
+
+
+a través de diferentes sistemas y trucos podemos ajustar y sortear las diferntes tecnologías y métodos
+
+para hacer que las limitaciones de los procesos de shatter, sean compatibles con los procesos de rigid bodies,
+
+y fields, otros
+
+
+
+Tutorial:
+
+	3D Maya 118 Dinamicas Efecto de rotura con Shatter
+
+		https://www.youtube.com/watch?v=8SeC3dbg6P8&list=PLVnqjpSwnYEdWyuwBP5YP5TULZJGPbrkG&index=118
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Proceso "Surface Shatter":
+__________________________
+
+
+	DETALLES:
+
+
+	aplicaremos diferentes métodos para hacer que la interpenetración de las diferentes meshes, entre sí,
+
+	no sea una limitante para el proceso de rigid bodies
+
+_______________________________________________________________________________________________________________
+
+
+
+	_primero creamos una mesh/motive, a la cuál deseamos aplicar el proceso de fractura/shatter, y la ubicamos
+
+	según la lógica de la escena
+
+
+		_esta mesh, debe tener una alta resolución para un mejor desempeño
+
+		
+		_ha esta mesh, debemos borrarle el historial antes de aplicarle un "shatter"
+
+
+	_luego creamos ej:, un plano ó floor, el cuál servirá de colisionador a los fragmentos generados en el
+
+	proceso de shatter, y, lo ubicamos en relación a la lógica de la escena
+
+
+		_luego seleccionamos esta mesh/floor, y con esta seleccionada vamos ha "Dynamisc/Soft-Rigid Bodies
+
+		/Create Passive Rigid Body"
+
+		
+		_posteriormente vamoa a los atributos de la mesh/floor, "Attribute Editor/rigidBody00/
+
+		Performance Attributes/", y colocamos en "Collision Layer", un valor de "-1", para que así,
+
+		incluya este rigid body, en los siguientes procesos que lleven rigid bodies, como el "shatter",
+
+		de esta menera posteriormente los fragmentos de generados en el proceso de shatter, con rigid
+
+		bodies, podrán colisionar con este mesh/floor
+
+
+	_luego seleccionamos la mesh/motive, a la cuál deseamos aplicarle el "shatter", y con esta seleccionada
+
+	vamos ha "Dynamics/Effects/Create Shatter/Options:"
+
+
+		_primero seleccionamos la pestaña de "Surface Shatter"		
+
+
+		_Surface shatter name:
+
+			podemos asignale un nombre el sistema de shatter
+
+		
+		_Shard count:
+
+			podemos indicar el número de fragmentos deseados
+
+
+		_Extrude shards
+
+			podemos asignarle un grado de extrusión ó espesor a los fragmentos resultantes
+
+
+		_Seed value:
+
+			podemos variar la semilla de generación de los fragmentos resultantes
+
+
+		_Post operation:
+
+
+			_Shapes:
+
+				permite crea los fragmentos sin aplicarles sistemas de rigid bodies, fields, otros
+
+
+			_Rigid bodies with collisions off: (para este ejemplo escogemos este parámetro)
+
+				permite cuerpos rígidos "activos", pero sin colisiones entre ellos, ó mejor dicho, 
+
+				no tienen aplicado "Dynamics/Particles/Make Collide" para evitar las interpenetraciones 
+
+				que generan conflictos en el proceso de rigid bodies, esta opción es la más recomendada, 
+
+				ya que los fragmentos obedecerán a los procesos rigid bodies, y fiedls, más estos 
+
+				fragmentos no colisionarán entre sí 
+
+				_los fragmentos generados en esta opción también se generarán en un grupo más
+
+				éstos dentro de cada una de sus partes ó fragmentos tendrá un "rigidBody00"				
+
+
+			_Soft bodies with goals:
+
+				permite crear cuerpos blandos con "goals"
+
+
+			_Soft bodies with lattice and goals:
+
+				permite crear cuerpos blandos con "goals", más el modificador "lattice"
+
+
+			_Sets:
+
+				(indeterminado)
+
+
+		_Triangule surface:
+
+			permite hacer triads, de los componentes que conforman el shatter, resultante
+
+
+		_Smooth shards:
+
+			permite suavizar las partes de los fragmentos resultantes
+
+
+		_Original surface: 
+
+			podemos ocultar/hide, borrar/delete ó dejar/nothing, la mesh, original 
+
+
+		_Link to shards:
+
+			podemos relacionar los fragmentos resultantes
+
+		
+		_Make original surface rigid:
+
+			hacer la mesh, original un elementos rigid bodies
+
+
+		_Verbose mode:
+
+			(indeterminado)
+
+
+	así, se generará un nuevo group/grupo, "surfaceShatter", el cuál contendrá lar partes ó fragmentos
+
+	que conforman el shatter, las partes del shatter, se crearán en el mismo lugar que la mesh, original
+
+
+	NOTA:
+
+	
+	es recomendable mantener el elemento ó mesh, original en el mismo sitio de creación ya que la mesh,
+
+	que conforma el shatter, se representará en el render con grietas e imperfecciones
+
+	
+	para así, hacer la animación y demás procesos de visualización con la mesh, original y solo mostrar el mesh,
+
+	shatter, en el proceso de la simulación de las fracturas
+
+_______________________________________________________________________________________________________________
+
+
+	procesos con Rigid bodies with collisions off:
+	______________________________________________
+
+	
+		_podemos seleccionar los elementos ó partes ó fragmentos dentro del grupo que conforma el shatter,
+
+		en el outliner, y con estos seleccionados vamos ha "Dynamics/Fields/Gravity"
+
+
+		_en este punto, al reproducir la simulación veremos que los fragmentos colisionan con el elemento
+
+		mesh/floor, en este caso más no colosionan entre sí
+
+
+		_en este punto comenzaremos a realizar el proceso que nos permitirá superar las limitaciones
+
+		de compatibilidad en el proceso de rigid bodies, y el proceso de shatter
+
+	
+			_primero hacemos el proceso de creación del sistema de shatter, con "Rigid bodies with collisions off",
+
+			con  sobre la mesh/motive
+
+		
+			_luego hacemos un duplicado "control + D", del grupo, que conforma ó contiene todas 
+
+			las partes ó fragmentos generados en el proceso de shatter
+
+
+			_ahora con las partes ó segmentos del shatter, duplicados seleccionados vamos ha
+
+			"Polygons/Mesh/Average vertices/Options", esta opción permite suavizar lo vertices y 
+
+			separarlos entre sí
+
+
+				_Smoothing amount: "colocamos un valor de 3"
+
+
+			este proceso separará lo vertex, y las partes ó segmentos en sí, creando grietas
+
+			ó fisuras entre ellos (por eso es recomendable conservar la mesh, original)
+
+
+			_al haber duplicado el grupo con los segmentos del shatter, se han desvinculado
+
+			todos los rigid bodies, más tendremos que repetir el proceso para esta copia de los
+
+			segmentos optimizados:
+
+
+				_primero seleccionamos la segmentos a través del outliner, y borramos su historia
+
+			
+				_como también es aconsejable hacerles un "Modify/Free transformation"
+
+				
+				_y aún con estos seleccionamos vamos ha "Edit/Delete by Type/Rigid Body"
+
+
+				_luego los seleccionamos nuevamente y vamos ha "Dynamics/Soft-Rigid Bodies
+
+				/Create Active Rigid Body"
+
+
+				_y aún con los segmentos seleccionamos vamos ha "Dynamics/Fields/ej: Gravity"
+
+
+				-así, podremos ver como esta versión duplicada y optimizada de los fragmentos
+
+				del shatter, si funciona correctamente con el rigid body sistem, ahora podemos
+
+				fácilmente emparentarla a las partes ó fragmentes originales del proceso del shatter,
+
+				para que así, éstos emulen los movimiento dinámicas de las colisiones correctas
+
+
+
+
+		NOTA:
+
+		para que estos fragmentos respondas a las fields/fuerzas, debemos seleccionar cada uno e ir ha
+
+		"Attribute Editor/rigidBody00/Performance Attributes/", y activamos la opción de "Collisions",
+
+
+		más éstos, en las partes en que los fragmentos que se superpongan entre sí, estas meshes, entrelazadas
+
+		el sistema de rigid body, interpretará ha estas meshes, como ha una sola ó de forma inesperada
+
+	
+
+
+
+
+

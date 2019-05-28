@@ -1,0 +1,97 @@
+
+
+DETALLES:
+
+
+tenemos la posibilidad de crear fuidos a "mano", para así, poder que crear una estado inicial de las partículas "Initial State",
+
+de esta manera podemos "Pintar", con la herramienta "Paint Fluids Tool", diferentes atributos específicos de los sistemas
+
+de fludos, como densidad, combustible, velocidad, tmeperatura, color, otros, 
+
+así, al comenzar la somulación, esta comenzará a partir del estado inicial "Initial State", que creamos a manos con el "Paint fluids Tool"
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Crear fluidos estáticos:
+____________________
+
+	
+	Paint FluidsTool:
+	____________________
+
+
+	_primero seleccionamos el contenedor respectivo
+
+	_con el contenedor seleccionado vamos ha "Dynamics/Fluid Effects/Add-Edit Content/", y seleccionamos "Paint Fluids Tool"
+
+	_así, con la herramienta "paint Fluids Tools", podemos comenzar a pintar sobre el contendor, seleccionado, sea este 2d,  ó 3d,
+
+	_la herramienta "Paint Fluids Tool", tiene las siguientes opciones:
+
+
+		_Brush:
+
+			_Raduis:
+				podemos graduar al radio ó diámetro de la brush
+
+			_Opacity:
+				podemos graduar la opacidad de la brush
+
+			_Profile:
+				podemos seleccionar el tipo de perfil de la brush
+
+		_paint Attributes:
+
+			_Auto set initial state:
+				indeterminado
+
+			_Paintable attributes:
+
+				_Densoty:
+					Pintar densidad
+				_Density and Color:
+					Pintar densidad y color
+				_Density and Fuell:
+					Pintar densidad y combustible
+				_Temperature:
+					Pintar temperatura
+				_Velocity:
+					Pintar velocidad
+				_Fuell:
+					Pintar combustible
+				_Color:
+					pintar color
+				_Falloff:
+					Pintar interpolación
+
+			_paint operation:
+
+				_este es el modo de acción de la brush,  "utiliza los mismos que para todas los modos paint"
+
+			_otros: 
+
+				_también dispone del valor de acción así, como un mínimo y un máximo, como también
+				un rellenar "Flood"
+
+
+		_Stroke:
+
+			_tenemos la opción de hacer proyección como también trabajar en mirrow/reflexion, otros
+		
+				
+				
+		
+		
+				
+			
+				
+	
+
+
+
+
+

@@ -1,0 +1,49 @@
+
+
+
+DETALLES:
+
+
+los sistemas de nDynamics, nos ofrecen un serie de "nucleos", los cuales pertiten hacer interactivos los sistemas
+
+tanto de particles/partículas, nCloth/telas, fur-hair/pelo-cabello, donde los componenten que modifican sus 
+
+cualidades dinámicas permiten a cada conjunto interactuar con los demás elementos de la escene como entre sí
+
+
+esto permite la compatibilidad con todos los sistemas y tecnologías de los módulos ó mtores de maya, lo que
+
+comprende una gama mucho más amplia a la hora de hacer más simulaciones avanzadas y dinámicas
+
+
+
+	3D Maya 165 Dinamicas NDynamics Introducción
+
+		https://www.youtube.com/watch?v=qHBIFydN9xE&list=PLA9A5E4BDF49EB336&index=165
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+nDynamics:
+__________
+
+
+
+	ahora tenemos posibilidades indefinidas para utilizar y reutilizar elementos entre diferentes tecnologías
+
+	ó motores de maya, ej: podemos crear un sistema de nParticles, y crear una mesh, motive y ha esta convertirla
+
+	en nCloth, y, a su vez, agregar ha esta un sistema de nHair, sobre la misma geometría así, cualquier otro
+
+	elemento dinámico sobre esta y su vez, que esta geometría interactue con todos los elmentos de la escena
+
+	sean estos estáticos ó dinámicos
+
+
+

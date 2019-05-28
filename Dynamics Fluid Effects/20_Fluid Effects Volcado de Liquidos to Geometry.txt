@@ -1,0 +1,131 @@
+
+
+DETALLES:
+
+
+las opciones de los sistemas de "Fluid Effects", tenemos la posibilidad de convertir las simulaciones
+
+de "líquidos", a geometría poligonal ó lo que también se conoce como volcado a polígonos, esto es 
+
+especialmente útil para prescindir del contenedor y sus limitantes y características
+
+
+aunque el la geometría resultante del volcado también, conserva las propiedades editables del sistema
+
+del fluid effects, del container, así, podremos editar la geometría resultante en vivo y hacer modicaciones
+
+sobre esta, otros
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Fluid to Polygons:
+__________________
+
+
+
+	_primero creamos un contenedor con un emisor
+
+
+	_luego creamos una geometría la cuál, hará de elemento colisionable del sistema de fluidos en
+
+	caso de existir en relación a la lógica de la escena
+
+
+	_luego procedemos a realizar la simulación de fluidos "líquidos", con el requerimiento de que
+
+	debe estar activada la opción "fluidShape1/Surface/Surface Render/Hard-Soft Surface", para que
+
+	tengamos una aproximación de la geometría resultante
+
+
+------------------------------------------------------------------------------------------------------
+
+	_luego de haber terminado con el proceso de creación y pruebas de la simulación deseada, ahora
+
+	seleccionamos el contenedor deseado y vamos ha "Modify/Convert/", y aplicamos la opción de 
+
+	"Fluid to Polygons"
+
+	
+	_así, veremos que contenedor seleccionado se convertirá en una mesh/geometría, resultante y marco
+
+	del contenedor desaparecerá
+
+
+	_de esta manera, dispodremos de la geometría resultante como una secuenta "OBJ", del mismo modo
+
+	de cuando importamos una simulaciones de realflow, así, al desplazar el cabezal del timeline,
+
+	podremos ver que la simulación continúa cuadra a caudro pero en vez de en el contenedor, ahora
+
+	la veremos en la geometría resultante
+
+	
+	_así, será agregado el outliner, un nuevo elemento de geometria "polySurface1", el cuál, es una
+
+	geometría común y corriente con las mismas tabs, que cualquier geometría creada dentro de la escena
+
+	más ésta geometría resultante dispone de una tab, adicional, esta es: "fluidShape1", la misma
+
+	que disponíamos en el "contenedor/container", del "fluid effects"
+
+
+	_y es a través, de la tab, "fluidShape1", con la cuál, podremos ajustar de forma dinámica los
+ 
+	atributos, de la simulación resultante en forma de geometría
+
+
+------------------------------------------------------------------------------------------------------
+
+
+	_así, disponemos de todas las mismas opciones que en el contenedor de esta manera no repetiremos
+
+	esas respectivas explicaciones, más sólo tomaremos en cuenta la más importante en este caso
+
+
+	_"fluidShape1/Output Mesh", donde podremos influir directamente en forma como se visualizar 
+
+	el fluido/mesh, y la carga ó peso que esto representará para el sistema así, como también,
+
+	la visualización de cara al render final, de esta forma tenemos:
+
+
+		_Mesh Method:
+
+			_por lo general el método "Triangle mesh", es el que ofrece mejores resultados
+
+
+		_Mesh Resolution:
+
+			_podemos aumentar ó disminuir la cantidad de geometría o densidad de la misma
+
+			en relación a si sólo estamos visualizado la simulación o si vamos ya ha producir
+
+			el render final, esto nos permite una gran flexibilidad en el workflow
+
+
+		_Mesh Smoothing Iterations:
+
+			_a parte de aumentar la resolución de la mesh, que compone la simulación también,
+
+			podemos simular esta, para que así, sean suvizados los bordes de los "Triads"
+
+
+		_otros:
+
+			_también, podemos incluir otros atributos digamos en la "Exportación", para
+
+			ser estos utilizados y contemplados en el render final
+			
+
+------------------------------------------------------------------------------------------------------
+
+
+	_e incluso tras la pos creación ó volcado de la simulación a geometría, podemos también, seguir
+
+	agregando elemento a la simulación como elementos colisionadores, ó fields/fuerzas, otros
+		

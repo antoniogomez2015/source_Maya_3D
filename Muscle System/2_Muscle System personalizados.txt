@@ -1,0 +1,102 @@
+
+
+Edición de Cápsulas: 
+___________________
+
+
+	Animation/Muscle/Muscle - Bones/Make Capsule:
+	____________________________________________
+
+
+	_podemos crear capsular y editar sus característas, tanto de su conformación de edges loops, así, como editar su forma resultante
+
+	_las cápsulas tienen unas características las cuales pueden convertirse en huesos a medida permitiéndonos variar su longitud, radio,
+
+	densidad poligonal e influencia, otros, dichos atrobutos estan disponibles en el channel box, con la respectiva capsule, seleccionada,
+
+	estos atributos son:
+
+		_Radius: gradúa el grosor del bone/hueso
+
+		_Length: gradúa la longitud ó tamaño del hueso resultante
+
+		_Capsule Axis: gradúa la orientación que tendrá el hueso resultante
+
+		_densidad poligonal: N Seg / N Sides
+
+
+
+
+	Animation/Muscle/Muscle - Bones/Make Capsule with End Locator:
+	_____________________________________________________________
+
+
+	_esta opción tiene las mismas propiedades que la capsule, estandar más con la diferencia de que esta dispone de un handle (locator),
+
+	con el cuál podemos variar l longitud y dirección del hueso resultante directamente en el viewport
+
+
+
+	Animation/Muscle/Simple Muscle/Set Muscle Parameters:
+	____________________________________________________
+
+	
+	_esta es un pestaña de opciones que se agrega al panel de "Animation/Muscle/Simple Muscle/Muscle Builder", en dicha pestaña
+
+	"Muscle Parameters", podemos configurar las características generales de las capsules a nivel general
+
+
+
+	Utilizar elementos mesh/skeletos, como muscles systems, personalizados: 
+	______________________________________________________________________
+
+	(no ha sido comprobado completamente su funcionamiento correcto)
+
+
+	
+	Tenemos la posibilidad de convertir cualer mesh/malla, en un systema de músculos, de igual manera como convermos capsules,
+
+	en estructuras de músculos
+
+
+	_para esto, primero creamos las mesh, y creamos la forma que hará de hueso ó de muscle system
+
+	_luego con las meshes, seleccionadas vamos al menú Animation/Muscle/Muscle - Bones/"Connvert Surface to Muscle Bone", así,
+
+	las mehes, implicadas cobrarán las características de un muscle system, posteriormente podemos seguir el proceso estandar de creación de muscles
+
+
+		_seleccionamos el mesh/motive, y vamos al menú Animation/Muscle/Skin Setup/"Apply Muscle System Skin Deformer"
+
+		_luego seleccionamos la mesh/motive y luego los elemento que hacen de muscle system, ó bones y vamos al menú Animation/Muscle/Muscle Objects/"Connet selected Muscle Objects"
+
+		_por último seleccionamos le mesh/motive, y vamos al menú Animation/Muscle/Weighting../"Apply Default Weights.."
+
+
+
+
+	Sistem de músculos itinerante:
+	_____________________________
+
+
+	podemos crear un simple muscle sin la necesidad de crear previamente un muscle system, a través de dos puntos de referencia
+
+	a través de una selección de algunos de los sub-elementos "faces", de estas meshes, de referencia
+
+
+	_primero entramos al modo de sub-elementos de la primera mesh, y seleccionamos un grupo de faces, y vamos al menú Animation/Muscle/Bonues Riggins/"Surface Attach"
+
+	así, se creará un "Locator", de referencia en esa ubicación de los sub-elementos seleccionados
+
+	_repetimos los pasos anteriores para obtener el otro punto de referencia
+
+	_ya con los dos puntos de referencia creamos vamos ha Animation/Muscle/Simple Muscle/Muscle Builder, y configuramos el muscle a crear:
+
+		_en Attach Obj1: colocamos el primero "Locator", que creamos de referencia
+
+		_en Attach Obj2: colocamos el segundo "Locator", que creamos de referencia
+
+		_y así, seguimos el proceso convencional de creación de simple muscle
+
+
+

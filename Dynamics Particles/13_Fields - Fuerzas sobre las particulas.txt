@@ -1,0 +1,163 @@
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Aplicación a partículas/particles:
+__________________________________
+
+
+DETALLES:
+
+tenemos la posibilidad de agregar fields/fuerzas, sobre las partículas para influir sobre su comportamiento, a continuación
+
+se expresarán la descripción general de las fields/fuerzas, disponibles para las partículas:
+
+
+
+
+
+	_Primero seleccionamos el sistema de partículas/particle1
+
+	_luego con "particle1", seleccionado vamos ha "Dynamics/Fields/.."
+
+	así, quedarán relacionados ambos sistemas y las partículas se verán efectadas
+
+	por las fuerzas/fields
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Aplicación a meshes:
+____________________
+
+
+
+
+DETALLES:
+
+tenemos la posibilidad de hacer sistemas interactivos de fuerzas/fields, con geometrías, como si estuviesen en un 
+
+sistema de partículas con instancias, más estos efectos ó sistemas se consigen de forma directa aplicando fuerzas
+
+ó fields, a un grupo de geometrias seleccionadas
+
+
+
+
+
+	_primero creamos la meshes/motives, deseados y las colocamos en las ubicaciones deseadas
+
+
+	_luego debemos seleccionar las meshes/motives, deseados
+
+
+	_luego con los meshes/motives, seleccionados vamos ha "Dynamics/Fields/...", de esta manera se aplirán 
+
+	las fuerzas/fields, a los elementos geométricos seleccionados más ha éstos le serán agregados sistemas 
+
+	de "Soft/Rigid Bodies", para activar un sistema de colisión agregado automáticamente
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+Fields/fuerzas disponibles:
+___________________________
+
+
+
+
+	_Air: 
+
+		fuerza de viento, esta altera el vector de la dirección de emisión de las partículas en las cordenadas
+
+		indicadas, entre X,Y,Z
+
+	
+	_Drag:
+
+		este permite retener las partículas en una posición determinada a través de una radio perimetral 
+
+		de alcance de las partículas, (afecta ó a partir de la ubicación del fields/Drag)
+
+
+	_Gravity:
+
+		esta nos permite hacer efectos de actracción de gravedad, sea positiva/hacia abajo, ó negativa/
+
+		hacia arriba, para cambiar el vector de la dirección de las partículas
+
+
+	_Newton:
+
+		este permite hacer un efecto de oxilación en forma de átono con las partículas
+
+		(afecta ó a partir de la ubicación del fields/Drag)
+
+
+	_Radial:
+
+		es similar al "Drag", más este es más dinámico ó aleatorio
+
+
+	_Turbulence:
+
+		este permite agregar valores de alietoriedad ó turbulencia en el comportamiento de las partículas
+
+		(afecta ó a partir de la ubicación del fields/Drag)
+
+
+	_Uniform:
+
+		este genera un fuerza uniforme, podría decirse que es similar ha "Air" es como un chorro contínuo, 
+
+		que va de menos a más, a diferencia de "air"
+
+
+
+	_Vortex:
+
+		este permite hacer efectos de twister, ó tornados, sistemas de torsión, otros
+
+
+
+	_Volume Axis:
+
+		este es un sistema en el cuál las fuerzas sólo afectarán sólo en esa área del contenedor, así,
+
+		podremos modificar su tamaño/escala, magnitud ó fuerza, así, como turbulencia, otros
+
+
+
+	_Volume Curve:
+
+
+
+	_Use Selected as Source of Field:
+
+
+
+	_Affect Selected Object(s):
+		
+
+
+
+

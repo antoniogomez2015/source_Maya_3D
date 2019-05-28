@@ -1,0 +1,112 @@
+
+
+
+DETALLES:
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+Viewport 2.0, y Direct 11:
+__________________________
+
+
+	Direx_11:
+	_________
+
+
+	1_esta versión incluye un nuevo panel dedicado al modelado y sus herramientas como también, 
+
+	los sub-elementos que componen la geometría así, como opciones contextuales
+
+____________________________________________________________________________________________________
+
+
+	Modeling Tool Kit:
+	__________________
+
+	2_al lado, antecediento al ícono del panel "attribute editor", se encuentra el ícono de 
+
+	"modeling tool kit"
+
+		
+	3_este panel nos auxilia ofreciendonos opciones al seleccionar un elemento ó sub-elemento,
+
+	modos de selecciona, simetría, bevel, extrude, constraint selección, pivot, otros, selección
+
+	suavizada, otros 
+
+
+
+____________________________________________________________________________________________________
+
+
+	Crease Set Editor:
+	__________________
+
+
+	4_ahora disponomos de una panel para administrar los "crease", generados en un geometría, otros
+
+
+	_para esto vamos ha "Window/relationship Editors/Create Sets"
+
+
+	_liego podemos seleccionar los sub elementos que desemos hacerle "Crease", y con estos seleccionamos 
+
+	vamos al panel "Crease Set Editor/New (icon)", para crear así, un nuevo crease, el cuál podremos 
+
+	controlar desde el panel, como su dureza, otros
+
+
+	_e incluso podemos añadir/add, más sub-elementos ha un "crease", ya creado a través del panel
+
+
+
+____________________________________________________________________________________________________
+
+
+	Reduce-Polygins:
+	________________
+
+
+	5_la herramienta de reducción de polígonos ha sido optimizada, para esto vamos ha "polygons/Mesh/Reduce"
+
+
+	_esta ofrecen en sus opciones ahora diferentes métodos de acción como porcentaje, forma, preservación
+
+
+
+____________________________________________________________________________________________________
+
+
+	Edit Ege Flow:
+	______________
+
+	
+	6_ahora podemos graduar el flow de la continuidad de los polígonos, para esto seleccionamos los edges,
+
+	en desarmonía y con estos seleccionamos vamos ha "Polygons/Edit Mesh/Edit Edge Flow/Options", así,
+
+	podemos ver como los edges seleccionamos se alinean con los demás edges, en relación a la forma del motive
+
+
+
+____________________________________________________________________________________________________
+
+
+	Sculp Geometry Tool:
+	____________________
+
+
+	7_ahora podmos hacer suavizado de geometría sin deformar esta, y que esta mantenga sus proporciones
+
+	para esto, seleccionamos la mesh/motive, y vamos ha "Polygons/Mesh/Sculp Geometry Tool/Options"
+
+
+	_
+
+
+

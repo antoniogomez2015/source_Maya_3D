@@ -1,0 +1,167 @@
+
+
+
+DETALLES:
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+Elementos "nHair" en elementos "nCloth":
+_______________________________________
+
+
+	nHair/nCloth:
+	_____________
+
+
+	1_ahora tenemos la posibilidad de crear "Hair/cabello", en elementos que previamente ya poseen ó son
+
+	elementos "nCloth/tela"
+
+
+	_primero creamos y posicionamos el mesh/motive, que hará de elemento pasivo, para esto vamos ha
+
+	"nDynamics/nMesh/Create Passive Collider", así este elemento será un elemento de colisión pasivo
+
+
+	_luego creamos el elemento mesh/motive, que hará de elemento nCloth, y lo colocamos según la lógica
+
+	de la escena, y con este seleccionado vamos ha "nDynamics/nMesh/Create nCloth"
+
+
+	_ahora seleccionamos el mesh/motive, que tiene ó es "nCloth", y con este seleccionado vamos ha
+
+	"Dnamics/nHair/Options", así, podremos ajustar las opciones disponibles
+
+
+	de esta manera podemos ver que que ahora podemos crear nHair/cabello, sobre superficies con nCloth/tela
+
+
+
+___________________________________________________________________________________________________________
+
+
+
+	nHair:
+	______
+
+
+	2_ahora tenemos la posibilidad de hacer colisionar el hair/cabello, con la geometría
+
+
+	_para esto seleccionamos la mesh/motive, a la cuál vamos ha aplicarle hair/cabello, y con esta
+
+	seleccionada vamos ha "Dynamics/nHair/Create hair/Options"
+
+
+	_y en las opciones ante de crear el sistema debemos activar la nueva opción de "Collode with mesh",
+
+	de eta manera la simulación del cabello respetará la área estática de la meshes, ó geometrías
+
+
+
+
+___________________________________________________________________________________________________________
+
+
+
+	nConstraint:
+	____________
+
+
+	3_se ha agregado un nuevo constraint, este es "Component", el cuál nos permite controlar mejor los
+
+	pliegues y los tejidos, otros
+
+
+	_para eso creamos una mesh/motive, que hará de elemento nMesh/Passive, la colocamos según la lógica
+
+	de las escena
+
+	
+	_luego creamos una mesh/motive, la cuál hará de ekemento nCloth, y la colocamos según la lógica de escena
+
+
+	_ahora seleccionamos la mesh/motive, uqe hará de nMesh/Passive, y con esta seleccionada vamos ha 
+
+	"nDynamics/nMesh/Create Passive Collider"
+
+
+	_lugo seleccionamos la mesh/motive, que hará de elemento nCloth, y con esta seleccionada vamos ha
+
+	"nDynamics/nMesh/Create nCloth"
+
+	
+	_ahora vamos ha agregarle al elemento nCloth, un contrainst, de posición para limitar su desplazamiento
+
+		
+		_para esto seleccionamos los sub-elementos vertex, que desemos que permanezcan estáticos, y con
+
+		estos sleccionados vamos ha "nDynamics/nConstrint/Transform"
+
+
+	_por últimos vamos ha agregarle el nuevo constrint "Component", para esto, seleccionamos los vertex, ó
+
+	edges, deseados ha aplicar el contrsint, y con los sub-elementos seleccionados vamos ha "nDynamics
+
+	/nConstrint/Component"
+
+
+
+___________________________________________________________________________________________________________
+
+
+
+	Fkuid Effects:
+	______________
+
+
+	4_también se han agregado nuevos atributos de los sistemas de fluidos 3d, para generar partículas desde
+
+	el volúmen de las geometrías y no sólo de las superficies de las mismas como en versiones anteriores
+
+
+	_primero vamos ha "Dynamics/Fuid Effects/Create 3D Container", y lo ubicamos según la lógica de la escena
+
+
+	_luego agregamos una meseh/motive, y la ubicamos dentro del contenedor 3d, de fluid effects
+
+
+	_ahora debemos relacionar ambos elementos, para esto, seleccionamos la mesh/motive, y luego seleccionamos
+
+	el contenedor de fluidos 3d, y con ambos seleccionados vamos ha "Dynamics/Fluid Effects/Add-Edit Content
+
+	/Emit from Objet", para así, agregar la mesh/motive al sistema como un emisor
+
+
+	_así, al relacionar el contenedor de fluidos 3d, con la mesh/motive, se ha creado dentro de la mesh/motive,
+
+	un emisor "Ball1", y si entramos en sus parámetro dentro del atributo editor "Ball1/Basic Emitter Attributes
+
+	/Fill Object", podemos activar esta opción para que la emisión realice a partír del volúmen del objecto y no,
+
+	de la superficie del mismo
+
+	_al activar esta opción "Fill Object", del paso anterior, es aconsejable ir ha la sección dentro los mismos
+
+	atributos "Fluid Attributes/Density-Voxel-Sec", y elevar su valor a casi a "1"
+
+
+	_también tenemos una nueva propiedad las cuál nos permitirá graduar el tiempo en el que se emiten esos fluidos,
+
+	para esto seleccionamos el elemento emisor/Ball, dentro de la mesh/motive, a través del outliner, y vamos
+
+	al "atributo editor/Basic Amitter Attributes/Start Frame Emission/", y seleccionamos la opción de
+
+	"Start Frame Only", esta opción indica que se solo se generará emisión del volúmen contenido dentro 
+
+	del objecto mesh/motive, y que al acabarse ó explulsarse este contenido dejará de emitirse fluido
+,
+
+
+
+

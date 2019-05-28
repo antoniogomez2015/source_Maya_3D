@@ -1,0 +1,38 @@
+
+Pileline Cache:  (Lucas Films/Sony)
+
+Descripción: exportar la cache de las geometrías complejas de las escenas, para luego volver a importar 
+
+este archivo y así, manejar la escena de forma fluida ya que la complejidad de la escena ó geometría en alta 
+
+resolución queda almacenada en el archivo exportado y luego importado nuevamente con un low geometry
+
+
+
+	_primero seleccionamos la geometría en alta resolución "HighPoly", uqe deseamos cachear
+
+
+	_luego con la mesh, deseada seleccionada vamos al menú Pipeline Cache/Alembic Cache/Export All to Alembic...,
+
+	así, se exportará el archivo de la geometría como también hará un escaneada en el timeline en busca de anumaciones
+
+	existentes para también cachearlas dentro de este archivo
+
+	
+	_ahora podemos eleminar esta geometría y elementos cacheados u ocultarlos en otras capas
+
+	
+	_luego vamos al menú Pipeline Cache/Alembic/Import Alembic, y cargamos el archivo cacheado guardado anteriormente,
+
+	así, veremos que la escena y los elementos pesados se visualizarán rápidamente
+
+
+	_las opciones del menú Pipeline Cache/GPU Cache, funcionan de la misma manera que las opciones "Alembic",
+
+	con la diferencia que esta opción utiliza las capacidades y fuerza de la GPU/
+
+
+
+
+
+

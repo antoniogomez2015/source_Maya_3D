@@ -1,0 +1,198 @@
+
+
+
+DETALLES:
+
+
+Tutorial:
+
+	3D Maya 125 Novedades Maya 2014 Paint Effects
+
+		https://www.youtube.com/watch?v=EhKiEOai9Qg&list=PLVnqjpSwnYEdWyuwBP5YP5TULZJGPbrkG&index=125
+	
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+Paint Effects:
+______________
+
+
+	Make Collide:
+	_____________
+
+
+	1_ahora tenemos la posibilidad de hacer las superficies de las geometrías colisionables con los
+
+	sistemas de paint effects
+
+
+	_para esto primero vamos ha "Rendering/Paint Effects/Get Brush", así, se abrirá el visor, donde
+
+	podemos buscar brush, predefinidas para ejemplarizar algo en concreto, ej: "grasses", en esta
+
+	sección escogemos un brush, que nos guste y hacemos click, en este, minizamos el panel y comenzamos 
+
+	a pintar, ó vamos ha "Rendering/Paint Effects/Paint Effects Tool", para activar la herramienta de brush
+
+
+	_luego seleccionamos la geometría generada en el proceso de paint effects, y luego vamos al attribute
+
+	Editor, y ajustamos sus características de ser necesario
+
+
+	_ahora debemos relacionar el sistema de paint effects, con el mesh/motive, que hará de elementos colisionador
+
+	
+		_primero seleccionamos el sistema de paint effects, y luego seleccionamos la mesh/motive, que hará
+
+		de elemento colisionador y, con ambos seleccionados vamos ha ""Rendering/Paint Effects/Make Collide",
+
+		así, al mover el mesh/motive, sobre el sistema de paint effects, este se verá afectado por el 
+
+		elemenos colisionador
+
+
+___________________________________________________________________________________________________________
+
+
+
+	Surface Snap:
+	_____________
+
+
+	_también tenemos la posibilidad dentro las opciones del sistema de paint effects, de hacer que el sistema
+
+	de paint effects, ó follaje se siña a la superficie de colisión, esto es especialmente útil para hacer
+
+	sistemas de gramas sobre superficies, otros
+
+
+	para eso, seleccionamos el sistema de paint "effects/attribute editor/ej:grassWindNarrow1/Tubes/Creation
+
+	/Surface Snap", activando esta opción la geometría correspondiente al paint effects, se señirá al objeto
+
+	mesh/motive, colisionador
+
+
+___________________________________________________________________________________________________________
+
+
+
+	Surface Attack:
+	_______________
+
+	
+	_también disponemos ahora de un factor de "Goal", ó atractor ó imán de parte de la geometria ó mesh/motive,
+
+	colisionador para que así, esta mesh/motive, ejerza fuerzas sobre el sistema de paint effects
+
+
+	_para esto vamos ha "effects/attribute editor/ej:grassWindNarrow1/Behavior/Forces/", y aumentamos el valor
+
+	de "Surface Attack" , y "Max Attack Dintance", así, el sistema de paint effects, y toda su geometría
+
+	responderá a la presencia y acercamiento de la mesh/motive, colisionadora, excelente para hacer enrredaderas,
+
+	sistemas organicos, otros
+	
+, 
+
+
+___________________________________________________________________________________________________________
+
+
+
+	Occupation Durface:
+	___________________
+
+
+	_al "Make Paintable", una superficies de una geometría, ahora tenemos la posibilidad de ajustar cuanto
+
+	se señe ó reconoce la superficie el sistema de paint effects, para ajustar mejor a ella de forma más
+
+	abrasiva ó integral ó uniforme
+
+	
+	_para esto, seleccionamos la geometría ó los sistemas de paint effects, deseados y con estos seleccionados
+
+	vamos ha "Attribute Editor/ej: grassBermuda3/Behavior/Occupation Surface", en donde tendremos todos los
+
+	controles para ajustar mejor el sistema de paint effects, sobre la superficie deseada
+
+
+
+___________________________________________________________________________________________________________
+
+
+
+	Surface Collide:
+	________________
+
+
+	_también disponemos de otra opción al crear ó aplicar sistemas de paint effects, sobre una superficie
+
+	"Make Paintable", así, al seleccionar el sistema de paint effects, aplicado sobre una superficie e ir
+
+	al "attribute editor/ej: grassBermuda3/Behavior/Forces/", tenemos la posibilidad ahora de activar
+
+	"Surface Collide", así, estaopción impedirá que el sistema de paint effects, penetre dentro de la
+
+	superficie del motive
+
+
+
+
+___________________________________________________________________________________________________________
+
+
+
+	Create modifiers:
+	_________________
+
+
+	_ahora también podemos incluir dentro de los sistema de paint effects, un atractor ó peine, con el cuál
+
+	podremos incidir sobre el sistema de paint effects, respectivo, en este sistema atractor agregado disponemos
+
+	de diferentes parámetros como ajustar la escala, desplazamiento, opacidad, otros, este atractor dispone
+
+	de una handle para su control y manejo manual
+
+
+
+___________________________________________________________________________________________________________
+
+
+
+	rellenar volúmenes con sistemas Paint Effects:
+	______________________________________________
+
+
+	_con un sistema de paint effects, seleccionados vamos a crear un "Create Modifier"
+
+
+	_ahora vamos ha anclar el "Modifier", a la geometría la cuál hará de contenedor del sistema paint effects,
+
+		
+		_primero seleccionamos el sistema de paint effects, y luego seleccionamos la geometría y con ambos
+
+		seleccionados vamos ha "Rendering/Paint Effects/", y allí, seleccionamos la nueva opción de
+
+		"Set Modifier Fill Object", así. el sistema de paint effect, empezará a tomar como limitador
+
+		la geometría indicada, 
+
+
+		_ahora debemos tratar de colocar la geometría contenedora sobre el sistema de paint effects, para
+
+		que así, el sistema de paint effects, trate de meterse dentro de la forma de la mesh
+
+	
+	
+
+
+
+

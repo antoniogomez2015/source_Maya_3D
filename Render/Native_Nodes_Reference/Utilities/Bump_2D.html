@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Utilities Bump 2D:
+    __________________
+
+        _éste nodo nos permitirá controlar el nivel del efecto de bump map, en materiales nativos de maya
+
+        _de ésta manera, éste nodo nos permitirá crear efectos de volúmen y de alto detalle sobre superficies a través, de mapas nodales ó a través, de imágenes y elementos compuestos, otros
+
+
+        Aplicación:
+        ___________
+
+        _de ésta manera, por ejemplo; podremos crear una nodo de tipo "blinn", yendo ha "Hypershade/Surface/Blinn"
+
+        _al cuál, a su vez, le conectamos un nodo de textura, ejmplo; un nodo de "Hypershade/2D Texture/Cloth"
+
+        _para que así, sean agregado los nodos "Place2DTexture", y "Cloth"
+
+        _para que así, posteriormente arrastremos el nodo "Cloth", haciendo "Mouse Midle Click", hasta el nodo "Blinn", en éste caso
+
+        _para que así, nos aparezca un panel contextual en el cuál, podremos seleccionar la opción de "Bump"
+
+        _para que así, sea agregado el nodo "Bump2D", entre ambos nodos
+
+        _de ésta manera, podremos ahora controlar el efecto bump, a través, del nodo "Bump 2D"
+
+
+        Parámetros:
+        ___________
+
+        2D Bump Attributes:
+
+            _Bump Value: (parámetro de entrada)
+
+                _éste parámetro corresponde a la conexión con la textura ó nodo que proporciona la información para la generación del efecto
+
+            _Bump Depth:
+
+                _ésta opción nos pemritirá indicar el umbral ó valor para la generación del efecto
+
+                _de ésta manera, podremos graduar la intensidad del efecto
+
+                _éste parámetro también, permite valores negativos
+
+            Use As:
+
+                _Bump:
+
+                    _éste es el algoritmo por defecto y el más recomendado ya que interpretará el efecto sólo tomando la información del nodo ó imágen respectivo y no de la morfología del objeto ó motivo
+
+                _Tangent Space Normals:
+
+                    _éste algoritmo contempla la información de la orientación de las normales en el espacio 3d, para la generación del efecto
+
+                    NOTA: éste algoritmo es utilizado por aplicaciones como ZBrush, Mudbox, otros
+
+                _Object Space Normals:
+
+                    _éste algoritmo contempla la información de la orientación de las normales y todo el objeto como un todo en el espacio 3d, para la generación del efecto
+
+                    NOTA: éste algoritmo es utilizado por aplicaciones como ZBrush, Mudbox, otros
+
+        Effects:
+
+            _Bump Filter:
+
+                _ésta opción nos pemritirá mejorar el resultado ó la calidad del efecto resultante
+
+                _de ésta manera, con valores cercanos ha "0", el efecto será más perfilado y refinado y con menos artefactos
+
+                _más con valores superiores ha 0.5, el efecto será más imperfecto y con más artefactos, otros
+
+            _Bump Filter Offset:
+
+                _ésta opción nos pemritirá desfazar el efecto, y con valores superiores ha "0", puede desaparecer el efecto hasta inverter partes de la aplicación del efecto en ciertos casos
+
+            _Adjust Edges:
+
+                _ésta opción tratará de mojorar el comportamiento general de los bordes para que tengan un mejor y más homogéneo aspecto
+
+            _Provide 3D Info:
+
+                _ésta opción brindará informaicón 3d, para los casos en los que el nodo de entrada esté conformado por un nodo "Layered Texture", el cuál, tiene a su vez, un nodo conectado de textura 3d, y otro de textura 2d
+
+                _de ésta manera, el nodo "Bump2D", le enviará la información necesaria para una correcta interpretación de las texturas en 3d, otros
+
+        Node Behavior:
+
+            _Caching:
+
+                _(indeterminado)
+
+            _Node State:
+
+                _Normal:
+
+                    _(indeterminado)
+
+                HasNoEffect:
+
+                    _(indeterminado)
+
+                _Blocking:
+
+                    _(indeterminado)
+
+                _Waiting-Normal:
+
+                    _(indeterminado)
+
+                _Waiting-HasNoEffect:
+
+                    _(indeterminado)
+
+                _Waiting-Blocking:
+
+                    _(indeterminado)
+
+
+
+    Multiples Bump 2D:
+    __________________
+
+        _más también, tendremos la posibilidad de conectar la información de más de un nodo bump 2d, y de varias texturas a la vez
+
+        _de ésta manera, podremos agregar una nueva textura conectada a un nuevo nodo "Bump 2d"
+
+        _para posteriormente arrastrar el nodo "bump 2d_2", adicional sobre el nodo "bump2d_1"
+
+        _para que así, nos aparezca un menú contextual en el cuál, debemos de seleccionar la opción de "Other"
+
+        _para que así, nos aparezca el panel "Connection Editor", a través, del cuál, podremos personalizar las relaciones entre ambos nodos
+
+        _donde primeramente debemos de ir ha "Connection Editor/Right Display/", y una vez allí, activar la opción de "Show Hidden"
+
+        _de ésta manera, podremos visualizar todas las opciones del nodo de la derecha en éste caso del nodo "bump 2d"
+
+        _para que así, podamos seleccionar la opción del lado izquierdo de "OutNormal"
+
+        _y en el nado derecho del panel "Connection Editor", podamos seleccionar la opción de "NormalCamara"
+
+        
+    _de ésta manera, ahora tendremos ambas influencias de bump map, sobre el material y motivo respectivo
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

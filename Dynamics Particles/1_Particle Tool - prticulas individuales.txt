@@ -1,0 +1,114 @@
+
+
+INTRO A DYNAMICS: (maya 2013)
+
+este es el sistema clásico de partículas de maya, este sistema permite crear sistemas de partículas para efetos especiales
+
+entre otros, más estos son independientes y tienen limitantes, no interantúan con todos los motores de maya, así, como con
+
+todos los motores de maya
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+MANIFIESTOS:
+
+	las partículas "Dynamics", requieren para su acción ó movimiento ó interacción dinámica "no interactiva",
+
+	la implementación de Dynamics/"Fields/Fuerzas", externas agregadas a los sistemas de partículas agregados
+
+
+	los sistemas de partículas creados podemos seleccionalos tanto en el viewport, como en el outliner, y
+
+	activar la herramienta de translate/scale/rotation, y variar estos valores y animarlos en el timiline,
+
+	como cualquier otros elemento de maya
+
+
+	es aconsejable alaplicar partículas en modo "brush", convertir previamente las superficies que utilizaremos
+
+	como proxis, en objectos de tipo "Live", seleccionando estos y luego yendo ha: "Modify/make live", /Make not Live,
+
+	para que así, las partículas creadas se creen sobre los elementos que hemos convertidos en live, ó proxis volumétricos
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+"Dynamics/Particles/Particle Tool"
+
+
+	Particle Tool:
+	______________
+
+
+	hacemos doble click, para entrar en las opciones y modalidades de acción de la herramienta, estas son:
+
+
+	
+
+	_Particle name: aquí podemos indicarle un nombre al sistema de partículas que vamos a crear
+
+
+	_Conserve: impide que el desplazamiento de las partículas sea ilimitado
+
+
+	_Number of particles: cantidad de partículas emitidas por pincelada en el sistema
+
+		_el sistema por defecto sólo emite partículas sólo hacer click, en el view port, emitiendo sólo 
+
+		la cantidad de partículas indicada "Number of particles:", por defecto es una sóla partícula 
+
+		por click, esta opción es posible sólo cuando las opciones de abajo estan desactivadas obviamente
+
+
+
+	_Maximun radius: al indicar que la cantidad de emisión de partículas "Number of particles:", es mayor 
+
+	a una partícula se activará la opción de "Maximum radius:", esta opción indica la distancia que existirá 
+
+	entre las partículas emitidas en cada click, que se haga
+
+
+
+	_Sketch particles: al activar esta opción las partículas podras ser emitidas con el cursor con la función
+
+	de "Brush", ó brocha, haciendo "mouse left click + drag", con la cantidad de particulas indicada así, 
+
+	como su distancia entre sí
+
+
+	_Sketch interval: esta opción esta disponible sólo en el modo de emisión de "Sketch particles:", y permite
+
+	hacer intervalos de variaciones de flujo de la emisión del brush, entre más alto el valor 0-100, mayor el intervalo
+
+
+	_Create particle grid: esta opción permite crear grids, ó matrices de partículas ordenadas en forma rectangular
+
+		_primer indicamos el número de partículas de deseamos "Number of particles:"
+		
+
+
+	_Particle spacing: esta opción sólo esta disponible en el modo de emisión "Create particle grid:", y permite
+
+	indicar el espaciado entre las partículas al igual que el "Conseve:"
+
+
+	_Placement with cursor:
+
+
+	_Placement with text fields:
+
+
+	_Minimum corner:
+
+
+	_maximum corner
+
+
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Mib Ilum Ward: (Anisotropic)
+    ______________
+
+    _el nodo "Mib Ilum Ward", nos permitirá crear una material similar al tipo "Mib Ilum Blinn"
+
+    _con la diferencia de que el mateiral "Mib Ilum Ward", tiene la capacidad de tener efecto refracción y el efecto anisotropic
+
+    _un material especial para la creación metales "steels", y esmerilados, otros
+
+
+    Workflow:
+    _________
+
+    _al aplicar el material "Mib Ilum Ward", y renderizar éste será totalmente blanco
+
+    _de ésta manera, debemos de configurar el material con nodos complementarios para lograr el efecto deseado
+
+    1_donde primeramente los parámetros de "Ambience", y "Ambient", debemos de colocarlos ha "0", ó totalmente hacia izquierda
+
+    2_para posteriormente ir ha "Windows/Rendering Editor/", y una vez allí, abrir el "Hypershade" 
+    
+        _y una vez allí, debemos ir al tag, Legacy/", en el cuál, debemos de cargar el node "mib_texture_rotate"
+
+        _así, como también, debemos de cargar el nodo "mib_texture_vector"
+
+    3_para que así, podamos abrir las opciones del nodo "mib_texture_rotate"
+
+        _y en las cuáles debemos de ubicar la propiedad de "input"
+
+        _para que así, procedamos ha arrastrar el nodo "mib_texture_vector", con "mouse midle click and drag", hasta "mib_texture_rotate/input"
+
+        _para que así, podamos relacionar ambos nodos en éste parámetro de input
+
+    4_para posteriormene abrir las opciones del nodo "mib_ilum_ward"
+
+        _para que así, podamos arrastrar al nodo "mib_texture_rotate", con "mouse midle click and drag"
+
+        _y soltarlo sobre el nodo del "mib_ilum_Ward"
+
+        _de éste manera, nos saldrá un menú contextual con el podremos elegir abri el panel "Connection Editor"
+
+        _a través del cuál, podremos conectar los parámetro de "u", de entrada con los de "u", de salida
+
+        _así, como de los parámetro de "v", de entrada como los de "v", de salida
+
+        _de ésta menera, habremos relacionado el nodo "mib_texture_rotate", y sus cordenadas a los parámetros de "Brushing Direction", y "Perpendicular Direction", del nodo "mib_ilum_ward"
+
+    5_para por último, por los propios medio del nodo "mib_ilum_ward", podremos controlar el color e itensidad del del material y demás parámetros propios del matrial
+
+        _más a través, del nodo "mib_texture_rotate/Angle", podremos controlar el ángulo de rotación del efecto "Anisotropic", generado
+
+
+
+    Parámetros:
+    ___________
+
+        Shading:
+        ________
+
+            _Ambience:
+
+                _éste parámetro nos pemritirá determinar el umbral a partir del cuál, se determinará la cantidad de influencia ó color ambiental agregado al color base
+
+                _de ésta manera, con un valor de "0", ó color blanco equivaldrá a un cero por ciento de influencia
+
+                _más un valor de "100", ó color negro equivaldrá ha un ciento por ciento de influencia
+
+            _Ambient:
+
+                _éste parámetro nos permitirá deterinar cuál, será el color ambiental a través, del cuál, podremos influenciar ó contaminar el color base ó difuso del material
+
+            _Diffuse:
+
+                _éste parámetro nos permitirá determinar cuál, será el color difuso ó color base del material
+
+            _Glossy:
+
+                _éste parámetro nos permitirá controlar cuán brillante será el efecto especular de tipo anisotropic
+
+                _de ésta manera, podremos indicar a través, de un umbral ó valor luminancia la intensidad del efecto
+
+            _Shiny U:
+
+                _éste parámetro nos permitirá determinar la expansión del efecto anisotropic, horizontalmente
+
+                _de ésta manera, con un valor bajo, el efecto de estiramiento será menor y por ende será más puntual, más con valores altos el estiramiento será total como una línea horizontal
+
+            _Shiny V:
+
+                _éste parámetro nos permitirá determinar la expansión del efecto anisotropic, verticalmente
+
+                _de ésta manera, con un valor bajo, el efecto de estiramiento será menor y por ende será más puntual, más con valores altos el estiramiento será total como una línea vertical
+
+            _Brushing Direction:
+
+                _éste parámetro nos permitirá controlar la dirección del efecto anisotropic
+
+            _Perpendicular Direction:
+
+                _éste parámetro nos permitirá controlar la dirección del efecto anisotropic
+
+
+
+    Nodes Complementarios:
+    ______________________
+
+        _para ver los nodes, alternativos relacionados con el nodo en éste caso"Mib Ilumin Ward", debemos ir ha "Windows/Rendering Editors", y una vez allí, debemos de abrir el panel "Hypershade"
+
+        _y una vez allí, debemos seleccionar el manterial "Mib Ilum Ward", y posteriormente darle al botón de "Input and Output Conections"
+
+        _para que así, podamos ver los nodos relacionados al material respectivo, de ésta manera, podremos ver en éste caso el nodo "mib_illum_ward2SG"
+
+        _a través, del cuál, podremos configurar los atributos relacionados de "Surface Material", "Volumen Material", y "Displacement Mat", "Contours", entre otros shaders, posibles disponibles
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

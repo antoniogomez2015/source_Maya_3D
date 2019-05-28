@@ -1,0 +1,54 @@
+
+(Volcado de información cache) funciona con nurbs/subdivision/polygons (los volcados almacenan sólo el desplazamiento de los vertices, no rotación escala y demas..)
+
+
+Especialmente útil para guardar ciclos de animación de una acción en concreta de un elementos de nuestro character 
+
+por ejemplo, este cache equivale ha crear un clip, de Trax Editor, de hecho se cargan automaticamente los caches
+
+creados y asignados a un elementos, estos caches/clips, se cargarán dentro del trax editor
+
+
+Esta opción nos permite almacenar caches, de la información de los vertes, de los sub elementos de las meshes,
+
+modificaciones realizadas en la geometría a través de deformaciones, modificadores, otros
+
+
+
+1_creamos la mehe/motive, 
+
+
+2_luego creamos la animación con la deformación de los sub-elementos vertex, o la mesh, en general
+
+
+3_luego con la mesh, seleccionada vamos ha: Animation/Geometry Cache/"Create New Cache", en las opciones 
+
+de "Create New Cache", podemos ajustar las siguientes características:
+
+	3.1_Name: podemos asignarle un nombre
+
+	3.2_ile/frame: podemos indicar si guardará un archivo por frame ó un archivo por animación
+
+	3.3_inicio/fin: podemos indicar un principio y un fin para esta animación cacheada
+
+
+4_import Cache: esta opción permite aplicar las animación cacheada a otro motivo/mesh, ó instancia del mismo
+
+
+5_Delete Hostory Ahead of Cache: esta opción permite borrar animaciones previas en el motivo/mesh
+
+
+6_en general podemos combinar caches "marge cache", borrar cache "delete cache", agregar caches append to cache"
+
+
+7_en el chanel box, al importar o crear caches, se crearán opciones de "cacheBlend", que hará la función de las blendShapes, 
+
+permitiendo fusionar las caches cargadas
+
+	7.1_las cahches se cargan en el chanel box, como ej: "chache1 0/1", donde en "0", indica que esta inhabilitada y "1", habilitada
+
+
+8_paint cache weights tool: esta herramienta permite ajustar la influencia de las animaciones con caches
+
+
+

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Mesh Menu: (Maya 2015)
+    __________
+
+        Reference:
+            How to Use the Maya Cleanup tool to fix bad geometry
+                https://www.youtube.com/watch?v=ySxkeJKpnsk
+
+
+        Optimize:
+        _________
+
+            Cleanup:
+
+                _ésta opción nos pemritirá optimizar un elemento ó elemento a través, de la eliminación de sub elementos duplicados ó con algún problema ó mal comportamiento
+
+                _de ésta manera, dispondremos de las siguientes configuraciones:
+
+
+                CLeanup Effects:
+                ________________
+
+                    Operations:
+                    ___________
+
+                        _Cleanup matching polygons:
+
+                            _ésta opción nos permitirá indicarle al sistema que elimine los sub elementos superpuestos y duplicados en todo el elemento seleccionado
+
+                        _Select Matching polygons:
+
+                            _ésta opción nos permitirá indicarle al sistema que no aplique la solución al problema 
+                            
+                            _si no que vez de eso, seleccione los sub elementos implicados para así 
+                            
+                            _podamos nosotros mismo ver cuál, es el área afecta y tomas las determinaciones pertinentes manualmente 
+
+                    Scope:
+                    ______
+
+                        _Apply to selected objects:
+
+                            _ésta opción nos pemritirá indicarle al sistema cuál, será su alcance y que en éste caso, sólo aplique el ajuste a los objetos ó elementos seleccionados
+
+                        _Apply to all polygonal objects:
+
+                            _ésta opción nos pemritirá indicarle al sistema cuál, será su alcance y que en éste caso, aplique el ajuste a todos objetos ó elementos poligonales de la escena
+
+                        _Keep construction history:
+
+                            _ésta opción nos permitirá indicarle al sistema que conserve la historia de los objetos post proceso
+
+
+                Fix by Tesselation:
+                ___________________
+
+                        _4-sided faces:
+
+                            _ésta opción nos permitirá indicarle al sistema que altere en éste caso a los polígonos con cuatro caras convirtiendo éstos a polígonos de tres caras ó triads
+
+                        _Faces with more than 4-sides:
+
+                            _ésta opción nos permitirá indicarle al sistema que modifique a los polígonos con más de cuatro caras
+
+                            _transformando éstos a polígonos de tres caras ó triads
+
+                            _modificando también, a los polígonso contíguos
+
+                            _así, como también, seleccionando a los polígonos implicados
+
+                        _Concave faces:
+
+                            _ésta opción nos permitirá indicarle al sistema que altera las faces, que estén inclinadas ó irregulares
+
+                            _convirtiéndo éstas ha polígonos de tres lados ó triads, para mejorar su visibilidad y comportamiento
+
+                        _Faces with holes:
+
+                            _(indeterminado)
+
+                        _Nom-planar faces:
+
+                            _ésta opción nos permitirá indicarle al sistema que altera las faces, que estén que se sean totalmente plandas y lleven el flujo de las demás caras ó faces
+
+                            _ésta opción va de la mano con la opción de "Concave faces"
+
+                            _convirtiéndo éstas ha polígonos de tres lados ó triads, para mejorar su visibilidad y comportamiento
+
+
+                Remove Geometry:
+                ________________
+
+                        _Lamina faces (faces shading all edges)
+
+                            _ésta opción nos permitirá indicarle al sistem que eliminar las faces, duplicadas y superpuestas unas sobre otras y no son apreciables a la vista
+
+                        _Nonmanifold geometry:
+
+                            _ésta opción nos permitirá indiarle al sistem que ajuste las geometría con sub elementos con conexión múltiple
+
+                            _es decir, por ejemplo donde unos edges, que conforman una figura determinada
+
+                            _de los cuáles, sale una nueva extrusión de algunos edges, los cuáles, conforman ahora nuevas faces
+
+                            _de ésta manera, a través, de ésta opción, éstas nuevas faces, serán separadas de la forma original para eliminar tensiones dobles sobre las formas originales
+
+                            _de ésta manera, tendremos ahora separado las faces, extras separadas como también, a los sub elementos vertex implicados en el proceso de la parte de la forma original
+
+                        _Normals and geometry:
+
+                            _ésta opción nos pemritirá indicarle al sistema que éste tome en cuenta tanto a las normales como la geometría en si del modelo seleccionado
+
+                            _como parte del criterio de acción para la acción anterior de la opción de "Nonmanifold geometry"
+
+                        _Geometry only:
+
+                            _ésta opción nos pemritirá indicarle al sistema que éste tome en cuenta sólo la geometría del modelo seleccionado
+
+                            _como parte del criterio de acción para la acción anterior de la opción de "Nonmanifold geometry"
+
+                        
+
+
+                    Length tolerance:
+                    _________________
+
+                            _Edge with zero length:
+
+                                _ésta opción nos permitirá indicarle al sistema que fusione a lo vertex que se encuentre en una distancia mínima
+
+                                _de ésta maenra, podremos simplificar el modelo cuando detectamos que hay geometría residual y que no tiene efectos en la morfología ni en la topología real del objeto
+
+
+                            _Faces with zero geometry area:
+
+                                _(indeterminado)
+
+
+                    Area tolerance:
+                    _______________
+
+                            _Faces with zero map area:
+
+                                _(indeterminado)
+
+
+                    Area tolerance:
+                    _______________
+
+                            _(indeterminado)
+
+
+                            
+
+
+
+
+
+-->
+</body>
+</html>

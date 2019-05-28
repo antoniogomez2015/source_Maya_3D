@@ -1,0 +1,23 @@
+
+Maya Dynamic IK Chain Express Tutorial
+	https://www.youtube.com/watch?v=amgZrXL5rE4
+
+
+Dynamic IK Chain:
+
+
+	_primero creamos la cadena/chain, de huesos deseada
+
+	_ahora vamos a las propiedades de la herramienta Animation/Skeleton/Ik Spline Handle Tool/Setting,
+
+	y desactivamos la opción de "Auto simplify curve", para que conserve la forma ó disposición de la cadena 
+
+	y la spline creada a través de su forma
+
+	_luego aplicamos la herramienta "Ik Spline Handle Tool", al primero y al último joint, respectivamente
+
+	_ahora vamos al panel "OutLiner", y borramos el "iKHandle", creado correspondiente ó respectivo, para así, 
+
+	conservar solo la spline generada en ese proceso
+
+	_NO SE PUSO CONTINUAR

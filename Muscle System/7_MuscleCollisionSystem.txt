@@ -1,0 +1,121 @@
+
+
+DETALLES:
+
+podemos también crear en los muscles system, sistemas de reservas de auto colisión, para así, las partes de la mesh/motive,
+
+de las áreas de las articulaciones no se solapen ó se metan unas dentro de otras a la hora de hacer las posiciones ó estados
+
+del punto de mayor flexión de una músculo ó articulación
+
+Se entiende que los procesos presentados a continuación son para character que ya poseen una estructura de Muscle System,
+
+y Simple Muscle, ó Parametric Msucle, u otros muscles systems
+
+
+
+	Selft Collision:
+	________________
+
+
+	_para esto, primero vamos ha "Animation/Msucle/Self-Multi Collision/Self Collision Grouping..", así, nos aparecerá
+
+	una ventana con las opciones para crear grupos de vertices de auto colisiones, estas opciones son:
+
+		
+		_Name: debemos asignarle un nombre al grupo de colisión de vertices que crearemos
+
+
+		_pts A: debemos seleccionar la mesh/motive, y entrar en en el modo de sub-elemento y seleccionar un grupo 
+
+		de vertex, por ej, los vertex, correspondiente a la tibia de la pierna, con estos vertex seleccionados vamos
+
+		y hacemos "Pts A:", para que así, estos puntos queden cargados en el sistema de auto colisión
+
+
+		_Pts B: debemos seleccionar la mesh/motive, y entrar en en el modo de sub-elemento y seleccionar un grupo 
+
+		de vertex, por ej, los vertex, correspondiente a el femur de la pierna, con estos vertex seleccionados vamos
+
+		y hacemos "Pts B:", para que así, estos puntos queden cargados en el sistema de auto colisión
+
+
+		_Create New Grouping: por último con ambos grupos de vertices cargados en "Pts A", y "Pts B", hacemos 
+
+		"Create New Grouping", así, veremos que al crear un nuevo grupo, este aparecerá en la sección "Self Collision Groups:",
+
+		con el nombre que le hayamos dado
+
+
+	_llegado a este punto tendremos que activar el "Self Collision", en la mesh/motive
+
+
+		_para esto seleccionamos la mesh/motive, y vamos al "Attribute Editor/cMuscleSystem/", y allí, activamos 
+
+		la opción de "Self Collision", para que así, queden activadas las opciones de auto colisión sobre la mesh/motive,
+
+		estan podran ser vistas cuando el área entre ambos grupos de vertex, seteados se flexionen a través de los músculos
+
+		que existen entre ellos, para que así, el sistema de auto colisión evite que los vertex, de la maya se solapen entre sí
+
+
+	_para graduar la influencia ejercida por el sistema de auto colisión en grupos de vertex determinados contamos con la edición
+
+	de pintado de vertices convencional:
+
+		_para esto, seleccionamos la mesh/motive, y vamos ha "Animation/Muscles/Paint Muscles Weights..", 
+
+		_en la cuál tendremos que escogern la opción "Paint Weights:", la modalidad de edición "Self Collision", para que así,
+
+		la edición de vertices, se realice en los grupos de vertices disponibles y no en otros sistemas no contemplados en esta edición
+
+
+
+		_las opciones de pintado de vertices "Self Volumize", permite incrementar ó inflar en músculo en determinadas áreas, esto
+
+		es importante para determinadas áreas donde se realizan undimientos de la mesh/motive, en algunas flexiones y contracciones
+
+		de la misma mesh/motive, en su movimiento y relación con el muscle system, y el self collision
+
+
+
+	Smart Collision:
+	________________
+
+
+		_para esto, primero seleccionamos la 2 capsulas ó de la estructura de muscle system, ej: femur y tibia
+
+		_luego con la parte del muscle system, de interés vamos ha "Animation/Muscle/Smart Collision/Crear Muscle Smart Collide",
+
+		así, nos aparecerá bordeando la zona de influencia de los grupos de vertices implicados en el proceso de smart collision,
+
+		una spline/rectángulo, la cuál representará el sistema smart collide
+
+		_luego tendremos que incorporar el sistema de smart collide, al muscle system, 
+
+		_para esto seleccionamos la spline/rectangle, "cMuscleSmartCollideShape1"
+
+		luego seleccionamos la mesh/motive, y vamos ha "Animation/Muscle/Smart Collision/Connect selected Muscle Collide nodes" 
+
+	
+	y para activar el proceso Smart Collide, debemos activarlo sobre la mesh/motive 
+
+		_para esto, primero seleccionamos la mesh/motive
+
+		_luego vamos al "Attribute Editor/cMuscleSystem", y activamos la opción "Smart Collision", para que así,
+
+		el sistema de auto colisión inteligente quede activado sobre la mesh/motive y evite que los vertex de esta se solapen
+
+
+	
+	y para editar la acción del smart collide, podremos modificar la influencia de vertices
+
+		_para esto seleccionamos la mesh/motive, y vamos ha "Animation/Muscles/Paint Muscles Weights..", 
+
+		_en la cuál tendremos que escogern la opción "Paint Weights:", cualquiera de las modalidades de "Smart", disponibles para que así,
+
+		la edición de vertices, se realice en los grupos de vertices disponibles y no en otros sistemas no contemplados en esta edición
+
+
+	
+

@@ -1,0 +1,166 @@
+
+
+DETALLES:
+
+
+también podemos aplicar los sistemas de soft bodys, a deformadores convencionales "Animation/Create Deformers/"
+
+utilizados para modelar y animar entre otros
+
+
+al aplicar un sistema de soft body, a un modificador podemos a su vez, aplicar ha este sistema de soft body,
+
+un sistemas de Fields/fuerzas, las caules podrán interactuar con el sistema de soft body, mientras que a su vez,
+
+el modificador hace su efecto ó trabajo
+
+
+es recomentable utilizar sistemas de soft body, convencioanles "make soft", en vez, de sistemas con "goals",
+
+por que los sistemas "make soft", funcionan mejor para estos casos y, complementariamente podemos aplicarles
+
+a estos sistemas de "make soft", sistemas de "Springs", para manejar el sistema de defomración e interacción
+
+del sistema de soft body estandar
+
+
+
+Tutorial:
+
+	3D Maya 113 Dinamicas Soft Bodies Aplicacion en deformadores
+
+		https://www.youtube.com/watch?v=9JvkV-0YLNA&index=113&list=PLA9A5E4BDF49EB336
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	_primero creamos la mesh/motive, a la cuál le aplicaremos un modificador y la colocamos según la lógica
+	
+	de la escena
+
+
+	_luego seleccionamos la mesh/motive, a la cuál le aplicaremos el modificador y con esta seleccionada
+
+	vamos ha "Animation/Create Deformer/ej: Lattice", así, podremos ajustar y modificar las propiedades
+
+	y atributos del modificador si así, lo requerimos como también, animarlo entre otras opciones
+
+
+	_ahora con el modificador aplicado seleccionado vamos ha "Dynamics/Soft-Rigid Bodies
+
+	/Create Soft Body/Options:"
+
+
+		_Create options: seleccionamos "Make soft"
+
+		
+		_las demás opciones las dejamos por defecto
+
+
+		_luego hacemos "Apply", ó "Create", para crear el sistema de soft body, sobre el modificador
+
+
+	así, se agregará un sistema de partículas dentro modificador respectivo, en el outliner, el cuál
+
+	corresponde al sistema de soft body, generado
+
+
+	_ahora podemos seleccionar este sistema de partículas el cuál coresponde al sistema de soft body,
+
+	y con este seleccionado ir ha "Dynamics/Fields/ej: Gravity", para someter así, a la mesh, del soft body
+
+	a las fuerzas de gravedad entre otras
+
+
+	_en este punto podremos generar una mesh, la cuál de colosionador ó retenedor de las partículas del
+
+	sistema de soft body, así, lo ubicamos en la lógica de la escena (borrar historial)
+
+
+	_luego seleccionamos esta mesh/colisionador, que creamos en el paso anterior y con esta seleccionada
+
+	vamos ha "Dynamics/Particles/Make Collide", para así, hacer este elemento un elemento colisionador dinámico
+
+
+	_ahora vamos ha "Window/Relationship Editors/Dynamics Relationship Editor", para a´si abrir el panel
+
+	"Dynamics Relationship Editor":
+
+
+		_ahora vamos al outliner. del panel Dynamics Relationship Editor, y seleccionamos el sistema
+
+		de partículas correspondiente al soft body sistem
+
+
+		_luego vamos a la pestaña de "collision", y seleccionamos la mesh, colisionadora
+
+
+	_ahora para controlar mejor ele sistema de deformación y simulación de soft body, seleccionamos tanto
+
+	el sistema de partículas que conforma el soft body, ó el deformador aplicado y vamos ha "Dynamics
+
+	/Soft-Rigid Bodies/Create Springs/Options:"
+
+
+		_Spring name: podemos asignarle un nombre al sistema de springs
+
+
+		_Creation method: es recomentable utilizar "Wireframe"
+
+
+		_Wire walk lengh: es recomendable utilizar un valor de "2"
+
+		
+		_las demás opciones las dejamos por defecto
+
+
+	_y por último podemos controlar el sistema de deformación de soft body, a través de los siguientes
+
+	parámetros:
+
+
+		_seleccionamos el sistema de partículas correspondiente al soft body, y con este seleccionado
+
+		vamos ha 
+
+			
+			_ttribute Editor/general Control Attributes:
+
+
+				_Dynamics Weights:
+
+					un valor bajo permite bajar la interación dinamica deformara en el tiempo
+
+
+				_Conserve: 
+
+					un valor bajo permite conservar la forma original ofreciendo resistencia
+
+					a la fuerza ejercida por las fields/fuerzas, y el deformador aplicado
+
+
+		_también, podemos seleccionar el "Spring", en el outlier, ó buscar esta la pestaña con el nombre
+
+		del spring, dentro de las pestañas del sistema de partículas correspondiente al soft body:
+
+
+				_Softness:
+
+					suavizado ó interpolación general
+
+				
+				_Damping:
+
+					capacidad de formación ó contensión de la mesh/motive
+					
+
+
+
+
+
+
+
+

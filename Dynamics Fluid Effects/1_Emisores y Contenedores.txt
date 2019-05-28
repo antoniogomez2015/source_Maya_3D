@@ -1,0 +1,103 @@
+
+
+DETALLES:
+
+
+también disponemos de un sistema con el cuál, podemos hacer sistemas gaseosos, líquidos, fluidos, así,
+
+como de diferentes densidades, otros
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Contenedores 2d, y 3D:
+______________________
+
+
+
+	Creación:
+	_________
+
+
+	_podemos crear contenedor con emisor incluido ó no, osea con emisor
+
+
+	_para esto vamos ha "Dynamics/Create Container 3D ó Create Containes 3D with Emitter"
+
+
+	_al crear ó generar un contenedor se agregará un elemento "fluid1", al panel outliner, y,
+
+	dentro de este elemento "fluid", se encontrarán otros elemento "fluidShape1", este se 
+
+	refiere
+
+	ha los controles y parámetros del sistema de fluidos y, "fluidEmitter1", este se refiere al
+
+	emisor del sistema en caso de que el contenedor/container/ lo hayacreado con emisor incluido
+
+
+	Resolución, Tamaño y relacionados:
+	__________________________________
+
+
+	_la unidad de medida de resolución es el "Voxel", y se representa por una rejilla, la cuál 
+
+	equivaldrá 
+
+	a la densidad ó capacidad de representación de las simulaciónes en el espacio dentro del 
+
+	contenedor 
+
+	y en su conjunto se entenderá con resolución, así, cada boxel, equivaldrá a un cuadro de la
+
+	 rejilla,
+
+	de esta forma entre más cuadros tenga la rejilla mayor resolución hadrá para representar la
+
+	 simulación
+
+	aunque esto aumentará el tiempo de proceso
+
+	
+	_para configurar la resolución seleccionamos el elemento "fluid1", en el ourliner, ó el 
+
+	contenedor 
+
+	directamente en el viewport, y con este seleccionado vamos al "attribute editor/fluidShape1
+
+	Container Properties/Base Resolution:", es recomendable para pruebas mantenerse en valores
+
+	en "10 y 25",
+
+	para previsualización entre valores de "50", y para render entre valores de "100" ó más
+
+
+	_hay que hacer la salvedad entre las diferencias entre resolución y tamaño, ya que la opción
+
+	"Size",
+
+	es totalmente a parte de la de base resolution, así el "Size/tamaño", lo podemos ajustar 
+
+	nuestras
+
+	necesidades en las cordenadas deseadas, en X,Y,Z
+
+
+	_también en esta sección disponemos de la opción de "Boundary", esta es la propiedad de 
+
+	indicar un margen
+
+	para que la simulación no llegue a los extremos ó costados del contenedor, de esta 
+
+	habrá un límite
+
+	del alcance de la simulación en relación al tamaño del contenedor, estos límites los podemos
+
+	colocar
+
+	en relación a las cordenadas deseadas entre, X,Y,Z
+
+
+

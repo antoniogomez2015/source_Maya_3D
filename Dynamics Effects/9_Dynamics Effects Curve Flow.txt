@@ -1,0 +1,186 @@
+
+
+DETALLES:
+
+
+también disponemos de la opción de la creación de sistemas de partículas precostruidos para las soluciones más
+
+comúnes, en este caso la creación de sistemas de partículas sobre trayectorias ó "paths", para así, poder
+
+controlar el fujo, volumen, dirección y demás características las cuales podemos modificar y hasta personalizar
+
+a fondo
+
+así, se generará un sistema de partículas el cuál es generico, por que no tiene ningún preset, aplicado para
+
+así, estar disponible para la configuración que desiemos para las partículas
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Curve Flow:
+___________
+
+
+	_primero creamos debemos crear una spline, ó curva, a través de cualquiera de las herramientas
+
+	de creación de spline de maya, luego la ubicamos según la lógica de la escena
+
+
+	_luego, con la spline, seleccionada vamos ha "Dynamics/Effects/Crete Curve Flow/Options", para así,
+
+	entrar en las opciones de creación del sistema de partículas:
+
+
+----------------------------------------------------------------------------------------------------------------------
+	
+	/Flow Along Curves
+
+
+		_Flow group name:
+
+			podemos asignarle un nombre al sistema de partículas generado
+
+
+	/Flow Creation Controls
+
+
+		_Attach emitter to curve:
+
+			podemos indicar que el emisor de partículas se siña al path, ó trayectoria
+
+
+		_Num control segments:
+
+			podemos indicar los números de segmentos de control generales
+
+
+		_Mum controls subsegments:
+
+			podemos indicar el número de sub-segmentos de control, los cuales nos permitirán 
+
+			manejar el flujo de partículas así, como la velocidad
+
+
+	/Flow Attribute Controls
+
+
+		_Emission Rate:
+
+			podemos indicar la rate/ó cantidad de partículas generadas
+
+
+		_Random motion speed:
+
+			podemos indicar el factor de aleatorio de la velocidad de las partículas
+
+
+		_Particle livespan:
+
+			podemmos indicar la vida que tendrán las partículas en el sistema
+
+
+		_Goal weight:
+
+			podemos indicar los pesos de atracción de las partículas
+
+
+	por últimos hacemos "Apply", ó "Create", para crear el sistema de partículas deseado
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+
+	_así, se generará un nuevo group, en el outliner, "Flow", el cuál contendrá el sistema de partículas,
+
+	el emisor, los paths, y los grupos de control, locator, circles
+
+
+	_ahora al seleccionar los "circles", en el recorrido del path/spline, tanto en el viewport, con en en
+
+	outliner/FLow/ControlObjects/Circles/, podremos ajustar el tamaño/scale, de estos circles, por que estos
+
+	circles/splines, indican el fljo de partículas que pasa sobre estos así, como la disperción 
+
+	de las partículas
+
+
+	_podemos ajustar y personalizar las partículas yendo al outliner/Flow/Flow_particles, y luego vamos 
+
+	al attribute editor, para controlar sus características de visualización render	
+
+
+	_también disponemos de atributos de control tanto los disponiamos en el momentos de creación del sistema
+	
+	de partículas como extras, para tener un control completo y workflow
+
+
+		_para esto, vamos y seleccionamos en el "outliner/Flow/"
+
+		
+		_luego con el elementos flow, seleccionamos vamos al "Attributo Editor/Flow/Extra Attributes/"
+
+
+
+			_Display Subsegmentos:
+
+				podemos variar la cantidad de sub-segmentos ó circles, de control
+
+
+			_Display All Circles:
+
+				podemos mostrar todos los circles ó no
+
+
+			_Display Thickness:
+
+				podemos mostrar la trayectoria sugerida de las partículas
+
+
+			_Lifespan:
+
+				podemos ajustar la vida de las partículas
+
+
+			_Goal Weight:
+
+				podemos ajustar los pesos de las partículas en relación al path
+
+
+			_Random Motion Speed:
+
+				podemos ajustar la velocidad aleatoria de las partículas
+
+			
+			_Emission Rate:
+
+				podemos ajustar el flujo de la cantidad de partículas sobre el path
+
+
+			_Curve Min:
+
+				(valor seteado)
+
+
+			_Curve Max:
+
+				(valor seteado)
+
+
+			_Locator 0 Position:
+
+				podemos ajustar la velocidad de un punto de control/locator, hasta el otro
+
+				punto de control, así, como su separación para variar así, el flujo de las 
+
+				partículas en su recorrido
+			
+
+		
+	_también podemos editar los sub-elementos que conforman la spline/path, para cambiar así, su forma,
+
+	de esta manera también podemos animar la splines, entre otros
+

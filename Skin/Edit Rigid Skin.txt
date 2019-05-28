@@ -1,0 +1,82 @@
+
+Animation/Skin/Edit Rigid Skin
+
+
+	_Create Flexor: (para suaviar pliegues)
+
+		_primero seleccionamos la joints, ó cadenas/chains, deseadas a aplicar flexor/deformadores
+
+		_luego vamos al menú Animation/Skin/Edit Rigid Skin/Create Flexor.., así se abrirá una
+	
+		ventana contextual donde podremos configurar la aplicación del flexor type, estos son:
+
+
+			_Lattice:
+
+				_joints:
+
+					aqui podemos seleccionar el alcance de a cuantas articulaciones aplicará este
+
+
+				_Bones:
+
+					aqui podemos seleccionar el alcance de a cuantos huesos aplicará este
+
+
+				_lattice Options:
+
+					aqui podemos indicar la cantidad de sub divisiones que conformarán el deformado r
+
+					lattice, en las diferentes cordenadas
+
+
+			así, se creará un lattice, tanto en la articulación como en el hueso, el cuál ayudará a corregir
+
+			los pliegues a la hora de la flexión de la deformación, pero también podemos entrar en los subelementos
+
+			del lattice, para un mayor dominio y edición de la deformación corregida por el mismo
+
+
+
+			_Sculpt:
+
+				_joints:
+
+					aqui podemos seleccionar el alcance de a cuantas articulaciones aplicará este
+
+
+				_Bones:
+
+					aqui podemos seleccionar el alcance de a cuantos huesos aplicará este
+
+
+				_Sculpt Options:
+
+					nos permite selecciónar la máxima distancia de acción así como la interpolación
+
+					de esta entre otras opciones colaterales, de esta manera se creará en la articulación
+
+					ó hueso una esfera deformadora la cuál hara de colchón articulador, esta espera la podemos
+
+					escalar, moder y destorcionar como cualquier otra esfera
+
+
+				así, seleccionando la mhesh principal vamos al chanel box y buscamos las opciones de "Sculpt1"
+
+				para reajustar las opciones
+
+
+
+			_Joint Cluster:
+
+
+				_joints:
+
+					aqui podemos seleccionar el alcance de a cuantas articulaciones aplicará este
+
+
+				así, en el chanel box, se creará un "jointCluster1", en cuál podemos configurar el Envelope,
+
+				entre otras opciones que nos permitirán realizar el suavizado e interpolación de la mesh
+
+				

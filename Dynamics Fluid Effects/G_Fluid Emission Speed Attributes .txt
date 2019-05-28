@@ -1,0 +1,76 @@
+
+
+DETALLES:
+
+
+en los sistemas de contenedores de fluidos, podemos ajustar las características que tendrá los
+
+emisores que accionarán dentro de el contenedor, así, podremos activar ó desactivar opciones
+
+y características de emisión
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+NOTA: podemos hacer que los puntos que conforman la simulación ya a partir de su inicio estos lleven
+
+turbulencia con características y patrones definidos
+
+
+
+FuidEmitter1:
+_____________
+
+	
+	Fluid Emission Turbulence:
+	__________________________
+
+
+	_Turbulence Type:
+
+		podemos elegir el tipo de turbulencia a aplicar sobre el emisor del contenedor
+
+
+			_Gradient:
+
+				podemos escoger un turbulencia escalable
+
+
+			_Random:
+
+				podemos escoger una turbulencia alternable
+	
+
+
+	_Turbulence:
+
+		podemos indicar un valor de la fuerza de incidencia que tendrá la turbulencia 
+
+	
+	_Turbulence Speed:
+
+		podemos indicar la velocidad que tendrá la turbulencia
+
+
+	_Turbulence Freq:
+
+		podemos demos indicar la frecuencia que tendrá la turbulencia en cordenadas X,Y,Z
+
+	
+	_Turbulence Offset:
+
+		podemos indicar el desface que tendrá la turbulencia en condenadas
+
+	
+	_Detail Turbulence;
+
+		podemos indicar un valor para detalle ó resolución que tendrá la turbulencia
+
+
+		
+
+
+
+
+

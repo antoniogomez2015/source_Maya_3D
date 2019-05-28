@@ -1,0 +1,273 @@
+
+http://es.xhamster.com/movies/4706714/hardcore_328.html?s=3&p=40
+
+http://es.xhamster.com/movies/4706922/hardcore_332.html?s=4&p=18
+
+http://es.xhamster.com/movies/4706733/hardcore_327.html?s=7&p=22
+
+
+DETALLES:
+
+
+en los contenedores de fluidos podemos configurar los mismos atributos asignados en un emisor
+
+también en contenedor para que de esta manera el contenedor reacciones de la manera espera 
+
+a como se configura previamente el emisor a través, de los detalles de contenido
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	
+Containt Details:
+_________________
+
+
+	Density:
+	________
+
+
+		_Density Scale:
+
+			_permite configurar la densidad ó cantidad de partículas que conforma el fluido
+
+
+		_Buoyancy:
+
+			_esta opción define la flotabilidad ó peso atómico de la densidad del fluido
+
+
+		_Dissipation:
+
+			_disipación ó perdida de la densidad del fluido, en valores a partir de "1", 
+
+			se empieza a ver más fluidéz en el fluido resultante aunque valores mayores
+
+			que "2", causan gran disipasión del fluido hasta llegar ha desvanecerlo
+
+
+		_Diffusion:
+
+			_esta opción permite hacer un fluido homogenio, de tipo gaseoso, es recomendable
+
+			utilizar esta opción en valores bajo, menores de "0.5"
+
+
+		_Density Pressure:
+
+			_presión de la densidad ó resistencia a si mismo en la emisión de este, especialmente
+
+			útil para hacer llamas, fluidos variables e inestables otros
+
+
+		_Density Presure Threshold:
+
+			_umbral de la presión de la densidad, es recomendable utilizar valores entre "0.5",
+
+			ha "1", de manera ponderada
+
+
+		_Noise:
+
+			_este valor agrega poluciones al fluido lo cuál, causa una generación dinámica 
+
+			del fluido de forma aleatoria y alternada en forma de ruido, especialmente útil
+
+			para hacer fumarolas, combustiones, explosiones, otros
+
+
+		_Density Tension:
+
+			_la tensión de la densidad, permite variar la corporeidad del fluido permitiendo así,
+
+			lograr efectos piroplásticos ó de metaball, así, como líquidos viscosos, otros, haciendo
+
+			que el fluido densificado se fragmente en islas ó nubes, esta opción funciona entre 
+
+			valores apreciables entre "10"
+
+
+		_Tension Force:
+
+			_la fuerza de la tensión, permite variar la influencia de la fuerza de la tensión sobre
+
+			el fluido, así, entre más fuerza, mayor será la capacidad viscosa ó plástica del fluido
+
+
+		_Gradient Force:
+
+			_esta opción es idéntica a la anterior más esta se realiza de forma gradada
+
+
+-------------------------------------------------------------------------------------------
+
+
+	Velocity:
+	_________
+
+
+		_Velocity Scale:
+
+			_podemos aplicar velidad al fluido en diferentes cordenadas para hacer que 
+
+			el fluido sea más dinámico
+
+
+		_Swirl:
+
+			_podemos también crear remolinos en el fluido para variables con patrones de movimiento
+
+
+		_Noise:
+
+			_podemos agregar ruiso ó aleatoriedad en la velocidad del fluido
+
+
+
+-------------------------------------------------------------------------------------------
+
+
+	Turbulence:
+	___________
+
+
+		
+		_Strengh:
+
+			_podemos variar la cantidad de fuerza de la turbulencia aplicada sobre el fluido
+
+
+		_Frequency:
+
+			_podemos variar la frecuencia de cantidad de la fuerza de la turbulencia aplicad
+
+			sobre el fluido
+
+
+		_Speed:
+
+			_podemos variar la velocidad de la turbulencia aplicada al fluido
+
+
+-------------------------------------------------------------------------------------------
+
+
+	Temperature:
+	____________
+
+
+		_Temperature Scale:
+
+			_podemos variar la escala de la temperatura 
+
+		
+		_Bouyancy:
+
+			_podemos variar la cantidad de flotabilidad de la temperatura del fluido
+
+
+		_Pressure:
+
+			_podemos variar la presión sobre si misma de la temeratura del fluido
+
+
+		_Pressure Threshold:
+
+			_podemos variar el umbral de la presión de la temperatura del fluido
+
+
+		_Dissipation:
+
+			_podemos variar la disipación de la temperatura del fluido
+
+
+		_Diffusion:
+
+			_podemos variar la difusión de la temperatura del fluido
+
+
+		_Turbulence:
+
+			_podemos agregar  y variar la cantidad de temperatura del fluido
+
+
+		_Noise:
+
+			_podemos agregar noise/ruido, a la temperatura del fluido
+
+
+		_Tension:
+
+			_podemos variar la tensión de la temperatura del fluido
+
+
+
+-------------------------------------------------------------------------------------------
+
+
+	Fuel:
+	_____
+
+
+		_Fuel Scale:
+
+			_escala de la combustión
+
+
+		_Reaction Speed:
+
+			_relación de la velocidad
+
+			
+		_Air/Fuel Ratio:
+
+			_relación de aire y combustible
+
+
+		_Ignition Temperature:
+
+			_temperatura de ingnición
+
+
+		_Max Temperature:
+
+			_máxima temperatura
+
+
+		_Heat Released:
+
+			_calor permitido
+
+
+		_Light Released:
+
+			_luz permitida
+
+
+		_light Color:
+
+			_luz del color
+
+
+-------------------------------------------------------------------------------------------
+
+
+	Color:
+	______
+
+
+
+		_Color Dissipation:
+
+			_dispersión del color
+
+
+		_Color Difufsion:
+
+			_difusión del color
+
+
+
+
+

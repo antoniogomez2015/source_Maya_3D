@@ -1,0 +1,40 @@
+
+
+DETALLES:
+
+
+también disponemos de sistemas para la creación de "Oceanos y Mares ó Rios", los cuales son altamente configurables
+
+prácticos y de poco peso y ocreacen un alto realismo para lograr "Oceanos y Mares ó Rios"
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Add Ocean Surface Locator:
+__________________________
+
+
+
+	tenemos la posibilidad de agregar elementos flotantes de forma dinámica sobre los sistemas de ocean, para esto,
+
+	
+	_primero seleccionamos el sistema de ocean, deseado y, con este seleccionado vamos ha "Dynamics/Fluid Effects
+
+	/Ocean/", y seleccionamos la opción de "Add Ocean Surface Locator"
+
+
+	_así, se agregará un "Locator", en el medio del grid, de la escena sobre la superficie del ocean system, de esta
+
+	manera al reproducir el sistema de oceano, el locator, se moverá ó fluctuará en relación al oleaje del sisdema
+
+	ocean
+
+
+	_de esta manera podremos emparentar ó relacionar objectos al locator, flotador para que así, los objectos relacionados
+
+	floten y fluctúen sobre el ocean system
+	
+
+
+

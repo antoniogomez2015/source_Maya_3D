@@ -1,0 +1,30 @@
+
+
+
+
+DETALLES:
+
+
+también disponemos de sistemas para la creación de "Oceanos y Mares ó Rios", los cuales son altamente configurables
+
+prácticos y de poco peso y ocreacen un alto realismo para lograr "Oceanos y Mares ó Rios"
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Displacement to Polygons / Displacement to Polygons with History:
+_________________________________________________________________
+
+
+
+	tenemos la posibilidad de convertir el sistema de ocean en un elemento poligonal
+
+
+	_así, podremos seleccionar el sistema de ocean, deseado e ir ha "Modify/Convert/", y seleccionar la opción
+
+	de "Displacement to Polygons", de esta manera el sistema de ocean, creará un copia del mismo en una versión
+
+	poligonal con la forma actual del sistema ocean	

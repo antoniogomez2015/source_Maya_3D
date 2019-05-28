@@ -1,0 +1,209 @@
+
+
+DETALLES:
+
+
+el efecto shatter, nos permite hacer fracturas en meshes/motives, como también ha éstas, agregarles sistemas
+
+adicionales de rigid bodies, com también fields/fuerzas, entre otros
+
+
+Crack Shatter: esta opción es funcional para sumulaciones sencillas, de elementos pequeños, ya que sus 
+
+interpenetraciones lineales entre los diferentes elementos al ser producidos de forma residual comparten 
+
+la misma área entre sus vertexs, como también, hay áreas que se meten dentro de otras y, esto es problemático 
+
+para el proceso de rigid bodies, el cuál entiende esto como un error, produciendo simulaciones resultantes 
+
+inesperadas
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Proceso "Crack Shatter":
+__________________________
+
+
+	DETALLES:
+
+
+	esta opción permite realizar procesos de fracturas en meshes, con resultados; concentricos a partir
+
+	de determinados puntos indicados por nosotros a través de una selección de sub-elementos vertex, 
+
+	sobre la mesh/motive, así, apartir de esta selección se generará de manera concentria pero aleatoria 
+
+	una fragmentación de la mesh, la cuál se generará como una fragmentación similar a la ocurrida 
+
+	en un parabrisas al este ser impactado con un piedra
+
+
+_______________________________________________________________________________________________________________
+
+
+
+	_primero creamos una mesh/motive, a la cuál deseamos aplicar el proceso de fractura/shatter, y la ubicamos
+
+	según la lógica de la escena
+
+
+		_esta mesh, debe tener una alta resolución para un mejor desempeño
+
+		
+		_ha esta mesh, debemos borrarle el historial antes de aplicarle un "shatter"
+
+
+	_luego seleccionamos los sib-elementos vertex, deseados de la mesh/motive, a la cuál deseamos 
+
+	aplicarle el "Crack shatter", y con esta seleccionada vamos ha "Dynamics/Effects/Create Shatter/Options:"
+
+
+		_primero seleccionamos la pestaña de "Crack Shatter"		
+
+
+		_Crack shatter name:
+
+			podemos asignar un nombre para el sistema de shatter
+
+		
+		_Crack count:
+
+			cantidad de segmentos generados
+
+
+		_Crack lengh:
+
+			distancia alcanzada por las fisuras que conformarán los segmentos
+		
+
+		_Edge jagginess:
+
+			(indeterminado)
+
+
+		-Extrude shards:
+
+			podemos extrruir ó agregar espesor a los segmentos generados
+
+
+		_Seed value:
+
+			valor de la semilla de generación
+
+
+		_Post operation:
+
+
+			_Shapes:
+
+				permite crea los fragmentos sin aplicarles sistemas de rigid bodies, fields, otros
+
+
+			_Rigid bodies with collisions off:
+
+				permite cuerpos rígidos "activos", pero sin colisiones entre ellos, ó mejor dicho, 
+
+				no tienen aplicado "Dynamics/Particles/Make Collide" para evitar las interpenetraciones 
+
+				que generan conflictos en el proceso de rigid bodies, esta opción es la más recomendada, 
+
+				ya que los fragmentos obedecerán a los procesos rigid bodies, y fiedls, más estos 
+
+				fragmentos no colisionarán entre sí 
+
+				_los fragmentos generados en esta opción también se generarán en un grupo más
+
+				éstos dentro de cada una de sus partes ó fragmentos tendrá un "rigidBody00"				
+
+
+			_Soft bodies with goals:
+
+				permite crear cuerpos blandos con "goals"
+
+
+			_Soft bodies with lattice and goals:
+
+				permite crear cuerpos blandos con "goals", más el modificador "lattice"
+
+			
+			_Sets:
+
+				(indeterminado)
+
+
+
+		_Triangule surface:
+
+			permite
+
+
+		_Apply interior material: 
+
+			podemos
+
+
+		_Link to shards:
+
+			podemos relacionar los fragmentos resultantes
+
+		
+		_Make original surface rigid:
+
+			hacer la mesh, original un elementos rigid bodies
+
+
+		_Verbose mode:
+
+			(indeterminado)
+
+
+	así, se generará un nuevo group/grupo, "CrackShatter", el cuál contendrá lar partes ó fragmentos
+
+	que conforman el shatter, las partes del shatter, se crearán en el mismo lugar que la mesh, original
+
+
+	NOTA:
+
+	
+	es recomendable mantener el elemento ó mesh, original en el mismo sitio de creación ya que la mesh,
+
+	que conforma el shatter, se representará en el render con grietas e imperfecciones
+
+	
+	para así, hacer la animación y demás procesos de visualización con la mesh, original y solo mostrar el mesh,
+
+	shatter, en el proceso de la simulación de las fracturas
+
+_______________________________________________________________________________________________________________
+
+
+	procesos con Rigid bodies with collisions off:
+	______________________________________________
+
+	
+		_podemos seleccionar los elementos ó partes ó fragmentos dentro del grupo que conforma el shatter,
+
+		en el outliner, los cuales son rigid bodies/actives, y con estos fragmentos seleccionados vamos
+
+		ha "Dynamics/Fields/gravity", otros, para que así, los fragmentos respondan a fuerzas físicas
+
+		NOTA:
+
+		para que estos fragmentos respondas a las fields/fuerzas, debemos seleccionar cada uno e ir ha
+
+		"Attribute Editor/rigidBody00/Performance Attributes/", y activamos la opción de "Collisions",
+
+
+		más éstos, en las partes en que los fragmentos que se superpongan entre sí, estas meshes, entrelazadas
+
+		el sistema de rigid body, interpretará ha estas meshes, como ha una sola ó de forma inesperada
+
+	
+
+
+
+
+

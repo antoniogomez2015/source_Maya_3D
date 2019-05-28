@@ -1,0 +1,60 @@
+
+
+DETALLES:
+
+
+Tenemos la posibilidad de hacer edición por regiones de partículas seleccionadas para así, cierta parte de las partículas
+
+de un amisor tendran un comportamiento diferente a las demás
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Edición por componente:
+_______________________
+
+
+	_primero creamos un sistema de partículas deseado, sea a través de un emisor ó de un particle/brush
+
+
+	_luego seleccionamos las partículas y hacemos "F8", ó hacemos "mouse left click/particle", para así,
+
+	entrar en el modo de edición de las partículas y poder realizar una selección de un cierto grupo
+
+	de partículas deseado al cuál le asignaremos un grupo de atributos diferente a los demás
+
+
+	_luego con el grupo de partículas seleccionadas del "particle1", vamos ha "Window/General Editors/Component Editor",
+
+	así, se abrirá el panel e iremos a la sección "Component Editor/Particles", y veremos así, que nos parecerá una lista
+
+	con todas las partículas seleccionadas previamente
+
+
+	_en la cuál podremos modificar los siguientes atributos:
+
+
+		_Position: variar posición en cordenadas X,Y,Z 
+
+			(es recomendable no variar posición por errores del sistema de partículas)
+
+		
+		_Velocity: variar velocidad en cordenadas X,Y,Z
+
+
+		_Mass: variar masa la cuál influye sobre las fuerzas/fields, aplicadas a las partículas
+
+
+		_LifespanPP: variar la vida de las partículas
+
+
+	_para hacer una modificación podemos hacer mouse left + click + drag, sobre toda una columna de atributos, ej "Mass",
+
+	y al final directamente escribir el valor ej: 0.5, ó solo hacerlo para una sola partícula
+
+
+
+
+

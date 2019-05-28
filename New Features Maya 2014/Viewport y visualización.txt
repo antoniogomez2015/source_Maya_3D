@@ -1,0 +1,43 @@
+
+
+
+DETALLES:
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+Viewport 2.0, y Direct 11:
+__________________________
+
+
+	1_ahora disponemos de más opciones de visualización tanto de ambient occlusion, como de deep fields,
+
+	a través del viewport 2.0, dentro de sus opción y los atributos de la cámara entre otros
+
+
+	2_también en los icons, superiores del viewport, se ha agregado el icono de "Create Pencil", el cuál
+
+	nos permitirá realizar dibujos y señalizaciónes 2d, en el viewport, para usarlos como referencias
+
+	animadas para hacer correcciones en animaciones y modelos, otros
+
+
+		_al abrir esta herramienta se abrirá un caja de herramientas
+
+		_en la cuál podremos indicar en donde crear un fotograma especial en el timeline,
+
+		y en dicha posición podremos hacer un dibujo
+
+
+		_así, debemos avanzar hasta un siguiente punto del timeline, y allí agregar otros keyframe,
+
+		especial y recomenzar el proceso hasta determinar de generar pose a pose las indicaciones 2d,
+
+		y al finalizar podemos exportar estas indicaciones a través de "Window/Playblast/Options"
+
+
+

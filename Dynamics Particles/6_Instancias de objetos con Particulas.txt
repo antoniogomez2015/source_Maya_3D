@@ -1,0 +1,466 @@
+
+
+DETALLES: (instancias objetos)
+
+
+el sistema de instancias de objectos a través de partículas nos permiten instanciar elementos de forma dinámica y hasta
+
+interactíva a través de sistemas de partículas entre otras interacciones disponibles
+
+
+
+	_primero creamos la mesh/motive, a la cuál deseamos instancias a través del sistema de partículas
+
+
+		_tenemos la posibilidad de crear un "Group", que conformen elemento animados con un bird, por ejemplo
+
+
+	_luego creamos el sistema de partículas deseado, sea este un emisor ó un brush/particles
+
+
+	_luego seleccionamos la mesh/motive, y luego el sistema de partículas creado "particle1"
+
+
+	_y por último, con ambos elementos seleccionados vamos ha "Dynamic/Particles/instancer (Replacement)",
+
+	así, veremos que al reproducir las partículas éstas estarán sustituidas por nuestro mesh/motive, ó "Group"
+
+
+
+	como también, al sistemade partículas se le agregará una nueva tag, con las opciones de "Instancer",
+
+	quedando así: "particle1/ej: gancho/Intances", con las siguientes opciones:
+
+
+	
+		_Rotation Angle Units: Degrees/Radians:
+
+		_Rotation Order: XYZ:
+
+		_Level Of Detail: Geometry/BoundyBoxes/BoundyBox:
+
+		_Cycle: None/Secuential:
+
+		_Cycle Step Unit: Frames/Seconds:
+
+		_Cycle Step:
+
+
+
+	y particularmente se activan las opciones de "particle1/particleShape1/Instancer(Geometry replacement)"
+
+		_instances Nodes: aquí podemoe elegir entre los diferentes sistemas de instanscias creados
+
+		Allow All Data Types: permitir todos los tipos disponibles
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Como también podemos instancias más de un objecto ó grupo/group, en un mismos sistema de partículas/particles, así,
+
+como varias todos sus atributos e incluso agregar atributos nuevos para hacer más realista e interactiva la animación
+
+generada
+
+
+	
+	Expresión: Multi instancias/Multi ID
+	____________________________________
+
+
+
+	_primero creamos el sistema de partículas deseado, sea este un amisor, ó un particle/brush
+
+
+	_luego creamos las formas mesh/motive, que harán de proxis, en este ejemplo utilizaremos 3, meshes, estas
+
+	meshes, la ubicaremos a un costado del sistema de partículas
+
+
+	_luego seleccionamos el sistema de partículas "particle1", y vamos ha "Dynamics/particles/Instancer (Replacement)/Options"
+
+
+	así, se abrirá el panel "Particle Instancer Options", con todas las opciones de configuraciones para el instacer mode:
+
+
+		_Particle instancer name:
+
+		
+		_Rotation units: Degrees / Radians:
+
+
+		_Rotation order: XYZ/:
+
+		
+		_Leve of detail: Geometry/ Boundy Boxes / Boundy Box:
+
+
+		_Cycle: None/ Secuential:
+
+
+		_Cycles step units:
+
+
+		_Cycle step size:
+
+
+		_Instanced objects:
+
+
+		_Add Selection:
+
+
+		_Remove Items:
+
+
+		_Move Up:
+
+
+		_Move Down:
+
+
+		_Allow all data types:
+
+
+		_Particles object to instance:
+
+
+		_General Options:
+
+
+			_Position:
+
+			_Scale:
+
+			_Shear:
+
+			_Visibility:
+
+			_Object index:
+
+		
+		_Rotation Options:
+
+
+			_Rotation type:
+
+			_Rotation:
+
+			_Aim direction:
+
+			_Aim position:
+
+			_Aim axis:
+
+			_Aim up axis
+
+			Aim world up:
+		
+
+
+	_luego debemos ir agregando cada una de las mesh/proxis, a incorporar al sistema de instancias
+
+	para esto seleccionamos cada mesh/proxi, y luego vamos ha "particle Instancer Options/Add Selection",
+
+	así debemos repetir este paso cargar cada una de la meshes/proxis, deseadas, (se cargará por defecto la "0:"),
+
+	luego le damos "Create", para finalizar la operación y terminar de crear el proce de instancias
+
+
+
+	_ahora vamos ha agregar atributos nuevos en los cuales configuraremos las características deseadas
+
+	a los controles de las instancias personalizadas que deseamos hacer
+
+
+		_primero seleccionamos el sistema de partículas "particle1", luego con este seleccionado
+
+		vamos al "particle1/Attribute Editor/particleShape1/Add Dynamic Attributes/General", así,
+
+		se abrirá el panel "Add Attribute: particleShape1/New": y en este escogeremos las siguientes opciones:
+
+
+			_Long name: indicamos un nombre, ej: FormaPP
+
+
+			_Make attribute: escogemos "Keyable"
+
+
+			_Data Type:
+
+
+			_Attribute Type:
+
+
+				_Scalar:
+
+
+				_Per particle (array): escogemos esta opción para que aplique por partículas
+
+
+
+			_Numeric Attribute Properties: (opción inactiva)
+
+				_Minimum: (opción inactiva)
+
+				_maximum: (opción inactiva)
+
+				_Default: (opción inactiva)
+
+
+			_Enum Names:
+
+
+			_Ok: hacemos "ok", para terminar la operación y crear el nuevo atributo "FormaPP"
+
+
+			_Add:
+
+
+		_Así, será agregado en "particle1/particleShape1/Per Particle (Array) Attributes/", el atributo
+
+		"Norma PP",
+
+
+		_ahora hacemos "mouse right click", sobre el atributo "Normal PP", y elegimos "Creation Expression",
+
+		así, se abrirá el panel "Expression Editor",
+
+
+		_así, en el panel "Expression Editor/Selection", debemos indicar el elemento y el atributo al cuál
+
+		deseamos aplicarle la expresión desarrollada:
+
+
+			_Expression Editor/Selection/Object: debemos seleccionar el elemento deseado, en este caso 
+
+			es: "particleShape1"
+
+
+			_Expression Editor/Selection/Attributes: debemos seleccionar el atributo que creasmo, 
+
+			en este caso el atributo "NormalPP"
+
+
+		_y por último vamos ha "Expression Editor/Expression:", y procesmos a desarrollar la expresión deseada
+
+		la cuál se expresa a continuación:
+
+
+			_la expresión consta de lo soguiente:
+
+
+				_NormalPP : nombre del atributo a modificar
+
+				
+				_=: signo de asignación
+
+
+				_ID: cantidad de ids "índices", (0:), de "Dynamics/Particles
+
+				/Particle Instancer Options/Instancedobject/0:"
+
+
+				_%: signo de relación
+
+
+				_4: en este caso re refiere a la cantidad de proxis creados
+
+
+				_;: finalizar la sentencia
+
+
+				Qudando la expresión así: NormalPP=id%3;
+
+
+
+		_luego debemos relacionar la expresión creada a los atributos de la instancia
+
+			
+			_yendo ha "particle1/particleShape1/Instancer (Geometry Replacement)/Genetal Options/",
+
+			 y en "Object Index", seleccionamos la expresión que hemos creado previamente
+
+
+		y así, veremos que al reproducir la emisión de partículas se instanciarán no sólo la ID:0, sino 
+
+		los existentes y relacionados en la expresión creada
+
+
+
+	Expresión: Rotation
+	___________________
+
+
+		_primero vamos ha "particle1/particleShape1/Add Dynamics Attributes/General", 	así, se abrirá el panel 
+
+		"Add Attribute:particleShape1":
+
+
+			_Long name: Rotacion
+
+
+			_Date Tyoe: Vector
+
+
+			_Attribute Type: per particle (array)
+
+
+			_Ok: indicamos "Ok", para finalizar la creación del atributo nuevo
+
+
+		_luego vamos ha "particle1/particleShape1Per Particle (Array) Attributes", y veremos que se ha agregado 
+
+		el atributo "Rotacion", el cuál hemos creado,
+
+		hacemos "mouse right click", sobre este y seleccionamos la opción de "Creation Expressions", así, 
+
+		se abrirá el panel "Expression Editor", así:
+
+
+			_Expression Editor/Selection: indicamos el objecto, en este caso "particleshape1"
+
+
+			_Expression EditorAttributes: indicamos el creado y a configurar en este caso "Rotacion"
+
+
+			_Expressions: 
+
+
+		_la expresión consta de lo soguiente:
+
+
+			_ya aparecerán las expresiones previas creadas
+
+
+			_particleShape1: indicamos el elemento al cuál pertenecen las partículas
+
+			
+			_.: signo (punto), conectivo entre sentencias
+
+
+			_Rotate: luego indicamos el nombre de la propiedad, en este caso es "Rotate"
+
+
+			_=: signo de asígnación de valor
+
+
+			_<<>>: signos indicadores de valores múltiples
+
+
+			_rand(360), rand(360),rand(360): indica que el rango será aleadorio/random, de hasta 360, grados,
+
+			repetimos la acción tre veces, una vez, para cada una de las cordenadas (XYZ), separadas éstas pos ","
+
+
+			_; : y finalizamos la sentencia con ";" 
+
+
+			_Edit: hacemos click, en botón "Edit", para finalizar de crear la expresión
+
+
+			_Quedando la expresión así:
+
+				particleShape1.NormaPP=particleShape1.particleId%3;
+				particleShape1.Rotacion=<<rand(360),rand(360),rand(360)>>;
+
+
+
+		_ahora vamos ha "particle1/particleShape1/Instancer (Geometry Replacement)/Rotation Options/Rotation/",
+
+		y allí, buscamos la expresión, creada, en este caso, la expresión "Rotacion", así, veremmos que al reproducir
+
+		la creación de partículas las instancias se crearán con ángulos de rotación aleatorio
+
+
+
+
+
+	Expresión: Scale
+	________________
+
+
+		_primero vamos ha "particle1/particleShape1/Add Dynamics Attributes/General", 	así, se abrirá el panel 
+
+		"Add Attribute:particleShape1":
+
+
+			_Long name: EscalaInstancias
+
+
+			_Date Tyoe: Vector
+
+
+			_Attribute Type: per particle (array)
+
+
+			_Ok: indicamos "Ok", para finalizar la creación del atributo nuevo
+
+
+		_luego vamos ha "particle1/particleShape1Per Particle (Array) Attributes", y veremos que se ha agregado 
+
+		el atributo "EscalaInstancias", el cuál hemos creado,
+
+		hacemos "mouse right click", sobre este y seleccionamos la opción de "Creation Expressions", así, 
+
+		se abrirá el panel "Expression Editor", así:
+
+
+			_Expression Editor/Selection: indicamos el objecto, en este caso "particleshape1"
+
+
+			_Expression EditorAttributes: indicamos el creado y a configurar en este caso "EscalaInstancias"
+
+
+			_Expressions: 
+
+
+		_la expresión consta de lo soguiente:
+
+
+			_ya aparecerán las expresiones previas creadas
+
+
+			_particleShape1: indicamos el elemento al cuál pertenecen las partículas
+
+			
+			_.: signo (punto), conectivo entre sentencias
+
+
+			_Escale: luego indicamos el nombre de la propiedad, en este caso es "Escale"
+
+
+			_=: signo de asígnación de valor			
+
+
+			_rand(0.5,2), donde 0.5, será el valor mínimo de escala y, 2, será el valor máximo de escala
+
+
+			_; : y finalizamos la sentencia con ";" 
+
+
+			_Edit: hacemos click, en botón "Edit", para finalizar de crear la expresión
+
+
+			_Quedando la expresión así:
+
+				particleShape1.NormaPP=particleShape1.particleId%3;
+				particleShape1.Rotacion=<<rand(360),rand(360),rand(360)>>;
+				particleShape1.EscalaInstancias=rand(0,10);
+
+
+		
+		_ahora vamos ha "particle1/particleShape1/Instancer (Geometry Replacement)/General Options/Scale/",
+
+		y allí, buscamos la expresión, creada, en este caso, la expresión "EscalaInstancias", así, veremmos 
+
+		que al reproducir la creación de partículas las instancias se crearán con escalas aleatorias
+			
+
+				
+

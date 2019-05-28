@@ -1,0 +1,178 @@
+
+
+DETALLES:
+
+
+los sistema de soft bodies, permite hacer simulaciones de cuerpos blandos los cuales pueden intaractuar con sistemas
+
+de colisión de partículas así, como de las fuerzas/fields, aplicadas también en los sistemas de partículas
+
+
+los sistemas de "soft bodies", ó cuerpos (GOALS), blandos son compatibles tanto con los sistemas dinámicos de las 
+
+de las partículas como los sistemas rigid bodies
+
+
+los sistema de soft bodys, con goals, ó imánes se pueden aplicar ha:
+
+
+	1_directamente a un geometría/motive, 
+
+
+	2_como a un rigid bodies, sea este passive, ó active, y es mucho más estable y tiene una mejor 
+
+	reacción que los sistemas estándares
+
+
+
+
+(es altamente recomendable crar 'o convertir primero los elementos de la escena a rigid body / passive, y active, para luego
+
+si convertir estos a "soft bodys", según la escena)
+
+
+Tutorial:
+
+	3D Maya 104 Dinamicas Soft Bodies Control de la deformacion con Goal
+
+		https://www.youtube.com/watch?v=3yJFtbvQRZA&list=PLVnqjpSwnYEdWyuwBP5YP5TULZJGPbrkG&index=104
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Aplicación de Soft Body "Goals", a una geometría normal:
+_______________________________________________________
+
+
+	
+	1_primero creamos una base ó "floor", ó el entorno que deseamos
+
+		_es recomendable al haber "Fields/fuerzas", implicadas en el proceso aplicar entonces con la mesh
+
+		floor, seleccionada "Dynamics/Soft-Rigid Bodies/Create Passive Rigid Body", para que así, esta superficies
+
+		responda a elementos con fuerza de gravedad entre otros elementos para del sistema soft body
+
+
+	2_luego creamos la mhes/motive, que hará de soft body, y la colocamos en el lugar deseado, esta mesh, deberá tener
+
+	una alta resolución, como también tendremos que seleccionar esta y hacer, "edit/delete by type/history"
+
+
+	3_luego creamos la mesh/motive, que hará de colisionador, el cuál ejercerá fuerza ó impacto sobre el soft body, 
+
+	y la colocaremos en el lugar deseado según la lógica de la escena
+
+
+	4_ahora seleccionamos la mesh/motive, que hará de soft body, y con esta seleccionada vamos ha "Dynamics/Soft-Rigid Bodies
+
+	/Soft Body/Options", y en sus opciones elegimos lo siguiente:
+
+
+		_Creation options: "Duplicate, make copy soft"
+
+		
+		_Hide non-sof object: activamos esta opción
+
+
+		_Make non-soft a goal: activamos esta opción
+
+
+		_Weight: entre más pequeño el valor el cuerpo blando resultante se deformará más y será más inestable,
+
+		y entre el valor sea más alto, cercano a "1", el soft body, será más estable (valor recomendado 0.7)
+
+
+	y por último hacemos "Apply", ó "Create", para terminar la operación y convertir la mesh/motive, en un soft body,
+
+
+		_así, a la mesh/motive, se le agregará un sistema de partículas en el outliner
+
+		_dicho sistema de partículas estará conformado por una partícula por cada "vertex", de la geometría
+
+
+
+	5_al conformarse por partículas los sistemas de soft bodys, debemos hacer un elemento colisionador a la mesh, que
+
+	impactará con el soft body, 
+
+		
+		_para esto seleccionamos la mesh, que hará de colisionador y con esta seleccionada vamos ha "Dynamics
+
+		/Particles/Make Collide", para así, convertir esta mesh, en un elemento colisionador de rigid bodies
+
+
+	
+	6_ahora con la mesh, que hará de colisionador seleccionada vamos ha "Dynamics/Fields/Gravity", para que la mesh,
+
+	colisionadora obedesca a la fuerza de la gravedad
+
+		_en este punto a la mesh, que hará de colisionador se le habrá agregado una tab, de "rigidBody1",
+
+		para manejar a través de ésta, las características de colisión
+
+		
+		_ahora debemos ir a las opciones de rigidBody1, de la mesh, que hará de colisionador
+
+		
+			_Particle Collision: debemos activar esta opción para que sea detectable por las partículas de soft body
+
+
+			_Mass: debemos aumentar el valor de la masa ó peso atmosférico del mesh, que hará de solicionador sobre 
+
+			el soft body, así, como considerar los demás valores de ser necesarios
+
+	
+	7_como también seleccionamos la mesh/motive, que hace de soft body, y con esta seleccionada vamos ha "Dynamics
+
+		/Particles/Make Collide", para así, convertir esta mesh, en un elemento colisionador de rigid bodies
+
+
+	8_ahora debemos relacionar el sistema de partículas creado dentro de la mesh/motive, que hará de soft body, 
+
+	con los elementos colisionadores
+
+
+		_primero vamos ha "Window/Relationship Editors/Dynamic Relationships", para abrir el panel "Dynamic Relationships Editor"
+
+
+		_ahora en el outliner del panel, seleccionamos el sistema de partículas de la mesh/motive, soft body
+
+
+		_luego en el mismo panel vamos a la sección de "Collisions", y seleccionamos la mesh/colisionadora,
+
+		y la propia mesh, del soft body
+
+
+
+	9_por último seleccionamos el sistema de partículas dentro de la mesh/motive, soft body, ej "copyOfpPipe2Particle
+
+	/Goal Weights and Objects", ajustamos sus parámetros:
+
+
+		_Goal Smoothness: capacidad de deformación ó distorción del objeto
+
+
+		_pPipeShape2: cuerpo del objecto ó resistencia del mismo ante deformaciones
+
+
+
+NOTA:
+
+debemos controlar los comportamientos del sistema de osft body, entre los atributos del paso "6", y los del paso "9"
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,124 @@
+
+
+DETALLES:
+
+
+las opciones de  "Texrues", de sistemas de fluids effects/fluidShapes, nos permites agrgar controladores del sistema de simulación
+
+de tipo nodales ó procedurables, los cuales son altamente configurables y biene predefinidos por el sistema, los cuales podemos
+
+asignárselos a diferentes atributos de las simulaciones como: al color, la incandescencia, opacity
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+fluidShape/Textures:
+________________
+
+	
+	Asignación:
+	__________
+
+
+	_Texture Color:
+
+		(no determinada aún)
+
+	_Texture incandescence:
+
+		(no determinada aún)
+
+	_Texture Opacity:
+
+		(no determinada aún)
+
+	_Texture Type::
+
+		(no determinada aún)
+
+	_Cordinate Method:
+
+		(no determinada aún)
+
+	_Cordinate Speed:
+
+		(no determinada aún)
+
+	_Color Text Gain:
+
+		(no determinada aún)
+
+	_Incand Text Gain:
+
+		(no determinada aún)
+
+	_Opacity Tex Gain:
+
+		(no determinada aún)
+
+	_Threshold:
+
+		(no determinada aún)
+
+	_Amplitude:
+
+		(no determinada aún)
+
+	_Ratio:
+
+		(no determinada aún)
+
+	_Frecuency Ratio:
+
+		(no determinada aún)
+
+	_Depth Max:
+
+		(no determinada aún)
+
+	_Invert Texture:
+
+		(no determinada aún)
+
+	_Inflection:
+
+		(no determinada aún)
+
+	_Texture Time:
+
+		(no determinada aún)
+
+	_zoom Factor:
+
+		(no determinada aún)
+
+	_Frecuency:
+
+		(no determinada aún)
+
+	_Texture Orion X,Y,Z
+
+		(no determinada aún)
+
+	_Texture Scale:
+
+		(no determinada aún)
+
+	_Texture Rotate:
+
+		(no determinada aún)
+
+	_Implode:
+
+		(no determinada aún)
+
+	_Implode Center:
+
+		(no determinada aún)
+
+	_Number Of Waves:
+
+		(no determinada aún)
+

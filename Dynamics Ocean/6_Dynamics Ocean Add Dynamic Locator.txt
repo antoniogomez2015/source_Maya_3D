@@ -1,0 +1,101 @@
+
+
+DETALLES:
+
+
+también disponemos de sistemas para la creación de "Oceanos y Mares ó Rios", los cuales son altamente configurables
+
+prácticos y de poco peso y ocreacen un alto realismo para lograr "Oceanos y Mares ó Rios"
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+NOTE:	la opción "Float Selected Objects", esta opción funciona igual que "Add Dynamic Locator" más la opción de
+
+"Float Selected Objects", no crea "Locator", si no funciona directamente seleccionando los objectos meshes, deseados
+
+en la escena y luego aplicamos el "Float Selected Objects", así, éstos flotarán automáticamente en el ocean system
+
+
+Add Dynamic Locator:
+____________________
+
+
+
+	tenemos la posibilidad de agregar elementos flotantes de forma dinámica con parámetros más avanzados sobre los 
+
+	sistemas de ocean, para esto,
+
+	
+	_primero seleccionamos el sistema de ocean, deseado y, con este seleccionado vamos ha "Dynamics/Fluid Effects
+
+	/Ocean/", y seleccionamos la opción de "Add Dynamic Locator"
+
+
+	_así, se agregará un "Locator", en el medio del grid, de la escena sobre la superficie del ocean system, de esta
+
+	manera al reproducir el sistema de oceano, el locator, se moverá ó fluctuará en relación al oleaje del sisdema
+
+	ocean
+
+
+	_más el "Locator", agregado a la escena cuanta con atributos extras, y para ver estos atributos vamos a las opciones
+
+	de "Locator/locatorShape1/Extra Attributes", los cuales son:
+
+
+		_Start Frame:
+
+			_fotograma inicial en relación al sistema ocean
+
+
+		_Buoyancy:
+
+			_flotabilidad en relación al sistema ocean
+
+
+		_Water Damping:
+
+			_rebote ó mortiguación en relación al sistema ocean
+
+
+		_Air Damping:
+
+			_insidencia del aire en relación al sistema ocean
+
+
+		_Object Height:
+
+			_altura del objecto Object Height
+
+
+		_Gravity:
+
+
+			_gravedad Object Height
+
+
+		_Scene Scale:
+
+			_escala de la escena Object Height
+
+		
+		_Start Y:
+
+			_comienzo en "Y", Object Height
+
+		
+		_Notes:
+
+			_indeterminado
+		
+
+
+	_de esta manera podremos emparentar ó relacionar objectos al locator, flotador para que así, los objectos relacionados
+
+	floten y fluctúen sobre el ocean system
+	
+
+
+

@@ -1,0 +1,460 @@
+
+
+DETALLES:
+
+este es el tag, que permite controlar el comportamiento principal del sistema de partículas y
+
+también manifiesta los sistemas relacionados
+
+
+particleShape:
+______________
+
+
+
+	_General Control Attributes:
+	____________________________
+
+
+		_is Dynamic:
+
+
+		_Dynamics Weight:
+
+
+		_Conserve:
+
+
+		_Forces in World:
+
+
+		_Cache Data:
+
+
+		_Count:
+
+
+		_Total Event Count:
+
+
+
+
+	_Emission Attributes (see also emitter tabs):
+	_____________________________________________
+
+
+		_Max Count:
+
+
+		_Level Of Detail:
+
+
+		_Inherit Factor:
+
+
+		_Emission In World:
+
+
+		_Die On Emission Volume Exit:
+
+
+
+
+	_Lifspan Attributes (see also per-particle tab):
+	________________________________________________
+
+
+		_Lifespan Mode:
+
+
+			_Life forever:
+
+			_Constant:
+
+			_Random Range:
+
+			_ifespanPP only:
+
+		
+		_Lifespan:
+
+
+		_lifespan Random:
+
+
+		_general Seed:
+
+
+
+	_Time Attributes:
+	_________________
+
+
+		_Start Frame:
+
+		
+		_Current Time:
+
+
+
+	_Collision Attributes:
+	______________________
+
+
+		_Trace Depth:
+
+
+
+	_Soft Body Attributes:
+	______________________
+
+
+		_Input Geom Space:
+
+
+		_Target Geom Space:
+
+
+		_Enforce Count From History:
+
+
+
+	_Goal Weights and Objects:
+	__________________________
+
+		
+		_Goal Smoothness:
+
+
+
+	_Instances (Geometry Replacemente):
+	___________________________________
+
+
+		_Instancer Noder:
+
+
+		_Allow All Data Types:
+
+
+
+	_General Options:
+	_________________
+
+
+	
+		_Position:
+
+
+		_Scale:
+
+
+		_Shear:
+
+
+		_Visibility:
+
+
+		_Object Index:
+
+
+
+	_Rotation Options:
+	__________________
+
+
+		_Rotation Type:
+
+
+		_Rotation:
+
+
+		_Aim Direction:
+
+
+		_Aim Position:
+
+
+		_Aim Axis:
+
+
+		_Aim Up Axis:
+
+
+		_Aim World Up:
+
+
+
+	_Cycle Options:
+	_______________
+
+
+		_Cycle Start Object:
+
+
+		_Age:
+
+
+	
+	_Emission Random Stream Seeds:
+	______________________________
+
+
+		_emiter:
+
+
+
+	_Render Attributes: 
+	___________________
+
+
+	(maya software), (s/w: maya hardware), (All: mental ray)
+
+
+
+
+		_Depth Sort:
+
+
+		_Particle Render Type:
+
+			_Points: 
+
+				para hacer sistemas elementales de puntos 
+
+			_MiltiPoint:
+
+				para hacer sistemas multi puntos, con punto contiguos y superpuestos
+
+			_MultiStreak:
+
+				para hacer sistemas de filamentos longitudinales
+
+			_Numeric:
+
+				para obtener data, de las partículas individuales
+
+			_Spheres:
+
+				para hacer sistemas de volúmen de bubbles/burbújas, ó esféras
+
+			_Sprites:
+
+				para hacer sistemas de instancias de objectos
+
+			_Streak:
+
+				
+
+			_Blobby Surface (s/w):
+
+			_Cloud (s/w):
+
+			_Tubes (s/w):
+
+
+		_Add Attributes For: Current Render Type: ver propiedades del tipo de partículas seleccionada 
+
+		en Particle Render Type:
+
+
+
+
+	_Render Stats:
+	______________
+
+
+		_Visible un Reflections: visible en las reflecciones de render
+
+		_Visible un refractions: visible en las refracciones de render
+
+		_Cats Shadows: detectables en el render
+
+		_Receive Shadpws: recive smbras en el render
+
+		_Motion Blur: desenfoque de movimiento en el render
+
+		_Primary Visibility: visibilidad primaria
+
+
+
+	_Per particles (Array) Attributes:
+
+
+		_Position:
+
+
+		_Ramp Position:
+
+
+		_Velocity:
+
+
+		_Ramp Velocity:
+
+
+		_Aceleration:
+
+
+		_Ramp Aceleration:
+
+
+		_Mass:
+
+
+		_Lifespan PP:
+
+
+		_World Velocity:
+
+
+		
+
+	_Add Dynamic Attributes:
+
+	
+		_General:
+
+			1_se abrirá el panel "Add Attribute particleShape1":
+
+				Add Attribute particleShape1/New:
+				_________________________________
+
+				en este panel podemos crear atributos personalizados con diferente tipos
+
+				tipos de datos, visibles, ocultos, animables y no animables, así, como 
+
+				con rangos de acción definidos por nosotros
+
+
+			2_también podemos seleccionar entre atributos avanzados preestablecidos de las partículas
+
+				Add Attribute particleShape1/Particle:
+				______________________________________
+
+				_interminados
+
+
+			3_también podemos seleccionar entre atributos avanzados preestablecidos de controles
+
+				Add Attribute particleShape1/Control:
+				______________________________________
+
+				_interminados
+
+
+
+
+
+		_Opacity:
+
+
+			1_Add Per Object Attribute:
+
+				agregar atributo de opacidad a todo el sistema de partículas
+
+
+			2_Add Per Particle Attribute:
+
+				agregar atributo de opacidad por partícula de forma individual
+
+
+			_Add Attribute: 
+
+				agregar el tipo de atributo seleccionado
+
+
+			_Cancel: 
+
+				cancelar la operación
+
+
+		1_Así, al agregar "Add Per Object Attribute:", se agregarán a las opciones de
+
+		"particle1/particlShape1/Render Attributes", las opciones de:
+
+
+			_Opacity
+
+
+		y a través de éstos podremos varias la opacidad de las partículas para su renderizado
+
+
+
+		2_más si agregamos un atributo "Add per Particle Attribute", se agregará el atributo
+
+		"Opacity PP", ó (Opacidad RGB, por partícula), en la sección "particle1/particleShape1
+
+		/per Prticle (Array) Attributes/Opacity PP", así al hacer "mouse right click", sobre 
+
+		estas opciones podremos crear expresiones como una "ramp", de valores de alpha, si
+
+		elegimos crear un ramp, se agregará el tag "ramp1", a las tags, de "particle1",
+
+		así en la tab, "ramp", podremos editar las opciones de alpha matte en degradado de ramp
+
+
+
+
+
+
+		_Color:
+
+			1_Add Per Object Attribute:
+
+				agregar atributos de color a todo el sistema de partículas
+
+
+			2_Add Per Particle Attribute:
+
+				agregar atributos por partículas de forma individual
+
+
+			3_Shader: 
+
+				agrega atributos al sistema de partículas con shader/cloud
+
+
+			_Add Attribute: 
+
+				agregar el tipo de atributo seleccionado
+
+
+			_Cancel: 
+
+				cancelar la operación
+
+
+		1_Así, al agregar "Add Per Object Attribute:", se agregarán a las opciones de
+
+		"particle1/particlShape1/Render Attributes", las opciones de:
+
+
+			_Color Red 
+
+			_Color Green 
+
+			_Color Blue
+
+		y a través de éstos podremos varias el color de las partículas para su renderizado
+
+
+
+		2_más si agregamos un atributo "Add per Particle Attribute", se agregará el atributo
+
+		"RGB PP", ó (color RGB, por partícula), en la sección "particle1/particleShape1
+
+		/per Prticle (Array) Attributes/RGB PP", así al hacer "mouse right click", sobre 
+
+		estas opciones podremos crear expresiones como una "ramp", de valores de color, si
+
+		elegimos crear un ramp, se agregará el tag "ramp1", a las tags, de "particle1",
+
+		así en la tab, "ramp", podremos editar las opciones de color en degradado de ramp
+
+
+			
+	
+
+			
+

@@ -1,0 +1,44 @@
+
+
+DETALLES:
+
+
+también disponemos de sistemas para la creación de "Oceanos y Mares ó Rios", los cuales son altamente configurables
+
+prácticos y de poco peso y ocreacen un alto realismo para lograr "Oceanos y Mares ó Rios"
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Create Ocean:
+_____________
+
+
+
+	_para crear un sistema de oceanos básico vamos ha "Dynamics/Fluid Effects/Ocean/Create ocean", así se creará
+
+	un sistema de ocenno, el cuál, se compone de:
+
+		
+		_en el outliner, se agregará un elemento "oceanPlane1", y "transform1"
+
+
+			_"oceanPlane1", representa el sistema de oceano
+
+			
+			_"transform1", representa la visualización en pantalla del sistema
+
+
+		_así, como también, se agregará el "tab/oceanShader1", tanto de "oceanPlane1", como ha "transform1",
+
+		con dicha tab, podremos controlar el sistema de ocean
+
+
+	_
+
+	
+
+
+
+

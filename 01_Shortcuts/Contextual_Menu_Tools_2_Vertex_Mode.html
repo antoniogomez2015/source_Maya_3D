@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Contextual Menu - Tool Vertex Mode:
+    ___________________________________
+
+                       
+
+        Vertex Mode:
+        ____________     
+
+        _Shift + Mouse Right Click (con sub elementos seleccionados)
+
+            _Merge Vertex:
+
+                _de ésta manera, podremos acceder a las herramientas:
+
+                    _Merge Vertices to Center:
+                    _Merge Vertices
+                    _Maerge Vertex Tool
+                    _Target Weld Tool                
+                        
+
+                _para que así, podamos unificar sub elementos de tipo vertex
+
+            _Avera Vertices:
+
+                _ésta herramienta nos permitirá opnderar una serie de vertex seleccionados 
+                
+                _para que así, los vertex seleccionados sean aplanados en proporción para suavizar la forma resultante
+
+            _Camfer Vertex:
+
+                _ésta herramienta nos pemritirá hacer un bevel, de un vertex dividiendo el vertex respectivo en 4, vertex
+
+                _lo que nos pemritirá poder modificaciones en topología de la geometría
+
+            _Vertex Normals:
+
+                _ésta opción nos pemritirá visualizar las opciones de visualización en el viewport, para los vertex, de ésta manera, dispondremos de las siguientes opciones:
+
+                    _Average Normals:
+
+                        _ésta opción nos pemritirá ponderar la dirección de las normales para un grupo de vertex seleccionados
+
+                        _de ésta manera, podremos cambiar la orientación y dirección de los vertex seleccionados 
+                        
+                        _ha modo de plano en conjunto para cambiar la orientación global de los sub elementos seleccionados
+
+                    _Vertex Normal Edit Tool:
+
+                        _ésta opción nos permiirá cambiar dinámicamente y en directo la orientación ó dirección de las normales de un grupo de vertex seleccionados
+
+                        _de ésta manera, podremos personalizar la orientación ó dirección de las normales de forma personalizada y al detalle de un grupo de vertex seleccionados
+
+                        _para lo cuál, dispondremos de un handle, de rotación a través, del cuál, podremos cambiar la dirección u orientación de las normales
+
+                    _Set Normal to Face:
+
+                        _ésta opción nos pemritirá reorientar la dirección de las normales de un grupo de vertex seleccionados
+
+                        _de ésta manera, los vertex automáticamente tratarán de conformar un plano en su conjunto de forma rígida 
+                        
+                        _y de forma escalonada al pasar un umbral mínimo en un curva conformada por vertex
+
+                        _para que así, en éste caso se cree múltiples planos escalonados
+
+                    _Toogle Verter Normal Tool:
+
+                        _ésta opción nos pemritirá aplicar las configuración previa de las normales aplicadas ó desactivar éstas ha modo de bypass
+
+            _Extrude Vertex:
+
+                _ésta opción nos permitirá extruir un grupo de vertex seleccionados
+
+                _de ésta manera, podremos crear nueva geometría poligonal a partir de vertex
+
+            _Delete Vertex:
+
+                _ésta opción nos permitirá eliminar un grupo de vertex seleccionados previamente
+
+                _más ésta opción sólo borrará los vertex seleccionados, dejando así, el face, base sobre el cuál, estaban enmarcados los vertex seleccionados previametne
+
+            _Multi-Cut Tool:
+
+                _ésta opción nos permitirá agregar edge, edgeloops, a través de la creación de nuevos edges 
+                
+                _como también, a paritr de unión de varios vertex seleccionados y unidos por medio de nuevos edges
+
+            _Paint Seleted Vertex:
+
+                _ésta opción nos permitirá seleccionar grupos de vertes a través, de la herramienta de paint ó sculpt, de forma interactiva
+
+
+
+            Generales:
+            __________
+
+                _Crease Tool:
+
+                    _ésta opción nos permitirá hacer variaciones sobre la tensión generada por un vertex, en relación de los demás vertex
+
+                Connect Component:
+
+                    _ésta opción nos pemritirá crear nuevos edges a través, de la selección previa de una serie de vertex
+
+                    _para que así, edges, nuevos sean trazados entres los vertex seleccionados previamente
+
+                    _con la condición de que debe de existir faces, debajo de los vertex seleccionados, de lo contrario, los nuevos edges, no serán creados
+
+                _Detach Component:
+
+                    _ésta opción nos permitirá hacer "unWeld", ó dividir vertex seleccionados
+
+                    _para que así, podamos dividir un vertex en dos vertex y poder hacer extracciones de partes de una geometría 
+                    
+                    _ó hacer separaciones para diferentes procesos de modelado, ajutes y efectos, otros
+
+                _Transform Component:
+
+                    _ésta opción nos permitirá activar las opciones de control de axis ó ejes de cordenadas
+
+                    _para que así, dispongamos de todas las opciones de edición y sub elementos de forma conjunta
+
+                _Bevel Tool: 
+
+                    _ésta opción nos pemritirá dividir un edge, que seleccionemos
+
+                    _de ésta manera, podremos dividir un edge, respectivo en dos ó más edges, de forma dinámica para reforzar la morfología del motivo
+
+                    NOTE: Bevel Tool: (interactive), nos pemritirá motificar dinámicamente sobre cualquier sub elemento del motivo
+
+                _Connect Tool:
+
+                    _ésta opción nos pemritirá activar la herramienta de connect tool, a través, de la cuál, podremos crear nuevos edges, a partir de la selección de dos ó más vertex previamente
+
+                    NOTE: Connect Tool: (interactive), nos pemritirá motificar dinámicamente sobre cualquier sub elemento del motivo
+
+                _Extrude Tool:
+
+                    _ésta opción nos pemritirá extruir un sub elementos sobre el cuál, nos posemos
+
+                    NOTE: Extrude Tool: (interactive), nos pemritirá motificar dinámicamente sobre cualquier sub elemento del motivo
+
+                _Apply Color:
+
+                    _ésta opción nos permitirá pintar un grupo de vertex, seleccionados
+
+                    _para lo cuál, lo más recomendable es entrar en las opciones de la herramienta
+
+                    _para que así, podamos cambiar el color por un color personalizado entre otras opciones disponibles
+
+                    _de ésta manera, podremos pintar vertex seleccionados para distinguirlos en el viewport y en la visualización en general
+
+                _Polygon Display:
+
+                    _Toogle Backface culling:
+
+                        _ésta opción nos pemritirá visualizar sólo los vertes que se encuentren en primer plano
+
+                        _ocultando así, los vertes que se encuentren por detras del motivo ó en segundo plano
+
+                        _lo cuál, hará la legera la visualización en el viewport, de la escena al haber menos polígonos en la escena
+
+                    _Toogle Vertex:
+
+                        _ésta opción nos permitirá visualizar los vertex de forma normal
+
+                    _Toogle Vertex Normal:
+
+                        _ésta opción nos permitirá visualizar los vertex de forma normal
+
+                        _más a su vez, podremos visualizar la dirección de las normales de los vertex en relación a la morfología del objeto
+
+                    _Toogle Vertex Number:
+
+                        _ésta ocpción nos permitirá visualizar el número asignado por el sistema para cada vertex directamente en el viewport
+
+                    _Reset Polygon Display:
+
+                        _ésta opción nos permitirá restaurar la visualización por defecto de los vertex en el viewport
+
+
+
+
+
+
+
+
+
+
+                        
+-->
+</body>
+</html>

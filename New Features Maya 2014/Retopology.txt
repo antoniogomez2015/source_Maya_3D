@@ -1,0 +1,86 @@
+
+
+
+DETALLES:
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+Retopology:
+___________
+
+
+	Retopology:
+	___________
+
+
+	1_seleccionamos la mesh/character, en alta resolución a topologizar y con esta seleccionada vamos 
+
+	al panel "Modeling Tool Kit"
+
+
+	_ya en el panel vamos ha "Modeling Tool Kit/Transform Contraints/", y vamos a las opciones de la 
+
+	"flechita/other surface/", y seleccionamos nuestro mesh/character
+
+	
+	_luego vamos ha las opciones del panel "Modeling Tool Kit/Mesh Editing Tool/, y seleccionamos
+
+	la herramienta "Quad Draw", para comenzar con el proceso de retopology
+
+
+		_así, con herramienta "Quad Draw", seleccionada vamos haciendo mouse right click, sobre la
+
+		mesh/motive/character, para ir generando docs, ó vertex sobre esta
+
+
+		_y para mover los vertex, generados para su edición y ajuste debemos hacer mouse midle click
+
+		and drag, sobre los vertex, para moverlos ó ajustar su posición
+
+		
+		_y haciendo  mouse right click + control, podemos eleminar docs/vertexs, no deseados
+
+
+		_y ahora para crear polygons, a treavés, de los vertex, que hemos generado previamente,
+
+		nos posamos sobre vertex, genrados con "Shift", así, el programa nos sugerirá las posibles
+
+		topologías en relación a nuestra ubicación a la distribución de los vertex
+
+
+		_y para aplicar ó crear poligonos, solo tenemos que mouse right click, con shift pulsado,
+
+		y así debemos repetir el proceso hasta terminar la retopología
+
+
+		_y si nos posamos sobre algún "Edge", son shift, pulsado nos ofrecerá la opción de hacer un
+
+		edge loops, en la dirección sugerida y, para aplicarlo hacemos mouse right click, sobre el edge
+
+
+		_y para finalizar el proceso cuando hayamos terminado el proceso de retopología, debemos
+
+		desactivar la herramienta "Quad Draw"
+
+
+		_y para recobrar la mobilidad de la mesh/character, en alta resolución debemos hacer "Off",
+
+		el "Trnasform Contraints"
+
+
+	así podemos ver como debajo de la mesh/character, en alta resolución se encuentra la retopología
+
+	que hemos creado
+
+
+_____________________________________________________________________________________________________________
+
+
+
+
+

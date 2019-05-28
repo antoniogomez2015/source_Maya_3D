@@ -1,0 +1,61 @@
+
+
+DETALLES:
+
+
+las opciones de los sistemas de "Fluid Effects", tenemos la posibilidad de agregar fuerzas/fields,
+
+físicas externas, de esta manera podremos aumentar las posibilidad de modelado y configuración
+
+de los sistemas de fluidos, otros
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Fields / Fuerzas:
+_________________
+
+
+
+	_primero creamos un contenedor con un emisor
+
+
+	_luego seleccionamos el contenedor deseado y vamos ha "Dynamics/Fields/..", y disponemos
+
+	de las siguiente fuerzas para los sistemas de fluidos:
+
+
+		_Air - Drag - Gravity - Newton - Radial - Turbulence . Uniform - Vortex - Volume Axis -
+
+		Volume Curve
+
+
+	así, la fuerza/field, creada quedará relacionada con el contenedor seleccionado previamente
+
+
+	_así, se agregará una nueva "Tab", al sistema de "fluid effects/", con el nombre de fuerza/field,
+
+	creada respectiva, así podremos a través, de esta etiqueda editar la fuerza/field, agregada, ó
+
+	también, podemos seleccionar a través, de su nombre en el outliner
+
+
+	_también, tenemos la posibilidad de relaionar ha un contenedor determinado con una field/fuerza,
+
+	creada previamente ó que no este relacionado previamente con el contenedor deseado, para esto
+
+	vamos ha "Window/Relationshp Editors/Dynamic Relationships", y entramos en las opciones del panel:
+
+
+		_en el outliner, del panel seleccionamos al sistema de fliudos deseado, y, con este
+
+		seleccionado vamos ha "Dynamic Relationship Editor/Fields", y seleccionamos la field/fuerza,
+
+		deseada a relaciona con el sistema de fluidos deseado, así ambos elementos quedarán 
+
+		relacionados y trabajando de forma interactira influyendo uno sobre el otro
+	
+		

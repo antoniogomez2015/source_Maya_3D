@@ -1,0 +1,163 @@
+
+
+DETALLES:
+
+
+los sistema de soft bodies, permite hacer simulaciones de cuerpos blandos los cuales pueden intaractuar con sistemas
+
+de colisión de partículas así, como de las fuerzas/fields, aplicadas también en los sistemas de partículas
+
+
+los sistemas de "soft bodies", ó cuerpos (GOALS), blandos son compatibles tanto con los sistemas dinámicos de las 
+
+de las partículas como los sistemas rigid bodies
+
+
+los sistema de soft bodys, con goals, ó imánes se pueden aplicar ha:
+
+
+	1_directamente a un geometría/motive, 
+
+
+	2_como a un rigid bodies, sea este passive, ó active, y es mucho más estable y tiene una mejor 
+
+	reacción que los sistemas estándares
+
+
+
+
+Tutorial:
+
+	3D Maya 104 Dinamicas Soft Bodies Control de la deformacion con Goal
+
+		https://www.youtube.com/watch?v=3yJFtbvQRZA&list=PLVnqjpSwnYEdWyuwBP5YP5TULZJGPbrkG&index=104
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Aplicación de Soft Body "Goals", a un sistema Rigid Bidies:
+___________________________________________________________
+
+
+	
+	1_primero creamos una base ó "floor", ó el entorno que deseamos (y borramos su historia)
+
+	
+		_ahora seleccionamos el mesh/floor, y con este seleccionado vamos ha "Dynamics/Soft-Rigid Bodies
+
+		/Create Passive Rigid Body", para que a´si, esta superficie responta a elementos dinámicos
+
+		
+		_también debemos hacer ha esta mesh, un elemento colisinador de dinámicas, para esto lo seleccionamos
+
+		y vamos ha "Dynamics/Particles/Make Collide"
+
+
+	2_luego creamos a la mesh, que hará de elemento colisionador y a su vez, de elemento soft body, y lo
+
+	uticamos según la lógica de la escena
+
+	
+		_esta mesh/colisionador, debe tener una alta resolución (y borramos su historia)
+
+		
+		_con esta mesh, seleccionada vamos ha "Dynamic/Soft-Rigid Bodies/Create Active Rigid Body",
+
+		para que así, esta mesh, se convierta en un elemento rígido móvil ó dinámico
+
+		_y aún con esta mesh, seleccionada vamos ha "Dynamics/Fields/Gravity", para que así, esta
+
+		mesh, responda a la fuerza de la gravedad
+
+
+		_también es recomendable hacer esta mesh, en un elemento de colisión dinámica, para esto
+
+		lo seleccionamos y vamos ha "Dynamics/Particles/Make Collide"
+
+
+	3_y ahora con la mesh/colisionador, seleccionada vamos ha "Dynamics/Soft-Rigid Bodies/Create Soft Body
+
+	/Options", para así, entrar en las opciones de creación de los sistemas de soft bodys
+
+
+		_Creation options: seleccionamos "Duplicate, make copy soft"
+
+
+		_Hiden non-soft object: activamos esta opción (se ocultará la mesh original)
+
+
+		_Make non-soft a goal: activamos la creación de "Goal", ó imán (mantendrá la geometría
+
+		dentro de una sere de parámetros)
+
+		
+		_Weight: 
+
+			_entre menor sea el valor menor será el peso ó capacidad de deformación o de su capacidad
+
+			que tendrá la mesh, ó el cuerpo blando de mantener su forma inicial ante impactos 
+
+			ó deformaciones dinámicas
+
+
+			_entre mayor sea el valor mayor será el peso ó capacidad que tendrá la mesh, ó el cuerpo
+
+			blando de mantener su forma inicial ante impactos ó deformaciones dinámicas
+
+
+			_los valores recomendados para hacer un cuerpo blando estado son de entre (0.5-0.8)
+
+
+	por últimos hacemos "Apply", ó "Create", para finalizar el procedo de creación del soft body
+
+		
+		_así, creará una copia de la mesh, respectiva dentro de la cuál se creará un sistema de partículas
+
+		el cuál representará al sistema de soft body 
+
+
+	
+	4_ahora vamos ha "Window/Relationship Editors/Dynamics relationships", para abrir así, el panel 
+
+	de "Dynamics Relationships Editor"
+
+
+		_ahora vamos al outliner, del panel "Dynamics Relationships Editor", y seleccionamos el sistema
+
+		de partículas de la mesh/colisionador, copiada
+
+
+		_ahora vamos a la sección de "Collision", y seleccionamos las superficies disponobles
+
+		como las del plano ó floor, la de la mesh/colisionador, para que así, estas queden relacionadas
+
+		con el sistema de partículas que conforma el soft body
+
+
+	5_y para controlar el sistema de colisiones y de cuerpos blandos vamos ha las opciones del sistema de partículas
+
+	yendo ha ej: "copyOfRoscaParticle/Goal Weights and Objects"
+
+		
+		_Goal Smoothness: capacidad de suavizado. deformación ó distorción de la mesh/motive, ante impactos 
+
+		y deformaciones dinámicas
+
+
+		_RoscaShape: capacidad del cuerpo blando de mantener la forma orignal del objeto/motive/mesh
+
+
+
+
+Opcional:
+
+
+	_también podemos agregar al modo de sistema de soft body goal, un sistema de "Springs", para ajustar
+
+	aún más, el control de las partículas y mehes, que conforman el sistema soft body
+
+

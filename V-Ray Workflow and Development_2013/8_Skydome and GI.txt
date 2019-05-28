@@ -1,0 +1,23 @@
+
+
+	1_para crear iluminación global con SkyDome vamos ha "Create/Light/V-Ray Dome Light", así, se creará en el Outliner el nodo "VRAYLightDome1", hacemos doble click en este para editarlo:
+
+	2_ya en "VRAYLightDome1", podemos utilizarlo por default más la iluminación será blanca, más si deseamos utilizar iluminación por HDRi, debemos ir ha: 
+	"VRAYLightDomeShape1/Texture/y activar Use Dome Tex/luego carmos la textura deseada"
+
+	3_en "Render Setting V-Ray/VRay/Color mapping/Type/cambiamos de Linear multiply por Exponential"
+
+	4_en "Render Setting V-Ray/Indirect Illumination/GI/desactivamos Reflective Caustics", por que no la necesitamos
+
+	5_en "Render Setting V-Ray/Indirect Illumination/GI/Secundary bounces/Engine/cambiamos de Brute force por Light cache, ya que ésta trabaja con la luminancia de la imágen cargada en el SkyDome
+
+	6_tenemos varias maneras de insidir en la radiación del sistema de SkyDome, estas son:
+
+		6.1_yendo ha "VRAYLightDomeShape1/Basic parameters/Intensity multiplier", e incrementar exponencialmente su valor
+
+		6.2_yendo ha "Render Setting V-Ray/VRay/Color mapping/ podemos incrementar de forma exponencial la "Gamma", así como también incrementar el "Bright multiplier"
+
+
+	7_para pruebas y desarrollo es aconsejable tener las subdivisiones del skydome bajas, esto lo hacemos yendo ha: en "VRAYLightDome1/Sampling/Subdivs: y dejamos el valor por defecto (8)"
+
+	8_para render finales es aconsejable colocar las subdivisiones del skydome altas, esto lo hacemos yendo ha: en "VRAYLightDome1/Sampling/Subdivs: y colocamos valores entre (30 a 60)"

@@ -1,0 +1,237 @@
+
+_Edit Deformes: Menu/Animation/Edit Deformer
+
+	_la mayoría de modificadores tienen opciones de edición de Weight, mesh, ó peso de la maya, estos son los siguientes:
+
+		_Pencil Blens Shapes Weights Tools
+
+		_Pencil Cluster Weights Tools
+
+		_Pencil Jiggle Weights Tools
+
+		_Pencil Wire Weights Tools
+
+
+
+1_blend shapes: (animación de expresiones faciales)
+
+	_primero debemos crear las meshes, deseadas a interpolar sus formas
+
+	_luego debemos seleccionar consecutivamente una por una 
+
+	_luego aplicamos blend shapes, yendo ha: menú/animate/create deformers/Blend Shapes, el parámetro controlador
+
+	se aplicará a la última mesh, seleccionada, así, al mover el slider, de su controlador hará la interpolación entre
+
+	las diferencias entre las formajes de las meshes 
+
+
+
+2_Lattice: (deformación exterior)
+
+	_seleccionamos la mesh, deseada y vamos al menú/animate/create deformes/Lattice
+
+	_este es un armazón configurable que se crea sobre la mesh, con la cuál podremos deformar la mesh, enbuelta
+
+	a través de los sub-elementos que conforman el armazón del Lattice
+
+	_al crear ó aplicar el lattice, podemos modificar su conformación en sus controladores aplicados a la mesh, deseada
+
+	_para aplicar el modificador y aliminarlo de la mesh, debemos ir ha: edit/Delete by Type/History
+
+
+
+3_Warp: (deformación exterior con modelo personalizado)
+
+	_primero seleccionamos la mesh, que deseamos deformar
+
+	_luego seleccionamos la mesh, que hará de deformador (recomendado: esta mesh, debera ser más grande ó cubrir la mesh a deformar)
+
+	_ahora aplicamos menu/animate/create deformes/Warp
+
+	_ahora la modificar los sub-elementos de la mesh, deformante, esta variación de la forma, modificará la mesh, deformada
+
+
+
+4_Cluster: (deformación pro sub-elementos)
+
+	_seleccionamos la mesh, a la cuál deseamos aplicarle la deformación
+
+	_entramos a sus sub-elementos/vertex, y seleccionamos los vertex, deseados que harán la deformación sobre la mesh
+
+	_luego con los vertex, seleccionamos vamos ha: menu/animate/create deformers/Cluster
+
+	_así, se creará un pequeño handle "C", en el área del grupo de vertex con el cuál podremos mover la zona de los vertex,
+
+	de forma independiente de la mesh, a las cuales éstos pertenecen
+
+
+
+5_Soft Modification: (modificador suavisado)
+
+	_seleccionamos la mesh, deseada ha aplicarle la deformación
+
+	_luego vamos ha: menu/animation/create deformes/Soft Modification, así, se creará un handle "S", en el área central
+
+	de la mesh, con el cuál, podremos deformar de forma "soft selection", la mesh, al igual que el Cluster, pero de forma suavizada
+
+	_y donde seleccionemos ó toquemos sobre la mesh deformada se cambiará el área de influencia ó anchor porint de acción del área de deformación
+
+
+
+////////////
+NO LINEALES: (deforman polygons, nurbs, surfaces)
+____________
+
+
+
+6_Bend: (deformación de arqueado)
+
+	_seleccionamos la mesh, deseada y vamos ha menu/animation/create deformers/no linerar/bend
+	
+	_así, en la mesh, se agregarán controles para aplicar el deformador de arqueado
+
+
+
+7_Flare: (deformación cónica por cordenadas) 
+
+	_seleccionamos la mesh, deseada y vamos ha menu/animation/create deformers/no linerar/flare
+	
+	_así, en la mesh, se agregarán controles para aplicar el deformador cónico
+
+
+
+8_Sine: (deformador de onda en ese "S")
+
+	_seleccionamos la mesh, deseada y vamos ha menu/animation/create deformers/no linerar/sine
+	
+	_así, en la mesh, se agregarán controles para aplicar el deformador de onda
+
+
+
+9_Squash: (esformador de estiramiento "Squash/Stretch")
+
+	_seleccionamos la mesh, deseada y vamos ha menu/animation/create deformers/no linerar/squash
+	
+	_así, en la mesh, se agregarán controles para aplicar el deformador de estiramiento
+
+
+
+10_Twist: (deformador de torneado)
+
+	_seleccionamos la mesh, deseada y vamos ha menu/animation/create deformers/no linerar/twist
+	
+	_así, en la mesh, se agregarán controles para aplicar el deformador de torneado
+
+
+
+
+11_Wave: (deformador de torneado)
+
+	_seleccionamos la mesh, deseada y vamos ha menu/animation/create deformers/no linerar/wave
+	
+	_así, en la mesh, se agregarán controles para aplicar el deformador de onda concentrica
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+12_Sculpt Deformer: (deformación por influencia) (simular muscle/golpes)
+
+	_seleccionamos la mesh, deseada y vamos ha menu animation/create deformers/Sculpt Deformer
+
+	_así, se creará un handle y un controlador visual detro de la mesh, seleccionada el cuál deformará la mesh,
+
+	en relación al modivimiento y ubicación en relación a la mesh, y si esta dentro ó fuera de esta
+
+
+
+13_Jiggle Deformer: (deformador de inercia de movimiento)
+
+	_primero seleccionamos la mesh, deseada y aplicamos Menu/Animation/Create Deformers/Jiggle Deformer
+
+	_luego procedemos ha animar la mesh, a la cuál aplicamos el Jiggle Deformer
+
+	_ahora con la mesh, seleccionada procedemos ha editar el peso de los sub-elementos de la mesh, yendo ha: 
+
+	Menu/Animation/Edit Deformer/Pencil Jiggle Weights Tools
+
+	_y procedemos a pintar de black/negro, el área que deseamos tenga influencia de inercia por la gravedad
+
+
+
+14_Wire: (deformador por spline "aconsejable para el rigging and muscle")
+
+	_primero selecciona la mesh, y aplicamos Modify/Make Live, así, las splines queadas se señirán la motivo (este paso es opcional)
+
+	_luego procedemos a crear aplines a través de curvas las cuales hará de de sistema de deformación
+
+	_podemos crear splines, cerradas perimetrales en las zonas en las cuales haremos deformaciones internas en esas áreas por medio de otras aplines (este paso es opcional)
+
+	_luego selecciona la mesh, y aplicamos Modify/Make Live, para así, volver a la mesh, a su estado original editable
+
+	_ahora deseleccionamos todos los elementos y vamos ha Menu/Create Deformers/Wire Tool
+
+	_luego con la herramienta Wire Tool, activa, seleccionamos la mesh, ó motivo deseado, luego pulsamos "Enter", para incorporarlo
+
+	_posteriormente con la herramienta Wire Tool, activa, seleccionamos la splines, que hará de deformador sobre la mesh, luego aplicamos "Enter", para incorporarla
+
+	_y luego entramos al modo de sub-elementos de apline que hace de deformador y procedemos a mover sus vertex, así, también se deformará la maya/mesh, en la misma proporción
+
+	_para aplicar limitadores a la deformación debemos hacer los siguientes pasos:
+
+		1.1_vamos ha Menu/Animate/Create Deformers/Wire Tools/"Cuadro de Options"
+
+			1.1.1_y en las opciones de la herramienta Wire Tools, activamos la opción de "Holders"
+
+		1.2_luego seleccionamos la mesh/motive, y precionamos "enter"
+
+		1.3_luego seleccionamos la spline, que hará de deformador y precionamos "enter"
+
+		1.4_luego seleccionamos la splines que hará de delimitador y precionamos "enter"
+
+		1.4_luego deseleccionamos todo y precionamos "enter", para aceptar el proceso y que se activen las opciones de deformación sobre la mesh/motive
+
+
+	ahora al mover la spline ó sus sub-elementos el efecto de deformación se ajustará sólo al área de la spline que hace de delimitador
+
+
+	_tenemos la opción de agregar un controlador de deformación:
+
+		1_para esto primero seleccionamos la spline ha hace de deformador
+
+			1.1_luego entramos a los sub-elementos/Curve Point, de la apline e indicamos el punto deseamos que se cree el controlador dentro de la trayectoria de la spline
+
+			1.2_luego con este punto de la spline seleccionado vamos ha Menu/Animate/Create Deformers/Wire Drooff Locator
+
+		así, se creará un controlador en ese punto de la spline, el cuál podremos controlar a través de un handle así, como en las propiedades de la spline, en el chanel box
+
+
+
+15_Write Tool: (deformardor tipo Cluster solo para geometría Nurbs)
+
+	_seleccionamos la Nurbs, deseada
+
+	_y aplicamos Menu/Animation/Create deformers/Write Tool, y aplicamos "Enter"
+
+	_así, se creará un handle "C", de deformación el cuál al moverlo deformación en relación a la Nurbs
+
+
+
+16_Point On Curve: (para rigging y animación)
+
+	_creamos una spline, que hará de deformador
+
+	_entramos a sus sub-elementos/Curve Point, e indicamos un punto de inserción deseado para el controlador de deformación
+
+	_luego con el Curve Point, seleccionamos vamos ha: Menu/Animator/Create Deformer/Point On Curve
+
+	_así, en el punto de inserción se creará un controlador de deformación conformado por un elemento de tipo "Locator",
+
+	al cuál al moverlo deformará en relación a la spline, deformadora
+
+
+
+
+
+	

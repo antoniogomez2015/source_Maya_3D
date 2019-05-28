@@ -1,0 +1,44 @@
+
+
+
+DETALLES:
+
+esta opción permite controlar las interacciones entre las fuerzar/fields, y las partículas así, las demás relaciones
+
+entre supercifies de colisión entre otras opciiones ó sistemas que interactúan con "particles"
+
+
+
+	_primero creado un sistema de partículas sea éste a partir de un emisor a particles/brush
+
+
+	_luego con las partículas "particle1", seleccionada agrgamos fuerzas/fields, para que éstas ejerzan fuerzas
+
+	que interactúen con las partículas
+
+
+	_y para controlar esa interacción vamos ha "Window/Relationships Editor/Dynamics Relationships Editor"
+
+
+
+	_el panel "Dynamics Relationships Editor", consta de las siguientes opciones:
+
+
+		_outliner: este permite seleccionar el elemento deseado a cambiar sus relaciones
+
+
+		_Fields: fuerzas relacionadas con un elemento determinado
+
+		
+		_Collisions: objetos de colisión relacionados con un sistema de partículas determinado
+
+
+		_Emitters: emisores relacionados con un sistema de partículas determinado
+
+
+		_All: todos los sistemas relacionados con un elementos determinado
+
+	
+	así, con seleccionar ó deseleccionar una propiedad podemos relacionarla ó no con un elemento determinado
+
+

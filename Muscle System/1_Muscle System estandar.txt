@@ -1,0 +1,457 @@
+
+Tutorial: 
+
+	Arumadigital:
+
+		3D Autodesk Maya 069 Skinning Muscle capsulas
+			https://www.youtube.com/watch?v=uULCkQe-Uuw&index=69&list=PLA9A5E4BDF49EB336
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+cápsulas system:
+
+
+	INTRO: las capsulas hacen de elementos iniciales para el proceso de muscles system, posicionando varias
+
+	de estas en las articulaciones/joints, deseadas ó, con solo una en una cadena de bones/huesos, deseada
+
+	para luego convertir dicha cadena de huesos en un sistema automático para soportar muscle systems
+
+
+
+	Crear cápsulas: 
+	_______________
+
+	(este paso es opciónal para el proceso, el proceso funciona con este ó sin este paso)
+
+
+	_primero cargamos el modelo/mesh/motive character
+
+	_luego creamos los bones/huesos deseados sobre este
+
+	_posteriormente seleccionamos el root, de la cadena de bones/huesos, deseada y vamos al menú
+
+	Animation/Muscle/Muscle - Bones/Make Capsule, así, se creará al centro del grid, un capsula "grpMUSCLES" 
+
+	en forma esférica, esta la seleccionaremos y la reposicionaremos en el root, de la cadena de bones/huesos,
+
+	seleccionada inicialmente, esta capsula podemos moverla y escalarla como una mesh, cualquiera
+
+
+
+
+	Crear Simple Muscle:
+	____________________
+
+	_primero vamos al panel outliner, y seleccionamos cada uno de sub huesos que conforman la cadena de huesos
+
+	deseada, entrando en cada joint, emparentado, "parent", y seleccionando cada uno de estos, desde el root, hasta 
+
+	el último hueso,. / consideraciones:
+
+		_(seleccionar solo "joint", no effectores)
+
+		_(los joints, no deben tener nombres repetidos en diferentes cadenas, es aconsejable renombrar todos los joints)
+
+		_(no ajustar la posición del bones/huesos, ó joint/articulaciones, con el "insert", activado ya que con esta 
+
+		opción se cambia la dirección de cada bone, ya que esto cambiará también la dirección de la estructura muscle system)
+
+
+
+	_con los elementos que conforman la cadena de huesos seleccionados en orden vamos al menú 
+
+	Animation/Msucle/Muscles - Bones/"Convert Surfaces to Muscle - Bones", así, nos aparecerá un menú "Joint to Capsule Convertion"
+
+	preguntandonos que escojamos un eje de cordenadas para proyectar la distancia y longitud de las articulaciones, por lo general escogeremos "X",
+
+	así se agregarán a la estructura de joints, en el outliner, "jointShapes", respectivamente en su ubicación gerárquica, así habremos convertido 
+
+	una cadena de huesos en una estrura de muscle system
+
+
+
+	_ahora vamos a indicarle al sistema de muscle system creado con que motivo/mesh, va ha trabajar, 
+
+	_para esto seleccionamos la mesh/motive, deseada y vamos al menú Animation/Muscle/Skin Setup/"Apply Muscle System Skin Deformer",
+
+	así, aparecerá una ventana contextual mostrándonos el proceso de cardado ó procesado de este paso, este dependerá de la densidad de la mesh/motive
+
+
+
+	_ahora vamos a conectar ambos procesos, tanto el de muscle system como el de el controlador de la mesh/motive
+
+	_para esto tendremos que seleccionar todos los elementos implicados;
+
+		_primero seleccionamos la mesh/motive
+
+		_luego seleccionamos los jointShapes que conforman la cadena de bones/huesos, más los "jointShapes" agregados, todo en orden descendente
+
+		_luego seleccionamos el elemento raíz, de la capsule, creada, en este caso "muscleCapsule1Shape"
+
+
+	_y con todos los elementos seleccionamos vamos al menú Animation/Muscle/Muscle Objects/"Connet selected Muscle Objects", y así,
+
+	los sistemas estarán relacionacionados y listos para trabajar
+
+
+
+	_ahora para ver los efectos sobre la mesh/motive, debemos aplicarle los pesos "Weights", a la mesh/malla
+
+	_para esto seleccionamos la mesh/motive, y vamos al menú Animation/Muscle/Weighting/"Apply Default Weights..", así,
+
+	nos aparecerá un ventana contextual en cual podremos indicar las características de los pesos sobre la mesh/motive,
+
+	al terminar de seleccionar los parámetros deseados aplicamos "Apply Default Weights", para que se apliquen los cambios, 
+
+	así, al model brazo veremos que la mesh/motive, se deforma en relación a la kinemática inversa aplicada, a continuación 
+
+	presentamos las opciones del panel "Apply Default Weights..":
+
+
+		_Sticky: 
+
+		opción por default, la cuál permite que el simple muscle, arrastre ó levante la mesh/motive 
+
+		(es la mas recomendada para reliazar systemas musculares en characteres, tros), la modalidad de Sticky,
+
+		ofrece algunas variantes de las fuerzas ejercidas sobre la mesh/motive, estas son:
+
+			_Sticky A: es una variante de "Sticky"
+
+			_Sticky B: es una variante de "Sticky"
+
+			_Sticky C: es una variante de "Sticky"
+
+		
+
+		_Sliding:
+
+		esta opción permite crear sistemas en los cuales la mesh/motive se siña al muscle system, haciendo un efecto
+
+		de snap, permitiendo desplazar el muscle system, sobre la superficie de la mesh/motive, a diferencia del "Sticky",
+
+		que sólo permite el arrastre y levantamiento de la mesh/motive, esta opción es especial para hacer efecto 
+
+		del efecto sifón sobre la superficie del agua, efectos dinámicos, efectos sub cutáneos, otros
+
+		
+		DETALLES:
+
+		_al aplicar esta modalidad de acción del muscle system, debemos seleccionar la mesh/motive, e ir al "Attribute Editor/cMuscleSystem",
+
+		cMuscleSystem Attributes, y desactivar las opciones de "Sticky", y activar las opicones de "Sliding", para así, 
+
+		la modalidad de acción de sliding, quede activada y en funcionamiento
+
+		_tmabién podemos edicar el alcance de acción del sliding, sobre la mesh/motive, para esto debeos hacer ajuste
+
+		yendo ha "Animation/Muscle/Paint Muscle Weights..", en el cuál tendremos que cambiar el modo 
+
+		de "Paint Weights:", a "Sliding", así, con esta opción activada podremos pintar sobre las zonas que deseamos tengan
+
+		reacción bajo el modo de acción del "sliding"
+
+
+
+
+	_y finalmente para editar el comportamiento de la deformación de mesh/motive a través del muscle system, podremos editar sus weights/pesos
+
+		_primero seleccionamos la mesh/motive, luego vamos al menú Animation/Muscle/"Paint Muscle Weights..", así, se abrirá una ventana 
+
+		con las opciones de la herramienta de pintado de pesos "Paint Muscle Weights", en la cuál podremos escoger las opción de edición de pesos
+
+			_podemos escoger el tipo de brush a utilizar
+
+			_podemos escoger el radio ó diámetro de la  brush seleccionada así como opacidad ó fuerza ejercida de la misma
+
+			_podemos escoger el tipo de weights/pesos, así como el fuerza de estos
+
+			_también podemos escoger el criterio de la brush, entre "replace / Add / Scale / Smooth", al igual que la edición de skinning
+
+			_también podemos escoger el hueso al cuál deseamos editarle su influencia sobre la mesh/motive
+
+			_como también podemos escoger si tener una visualización en colores ó "Gray", como el de el proceso de skinning
+
+
+	
+	IMPORTANTE:
+	___________
+
+	_asegurece que el proceso de weight/pesos, paint, el "muscleCapsule1", que corresponde al controlador de la capsule, que creamos para el proceso de muscle system
+
+	se encuentre pintada de color rojo, en el la mesh, en el viewer, cuando lo seleccionemos y editemos el weight, de la malla, quedando solo en color 
+
+	negro las zonas donde existen bones/huesos y articulaciones, así las zonas en "rojo", no se deformarán como zonas deformadas no deseadas
+
+
+
+
+	Simple Muscle estados de acción/poses:
+	______________________________________
+
+	tenemos la posibilidad de configurar los simple muscles, tanto en su proceso de creación así, como posproducidos, de esta
+
+	manera podremos ajustar la forma, ubicación y la forma que éstos tendran en sus poses de acción como por ejemplo 
+
+	en sus estados de reposo, squash, y stretch, a continuación se expresan los pasos a seguir:
+
+
+		_en las opciones de "Animation/Muscle/Simple Muscle/Muscle Builder", en el proceso de creación
+
+		de un simple muscle, sobre un muscle system, tenemos la pestaña en este mismos panel de "Muscle Parameters"
+
+		_también podemos acceder a estas opciones yendo ha "Animation/Muscle/Simple Mucle/Set Muscle Parameters...",
+
+
+	_cuando en el proceso de creación de un simple muscle, y estamos en el proceso de visulización de este, es posible
+
+	que el muscle de proyecte de forma invertida al sentido deseado a la hora de probar su flexión e inflexión, para
+
+	corregir esto podemos seleccionar la mesh/muscle, e ir a las opciones de "Animation/Muscle/Simple Muscle/Muscle Builder
+
+	Muscle parameters/Stretch Volumen Presset/Up Axis: X,Y,Z", así podremos seleccionar la cordenada que más se ajuste 
+
+	al comportamiento deseado
+
+
+
+
+	también podemos estableder los estados que tendrá el simple muscle, creado
+
+		_para esto seleccionamos la mesh/muscle, y vamos ha "Animation/Muscle/Simple Muscle/Muscle Builder
+
+		/Muscle Parameters/Spline Length Settings"
+
+
+		_Set Current as Default: seleccionamos y colocamos el muscle y en estado de reposo y aplicamos "Set Current as Default"
+
+		_Set Current as Squash: seleccionamos y colocamos el muscle y en estado de contraído y aplicamos "Squash"
+
+		_Set Current as Stretch: seleccionamos y colocamos el muscle y en estado de estiramiento y aplicamos "Stretch"
+
+
+	
+	y como si fuese poco el proceso de edición y personalización del simple muscle en el proceso de creación y "Previsualización"
+
+	podemos aún agregar más controles que permitirán personalizar aún mucho más la estructura muscular para reaccionar mejor 
+
+	a las diferentes poses y estados de acción, estas opciones adicionales son:
+
+		_primero vamos ha "Animation/Muscle/Simple Muscle/Custom Muscles Shapes", así se abrirá el panel de edición
+
+		"Muscle Spline Defprmer Shapes", en el cuál podremos editar al detalle los estados de acción del simple muscle
+
+		antes de su proceso de finalización ó creación definitiva, este panel dispone de las siguientes opciones y workflow
+
+
+
+		_Geo: aqui podemos cargar la geometría/mesh, a deformar
+
+		_Prep for Sculp / slider: prepara la geometría para esculpir sobre esta y la coloca en sub-elementos activos,
+
+		el slider, es para graduar la asígnación o fuerza ejercida sobre la mesh, en el proceso de esculpido
+
+		_Create New: para crear un nuevo estado de deformación de la mesh, ej: como se deformará en esta en el estado de "flexión"
+
+		_Edit: opción para volver a editar los estados creados
+
+		_Rename: posibilidad de volver ha renombrar los nombre de los estados de deformación creados
+
+		_Delete: posibilidad de borrar estados de deformación creados
+
+		_Blend / slider: permite funsionar el estado natural ó nativo de la mesh con el de las deformaciones generadas
+
+		_Current State / slider: indica el valor de la fuerza ejercida entre una deformació influyente aplicada a la mesh/muscle
+
+
+	_workflow:
+
+		_para crear un estado debemos seguir los siguientes pasos, estos son:
+
+			_primero debemos colocar la mesh/muscle, en el estado en el cuál deseamos hacer una deformación, 
+
+			para esto seleccionamos uno de sus rigs/handles, de sus extremos y lo movemos hacia uno de los estados
+
+			posibles, por lo general "squash", "stretch"
+
+
+			_luego, Prep for Sculpt: para activar la mesh/muscle, en modo de esculpido
+
+			_luego debemos modificar la mesh, a través de sus sub-elementos, vertex u otros
+
+			_Create New: para crear un nuevo estado con la deformación que hemos hecho
+
+			_así, debemos repetir estos pasos para cuantos estados desiemos que contenga el mesh/muscle, creado
+
+
+	Y al finalizar el proceso de edición al punto de tener el simple muscle adaptado a nuestras necesidades en sus
+
+	diferentes estados de acción ó poses de mismo debemos terminar el proceso de creación
+
+		_para eso seleccionamos el mesh/muscle, y vamos ha "Animation/Muscle/Simple Muscle/Muscle Builder
+
+		/Finaliza/", y hacemos "Convert to Muscle", para así generar el simple muscle, y continuar con el seteo
+
+		en el muscle system 
+
+	
+
+
+
+		
+	Asignación de Músculos/muscles, independientes:
+	_______________________________________________
+
+	A partir del proceso anterior terminado, podemos sobre esta estructura de muscle system, agregar múculos adicionales en áreas que nos interese 
+
+	resaltar la contracción de los músculos
+
+	 
+
+	Parametrics Muscles / Contructor de Músculos:
+	_____________________________________________
+
+	_primero vamos al menú Animation/Msucle/Simple Muscles/"Muscle Builder", así, se abrirá el panel Muscle Builder, el cuál nos permitirá
+
+	previsualizar y construir muscles, de forma personalizada y al detalle, la lógica del constructor de muscles simples procede a partir de
+
+	dos "jointShapes", contiguos que hacen permite hacer una flexión de una articulación, por ende debemos tener previamente dos joints,
+
+	creados,  a continuación presentamos el workflow, de la creación de un "simple muscle", dentro de las opciones del panel 
+
+	"Muscle Builder/Build":
+
+
+	_luego seleccionamos el "joint", ej: "Arm", superior ó pasivo, por lo general el que porta la cabeza del iK Handle, luego con este seleccionado
+
+	vamos a la opción "Attack Obj 1:"
+
+	_luego seleccionamos el "joint", ej: "Forearm", inferior ó activo, por lo general el portador de iK Hnadle ó controlador IK, luego con este seleccionado
+
+	vamos a la opción "Attack Obj 2:"
+
+	_posteriormente con ambos joints, cargados en el constructor de muscles, le damos a la opción "Build/Update", así se generará entre la mesh/motice, y la
+
+	cadena de bones/huesos, un "simple muscle", el cuál podremos personalizar y editar, esta es una representación en modo de "previsualización", 
+
+	aún es muscle no esta creado
+
+		_el simple muscle, creado en modo de presualización y edición consta de la forma que representa el muscle en si mismo
+
+		_también este consta de unos "Locator", uno a cada extremo del simple muscle, creado, estos locator, sirven para mover, redimensionar y ajustar el simple muscle
+
+		_también podemos adaptar de forma personalizada la forma en si que conforma el simple muscle, creada, para esto seleccionamos esta mesh, en este caso "cMuscleBuilder_surf1",
+
+		a continuación presentamos los atributos disponibles en el panel "Muscle Builder", con la mesh, del simple muscle, seleccionada, estos son:
+
+			_At: altitud / Off XY:, desface en X,Y / With: ancho ó grodor ó inflado del músculo / Falloff: suavizado en los extremos el muscle
+
+		_es altamente recomendable colocar el simple muscle, sobre el bone/hueso, no dentro del hueso, para que así, el simple muscle, se proyecte
+
+		sobre la mesh/motive, también es aconsejable colocar el "Locator", que se proyecta hacia el segundo bone/hueso, articulador, sobre la extensión
+
+		de este segundo hueso articulador, para que así, al flexionar el segundo hueso articulador este proyecte y levante el simple muscle hacia la mesh/motive,
+
+		correspondiente al muscle deseado a emular
+		
+
+
+	NOTA:
+	_____
+	
+	A partir de este punto no debemos mober la estrura de bones/huesos, y joints, ni de forma de kinemática directa ó inversa a través de ik Handles, y demás,
+
+	por que esto implica el desface en el cálculo residual del resultado final de la posición inicial del character en relación a los pesos/weights, por defecto que tendrá este
+
+
+
+	_y al finalizar la edición del simple muscle, podremos ahora sí, construir el simple muscle, para esto para al panel "Muscle Builder/Finalize"
+
+	_luego seleccionamos le mesh, que conforma el simple muscle, en este caso "cMuscleBuilder_surf1", y hacemos "Muscle Builder/Finalize/Convert to muscle",
+
+	así, se abrirá una ventana donde tendremos que indicar un nombre para para el simple muscle creado, y le damos "Ok"
+
+
+
+	_y finalmente tenderemos que conectar el simple muscle, creado al muscle system, que ya hemos creado previamente para que el simple muscle afecte a la mesh/motive, 
+
+	realizaremos los siguiente pasos:
+
+
+		_primero seleccionaremos la mesh/motive
+
+		_luego seleccionaremos la mesh, que conforma el "simple muscle"
+
+		_luego con ambos elementos seleccionados vamos al menú Animation/Muscle/Muscle Objects/"Connected Selected Muscle Objects", luego aparecerá una ventana
+
+		""Sticky Bind Maximum Distante", y le damos ha "Auto-Calculate"
+
+		_y luego con los mismos ambos elementos seleccionados vamos al menú Animation/Muscle/Weighting../"Apply Default Weights..", luego nos aparecerá
+
+		una ventana "Default Weights, en la cuál podremos configurar los weights/pesos deseados, así, al finalizar el proceso podremos ver que al mover 
+
+		la kinemática directa de la cadena en cuestión ó directamente el masa del simple muscle, creado veremos como esta deforma la mesh/motive
+
+		(no funciona por defecto con acciones de deformación a través de "iK Handles")
+
+
+
+	Muscle Builder/Cross Section:
+	____________________________
+
+	_esta sección nos permite editar ó modificar la forma base que conforma el simple muscle, a crear, permitiéndonos modificar
+
+	los loops, que conforman su estructura, como tmabién, los sub-elementos que conforman esos edges loops, los cuales se conforman
+
+	de splines, ó curvas, para esto, entramos en su modo de edición de sub elementos como cualquier spline creada
+
+
+
+
+	Animation/Muscle/Setup Master Muscle Control..:
+	_______________________________________________
+
+
+	DETALLES: esta opción nos permite gestionar varios muscles, a la vez, en sistemas complejos como character, entre otros, 
+
+	como nuevos atributos asignados dentro del chanel box, a través de un tercer elemento como lo puede ser un spline/circle
+
+
+
+	_primero creamos la forma "spline", por lo general la cuál contendrá los atributos creados con los controles de los muscles deseados
+
+	_luego vamos ha "Animation/Muscle/Setup Master Muscle Control..", así, nos aparecerá un panel con opciones y controles, las cuales
+
+	presentaremos en su correcto orden de ejecución, estas son:
+
+		1_Master Control: seleccionames la mesh/spline, que hará de proxi, para contener los atributos generados de los muscles
+
+		2_Controls: seleccionamos un rig/handle, ó spline, de un muscle deseado para que éste pase a ser un atributo del elemento proxi muscle
+
+		3_Name: debemos crearle un nombre el atributo que se generará en el elemento proxi muscle
+
+		_Setup Master Muscle Control: para crear el atributo dentro del channel box, del elemento proxi, debemos hacer "Setup Master Muscle Control",
+
+		así, aparecerá dicho atributo con el nombre que le hemos designado dentro del channel box, del elementos proxi muscle
+
+		4_así podremos repetir este paso para cuantos atributos desiemos en relación a cuantos muscles desiemos controlar con el elemento proxi muscle
+
+
+
+
+
+		
+
+
+
+
+
+	
+
+

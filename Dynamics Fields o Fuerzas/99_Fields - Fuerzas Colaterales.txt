@@ -1,0 +1,167 @@
+
+
+DETALLES:
+
+
+a diferencia del compendio de fuerzas/fields, existentes ó disponibles en maya, disponemos de la opción
+
+de utilizar las fuerzas existentes ó aplicadas en diferentes sistemas como "fluid effects", "particles",
+
+otros
+
+
+de esta manera podemos relacionar diferentes elementos como meshes, particles, soft bodys, otros, con 
+
+diferentes sistemas los cuales poseen fuerzas/fields, propias y agregadas ha estos, de esta manera, estas
+ 
+fuerzas implícitas en estos sistemas podrán afectar de forma colateral a los elementos relacionados 
+
+ha estas
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Affect Selected Object(s):
+__________________________
+
+
+
+------------------------------------------------------------------------------------------------------
+
+Meshes Relacioandas:
+____________________
+
+
+	_primero creamos un contenedor con un emisor ó cualquier sistema que contenga fields/fuerzas,
+
+	
+	_luego creamos y seleccionamos los elementos deseados a relacionar con el sistema con fuerzas,
+
+	estos elementos relacionados pueden ser meshes, partículas, soft bodys, otros
+
+
+	_así, primero seleccionamos el sistema deseado y luego seleccionamos los elemento a relacionar
+
+	y con ambos seleccionados vamos ha "Dynamics/Fields/Affect Selected Object(s)"
+
+
+	_de esta manera al reproducir la simulación del sistema relacionado veremos que serán
+
+	afectadas los elementos relacionados por las fuerzas/fields, aplicadas ó implicitas
+
+
+------------------------------------------------------------------------------------------------------
+
+Particles Relacionadas:
+_______________________
+
+
+	_en otro ejemplo podemos relacionar un sistema de fluid effects, con un sistema de partículas
+
+	para que así, al reproducir el sistema de fluid effects, este arrastre ó efecte a las partículas
+
+	estáticas ó dinamicas relacionadas al sistema de fluid effects
+
+
+		_primero creamos un fluid effects, contenedor y lo cofiguramos a nuestra necesidades
+
+
+		_luego vamos ha "Dynamics/Particles/Particle Tool/Option", y creamos unas partículas
+
+		dentro del contenedor a través, del modo de la herramienta "Particle Tool Brush",
+
+		así, las partículas se mantendrán de forma estática en su estado inicial, alternativamente
+
+		podemos cambiar el modo de visualización de las partículas creadas a "Particle Render Type
+
+		/Spheres", para apreciar así mejor las partículas creadas en el viewport
+
+
+		_ahora procedemos a relacionar ambos elementos para que ambos se vean relacionados
+
+		por las fuerzas colaterales ejercidas, así, primero seleccionamos al sistema de partículas
+
+		y luego seleccionamos el sistema de fluid effects, y, con ambos seleccionamos vamos ha
+
+		"Dynamics/Fields/", y seleccionamos la opción de "Affect Selected Object(s)" 
+
+	
+		así, al reproducir el sistema de fluid effects, ó contenedor se verán afectadas 
+
+		las partículas colateralmente por las fuerzas implícitas en los sistemas 
+
+
+		_en este caso específico podemos también, ajustar la influencia ejercida sobre las 
+
+		partículas, para esto, seleccionamos el sistema de partículas y vamos ha 
+
+		"particleShape1/General Control Attributes/Dynamics Weight", así, ajustando ó variando
+
+		este valor podremos ajustar cuán afectadas se verán las partículas por las fuerzas
+
+		colaterales implícitas en el sistemas del contenedor del fluid effects
+
+
+------------------------------------------------------------------------------------------------------
+
+
+Soft Bodys Relacionadas:
+_______________________
+
+
+
+	_primero creamos un fluid effects, contenedor y lo cofiguramos a nuestra necesidades
+
+
+	_luego creamos la/s forma/s que harán de soft bodys, y con estas seleccionadas vamos ha
+
+	"Dynamics/Soft-Rigid Bidies/", y aplicamos "Create Soft Body/Options", así, podremos 
+
+	seleccionar las siguientes opciones alternativas de creación:
+
+
+		_creation options:
+
+			_seleccionamos la opción "Duplicate, Make copy soft"
+
+
+		_hide non-soft objects:
+
+			_activamos esta opción
+
+
+		_make non soft a goal
+
+			_activamos esta opción
+
+
+		_weight:
+
+			_colocamo un peso aproximado de "0.700"
+
+
+	y, para finalizar el proceso de creación de los elementos soft bodys, hacermo "Create", ó "Apply"
+
+
+	_ahora debemos relacionar ambos elementos, tanto el sistema del contenedor del fluid effects,
+
+	con el elemento soft body, así, primero seleccionamos al elemento soft body, y luego seleccionamos
+
+	al elemento contenedor del fluid effects, y, con ambos seleccionados vamos ha 
+
+	"Dynamics/Fields/", y hacemos  "Affect Selected Object(s)", 
+
+
+	_de esta manera, al reproducir el sistema de fluid effects, veremos que el cuerpo blando soft body,
+
+	será afectado por las fuerzas/fields, implícitas en el sistems fluid effects
+
+
+
+
+
+
+

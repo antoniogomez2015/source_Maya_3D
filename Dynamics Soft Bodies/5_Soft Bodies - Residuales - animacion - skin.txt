@@ -1,0 +1,150 @@
+http://www.xnxx.com/video7257429/bobbi_starr
+
+DETALLES:
+
+
+tenemos la posibilidad de hacer cuerpos blandos personalizados, en los cuales existan zonas que respondan
+
+a deformaciones dinámicas por parte del sistem soft body, como zonas en las cuales la respuesta sea menor ó
+
+totalmente nula o independiente al sistema de soft body, existente y a las fuerzas ejercidas en la escena,
+
+esta opción es especialmente útil para hacer animaciones de cuerpos blandos residuales en characters, y 
+
+otros elementos especiales
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Paint Soft Body Weights Tool:
+_____________________________
+
+
+	_primero seleccionamos la mesh/motive, la cuál tiene un sistema de soft body, aplicado
+
+
+	_luego con la mesh, con el soft body, aplicado vamos ha "Dynamics/Soft-Rigid Bodies
+
+	/Paint Soft Body Weights Tool/Options", para así, abrir las opciones del panel de pintado
+
+	de pesos del sistema soft body, sobre la mesh, deformada, a continuación presentaremos 
+
+	las principales características de las opciones del panel pintado de pesos del soft body:
+
+
+
+		_Brush:
+
+
+			_Radius:
+
+			_Opacity:
+
+			_Profile:
+
+
+		_Paint Attributes:
+
+
+			_Paint operation:
+
+			_Value
+
+
+
+	NOTA:
+
+	
+	_estas opciones funcionan en comportamientos lógicos para objetos estáticos
+
+	
+	_más para objetos dinámicos, osea objetos con "rigid bodies/Active", desactivan las opciones
+
+	rigid body, desactivando por ejemplo en las partes pintadas el "rigid bodies/Active", 
+
+	quedando así, estan zonas estáticas ó inmóviles
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+podemos aplicar las características de los proesos de soft bodys, personalizados en characteres animados,
+
+con la finalizadad de que los carácteres no sólo reacciones a fuerzas/fields, e impactos de colisión en la
+
+escena, si no también, a las fuerzas residuales generadas en el proceso de animación como lo son las fuerzas
+
+aceleración y desaceleración ó mejor dicho las fuerzas centrífuga y la fuerza centrípeta
+
+para esto, debemo primero haber hecho los procesos de:
+
+
+	_skeleton sistem
+
+
+	_skin sistem
+
+
+	_rigging sistem
+
+
+	_así, como el proceso de animación previo al proceso de soft body
+
+
+para luego aplicar el proceso de soft body/goal, de forma normal, para luego entrar en el modo de edición 
+
+de soft body personalizado:
+
+
+	_para esto, primero seleccionamos la mesh, con el soft body aplicamos y vamos ha "Dynamics/Soft-Rigid Bodies
+
+	/Paint Sot Body Weights Tool/Options", para entrar en el modo de pintado de pesos del soft body
+
+
+	_así, podremos pintar los pesos de las partes que deseamos que obedescan a las fuerzas centrífuga y centrípeta
+
+	
+	_luego debemos también ajustar el sistema de partículas que conforma el soft body, en su sección de goal smoothness
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+para realizar cualquier proceso de modificación adicional luego de haber aplicado el proceso de soft body/goal
+
+debemo hacerlo en la mesh/motive, original, no en la mesh, copy/copia, si lo hacemos en la copia nos dará 
+
+resultados erroneos en los procesos de animación como en otros, para hacer modificaciones ó animaciones 
+
+en mesh/motives, con procesos de soft body, creados previos:
+
+
+
+	_primero vamos al outliner, y seleccionamos la mesh/motive, original, la cuál no tiene soft body, ej: "Character"
+
+
+	_con la mesh/motive, original seleccionada vamos ha "Dispplay/Show/Show Selection"
+
+
+	_ya con la mesh/motive, original visible, si podemos proceder a realizar ajustes de animación entre otros
+
+	
+	_al finalizar el proceso debemos ocultar la mesh/motive, original, para esto, la seleccionamos y vamos ha
+
+	"Display/Hiden/Hiden Selection"
+
+
+	_así, veremos como cambios realizados sobre la mesh/motive, original se aplicarán a la mesh/motive,
+
+	con el proceso de soft body, aplicado y funcionando dinámicamente
+
+	
+
+
+

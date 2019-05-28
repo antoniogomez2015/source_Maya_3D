@@ -1,0 +1,111 @@
+
+
+
+DETALLES:
+
+
+Tutorial:
+
+	3D Maya 125 Novedades Maya 2014 Paint Effects
+
+		https://www.youtube.com/watch?v=EhKiEOai9Qg&list=PLVnqjpSwnYEdWyuwBP5YP5TULZJGPbrkG&index=125
+	
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+Scene Assembly:
+_______________
+
+
+	Intercambio de versiones:
+	_________________________
+
+
+	1_ahora tenemos la posibilidad de intercambiar entre diferentes versiones de una maya de forma dinámica
+
+	para disponer así, de diferntes resoluciones  tanto para presentación, animación, render, otros en una misma 
+
+	escena
+
+
+	_para esto, necesitamos de diferentes versiones de los elementos a utilizar, en las diferentes resoluciones
+
+	de niveles de densidad de geometrías a utilizar, ej: mesh "Rock_High", "Rock_Low". "Rock_Ultra_Low", 
+
+	"Rock_BoundingBox"
+
+
+	_ahora procedemos a exportar la escena ó los elementos seleccionados "al alta resolución (High)" 
+
+	como escena maya binaty (.ma)
+
+	
+	_ahora procedemos a exportar las otras versiones de las mehes, en diferentes resoluciones pero esta vez,
+
+	a través del "Pipeline Cache/CPUCache/Export Selection", este paso debemos repetirlo para las diferentes 
+
+	versiones que tengamos el objeto
+
+
+	_ahora creamos una nueva escena ó utilizamos la escena donde tenemos la composición en la cuál requerimos
+
+	las meshes, con diferentes versiones de geometría ó topología que hemos creado previamente en los pasos
+
+	anteriores para variar así, la instancia a utilizar en los diferentes momentos ó requerimientos de la escena
+
+
+	_ahora en la nueva escena vamos ha "Create/Scene Assamby/Create Assambly Definition", así, nos aparecerá 
+
+	un locator, en la escena el cuál representará los elementos de la misma y, nos aparecerá una ventan contextual
+
+	la cual la cerramos sin hacer cambios, como también, en el outliner, se habra creado un elemento "assamblyDefinition1",
+
+
+	_luego tendremos dos opciones para cargar los archivos a la escena ensamblada, sean estos archivos de escena
+
+	ó archivos de cache estos son: "Add Cache representation", y "Add Scene representation"
+
+
+
+		_una opción es que vamos al outliner, y seleccionamos el elemento "assamblyDefinition1", 
+
+		ó al viewport, y seleccionamos el locator, generado y con alguno de estos seleccionado vamos 
+
+		al "Attribute Editor/Assambly representations/Add Scene representation", así, se abrirá un
+
+		ventana en la cuál podremos seleccionar el archivo a cargar
+
+
+		_otra opción es hacer mouse "right click/Scene Assambly/Add Scene Representation"
+
+
+		_así, podemos repetir cualquiera de estos dos pasos anteriore para incorporar más archivos
+
+		de cache, "Add Cache representation", ya que hemos agregado una escena
+
+
+	_luego de terminar tanto de cargar la escena de representación como de los archivos cache, veremos que
+
+	en "Attribute Editor/Assambly representations/", veremos un cuadro "representation List", con una lista
+
+	con la escena cargada y con todos los archivos cache cargados también
+
+
+	_y por últimos para hacer de las instancias cargadas en las diferentes situaciones podemos seleccionar
+
+	en el outlienr elemento "assamblyDefinition", e ir al "Attribute Editor/Assambly representations
+
+	/Active Representation:", y seleccionar la instancia que deseamos que se presente en un determinado
+
+	momento, esto nos permite jugar con las diferentes representación de un character a diferentes resoluciones
+
+
+
+
+
+___________________________________________________________________________________________________________
+
+

@@ -1,0 +1,65 @@
+
+
+
+DETALLES:
+
+al aplicar un muscle system, y simple muscles, sobre una mesh/motive, disponemos de todas las opciones de control
+
+en la mesh/motive, aplicada en la cuál podemos activar ó desactivar las opciones de control de todas las modalidades 
+
+de muscles existentes dentro de las posibilidades de muscle system, así, como activar otras opciones de interacción 
+
+dinámica sobre los muscles, creados y su relación con la mesh/motive, así, como con otras meshes, y fuerzas dinámicas 
+
+creadas en la escena
+
+
+
+para esto, primero seleccionamos la mesh/motive, y vamos al "atribute editor/cMusclesystem", en la cuál encontraremos
+
+las siguientes opciones disponibles:
+
+
+
+	_cMuscleSystem Attributes_
+
+		_Envelope: indica la fuerza abrasiva de la acción del simple muscle, aplicada en el muscle system
+
+
+	
+	_Enable Stiky: esta opción permite desactivar temporalmente el sistema de muscle por "Sticky"
+
+
+	_Relative Sticky: aplica la acción del muscle a elementos por separado
+
+
+		_Force Nomalize: permite normalizar las normales de la mesh/motive
+
+		_Sticky A: gradúa la cantidad de sticky general y aplicada en "Animation/Muscle/Weighting../Apply Default Weights../Weight/Sticky A"
+
+		_Sticky B: gradúa la cantidad de sticky general y aplicada en "Animation/Muscle/Weighting../Apply Default Weights../Weight/Sticky B"
+
+		_Sticky C: gradúa la cantidad de sticky general y aplicada en "Animation/Muscle/Weighting../Apply Default Weights../Weight/Sticky C"
+
+
+
+	_Enable Sliding: activa la opción de acción de muscle de tipo "Animation/Muscle/Weighting../Apply Default Weights../Weight/Sliding"
+
+
+	_Enable Force: esta opción permite activar las características de "gravedad/viento", a la mesh/motive, y al muscle system
+
+
+	-Enable Jiggle: esta esta opción permite activar las características de "fuerza centrífuga y centrípeta", a la mesh/motive, y muscle system
+
+
+	_Enable Relax: esta opción pemite activar las características de "Relax, fuerzas sobre la mesh/motive", ejercidas por el muscle system
+
+
+	_Enable Smooth: esta opción permite activar las características de "Smooth", sobre la mesh/motive, sobre la acción del muscle system
+
+
+	__Smart Collision: esta opción permite activar las características de "Collision", de dinámicos sobre la mesh/motive, del muscle system
+
+
+
+

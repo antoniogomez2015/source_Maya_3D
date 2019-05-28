@@ -1,0 +1,87 @@
+
+MAYA Arumadigital: https://www.youtube.com/user/arumadigital/search?query=maya
+
+Lista de reproducción: 3D Maya Curso esencial (193 Videos), https://www.youtube.com/playlist?list=PLA9A5E4BDF49EB336
+
+
+Interface y características básicas:
+
+	3D Autodesk Maya caracteristicas basicas
+		https://www.youtube.com/watch?v=nzwHlYin2V0&hd=1
+
+	3D Autodesk Maya 002 Caracteristicas basicas 002
+		https://www.youtube.com/watch?v=gO5guouqfpA&hd=1
+
+	3D Autodesk Maya 003 Caracteristicas basicas 003
+		https://www.youtube.com/watch?v=nEglpHbPRqQ
+
+	3D Autodesk Maya 004 Primitivas y modelado poligonal 001
+		https://www.youtube.com/watch?v=QHftNM1n2qQ&list=PLgKLSBsqN8p93XbbQQf7duh3dCEOlws4n&index=1
+
+	3D Autodesk Maya 005 Primitivas y modelado poligonal 002
+		https://www.youtube.com/watch?v=NTIYXClLu7U&index=2&list=PLgKLSBsqN8p93XbbQQf7duh3dCEOlws4n
+
+	3D Autodesk Maya 006 Primitivas y modelado poligonal 003
+		https://www.youtube.com/watch?v=zGBZjCLcbhc&hd=1
+
+	3D Autodesk Maya 007 Modelado poligonal 004
+		https://www.youtube.com/watch?v=t0EPQYV5ovE&index=4&list=PLgKLSBsqN8p93XbbQQf7duh3dCEOlws4n
+
+	
+
+
+
+Modelado en superficies NURBS:
+
+	3D Autodesk Maya 008 Modelado curvas y superficies nurbs 001
+		https://www.youtube.com/watch?v=IR68vY60E1k
+
+	3D Autodesk Maya 009 Modelado curvas y superficies Nurbs 002
+		https://www.youtube.com/watch?v=zSgI_4NmrX4
+
+	3D Autodesk Maya 013 Modelado curvas y superficies Nurbs 003.mp4
+		https://www.youtube.com/watch?v=84jQ1XZuXQw
+
+	3D Autodesk Maya 014 Practicas basicas con nurbs
+		https://www.youtube.com/watch?v=1FHlIOtfNAg&list=PLgKLSBsqN8p-Vh6XOOjBgCNDpU5nMeOLp&index=4 (práctica con nurbs)
+
+	3D Autodesk Maya 015 Pulpi Segunda practica con Nurbs
+		https://www.youtube.com/watch?v=IVVIW33Ss2M&list=PLgKLSBsqN8p-Vh6XOOjBgCNDpU5nMeOLp&index=5 (Práctica con nurbs)
+
+
+
+
+
+Modelado con superficies de sub division:
+
+
+	3D Autodesk Maya 016 superficies de subdivision
+		https://www.youtube.com/watch?v=9zBamR9LkGI
+
+	3D Autodesk Maya 017 Superficies de Subdivision Practica Nave
+		https://www.youtube.com/watch?v=VcuYyo_SFqU
+
+
+
+Modificadores:
+
+	3D Autodesk Maya 018 Modelado deformaciones basicas (modificadores)
+		https://www.youtube.com/watch?v=t94tII2TRwE
+
+
+	3D Autodesk Maya 019 Modelado deformaciones y edicion
+		https://www.youtube.com/watch?v=Oiz8UG1BlEI&list=PLA9A5E4BDF49EB336&index=19
+
+
+	
+
+
+
+
+
+
+
+
+3D Autodesk Maya 012 Novedades en Maya 2012
+	https://www.youtube.com/watch?v=1bn0hOr8zG0
+	

@@ -1,0 +1,171 @@
+
+
+DETALLES:
+
+
+las opciones de los sistemas de "Fluid Effects", tenemos la posibilidad de crear caches, de simulaciones
+
+ó partes de éstas para que así, podamos tener una reproducción y visualización en más controladas en
+
+el viewport, así, sólo bastaría con desplazar el cabezal del timeline, para reproducir de forma dinámica
+
+la simulación en alto detalle sin la necesidad de volver a simular la simulación cada vez, que deseamos
+
+vualizarla
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Fluid nCaches:
+______________
+
+
+
+	_primero creamos un contenedor con un emisor
+
+	
+	_luego procedemos a reproducir la simulación hasta un punto deseado
+
+
+	_luego seleccionamos el contenedor deseado y, con este seleccionado vamos ha 
+
+	"Dynamics/Fluid nCache/Create New Cache/Options", así veremos las siguientes opciones:
+
+
+		_cache directory:
+
+			_podemos asignar una ruta de guardado para el archivo de cache generado, 
+
+			por lo general ej: D:/PROYECTOS/Inverlago/Maya 2013/cache/fluid
+
+
+		_cache name:
+
+			_podemos indicarle un nombre al archivo de cache generado
+
+
+		_cache format:
+
+			_por lo general el fomato indicado por defecto es el más indicado
+
+
+		_file distribution:
+
+
+			_one file per frame:
+
+				_podemos indicar que se guarde un archivo de cache por cada frame
+
+
+			_one file:
+
+				_podemos indicar que se guarde un archivo de cache por toda la simulación
+
+
+
+		_cache time range:
+
+			_render settings:
+
+				_podemos indicarle que tome como rango de simulación el configurado
+
+				en las opciones del render de salida
+
+	
+			_time slider:
+
+				_esta opción toma toda el timeline, ó linea de tiempo
+
+
+			_start/end:
+
+				_podemos indicar un rango personalizado para la simulación
+
+
+			_evaluate every:
+
+				_podemos indicar un intervalor de muestreo para la evaluación de la
+
+				simulación, es recomendable dejarlo en "1", para una mayor fidelidad
+
+
+			_save every:
+
+				_podemos inciar cada cuantos segundos será re guardado el archivo 
+
+				generado de la simulación es recomendable colocar el mismo valor
+
+				que el paso anterior
+
+
+			_cache:
+
+				_podemos elegir que atributo serán cacheados, entre los cuales tenemos:
+
+
+				_ Density -Velocity - Temperature - Fuel - Color
+
+				- texture coordinates - falloff
+
+
+	así, podremos ver que al mover el cabezal sobre el timeline, podremos que la simulación se
+
+	reproduce de forma dinámica hasta el tiempo/frame, indicado
+
+
+	
+------------------------------------------------------------------------------------------------------
+
+
+	_a parte de la creación de caches, en panel de "Fluid nCache", contamos con las siguientes
+
+	opciones, para mantener el workflow, de los procesos de cache
+
+
+		_detele cache_
+
+			_podemos borrar un cache existente
+
+
+		_attach existing cache file:
+
+			_podemos incluir ó agregar un cache existente
+
+
+		_disable all caches on seleted:
+
+			_podemos desactivar temporalmente los caches existentes
+
+
+		_enable all caches on selected:
+
+			_podemos activar los caches existentes
+
+
+		_replace cache:
+
+			_podemos reemplazar un cache
+
+
+		_marge caches:
+
+			_podemos acoplar ó fusionar caches existenes
+
+
+		_append to cache:
+
+			_podemor incorporar caches
+
+	
+		_replace cache frame:
+
+			_podemos reemplazar caches en un frame, específico
+
+		
+		_delete cache frame:
+
+			_podemos borrar un caches en un frame, específico
+

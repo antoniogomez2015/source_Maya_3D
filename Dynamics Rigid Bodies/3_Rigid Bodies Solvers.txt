@@ -1,0 +1,219 @@
+
+
+
+DETALLES:
+
+
+al crear sistemas de "Rigid Bodies", estos tipo de de sistemas de cuerpos rígidos requieren de un sistema
+
+solucionadores "Solvers", y un sistema solvers, creado sirve para ser relacionado con todos 
+
+los objetos/meshes, rigid bodies
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+	_Rigid Body Solver Attributes:
+
+		al crear "rigid bodies", se creará un sistema común de "Solvers/solucionados", del cuál podremos
+
+		ver ssu atributos yendo ha "Dynamics/Solvers/", "Rigid Body Solver Attributes", así, se abrirá
+
+		una tab, en el Atribute Editor, con el nombre de "rigidSolver", con todos las opciones 
+
+		y atributos de el sistema de solver, creado
+
+
+	_Initial State:
+
+		podemos elegir entre si los siguiente elementos rigid bodies, creados tomarán como etado inicial
+
+		los estados ó valores seleccionados ó configurados en el "solver", activo en este momento 
+
+		en "Dynamics/Solvers/Current Rigid Body Solver/..."
+
+
+	_Current Rigid Body Solver.
+
+		aquí podemos seleccionar entre los sistemas de solvers, creados, el que tengamos activo 
+
+		ó seleccionado será el que se agregará a los futuros elementos rigid bodies, creados así,
+
+		como el solver influyente e imperante en los eventos desarrollados en la escena actual
+
+
+	_Create Rigid Body Solver:
+
+		esta opción nos permite crear nuevos sistema de solver, con los cuales podemos crear nuevas
+
+		configuraciones de estados e interacciones para diferentes tipos de dinámicos, y teniendo
+
+		la posibilidad de intercambiar ó interacturar con los solver, creados en "Current Rigid Body Solver"
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+
+
+	rigidSolver:
+	____________
+
+
+
+		_Rigid Solver Attributes:
+
+
+			_Step Size:
+
+				tamaño del paso (indeterminado)
+
+
+			_Collision Tolerance:
+
+				tolerancia de la colisión
+
+
+			_Scale Velocity:
+
+				escala de la velocidad
+
+
+			_Start Time:
+
+				tiempo inicial
+
+
+			_Current Time:
+
+				tiempo actual, podemos desvincular esta opción de "time1", y proceder a 
+
+				realizar un time remapping ó timewarp, animado del flujo ó animación de las dinámicas
+
+
+
+		_Rigid Solver Methods:
+
+
+			_Runge Kutta Adaptive:
+
+				método adaptativo, este es el más recomentado y el estandar
+
+
+			_Runge Kutta:
+
+
+			_MidPoint:
+
+
+
+		_Ridig Solver States:
+
+
+			_State:
+
+				activar estados
+
+
+			_Friction:
+
+
+				activar fricciones
+
+
+			_Bounciness:
+
+				activar rebotes
+
+			
+			_Contact Motion:
+
+				activar fricción dinámica
+
+
+			_Contact Data:
+
+				activar contacto de datos
+
+
+			_Allow Disconnection:
+
+				activar desconecciones
+
+
+		_node Behavior:
+
+			_caching:
+
+				activar cache
+
+			
+			_Node State:
+
+				_Normal:
+
+				_Has No Effects:
+
+				_Blocking:
+
+				_Walting-Normal
+
+				_Walting-Has No Effects
+
+				_Walting-Blocking
+
+
+
+		_Select:
+
+
+		_Load Attributes:
+
+
+		_Copy Tab:
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+también podemos intercambiar el solver asignado a un mesh/motive, rigid bodies, creado, a través de un 
+
+comando de línea de script/MEL
+
+
+	_primero seleccionamos el mesh/motive, con rigid bodies
+
+
+	_luego confirmamos el nombre del solver, el cuál desemos agregar al mesh/motive, con rigid bodies, 
+
+	seleccionada, yendo ha "Dynamics/Solvers/Current Rigid Body Solver/...", en este ejemplo es: "rigidBody1"
+
+
+	_y por último debemos escribir el siguiente script en la línea MEL:
+
+
+		rigidBody -edit -solver rigidBody1
+
+
+	_y al terminar de tipear el script, le damos ha "Enter", para ejecutar la sentencia que hemos tipeado
+
+
+
+DETALLES:
+
+
+tener la posibilidad de cambiar entre diferentes solvers, para diferentes elementos mesh/motive, rigid Bodies,
+
+es muy funcional para hacer que determinados elementos interactúen con unos y otros no, al no tener estos otros
+
+los mismos solver, por ende no renponderán a las interacciones del solver, del cuál no tienen ninguna relación
+

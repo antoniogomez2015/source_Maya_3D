@@ -1,0 +1,119 @@
+
+
+DETALLES:
+
+
+las opciones de  "Initial States", de los sistemas de fluidos nos permiten aumentan las capasidades de generación
+
+de fluidos más completos y complejos al permitirnos comenzar una simulación no necesariamente en el punto de
+
+partida si no, en un punto específico que nos interese para que así, hacer ó covertir este punto de la simulación
+
+en un nuevo punto de partida para comenzar desde aquí la simulación la próxima vez, que reproduscamos la 
+
+simulación
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Set Initial State:
+__________________
+
+	
+
+	_primero debemos crear un contenedor con un emisor
+
+
+	_luego, debemos reproducir la simulación a partir de un frame/fotograma, inicial deseado hasta
+
+	un frame/fotograma, final deseado, luego finalizamos la reproducción de la simulación en el punto deseado
+
+
+	_leugo, seleccionamos el contenedor ej: "fluid1", y vamos ha "Dynamics/Fluid Effets/Set Initial State/",
+
+	y entramos a sus opciones "options":
+
+
+		_en las opciones de "et Initial States Options", podemos seleccionar que atributos van a pasar
+
+		hacer parte del "initial state", esta parte es importante ya que podemos por ejemplo, hacer
+
+		todos los atributos "Initial State", menos la densidad, así, la simulación comenzará con todos
+
+		los atributos más un emisión de densidad agregada ó sumada, otros, esto permite una gran variedad
+
+		de posibilidades de configuración de los estados iniciales
+
+
+		_estas son los atributos disponibles:
+
+
+			Density - Velocity - Temperature - Fuel - Color - Texture Coordinates - Falloff
+
+
+	así, al preproducir nuevamente la simulación del contenedor veremos que la simulación empieza ó comienza
+
+	a partir del estado inicial que hemos creado
+
+
+	NOTA: la opción de "Initial State", no funciona con la opción de "Auto Resize"
+
+
+
+-----------------------------------------------------------------------------------------------------------
+
+
+Save State As:
+______________
+
+
+	
+	_tenemos la posibilidad de guardar estados/states, para ser utilizados posteriormente, para esto
+
+	reproducimos la simulación de un contenedor hasta un punto deseado
+
+
+	_luego seleccionamos el contenedor deseado y vamos ha ""Dynamics/Fluid Effects/Save State As.., así,
+
+	nos aparecerá un ventana de exportación donde podremos elegir un nombre para el "State", más una
+
+	ubicación, la cuál, puede ser dentro de los pressets, de "Initial States", ó en un luega de nuestra
+
+	preferencia ó dentro de nuestro proyecto
+
+	
+	_para cargar ó plicar luego los estados guardados debemos seleccionar el contenedor deseado al cuál,
+
+	deseamos aplicarle el "Initial State", guardado y, con este seleccionado vamos ha 
+
+	"Dynamics/Fluid Effects/Add-Edit Contents/Initial States/options", así, nos aparecerá el "Visor",
+
+	en la sección "Initial States", donde buscaremos en la ubicación donde guardados el initial state,
+
+	a través, de ubicación y su nombre, la ubicamos debemos hacer "mouse midle click and drag", sobre
+
+	el contenedor deseados, así, el estate, guardado se aplicará el contenedor deseado
+
+
+	al arrastrar elementos del "visor", algunos pressets, están hechos con la propiedad de "Voxel", no
+
+	cuadrado así, para que este tipo de pressets, se carguen correctamente en un contenedor debemos
+
+	primero desactivar la opción de "fluidShape1/Container Properties/Keep Voxels Square"
+
+	NOTA: la opción "Keep Voxels Square", no estará disponible si la opción "Auto Resize", esta activada
+
+
+-----------------------------------------------------------------------------------------------------------
+
+
+Clear Initial State:
+____________________
+
+
+
+	para borrar initial states, seleccionamos el contenedor deseado y vamos ha 
+
+	"Dynamycs/Fluid Effects/Clear Initial State"
+

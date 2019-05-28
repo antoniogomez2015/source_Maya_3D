@@ -1,0 +1,87 @@
+
+
+DETALLES:
+
+
+también disponemos de sistemas para la creación de "Oceanos y Mares ó Rios", los cuales son altamente configurables
+
+prácticos y de poco peso y ocreacen un alto realismo para lograr "Oceanos y Mares ó Rios"
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Create Ocean:
+_____________
+
+
+
+	_para crear un sistema de oceanos básico vamos ha "Dynamics/Fluid Effects/Ocean/Create ocean", así 
+
+	se creará un sistema de ocenno, el cuál, se compone de:
+
+		
+	
+	Ocean Attributes:
+	_________________
+
+
+	_Scale:
+
+		_esta opción permite ajustar la ecala apreciativa del sistema del oceno, para así, dar un sensación
+
+		de que se se esta mar cerca ó más lejos del oceano al aparentar estar sus elemento más cerca
+
+		ó más lejos, esto permite hacer sistemas más grandes ó más pequemos
+
+
+	_Time:
+
+		_esta opción permite controlar la animación ó progresión en el tiempo, esta opción viene controlada
+
+		ya por un sistema por defecto más esta opción podriamos desvincularla para hacerla manual
+
+
+	_Wind UV:
+
+		_podríamos ajustar la dirección relativa del oceno, en relación a sus olas por medio de las 
+
+		cordenadas UVs, esta combiene moverlo sólo en casos específicos
+
+
+	_Wave Speed:
+
+		_esta opción permite ajustar la velidad que tendrán las olas del oceano
+
+
+	_Observer Speed:
+
+		_esta opción permite ajustar la velocidad relativa en relación al punto de vista del observador
+
+
+	_Num Frequencies:
+
+		_esta opción permite ajustar la frecuencia ó complejidad del aguar entre las olas creando así
+
+		como una especie de turbulencia
+
+
+	_Wave Dir Spread:
+
+		_esta opción permite ajustar la dirección de la dispersión de las olas del oceano
+
+	
+	_Wave Length Min:
+
+		_esta opción indica la mínima longitud ó separación entre las olas del oceano
+
+
+	_Wave Length Max:
+
+		_esta opción indica la máxima longitud ó separación entre las olas del oceano
+
+	
+
+
+
+

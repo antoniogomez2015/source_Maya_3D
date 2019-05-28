@@ -1,0 +1,9 @@
+
+
+shortcut animation maya
+
+
+	_play pro: K + mouse drag left/right
+
+	
+	_play: alt + V

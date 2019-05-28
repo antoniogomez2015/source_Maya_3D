@@ -1,0 +1,217 @@
+
+
+	Los sistemas de músculos paramétricos nos permiten realizar sistemas de músculos con más control
+
+
+	Creación de muscle system base:
+	______________________________
+
+
+	_primero creamos una cadena/chain, de joints, deseada
+
+	_luego seleccionamos de forma gerárquica los joint, que la componen
+
+	_luego con la cadena seleccionada vamos al menú Animation/Muscle/Muscles - Bones/"Convert Surface to Muscle-Bone",
+
+	indicamos la cordenada de proyección y ok
+
+
+
+	Asignación de Muscle Parametric:
+	_______________________________
+
+
+	_primero vamos al menú Animation/Muscle/Muscle - Bones/"Muscle Creator..", así se abrirá un panel donde podremos 
+
+	configurar el muscle parametric
+
+	
+		Panel Muscle Creator/Create:
+		____________________________
+
+		_en Attach Start: seleccionaremos el primer joint, de la articulación ó el superior
+
+		_en Attach End: seleccionaremos el segundo joint, de la articulación ó el inferior
+
+		_por último hacemos "Create Muscle", así, veremos que se creará un músculo paramétrio en cuestión
+
+
+	así, el muscle parametríc, creado constará de cuatro locators, dos en cada extremo con los cuales podremos variar
+
+	sus dimensiones así, como su posición en relación al muscle system, al terminar de configurar su ubicación y dimensiones
+
+	el músculo paramétrico ya estará listo para su uso, de hecho desde el momento de su creación ya biene listo para su uso,
+
+	así, ya al mover la articulación del muscle system el músculo paramétrico realizará la flexión y contracción del músculo
+
+
+
+
+	Panel Muscle Creator/Edit/Sculting:
+	__________________________________
+
+	_principalmente podremos escoger entre diferentes filtro de acción "Affect:", en el cuál podremos escoger cordenadas 
+
+	de acción "X,Y,Z", así, como estados de acción "Rest / Sq / St" (rest/squash/stretch), de esta manera a través de estos
+
+	filtros podemos hacer ajustes controlados ó limitados entre todas las posibilidades de acción, a continuación expresaremos
+
+	las opciones más importantes para la configuración personalizada de los muscle parametrics:
+
+	
+
+	_Stretch: expresa la fuerza con la que modificaremos el músculo
+
+	_Location: sirve para modificar en que porción del músculo vamos a trabajar
+
+	_Falloff: este nos permite seleccionar un ámbito más ámplio ó menos ámplio de esa selección que vayamos a transformar
+
+	_Sculpt: este es el que realizará el proceso de transormaciones con las características elegidas en los pasos anteriores,
+
+	este slider funciona de forma incremental, este permite incrementar ó ecrementar el tamaño del muscle
+
+		_así podemos seleccionar directamente en el viewport un rectángulo rojo de sección del muscle, ó en el panel 
+
+		Muscle Creator/Edit/Pose/Controls/.., la sección deseada
+
+		_luego a través del parámetro "location", podemos indicar el grado de insidencia sobre esta sección y resto 
+
+		_y por último hacemos "Sculpt", a través del slider, incremental podemos hacer crecer ó decrecer el muscle,
+
+		en relación a la limitante sobre la sección que tenemos seleccionada y configurada su insidencia en relación a las demás,
+
+		para así, a través de esta diferencia de infliencia entre las partes que conforman el muscle, hacer deformaciones controladas
+
+		y su vez, hacer que estas sean ordenadas sobre la estructura del muscle parametric
+
+
+	_así, podemos los ajustes expuestos en el paso anterior limitando también las cordenadas de acción para así, tener la posibilidad
+
+	de deformas el muscle parametric, por ejmplo, en su cordenadas Z, de esta manera el muscle, se achataría para una función especial, otros
+
+
+	
+	_así, como también podemos hacer ajustes de la forma y comportamiento en los diferentes estados ó posiciones del muscle, estas son:
+
+		_la pose normal ó por defecto serían los ajustes que hacemos para conseguir la forma del muscle para que se adapta a la sección 
+
+		de la mesh/motive, deseado
+
+
+		_la pose en su estado de inflexión ó de músculo estirado, para esto, movemos el hueso secundario hasta colocarlo en la posición
+
+		de mayor inflexión del músculo
+
+			_dejamos activadas sólo las codenadas deseadas de acción (X,Y,Z)
+
+			_desactivando también las opciones de "Rest", "St"
+
+			_dejando sólo activado en este caso la opción de "Sq", Squash (desinflado del músculo)
+
+		esta configuración de filtros permitirá que las variaciones realizadas sobre el muscle, sobre se expresarán en esa `pose del muscle, 
+
+		no en las demás poses
+
+
+
+		_la pose en su estado de mayor flexión ó de músculo contraído, para esto, movemos el hueso secundario hasta colocarlo en la posición
+
+		de mayor flexión del músculo
+
+			_dejamos activadas sólo las codenadas deseadas de acción (X,Y,Z)
+
+			_desactivando también las opciones de "Rest", "Sq" (inflado del músculo)
+
+			_dejando sólo activado en este caso la opción de "St", Stretch
+
+
+	_así, luego de haber ajustado el estado de acción de trabajo y elegido los filtro convenientes a utilizar procedemos ha:
+
+		_hacer seleccionaes de las partes del muscle a modificar, sea directamente en el viewport, 
+
+		o en el Panel Muscle Creator/Edit/Pose/Controls/..
+
+		_luego debemos indicar el grado de influencia que esta selección tendrá en relación a los demás controles del muscle
+
+		_por último hacemos "Sculpt/slider", para incrementar ó decrementar el muscle, en relación a las diferentes configuradas en las selecciones
+
+
+	
+
+	
+	Panel Muscle Creator/Edit/Pose:
+	______________________________
+		
+
+	_primero colocamos el muscle system, sus articulaciones las colocamos en una posición intermedio en su flexión
+
+	_luego seleccionamos el muscle parametric, creado y le damos a "Muscle Creator/Edit/Reset Width", ya que hemos modificado
+
+	la posición de los locator, de los extremos del muscle parametric, y así, informaremos al sistema de dicho cambio en la ubicación de los locators
+
+	_luego con el muscle parametric, seleccionado aplicamos "Muscle Creator/Edit/Rest", para así, indicarle al sistema que esta será
+
+	su posición inicial ó por defecto
+
+	_luego colocamos el muscle system, en su punto de inflexión mayor, osea donde estarían los huesos estirados sin tensión, moviendo 
+
+	ó articulando el hueso secundario, luego de mover el hueso con kinemática directa, hacemos "Panel Muscle Creator/Edit/Stretch", así,
+
+	veremos como el muscle parametric, se estira asumiendo éste que esta será su posición de máxima inflexión 
+
+	_luego colocamos el muscle system, en su punto de flexión mayor, osea donde estarían los contraídos con la tensión mayor para el músculo,
+	
+	moviendo ó  articulando el hueso secundario, luego de mover el hueso con kinemática directa, hacemos "Panel Muscle Creator/Edit/Squash", así,
+
+	veremos como el muscle parametric, se contrae asumiendo éste que esta será su posición de máxima flexión 
+
+
+
+	
+	También podemos modificar la forma ó mesh, que conforma el muscle parametric, creado
+
+	_para esto podemos seleccionar la sección de color "red", que dividen el muscle parametric, sobre este, y moverlas y
+
+	ajustarla con la herramienta translate, ó también podemos seleccionar estas secciones en el 
+
+	"Panel Muscle Creator/Edit/Pose/Controls/..."
+
+
+
+
+	Panel Muscle Creator/Edit/Grow:
+	______________________________
+
+	_este grupo de opciones nos permiten hacer crecer el músculo en relación a la mesh/motive, que está sobre el, por ende,
+
+	ya debe de estar aplicado y creado el msucle system, y el skin setup, sobre la mesh/motive, otros, del proceso de muscle system
+
+
+
+	_primero seleccionamos la mesh, que conforma el muscle parametric
+
+	_con la mesh, seleccionada vamos al "Panel Muscle Creator/Edit/Grow/Grow to Surface"
+
+	_luego seleccionamos el joint, root ó base ó superior ó pasivo en "Main Bone"
+
+	_luego seleccionamos el joint, secundario ó activo y lo cargamos en "Main Bone Tip"
+
+	_por último seleccionamos la mesh, que conforma el muscle parametric, y hacemos "Grow Muscle"
+
+
+
+	así, tendremos los siguiente parámetros para configurar los estados del muscle, estos son:
+
+	_Angle: / Fat:/ % Reset:/ Sq:/ St:/
+
+	_de esta manera, en cada cambio que realizemos en este conjunto de controles ó atributos tendremos que aplicar
+
+	el "Glow Muscle", para que los cambios ó actualizaciones en dichos controles ó atributos sean aplicados en el muscle parametric
+
+
+
+
+
+
+
+

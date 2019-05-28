@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<!--
+
+
+	V-Ray Workflow:
+	_______________  
+	
+	_los criterios de DMC Sampler son los siguientes:
+
+
+		_estos tiene dos controles separados estos son:
+
+			_yendo ha: "Render Setting/V-Ray/VRAY/Image sampler"
+
+				_en Sampler Type: escogemos "Adaptative DMC", este ofrece los mejores resultados a nivel general
+
+				_en Antialiasing filter AA filter type: escogemos "Gaussian", ofrece los mejores resultados
+
+					_en Size: para pruebas y desarrollo lo podemos dejar en su valor por defecto de (1), para renders finales lo podemos subir a (1.5)
+
+				_Adaptative DMC:
+
+					_Min subdivs: para pruebas y desarrollo (1), para renders finales (2-3)
+
+					_Max subdivs: para pruebas y desarrollo (2), para renders finales (4-6)
+
+					_Threshold (Umbral): la definición es importante y responde a valores cercanos a (0), para pruebas y desarrollo podemos trabajar en valores de (0.100)
+
+
+
+			_yendo ha: "Render Setting/V-Ray/Settings/DMC Sampler
+
+				_Adaptative Amount (Cantidad): inside directamente en la resolución del render, valores cercanos a (0), ofrecerán mejores resultados, para pruebas y desarrollo podemos trabajar en valores de (1)
+
+				_Adaptative Threshould (Umbral):  la definición es importante y responde a valores cercanos a (0), para pruebas y desarrollo podemos trabajar en valores de (0.100)
+
+				_Adaptative Min Samples: entre mayor sera la cantidad de muestro mayor será la calidad del render final
+
+				_Subdivs Mult: este es un factor multiplicador general de todos los valores anteriores, lo podemos bajar ó aumentar tanto para pruebas y desarrollos como para los renders finales
+
+
+
+
+
+		Fixed rate: 
+			es especialmente �til para escena con planos homogeneos en las que determinados el flujo de producci�n deseado, ya que este m�todo aplica el un muestro fijo y determinado 
+			para toda la escena de manera igual sin consideraci�n referencial
+
+
+		Adaptative DMC:
+			este m�todo permite indicar in rango variante entre un m�nimo y un m�ximo el cu�l administrara en relaci�n a la complejidad requerida entre las diferentes zonas de la escena.
+
+			Threshold (Umbral): este permite indica el grado de precisi�n e integridad del resultado, rango cercanos a "0", permitir�n un �ptimo resultado, rango cercanos a "1", servir�n para pruebas y desarrollo
+
+
+		Adaptative subdivision: (este es el m�s recomendado)
+			este m�todo es similar al Adaptative DMC, m�s este permite m�s controles para escenas m�s exigentes; al igual este permite indicar un rango variable entre un m�nimo y un m�ximo, as� como un rango de Threshol � umbral de precisi�n 
+			m�s un control de los edges, � bordes, como de las normals � normales m�s un control jilter, que aumenta el nivel general de la calidad de la escena
+
+
+
+
+
+
+
+-->
+</body>
+</html>
+
+
+
+
+
+
+

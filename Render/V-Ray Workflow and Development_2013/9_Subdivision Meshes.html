@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<!--
+
+
+	V-Ray Workflow:
+	_______________
+
+	
+NOTA: vray for maya trabaja con materiales estandar de maya así como lo hace mental ray, más si utilizamos material vray el rendimiento es ostensiblemente superior
+
+
+
+	_para la subdivisión de los elementos en la escena tipo meshes de forma básica a forma suavisada ó "Smoother", en vray tenemos dos opciones,
+	la primera de forma general ó global para todos los elementos más esta consume considerables recursos del sistema, la segunda permite hacer particiones 
+	de elementos y en dichas particiones podemos agregar y quitar elementos similar como funciones los grupos ó particiones
+
+		_para suavizar de formal global todos los elementos de la escena vamos ha: "Render Setting/V-RAY/VRAY/Global options/Geometry/y activamos: Render Viewport subdivision"
+
+		_para crear grupos ó particiones de elementos de subdivisión; debemos seleccionar elementos directamente ó más recomendables es crear previamente grupos de elementos deseados
+		a través de gerarquias, personajes ó planos entre otros criterios, luego de seleccionar un grupo determinado vamos ha: "Create/V-ray/V-ray Displacement/Apply single VrayDisplacement node to selection",	así, se creará un nodo en el "Outliner", llamado "vrayDisplacement", el cuál lo podemos renombrar con un nombre alusivo al grupo que hace referencia, luego hacemos doble click sobre este para editarlo:
+
+			_ahora vamos ha agregar un nuevo atributo en "vrayDisplacement/Attributes/vray/Subdivision"
+
+			_ahora vamos ha agregar otro nuevo atributo complementario en "vrayDisplacement/Attributes/vray/Subdivision and Displacement Quality", luego vamos a las propiedades creadas:
+
+				_Vray Edge Length: lo dejamos como esta "4.000"
+				
+				_Vray Max Subdivs: lo colocamos en "6"
+
+
+
+
+
+
+
+-->
+</body>
+</html>

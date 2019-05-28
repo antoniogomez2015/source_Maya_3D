@@ -1,0 +1,161 @@
+
+
+DETALLES:
+
+
+las opciones de  "Shading", de sistemas de fluids effects/fluidShapes, nos permites asjutar y personalizar la apariencia ó material
+
+visiible ante el render, del sistema fluid effects, así, el proceso de shading, tiene diferentes parámetros y atributos los cuales 
+
+también, penden de otros elementos para su activación
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+fluidShape/Shading:
+____________________
+
+	
+	Global:
+	______
+
+
+	_Transparency:
+
+		podemos ajustar la transparencia del sistema de la simulación
+
+	_Glow Intensity:
+
+		podemos ajustar el glow effects,  agregado al sistema de simulación
+
+	_Dropoff Shape:
+
+		podemos agregar un umbral ó margen de recorte degradado sobre el perímetro de la 
+
+	simulación para evitar así, que se marque el perímetro del contenedor, este "faloff", puede
+
+	partir de un forma ó figura geométrica ó a partir de una cordenada definida por nosotros, 
+	las opciones son las siguientes:
+
+			_Off/ Sphere/ Cube/ Cone/ Doble Cone/ X,Y,Z, Gradient/ -X,-Y-Z, Gradient
+
+	_Edge Dropoff:
+
+		_expansión ó alcance del umbral del "Dropoff Shape", del paso anterior
+
+
+Color:
+_____
+
+
+	NOTA:  las opciones de color de la sección "Shading", dependen de parámetro aplicamos en la sección "Contents method
+
+	/Color Method/", debemos seleccionar la opción de "Use Shading Color", para así, poder editar las propiedades de color
+	
+	del sistema de fluid effects, a través de las propiedades de "Shading/Color"
+
+
+	_Selected Position:
+
+		se refiere al umbral del alpha, que representa al gradiente del color, esta valor es graduable
+
+	_Selected Color:
+
+		selector de color para cada valor del gradiente
+
+	_Interpolation:
+
+		se refiere el tipo de interpolación del alpha del gradiente que representará al color del sistema de la simulación, 
+
+		con valores entre "None, Linear,Smooth,Spline", por defecto se encuentra el valor "Linear"
+
+	_Color Input:
+
+		se refiere a la salida del mapa alpha, el cual representará al color a través, de un criterio, este criterior puede ser;
+
+		una gradiente por condena X,Y,Z, constant, temperatura, densidad, otros, del sistema de simulaciones, en el cuál 
+
+		determinará como se interpretará el color y de su comportamiento resultante
+
+			
+
+	_Input Bias:
+
+		es el valor que permite el desplazamiento del criterio del color "Color Input",  y el tipo de interpolación, así, de esta
+
+		manera podremos hacer "offset", en cualquiera de los extremos del alpha, controlador del sistema de color 
+
+		de la simulación, de esta manera podemos desplazar el sistema de color de forma controlada
+
+
+incandescence:
+_____________
+
+
+	_Selected Position:
+
+		se refiere al umbral del alpha, que representa al gradiente del color, esta valor es graduable
+
+	_Seleted Color:
+
+		selector de color para cada valor del gradiente
+
+	_Interpolation:
+
+		se refiere el tipo de interpolación del alpha del gradiente que representará al color del sistema de la simulación, 
+
+		con valores entre "None, Linear,Smooth,Spline", por defecto se encuentra el valor "Linear"
+
+	_Interpolation Input
+	
+		se refiere a la salida del mapa alpha, el cual representará la incandecencia a través, de un criterio, este criterior puede 
+
+		ser; una gradiente por condena X,Y,Z, constant, temperatura, densidad, fuel, pressure, speed, otros, del sistema 
+
+		de simulaciones, en el cuál determinará como se interpretará la incandecencia y de su comportamiento resultante
+
+	_Input Bias
+
+		es el valor que permite el desplazamiento del criterio del color "Incandescence Input",  y el tipo de interpolación, así, de esta
+
+		manera podremos hacer "offset", en cualquiera de los extremos del alpha, controlador del sistema de incandecencia 
+
+		de la simulación, de esta manera podemos desplazar el sistema de color de forma controlada
+
+
+Opacity:
+_______
+
+
+	_Selected Position:
+
+		hace de umbral ó posterizado en valores muy bajos (0.1), en valores más altos (1), amplia el umbral logrando suavizados
+
+	_Selected Value:
+
+		hace de valor de tramado ó interpolación del paso anterior "Selected Position", así, entre más bajo el valor (0), mayor
+
+		será la interpolación, entre más alto sea valor menor será la interpolación y se posterizará
+
+	_interpolation:
+
+		se refiere a la salida del mapa alpha, el cual representará la opacidad a través, de un criterio, este criterior puede ser;
+
+		una gradiente por condena X,Y,Z, constant, temperatura, densidad, fuel, pressure, speed, otros, del sistema 
+
+		de simulaciones, en el cuál determinará como se interpretará la opacidad y de su comportamiento resultante
+
+	
+	_Input Bias
+
+		es el valor que permite el desplazamiento del criterio de la opacidad  "Opacity Input",  y el tipo de interpolación, así, de esta
+
+		manera podremos hacer "offset", en cualquiera de los extremos del alpha, controlador del sistema de incandecencia 
+
+		de la simulación, de esta manera podemos desplazar el sistema de color de forma controlada
+
+
+
+
+

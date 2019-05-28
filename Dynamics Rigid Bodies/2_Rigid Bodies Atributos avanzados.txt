@@ -1,0 +1,199 @@
+
+
+DETALLES:
+
+a continuación mostraremos las tabs, relacionadas y los atributos al detalle relacionados el creación y configuración
+
+de rigid bodies, así, como con sistemas dinámicas e interactivos como de partículas entre otros
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Tab/rigidBidy:
+______________
+
+
+	_Rigid Body Attributes:
+
+
+		_Active: 
+
+			activa si este elemento será un rigid bodies "Active", ó "Passive"
+
+
+		_Particle Collision:
+
+			activa si esta elemento interactuará con particles systems "particle1"
+
+
+		_Allow Disconnection:
+
+			(indeterminado)
+
+
+		_Mass:
+
+			indica la masa ó gravedad ó densidad que representará este objeto en relación 
+
+			de la densidad ó masa de los demás objetos rigid bodies, en la escena 
+
+
+		_Center Of Mass:
+
+			permite indicar la distribución de la masa del objeto en relación a su área de
+
+			bounding box, por medio de sus cordenadas espaciales X,Y,Z, esto nos permite variar
+
+			la densidad del objeto en relación a determinadas áreas del mismo para generar
+
+			inclinaciones en el mismo y desequilibrios ó desbalances en relación a su interacción
+
+			con las fuerzas/fields, y los demás elementos rigid bodies, de la escena
+
+
+		_Lock Center Of Mass:
+
+			concentrar el peso de la masa del objeto en centro del mismo a través de su bounding box
+
+
+		_Static Friction:
+
+			fricción estática que se produce entre el rose entre varios objetos en movimiento ó 
+
+			mejor dicho como resbalan los objetos sobre otros
+
+
+		_Dynamic Friction:
+
+			disminución en el movimiento del objeto que se produce al rosar elementos varias veces
+
+			entre sí ó mejor dicho como resbalan los objetos sobre otros
+
+
+		_Bounciness:
+
+			es la capacidad de rebote que tiene un elemento al colosionar y rebotar sobre otro
+
+
+		_Damping:
+
+			este generará un fueza opuesta a la fuerza de colisión, con lo cuál podremos aumentar
+
+			ó disminuir la fuerza del objeto, permitiendo esto las fuerzas centrífugas y centrípetas
+
+
+		_Impulse:
+
+			fuerza constante aplicada en relación a las cordenadas del objeto
+
+
+		_Impulse Position:
+
+			posicón relativa del objeto en relación a la fuerza aplicada al objeto 
+
+			a su vez a las cordenadas del objeto
+
+
+		_Spin Impulse:
+
+			impulso de rotación ó viraje del objeto en relación a sus cordenadas
+
+
+
+		_Velocity:
+
+			(valores relacionados)
+
+
+		_Spin:
+
+			(valores relacionados)
+
+
+		_Force:
+
+			(valores relacionados)
+
+
+		_Torque:
+
+			(valores relacionados)
+
+
+		_Solver ID:
+
+
+
+	_Initial Settings:
+
+		
+		_Initial Spin: 
+
+			fuerza rotación inicial ejercida en relación a las cordenadas de el elemento
+
+
+		_Initial Position:
+
+			posición inicial en relación a las cordenadas de el elemento
+
+
+		_Initial Orientation:
+
+			permite cambiar la orientación inicial en relación a las cordenadas de el elemento
+
+
+		_Initial Velocity:
+
+
+			velocidad inicial en relación a las cordenadas de el elemento
+
+
+	_Performance Attribtes:
+
+	
+		_Stand In: Cube/Sphere:
+
+
+		_Apply Force At: (como se genera el cálculo)
+
+
+			_boundingBox
+
+				cálculo de área entre sus relaciones equidistantes en relación a cordenadas X,Y,Z
+
+			_Center Of Mass
+
+				cálculo a partir del centro de su masa hacia afuera respetando su topología
+
+			_Vertes Or CVs
+
+				cálculo a través de un ponderación de vertices ó CVs, 
+
+				(esta opción es la más recomendada)
+
+
+		_Tessellation Factor:
+
+			cuando se convierten elementos de tipo NURBS, en elementos geométricos para generar
+
+			el cálculo de las dinámicas, podemos entonces indicar el nivel de geometría el cuál
+
+			indicará el nivel de detalle y de cálculo para las dinámicas
+
+
+		_Collision Layer:
+
+			podemos crear capas de colisión para asignar determinadas colisiones solamente entre
+
+			determinados objetos, de esta manera sólo los elementos que se encientren dentro  
+
+			de una determinada capa van ha poder interactuar y colisionar
+
+
+		_Collisions:
+
+
+		_Ignore:
+			

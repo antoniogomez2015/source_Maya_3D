@@ -1,0 +1,26 @@
+
+
+Menús contextuales en Maya
+
+
+	Modos de selección: Q + Left Click
+	
+	herramientas Move: W + Left Click
+
+	herramientas Scale: E + Left Click
+
+	herramientas Rotate: R + Left Click
+
+	Outputs: A+Right Click
+
+	Paint Selection: O + Left Click
+
+	Development Menú: H + Left Click
+
+	Contectual Menú object: Right Click sobre el motivo
+
+	Menú Global: Spacebar
+
+
+
+	

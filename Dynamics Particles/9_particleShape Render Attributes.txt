@@ -1,0 +1,307 @@
+
+
+DETALLES:
+
+estas son las opciones de los modos de partículas que ofrece el sistema de partículas para render
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+particle1:
+__________
+
+
+	particleShape1:
+	_______________
+
+
+		Render Attributes:
+		__________________
+
+
+
+			Point:
+			______
+
+
+			Particle Render Type: "Point"
+
+			Add Attributes for / Curreent Render Type
+
+
+			
+				_Color Accum: 
+
+					permite acumular color ó luminancia al superponerse las partículas 
+
+					en el render
+
+			
+				_Normal Dir:
+
+					permite cambiar la dirección de las normales de las partículas
+
+		
+				_Point Size:
+
+					permite configurar el tamaño de las partículas
+
+
+				_Use lighting:
+
+					permite activar la opción de implementar las luces existentes para iluminar
+
+					el sistema de partículas
+					
+
+
+
+
+
+			MultiPoint:
+			___________
+
+
+			Particle Render Type: "MultiPoint"
+
+			Add Attributes for / Curreent Render Type
+
+
+			
+				_Color Accum: 
+
+					permite acumular color ó luminancia al superponerse las partículas 
+
+					en el render
+
+
+				_Multi Count: cantidad de puntos congiguos y multipuestos
+
+
+				_Multi Radius: radio de los punto contiguos y multipuestos
+
+			
+				_Normal Dir:
+
+					permite cambiar la dirección de las normales de las partículas
+
+		
+				_Point Size:
+
+					permite configurar el tamaño de las partículas
+
+
+				_Use lighting:
+
+					permite activar la opción de implementar las luces existentes para iluminar
+
+					el sistema de partículas
+					
+
+
+
+
+			MultiStreak:
+			___________
+
+
+			Particle Render Type: "MultiStreak"
+
+			Add Attributes for / Curreent Render Type
+
+
+			
+				_Color Accum: 
+
+					permite acumular color ó luminancia al superponerse las partículas 
+
+					en el render
+
+
+				_Line Width: indica la longitud de la línea ó "Streak"
+
+
+				_Multi Count: cantidad de Streak congiguos y multipuestos
+
+
+				_Multi Radius: radio de los Streak contiguos y multipuestos
+
+			
+				_Normal Dir:
+
+					permite cambiar la dirección de las normales de las partículas
+
+		
+				_Tail Fade: desvanecimiento de la estela ó cola
+
+
+				_Tail Size: tamaño de la cola ó estela
+
+
+				_Use lighting:
+
+					permite activar la opción de implementar las luces existentes para iluminar
+
+					el sistema de partículas
+
+
+
+			Numeric: 
+			________
+
+
+			(no renderizable), sólo para efectos de obtener datos
+
+
+
+			Particle Render Type: "Numeric"
+
+			Add Attributes for / Curreent Render Type
+
+
+			
+				_Attribute Name: asignar un nombre a los atributos
+
+
+				_point Size: tamaño de los números por partícula
+
+
+
+
+			Spheres:
+			_______
+
+			Particle Render Type: "Spheres"
+
+			Add Attributes for / Curreent Render Type
+
+
+			
+				_Radius: indica el radio ó diámetro de cada espehre, por partícula
+
+
+				
+
+
+			Sprites: 
+			________
+
+
+			(instancias/modulación)
+
+
+			Particle Render Type: "Sprites"
+
+			Add Attributes for / Curreent Render Type
+
+
+			
+				_Sprite Num: número de instancias
+
+
+				_Sprite Scale X:  cantidad de instancias en la cordenada "X"
+
+
+				_Sprite Scale Y: cantidad de instancias en la cordenada "Y"
+
+
+				_Sprite Scale Z: cantidad de instancias en la cordenada "Z"
+
+				
+				_Sprite Twist: cantidad de torsión de las instancias
+
+
+				use  Lighting: usar iluminación para insidir en las instancias
+
+				
+
+
+			Streak: 
+			________			
+
+
+			Particle Render Type: "Streak"
+
+			Add Attributes for / Curreent Render Type
+
+
+			
+				_Line Width: ancho y longitud de la línea ó Streak
+
+
+				_Normal Dir: dirección de la normal de la Streak
+
+
+				_Tail Fade: difuminado de la cola ó estela de la Streak
+
+
+				_Tail Size: tamaño de la cola ó Streak
+
+
+
+
+
+			Blobby Surface (S/W): (Metabol): 
+			________________________________
+
+
+			
+			Particle Render Type: "Blobby Surface (S/W)"
+
+			Add Attributes for / Curreent Render Type
+
+
+			
+				_Radius: tamaño de las sphere/particles, base
+
+
+				_Threshold: umbral de fisión entre las spheres/bases
+
+
+				
+
+
+			Cloud (S/W): (sistemas gaseosos): 
+			________________________________
+
+
+			
+			Particle Render Type: "Cloud (S/W)"
+
+			Add Attributes for / Curreent Render Type
+
+
+				
+				_Better Illumination: mejorado por iluminación
+
+
+				_Flat Shaded: sombreado plano de partículas
+
+			
+				_Radius: tamaño de las gass/particles, base
+
+
+				_Surface Shading: detalles de superficie fusión entre "sphere/gass"
+
+
+				_Threshold: umbral de fisión entre las spheres/bases
+
+
+
+
+
+			Tube(S/W): (sistemas gaseosos): 
+			_______________________________
+
+
+			
+			Particle Render Type: "Tube (S/W)"
+
+			Add Attributes for / Curreent Render Type
+
+
+				
+				_Tail Size: tamaño de la cola ó estela
+

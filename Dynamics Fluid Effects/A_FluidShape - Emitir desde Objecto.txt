@@ -1,0 +1,90 @@
+
+
+DETALLES:
+
+
+para ediciones más avanzadas y personalizadas de creación de fluidos a través, de objetos 
+personalizados dentro de un contenedor "fluid effects", podemos hacerlo con meshes/motives,
+
+personalizadas de nuestros proyectos prescindiendo así, el emisor básico que trae un contenedor
+
+compuesto
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+fluidShape/Emisor personalizado:
+________________________________
+
+	
+	Emisor personzalizado:
+	______________________
+
+
+	_primero creamos un contenedor vacío, osea, sin emisor dentro por defecto, para esto vamos
+
+	ha "Dynamics/Fuid Effects/Create 3D Container"
+
+
+	_si deseamos, podemos agregar un emisor estandar a un contenedor vacío ya existente, para 
+
+	esto, seleccionamos el contenedor y vamos ha "Dynamics/Fluid Effects/Add-Edit Contents
+
+	/Emiters/Options"
+
+
+		_allí, podremos configurar las características básicas de la emisión
+
+		
+		_una de las ventajas de crear el emisor básico ha un contenedor ya creado es que
+
+		tenemos la opción de dejar "Libre", ó desvinculado el emisor más sí, relacionado
+
+		con el contenedor, de esta menera podremos mover el emidor a través de la
+ 	
+		herramienta "translate", para un mejor manejo para pruebas y animación, para esto,
+
+		en las opciones de "Add-Edit Contents/Emiters/Options", debemos desactivar la
+
+		opción de "Parent to container"
+
+
+
+
+	_alternativamente podemos crear un emisor personalizado para más realismo de los
+ 
+	requerimientos de la escena, para esto, creamos la mesh/motive, que hará de emisor
+
+	luego la colocamos dentro del contenedor, posteriormente seleccionamos la mesh/motive,
+
+	que hará de emisor y luego seleccionamos el contenedor y, con ambos seleccionados vamos
+
+	ha "Dynamics/Fluid Effects/Add-Edit/Emot from Object/Options"
+
+
+		_luego de haber agregado un emisor personalizado debemo primero seleccionar el
+
+		contenedor y luego ir ha "Attribute Editor/fluidEmitter1/fluid Attributes
+
+		/Density-Voxel-Sec", y subir el valor ya que este valor se coloca en "0",
+
+		al agregar un emisor personzalizado y al colocar su valor en "0", el emisor
+
+		no emite ó no se ve la densidad de la simulación
+
+
+	repitiendo este paso, podemos agregar todos los emisores personalizados que necesitemos
+
+	dentro de un contenedor
+
+
+	_a la hora de agregar un emisor personalizado quizas sea conveniente en ciertos casos
+
+	emidir a través, del volúmen interno del objeto, para debemo seleccionar el contenedor
+
+	e ir ha "Attribute Editor/fluidEmitter1/Basic Emitter Attributes/Fill Object"
+
+
+

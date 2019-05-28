@@ -1,0 +1,49 @@
+
+
+DETALLES:
+
+
+también disponemos de la opción de la creación de sistemas de partículas precostruidos para las soluciones más
+
+comúnes como lo son, fuego, humo, rayos, otros, las cuales podemos modificar y hasta personalizar a fondo
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Smoke:
+______
+
+
+	_primero creamos una mesh/motive, que hará de emitter, ó emisor de las partículas de fuego
+
+	y lo ubicamos según la lógica de la escena
+
+
+	_luego, con esta mesh/motive, seleccionada vamos ha "Dynamics/Effects/Crete Fire/Options", para así,
+
+	entrar en las opciones de creación del sistema de fuego:
+
+
+		_Sprite image name: 
+
+
+			(suministrar las sprites es requerido)
+
+			podemos asignarle nuestra propia "Sprite", ó diseño de partícula previamente generado, 
+
+			de forma externa en otros aplicaciones ó de forma procedural en maya, debemos renderizar 
+
+			una secuencia de imágenes y luego colocarla en la ruta del proyecto de maya ej:
+
+			"Maya/sourceimages", así, debemos colocar en este campo el nombre y la extensión de la 
+
+			primera imágen de la secuencia, ej: fire01.png
+
+
+		_tenemos la posibilidad de configurar el fuego antes de crearlo, de forma resumida todos los parámetros
+
+		de todos los elementos implicados en el proceso, como el sistema de partículas, su emisor y, fields
+
+		/ó fuerzas implicadas

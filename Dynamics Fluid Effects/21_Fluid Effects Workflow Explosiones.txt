@@ -1,0 +1,238 @@
+
+
+DETALLES:
+
+
+las opciones de los sistemas de "Fluid Effects", a continuación comenzaremos ha realizar una serie
+
+de workflow, de los requerimientos y situaciones más comúnes en el desarrollo profesional para ver
+
+los detalles y generalidades a tener en cuenta para tales fines
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Explossive/ Explosiones:
+________________________
+
+
+
+	_primero creamos un contenedor con un emisor 
+
+
+	_el sistema de fluidos para crear explosiones se realiza a través, del uso de texturas, por lo
+
+	se requiere el modo de visualización de texturas "6", ó le damos al ícono de ver texturas en el 
+
+	viewport
+
+
+	_y ahora seleccionamos el emisor "fluidEmitter1", y vamos  "Volume Emitter Attributes/",
+
+	y en "Volume Shape", seleccionamos la opción de "Sphere"
+
+
+	_ahora seleccionamos el emisor del contenedor y vamos ha "fluidEmitter/Fluid Attributes/", y
+
+	procederemos ha animar los parámetros de amisión para así lograr sólo una emisión explosiva
+
+	al inicio de la simulación:
+
+	
+		_Density/Voxel/Sec:
+
+			_en el frame/1, colocamos un valor de "30", y lo animamos colocándole un keyframe
+
+			_en el frame/30, colocamos un valor de "0", y lo animamos colocándole un keyframe
+
+
+		_Heat/Voxel/Sec:
+
+			_en el frame/1, colocamos un valor de "30", y lo animamos colocándole un keyframe
+
+			_en el frame/30, colocamos un valor de "0", y lo animamos colocándole un keyframe
+
+
+	_la resolución base del contenedor la colocamos en "30", para comenzar
+
+
+	_los "Boundary X,Y,Z", del contenedor los colocamos en "None", para no tener límites
+
+
+	_en "Contents Method", colocamos todos los valores en "Dynamic Grid", tanto Density,
+
+	Velocity, Temperature, Fuel
+
+
+
+
+	
+	_activamos el "Auto Resize", desactivando en este la opción de "Resiza to Emitter", y,
+
+	colocando en "Auto Resize Margin", un valor inicial de "5"
+
+
+	_en "Dynamics Simulation"
+
+
+		_en "Damp", colocamos un valor de "0.010", 
+
+
+		_y en "High Detail Solve", colocamos "All Grids"
+
+
+		_y en "Simulation Rate Scale", colocamos un valor de "1.500", esto permite hacer
+
+		una simulación más acelerada
+
+	 
+
+
+	_en "Contents Details"
+
+		
+		Density
+		_______
+
+
+		_Buoyancy: colocamos un valor de "1", para acelerar la ascención y crecimiento
+
+
+		_Dissipation: colocamos un valor de "1.500", para que disipe al llegar arriba
+
+
+		Velocity
+		________
+
+
+		_Swirl: colocamos un valor "5"
+
+
+		
+		Temperature
+		___________
+
+
+		_Buoyancy: colocamos un valor alto de "300 ó 350"
+
+
+		_Dissipation: colocamos un valor de "2"
+
+
+		_Turbulence: colocamos un valor de "120"
+
+
+	_en "Shading"
+
+
+		_Transparency: bajamos la trasparencia "hasta verse un color oscuro en el cuadradito"
+
+
+		_Glow Intensity: aumentamos el glow ha "3"
+
+
+		Color
+		_____
+
+
+		_Seleted Color: hacemos un degrado de dos colores, un gris al 80%, casi negro y,
+
+		otro coloca negro "100%"
+
+
+		_Color Input: colocamos "Temperature"
+
+
+		Incandescence
+		_____________
+
+
+		_en la rampa de color creamos una personalizada en la cuál, colocaremos la primera mited
+
+		de color negro y la siguiente mitad, en un intervalo que va desde naranja hasta el rojo
+
+		a través, de diferentes valores los cuales colocaremos intercalados de la siguiente 
+
+		manera, uno naranja y otro rojo y, así, sucesivamente repetiremos este paso hasta 
+
+		terminar de completar la rampa, esta opción permite hacer una alternatividad de colores
+
+		en el momento de la innición de la explosión
+
+
+		_Input Bias: con el cuál, podremos graduar la intensidad de la incandecencia
+
+
+		Opacity
+		_______
+
+
+		_ajustamos la rampa para lograr una mayor acutancia en la simulación recortanto la rampa
+
+		hacia la derecha en un 30%, y luego haciendo una curva agregando más puntos de control
+
+
+	_en "Texture"
+
+
+		_activamos las opciones de "Texture color - Textire Incandescence - Texure Opacity"
+
+
+		_disponemos de las opciones de ganancia, para aumentar la influencia relativa
+
+		de la textura: "Color Tex Gain - Incand Tex Gain - opacity Tex Gain"
+
+
+		_Threshold: es el umbral de los valores de "Gain", de entrada del paso anterior
+
+
+		_Amplitude: se refiere a la escala de textura y por ende al tamaño del del detalle,
+
+		funciona bien en valores de "5"
+
+
+		_Ratio: se refiere a la proporción de la textura en sus atributos específicos
+
+
+		_Frequency Ratio: se refiere a la frecuencia de proporción, funciona bien en valores
+
+		de "5 a 10"
+
+
+		_Depth Max: se refiere a la profuncidad de la textura en su acción, funciona bien
+
+		con valores de "3"
+
+
+		_Inflection: este valo permite hacer que se mantenga la proporción del volúmen original
+
+
+		_Texture Time: avance ó desplazamiento de la textura
+
+		
+		_Zoom Factir: factor incremental ó de escala de la textura, funciona bien en valores
+	
+		de "2", ó más
+
+
+		_Frecuency: frecuencia del movimiento de la textura en su evolución
+
+
+		_Textura X,Y,Z: permite hacer variaciones para que la textura no se vea estática en la
+
+		evolución progresiva de la simulación, así esta se podrá mover en las cordenadas deseadas
+
+
+		_texture Scale: directamente podemos escalar la textura en general en cordenadas 	
+		determinadas
+
+
+		_texture Rotate: directamente podemos rotar la textura en general en cordenadas 
+	
+		determinadas
+
+------------------------------------------------------------------------------------------------------
+

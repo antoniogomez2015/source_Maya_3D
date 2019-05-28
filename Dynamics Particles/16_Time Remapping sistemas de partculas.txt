@@ -1,0 +1,101 @@
+
+
+DETALLES:
+
+tenemos pa posibilidad de animar las partículas como cualquier elemento en el timeline, e incluso podemos hacer
+
+"TamiWarp", ó time remapping, del tiempo de reproducción de las partículas e incluso, podemos hacer que éstas
+
+se reproduszan de forma inversa
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+	_primero creamos un sistema de partículas, a través de un amisor ó un particles/brush
+
+
+	_luego seleccionamos las partículas y vamos ha "particle1/particleShape1/Time Attributes/",
+
+	y en "Current Time", este valor controla el reloj, interno de los sistemas de partículas,
+
+	el cuál nos permitirá controlar el tiempo de reproducción en relación al "time", / tiempo del programa
+
+	ó "particle1/timer1/", "Out Time", y "Unwarped Time", más si desvinculamos el atributo "Current Time",
+
+	de "time1", podremos configurar las partículas a nuestro tiempo ó un tiempo específico que nosotros configuremos
+
+
+
+		_primero vamos ha "particle1/Time Attributes/Current Time", y hacemos "mouse right click/Brack Connections",
+
+		así, haremos roto ó desvinculado la relación del atributo "Current Time", con las opciones de "time1", 
+
+		de hecho, las opciones de "time1", serán eliminadas como "Tab", de "particle1"
+
+
+	_ahora podemos proceder ha realizar una animación con la reproducción del sistema de partículas bajo nuestra dirección:
+
+
+		1_primero colocamos el cabezal del timeline, en un tiempo inicial
+
+		
+		2_luego vamos ha "particle1/particleShape1/Time Attribute/", y en "Current Time", 
+
+
+			_y colocamos el valor/frames, en por ejemplo en: "1"
+
+
+			_luego hacemos "mouse right click", sobre el atributo "Current Time", y seleccionamos la opción 
+
+			de "Set Key", para crear en esta propidad un fotograma clave de animación en este tiempo
+
+
+		3_luego repetimos este proceso hasta terminar la animación deseada del sistema de partículas 
+
+
+			_avanzamos el cabezal hasta otro tiempo en el timeline, ej: frame: "50"
+
+
+			_luego también cambiamos el valor/frame, de ej: "Current Time / 100"
+
+
+			_posteriormente hacemos "mouse right click", sobre el atributo "Current Time", y seleccionamos 
+
+
+			la opción de "Set Key", para crear en esta propidad un fotograma clave de animación en este tiempo
+
+
+		así, podremos ver que no estamos alterando la velocidad/velocity, de las partículas si no, el tiemwarp,
+
+		ó deformación del tiempo a nuestras necesidades
+
+
+		
+	_más si desemos hacer que las partículas se reproduzcan de forma inversa, debemos activar el atributo "Cache Data"
+
+
+
+			
+			_avanzamos el cabezal hasta otro tiempo en el timeline, ej: frame: "150"
+
+
+			_luego también cambiamos el valor/frame, de ej: "Current Time / 1"
+
+
+			_luego debemos activar el atributo "particle1/particleShape1/General Control Attributes", "Cache Data"
+
+
+			_posteriormente hacemos "mouse right click", sobre el atributo "Current Time", y seleccionamos 
+
+
+			la opción de "Set Key", para crear en esta propidad un fotograma clave de animación en este tiempo
+
+
+	así veremos que al reproducir las partículas en este segmento de animacón éstas se reproducirán de forma inversa
+
+
+

@@ -1,0 +1,146 @@
+
+
+DETALLES:
+
+
+también disponemos de sistemas para la creación de "Oceanos y Mares ó Rios", los cuales son altamente configurables
+
+prácticos y de poco peso y ocreacen un alto realismo para lograr "Oceanos y Mares ó Rios"
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Ocean Waves:
+____________
+
+
+
+	_para crear waves/olas, primero debemos seleccionar el sistema de ocean, deseado
+
+	
+	_luego con el sistema de ocean, seleccionados vamos ha "Dynamics/Fluid Effects/Ocean/Create Wake/Options"
+
+
+	-------------------------------------------------------------------------------------------------------------
+		
+		_Wake size:
+
+			_esta opción indica el tamaño de la ola en relación al tamaño del sistema
+
+		
+		_wake Intensity:
+
+			_esta opción indica el la intensidad de la ola en relación al tamaño del sistema
+
+
+		_Foam Creation:
+
+			_esta opción indica el tamaño ó cantidad de espuma en relación al tamaño del sistema
+
+	-------------------------------------------------------------------------------------------------------------
+
+
+NOTE:	es recomendable aumentar la resolución de visualización del ocean sistem, para esto seleccionamos el elemento
+
+	"transform1", en el outluner, y colocamos el valor de "Resolución", de "20", ej: ha "200", así, podremos
+
+	visualizar mucho mejor el comportamiento de las olas sobre el sistema de ocean
+
+
+
+
+
+
+
+
+	_así, podremos ver que al crear un sistema de olas, se ha agregar al outliner un container "FluidTexture3D1",
+
+	como también, un emisor/emitter, "OceanWakeEmitter1", el cuál hara la emisión de la ola dentro del contenedor
+
+	creado sobre el sistema de ocean, en si mismo
+
+
+
+	Container:
+	__________
+
+	_el contenedor es idéntoco a un contener de fluid effects, por ende tiene las mismas propiedades y consideraciones
+
+	que los conteneores 3d, de los sistemas de fluid effects
+
+
+	_así, podremos escalar y aumentar la resolución del contenedor hasta un tamaño deseado en relación a la lógica
+
+	de la escena y del tamaño y cobertura de la ola deseada a crear sobre el sistema de ocean
+
+
+	_así, la ola creada no saldrá de los límites del contenedor en relación a la configuración del contenedor mismos
+
+
+	_al agregar la propiedad de "Foam Creation:", ó al colocar en ésta un valor superior ha "0", se agregará, un 
+
+	contenedor extra, llamado ej: "fluidTexture3D2", a través, del cuál, se calculará la espuma/foam
+
+
+	_al tener 2 contenedores es altamente aconsejable que cuando vayamos ha realizar ajustes y cambios como de tamaño
+
+	y resolución, seleccionemos ambos contenedores para que así, ambos conserven su escala ó tamaño proporcional entre
+
+	sí, de esta manera no habrá desface de tamaño ni se perderá la espuma u otro valor
+
+	
+	_para aumentar parte de resolución del sistema de ocean, debemos aumentar la resolución del contenedor
+
+
+	_para aumentar el alcance ó desplazamiento de las olas debemos ajustas las propiedades de 
+
+	"OcenwakeFiamTexture1/content Detail/Temperature"
+
+
+
+	Emitter:
+	________
+
+	
+	_la escala del emitter, en relación al tamaño del sistema de ocean, incluirá determinantemente en el tamaño real
+
+	de la ola
+
+
+	_de esta manera podremos emparentar ó utilizar cualquier sistema de constraint, para relacionar el "motive",
+
+	ej, en barco con el emitter, el cuál generará la ola en relación al movimiento heredado del mesh, "motive",
+
+	el cuál, fue animado
+
+
+	_Wake Intensity: este valor será controlado por el valor "(Density/Voxel/Sec)", del "Emitter", creado
+
+
+	_Foam Creaction: este valor será controlado por el valor de "(Heat/Voxel/Sec)", del "Emitter", creado
+
+
+	_Fluid Dropoff: este calor controlará la dureza de las crestas de las olas, interpolando y suavisando
+
+	las suvidas y caídas ó bajadas de las olas en relación a la geometría que las conforman
+
+
+
+	Foam:
+	_____
+
+
+	_podemos entrar a las opciones de "fluidTexture3D2", para configurar las opciones de la espuma generada
+
+	
+	_podemos seleccionar el tipo de espuma en "OceanwakeFoamTexture1/Textures/Texture Type/..", el ajuste de 
+
+	la textura es la clave del detalle y resolución del sistema de ocean, al igual, que en los fluid effects
+	
+
+		
+	
+
+
+

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Contextual Menu Sub Elements Generals:
+    ______________________________________
+
+        _al posarnos sobre cualquier objeto de tipo geometría podremos hacer 
+        
+
+            _"Mouse Right Click"
+
+
+        _para así, podremos acceder al menú contextual a través, del cuál, dispondremos de todos los sub elementos del objeto
+
+        _como también, a las opciones de selección, nodos de entrada y de salida, uvs, materiales, pintura, esculpido, hacer "live", un objeto, otros
+
+
+
+            _Edge:
+
+                _ésta opción nos permitirá acceder a los sub elementos de tipo edges, de la geometría respectiva
+
+            _Vertex:
+
+                _ésta opción nos permitirá acceder a los sub elementos de tipo vertex, de la geometría respectiva
+
+            _Vertex Face:
+
+                _ésta opción nos permitirá acceder a los sub elementos de tipo faces, y vertex, combinado de la geometría respectiva
+
+            _Face:
+
+                _ésta opción nos permitirá acceder a los sub elementos de tipo faces, de la geometría respectiva
+
+            _Multi:
+
+                _ésta opción nos permitirá la seleccionar y editar de sub elementos a través, de la herramienta Multi
+
+                _por medio de la cuál, podremos seleccionar todo tipo de sub elementos de la geometría respectiva, como vertex, edges y faces, a la vez
+
+            _UV:
+
+                _UV:
+
+                    _ésta opción nos permitirá entrar en el modo de selección de vertex, para uvs
+
+                _UV Shell:
+
+                    _ésta opción nos permitirá entrar el modo de selección de face, de inslands, de uvs, creadas previamente
+
+            _Object Mode:
+
+                _ésta opción nos pemritirá entrar el modo objet mode 
+                
+                _lo cuál, nos permitirá salir del modo de edición de sub elementos del objeto respectivo
+
+
+
+            Generals:
+            _________
+
+                _Name:
+
+                    _ésta opción nos permitirá abrir el "Attribute Editor", a través, del nombre del objeto respectivo
+
+                _Select:
+
+                    _ésta opción nos permitirá seleccionar un objeto sobre el cuál, estemos posados 
+                    
+                    _el cuál, a su vez no lo tengamos seleccionado previamente
+
+                _Select All:
+
+                    _ésta opción nos permitirá seleccionar todos los objeto de la escena
+
+                    _los cuáles, no tengamos seleccionados previamente
+
+                _Deselect All:
+
+                    _ésta opción nos permitirá deseleccionar todos los elementos de la escena que estén seleccionados previamente
+
+                _Select Hierachy:
+
+                    _ésta opción nos permitirá seleccionar todos los elementos u objetos que estén anidados dentro de otro
+
+                    _ha modo de cascada, lo que es equivalente ha seleccionar elemento tras elemento con "shift", pulsado más los grupos que contienen los objetos respectivos
+
+                    NOTA: ésta opción no seleccionar el root, ó grupo de la gerarquía principal
+
+                _Invert Selection:
+
+                    _ésta opción nos permitirá seleccionar elementos que no hayamos seleccionado 
+                    
+                    _al tener la posibilidad de invertir elementos seleccionados previamente por elementos que no están seleccionados en la escena
+
+                    _más también, podremos invertir sub elementos seleccionados 
+                    
+                    _por otros sub elementos del mismo tipo no seleccionados 
+                    
+                    _Sub elementos como vertex, edges y faces, dentro de un objeto en modo de edición de sub elementos
+
+                _Select Similar:
+
+                    _ésta opción nos permitirá seleccionar elementos del mismo tipo que no hayamos seleccionado en la escena
+
+                    _de ésta manera, podremos seleccionar elmeentos similares de tipo geometría por ejemplo, otros
+
+                    _para lo cuál, sólo tendremos que tener seleccionado previamente el tipo de elemento respectivo
+
+                _Make Live:
+
+                    _ésta opción nos permitirá convertir y hacer activa ha una geometría para el proceso de retopología a través, de la herramienta "Quad Drag Tool"
+
+                    _a través, de la cuál, podremos crear nueva geometría sobre la morfología de una geometría de referencia
+
+                _DG Traversal:
+
+                    _Select Name:
+
+                        _ésta opción nos permitirá seleccionar el elemento sobre cuál, estemos posado y no hayamos seleccionado previamente
+
+                    _History:
+
+                        _ésta opción nos pemritirá acceder a los parámetros de la historia de un objeto, en el caso de que el objeto disponga de un historial de edición creado
+
+                    _NameShape:
+
+                        _Select NameShape:
+
+                            _ésta opción nos permitirá seleccionar el elemento sobre cuál, estemos posado y no hayamos seleccionado previamente
+
+                        _Future:
+
+                            _(Indeterminado)
+
+                        _Initial Shading Group:
+
+                            _ésta opción nos permitirá acceder a los elementos anidados dentro de otro objeto
+
+                            _así, como también podremos acceder ha otras opciones de materiales y conexiones avanzadas para procesos dinámicos, otros
+
+                    _Future:
+
+                        _(Indeterminado)
+
+                    _Initial Shading Group:
+
+                        _ésta opción nos permitirá acceder a los elementos anidados dentro de otro objeto
+
+                        _así, como también podremos acceder ha otras opciones de materiales y conexiones avanzadas para procesos dinámicos, otros
+
+                _Inputs:
+
+                    _Select All Inputs:
+
+                        _(Inputs Indeterminados)
+
+                    _Enable All Inputs:
+
+                        _(Inputs Indeterminados)
+
+                    _Disable All Inputs:
+
+                        _(Inputs Indeterminados)
+
+                    _All Inputs:
+
+                        _(Inputs Indeterminados)
+
+                _Outpus:
+
+                    _Select All Outputs:
+
+                        _(Outputs Indeterminados)
+
+                    _Enable All Outputs:
+
+                        _(Outputs Indeterminados)
+
+                    _Disable All Outputs:
+
+                        _(Outputs Indeterminados)
+
+                    _Shading Engine:
+
+                        _(Indeterminados)
+
+                    _All Outputs:
+
+                        _(Outputs Indeterminados)
+
+                _Paint:
+
+                    _Paint Select:
+
+                        _ésta opción nos pemritirá hacer selecciones de sub elementos como vertex, edges, y faces, a través, de la herramienta de pintura
+
+                        _a través, de la herramienta de pintura lo cuál, es muy práctivo e interactivo
+
+                    _3D Paint:
+
+                        _ésta opción nos permitirá pintar sobre una textura asignada a una geometría directamente en el viewport 3d 
+                        
+                        _a través, de la herramienta de pintura lo cuál, es muy práctivo e interactivo
+
+                    _Sculpt:
+
+                        _ésta opción nos permitirá esculpir ó deformar la geometría directamente en el viewport, para lograr así, formas más orgánicas
+
+                        _a través, de la herramienta de pintura lo cuál, es muy práctivo e interactivo
+
+                    _Mesh:
+
+                        _NameShape-VertexColorRGB:
+
+                            _(Indeterminado)
+
+                        _NameShape-VertesFacesColorRGB:
+
+                            _(Indeterminado)
+
+                _Actions:
+
+                    _Template:
+
+                         _
+
+                    _Untemplate:
+
+                         _
+
+                    _Unparent:
+
+                        _
+
+                    _Bounding Box:
+
+                        _
+
+                _UV Sets:
+
+                    _UV Linking:
+
+                        _ésta opción nos pemritirá abrir el panel "Relationship Editor"
+
+                        _a través, del cuál, podremos relacionar proyecciones UVs, existentes en la geometría respectiva
+                            
+                        _con los diferentes materiales asignados a la geometría respectiva
+
+                    _UV Set Editor:
+
+                        _ésta opción nos permitirá abrir el panel "UV Set Editor"
+
+                        _a través, del cuál, podremos gestionar las proyecciones UVs, existentes en la geometría respectiva
+
+                        _así, como renombrar las proyecciones, borrarlas, copiarlas, otros
+
+                    _UV Name:
+
+                        _ésta opción nos permitirá visualizar el nombre de la proyección UV, aplicada y actual para la geometría respectiva
+
+
+                _Color Sets:
+
+                    _Color  Sets Editor:
+
+                        _ésta opción nos permitirá abrir el panel "Color Set Editor", a través, del cuál, podresmo gestionar todos los sets, de color creados
+
+                        _pudiendo así, renombrar éstos, copiarlos, modificarlos, borrarlos, fusionarlos, ordenarlos, otros
+
+                    _Color Set1(RGBA):
+
+                        _ésta opción nos permitirá visualizar el nombre de el set, activo para la geometría respectiva
+
+
+                _Scene Assembly:
+
+                    _(Indeterminado):
+
+                        _
+
+                _Material Attributes:
+
+                    _ésta opción nos permitirá abrir el panel "Attribute Editor", a través, del cuál, podremos gestionar las propiedades del material aplicado sobre la geometría respectiva
+
+                _Assign New Material:
+
+                    _ésta opción nos permitirá abrir el panel "Assign New Material",a través, del cuál, podremos asignar un nuevo material a la geometría respectiva
+
+                _Assign Favorite Material:
+
+                    _ésta opción nos permitirá visualizar una lista de los materiales más comúnes y utilizados los cuáles, podresmo aplicar sobre la geometría respectiva
+
+                _Assign Existing Material:
+
+                    _ésta opción nos permitirá visualizar una lista de los materiales utilizados en la escena
+
+                    _de ésta manera, podresmo re utilizar materiales existentes de forma fácil y rápida
+
+                _Remove Material Override:
+
+                    _ésta opción nos permitirá eliminar materiales super puestos sobre una geometría
+
+                _Baking:
+
+                    _Edit Attributes:
+
+                        _Texture:
+
+                            _(Indeterminado)
+
+                        _Vertex:
+
+                            _(Indeterminado)
+
+                    _Assign New Bake Set (MentalRay):
+
+                        _Texture Bake Set:
+
+                            _(Indeterminado)
+
+                        _Vertex Bake Set:
+
+                            _(Indeterminado)
+
+                    _Assign Existing Bake Set (MentalRay):
+
+                        _InitialTextureBakeSet:
+
+                            _(Indeterminado)
+
+                        _InitialVertexBakeSet:
+
+                            _(Indeterminado)
+                    
+
+
+
+            
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

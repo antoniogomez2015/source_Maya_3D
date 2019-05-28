@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Contextual Menu - Tool Edge Mode:
+    _________________________________
+
+                       
+
+    Edge Mode: 
+    ____________     
+
+    _Shift + Mouse Right Click (con sub elementos seleccionados)
+
+        _Merge/Collapse Edge:
+
+            _de ésta manera, podremos acceder a las herramientas:
+
+                _Merge Edge to Center
+
+                    _ésta opción colapzará todos los edges, seleccionados al centro del viewport
+
+                _Merge Border Edges
+
+                    _(indeterminado)
+
+                _Collapse Edge
+
+                    _ésta opción colapzará todos los edges seleccionados de forma paralela y en el mismo lugar de origen
+
+                _Target Weld Tool
+
+                    _ésta opción nos permitirá de forma interactiva fusionar edges, al arrastrar edges, sobre otros de forma manual
+
+            _para que así, podamos unificar éstos tipos de sub elementos
+
+
+        _Flip/Spin Edges:
+
+            _Flip Triangle Edge:
+
+                _ésta opción rotará la configuración de edgs, seleccionados que conformen triángulos ó triads, e invertirá su sentido de orientación 
+                
+                _sea ésta de arriaba hacia abajo ó de derecha a izquierda ó viceversa
+
+                _también, puede decirse que el sistema cambiará su disección sea ésta en orientación vertica u horizontal
+
+            _Flip Forward:
+
+                _ésta opción rotará la configuración de edges, seleccionados hacia la izquierda
+
+                _cambiando así, la horientación y dirección de los edges, seleccionados
+
+                _Manteniendo la morfología del motivo original
+
+            _Flip Backward:
+
+                _ésta opción rotará la configuración de edges, seleccionados hacia la derecha
+
+                _cambiando así, la horientación y dirección de los edges, seleccionados
+
+                _Manteniendo la morfología del motivo original
+
+
+        _Bevel Edges:
+
+            _ésta opción nos permitirá hacer el efecto bevel ó didivir edges, seleccionados en dos edges nuevos edges, separados por una distancia indicada por nosotros
+
+            _así, como también, podremos indicar segmentos de edges, intermedios para reforzar las tensiones de la geometría y mejorar la morfología del objeto
+
+
+        _Softten/Hardten Edges:
+
+            _de ésta manera, podremos acceder a las herramientas
+
+                _Soften Edge:
+
+                    _ésta opción nos permitirá suavizar la visualización de las caras ó faces de un motivo
+
+                _Soften/Harden:
+
+                    _ésta opción nos pemritirá hacer variaciones sobre el suavizado y dureza de las faces, de un motivo para su visualización
+
+                _Harden Edge:
+
+                    _ésta opción nos permitirá perfilar ó hacer duras las faces, de un motivo para su visualización
+
+                _Toogle Soft Edge Display:
+
+                    _ésta opción nos permitirá una vez suavizado las faces, de un motivo 
+                            
+                    _para que así, procedamos ha hacer "toogle soft edge display" 
+                            
+                    _para que así, los bordes aparezcan punteados y sugeridos en la visualización del motivo temporalmente
+
+
+        _Extrude Edges:
+
+            _ésta opción nos permitirá extruir edges, seleccionados para que así, podamos crear nueva geometría a partir de bordes previamente seleccionados
+
+
+        _Delete Edges:
+
+            _ésta opción nos permitirá eliminar edges, no deseados previamente seleccionados sin afectar la topología del objeto
+
+            _de ésta manera, podremos eliminar bordes y los respectivos vertex de los cuáles están conformados en un sólo paso
+           
+            
+        _Multi-Cut Tool:
+
+            _ésta opción nos permitirá agregar edges entre vertex de forma interactiva asi como también, edge loops, completos
+
+        _Paint Select Edges:
+
+            _ésta opción nos permitirá seleccionar edges, a través, del tool de paint sub elements
+
+            _de ésta manera, podremos seleccionar edges, más cómodamente y de forma interactiva a través, de la herramienta de pintura
+
+            _a la cuál, podremos graduar su tamaño a través, del shortcut, "B" + mouse left click and drag left/right 
+
+
+            Generales:
+            __________
+
+                _Crease Tool:
+
+                    _ésta opción nos permitirá hacer variaciones sobre la tensión generada por un edge ó edge loops, en relación de los demás edges
+
+                _Offset Edge Loop Tool:
+
+                    _ésta opción nos permitirá agregar edgeloops al rededor de un edge loops, sobre el cuál, nos posemos dinámicamente
+
+                    _para que así, podamos reformar una forma determinada
+
+
+                _Insert Edge Loop Tool:
+
+                    _ésta opción nos permitirá crear nuevos edges loops, completos entre edges paralelos al nuevo edge loop creado ó agregado
+
+                    _de ésta manera, podremos agregar nueva geometría e ir refinando la morfología del objeto
+
+
+                _Slide Edge Tool:
+
+                    _ésta opción nos permitirá desplazar edges, seleccionados a una nueva posición pero sin modificar la posición de los sub elementos contiguos a los edges, seleccionados
+
+                    _de ésta manera, no afectaremos en lo absoluto a la morfología del objeto si no sólo a su topología
+
+
+                _Edit Edge Flow:
+
+                    _ésta opción nos permitirá ajustar el flow, ó tensión de edges, seleccionados
+
+                    _de ésta manera, podremos suavizar la topòlogía y morfología de un objeto
+
+                    _de ésta manera, los edges, seleccionados se separarán de los edges contiguos 
+                    
+                    _si los edges, seleccionados se encuentran más cercanos a los edges, contiguos en relación a la separación de los demás edges, existentes en el objeto más cercanos
+                    
+                    _para así, conseguir un balance equidistante entre la distancia de los edges en general
+
+
+                _Add Division to Edges:
+
+                    _ésta opción nos permitirá dividir edges, seleccionados para que así 
+                    
+                    _los edges, seleccionados ahora cada uno de éstos sea dividido en dos edges 
+                    
+                    _a través, de un vertex nuevo agregado entre cada edges, seleccionado
+
+                    _lo cuál, es especialmente útil para procesos de modelado, re construcción y sub división de las geometrías, otros
+
+
+                _Bridge:
+
+                    _ésta opción nos pemritirá activar la herramienta de bridge, para poder rellenar áreas abiertas ó a través, de dos edges, seleccionados previamente
+
+                    _para que así, a través, de las opciones de la herramienta podremos configurar las segmentos, entre otros parámetros
+
+                    _de ésta manera, unificar inslands, y rellenar huecos vacios, otros
+
+                    NOTA: ésta opción está más recomendada para acciones en las que desiemos unir dos islands, seleccionando dos edge loops, completos de forma práctiva y directa
+
+                
+                _Bridge Tool:
+
+                    _ésta opción nos pemritirá activar la herramienta de bridge, pero de forma interactiva para poder rellenar áreas abiertas ó a través, de dos edges, seleccionados previamente
+
+                    _con la diferencia con la herramienta anterior de "Bridge", la opción de "Brige Tool", guarda memoría de la última configuración realizada en la herramienta 
+                    
+                    _y es más interactiva su aplicación y manejo y es mucho más práctica en general y más recomendada de usar
+
+                    NOTA: ésta opción está más recomendada para acciones en las que desiemos unificar dos edges, de forma manual e interactiva
+
+                
+                _Fill Hole:
+
+                    _ésta opción nos permitirá poder rellenar áreas vacías ó huecas en la geometría
+
+                    _para lo cuál, sólo tendremos que como mínimo haber seleccionado al menos un edge, del agujero que deseamos rellenar con un nuevo face, de la geometría ó insland, respectiva
+
+
+                _Connect Component:
+
+                    _ésta opción nos permitirá agregar nuevos edges, paralelos entre dos ó más edges, previamente seleccionados
+
+                    _de ésta manera, podremos sub dividir edges, de forma paralela para diferentes procesos de modelado y re ajuste de la topología de un objeto
+
+
+                _Detach Componnent:
+
+                    _ésta opción nos permitirá dividir edges, seleccionados en dos edges, respectivamente
+
+                    _mientras que a su vez, ambos edges, generados son separados en diferentes inslands, mientras mantienen la misma posición del edge, original
+
+                    _lo cuál, es especialmente útil para la generación de nueva geometría base que conforme nuevas inslands, dentro de un mismo objeto
+
+
+                _Transform Component:
+
+                _ésta opción nos pemritirá disponer de las opciones de transformación grupal por sub elementos seleccionados
+
+                _de ésta manera, podremos re orientar y editar elementos como si fuesen un sólo elemento
+
+                _de ésta manera, podremos mover, escalar y rotar elementos a través, de diferentes orientaciones y criterios
+
+
+                _Bevel Tool: 
+
+                    _ésta opción nos pemritirá dividir un edge, que seleccionemos
+
+                    _de ésta manera, podremos dividir un edge, respectivo en dos ó más edges, de forma dinámica para reforzar la morfología del motivo
+
+                    NOTE: Bevel Tool: (interactive), nos pemritirá motificar dinámicamente sobre cualquier sub elemento del motivo
+                
+
+                _Connect Tool:
+
+                    _ésta opción nos pemritirá activar la herramienta de connect tool, a través, de la cuál, podremos crear nuevos edges, a partir de la selección de dos ó más vertex previamente
+
+                    NOTE: Connect Tool: (interactive), nos pemritirá motificar dinámicamente sobre cualquier sub elemento del motivo
+
+                _Extrude Tool:
+
+                    _ésta opción nos pemritirá extruir un sub elementos sobre el cuál, nos posemos
+
+                    NOTE: Extrude Tool: (interactive), nos pemritirá motificar dinámicamente sobre cualquier sub elemento del motivo
+
+
+               _Polygons Display:
+
+                    _ésta opción nos pemritirá disponer de todos los modos de visualización de los polígonos
+
+                    _Tootle Soft Edge Display:
+
+                        _ésta opción nos pemritrá visualizar los edges de forma punteada ó segmentada de forma más suave ó suavizada
+
+                    _Toogle Backface Culling:
+
+                        _ésta opción nos pemritirá ocultar las caras del motivo que se encuentre en la parte tracera del motivo
+
+                         _para que así, éstas caras ya no sean visibles en el viewport, y pasen ha ser un segundo plano lo que hará más ligera la escena
+
+                    _Toogle Border Edges:
+
+                        _ésta opción nos permitirá visualizar los bordes más resaltados y gruesos en áreas abiertas ó con agujeros
+
+                    _Toogle Texture Border Edges:
+
+                        _ésta opción nos permitirá visualizar los bordes más resaltados y gruesos en áreas abiertas ó con agujeros y que a su vez estén texturizados
+
+                    _Toogle Face Normals:
+
+                        _ésta opción nos permitirá visualizar la dirección de las normales en relación a la dirección de los polígonos del motivo
+
+                    _Toogle Hidden Triangles Edges:
+
+                        _ésta opción nos permitirá visualizar como se vería la geometría compuesta de triads
+
+                        _a través, de segmentos punteados los cuáles conformarían los triads, ha generar posteriormente
+
+                    _Reset Polygon Display:
+
+                        _ésta opción nos pemritirá resetear la visualización de los polígonos y la geometría en general a su visualización normal ó por defecto
+            
+
+
+
+
+
+                        
+-->
+</body>
+</html>

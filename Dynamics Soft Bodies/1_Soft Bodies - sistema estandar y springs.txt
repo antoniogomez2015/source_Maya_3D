@@ -1,0 +1,311 @@
+
+
+
+DETALLES:
+
+
+los sistema de soft bodies, permite hacer simulaciones de cuerpos blandos los cuales pueden intaractuar con sistemas
+
+de colisión de partículas así, como de las fuerzas/fields, aplicadas también en los sistemas de partículas
+
+
+los sistemas de "soft bodies", ó cuerpos blandos son más compatibles ó parecidos a los sistemas dinámicos de las 
+
+partículas que a los sistemas de "Rigid Bodies", e incluso, se utilizan sistemas de partículas en los sistemas 
+
+blandos para realizar los cálculos de las fuerzas y sus reacciones físicas
+
+éstos sistemas blandos son especialmente útiles para realizar simulaciones de ej: carnes, gomas, gelatinas, y 
+
+materiales blandos en general, las cuales son suceptibles a deformaciones a través de colisiones y roses
+
+de otros elementos
+
+
+son utilizados para generar cuerpos blandos estáticos (no para rigid body systems), aunque estos sistemas requieren
+
+demaciados recursos y son inestables
+
+
+
+
+Tutorial:
+
+	3D Maya 103 Dinamicas Soft Bodies Introduccion
+
+		https://www.youtube.com/watch?v=ZvxbSSRqelw&index=103&list=PLVnqjpSwnYEdWyuwBP5YP5TULZJGPbrkG
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	Proceso de creación general:
+	____________________________
+
+
+
+		_primero creamos una mesh/motive, la cuál hará de cuerpo blando "Soft Body", esta mesh, de tener
+
+		una alta resolución comprendiendo que cada "vertex", será convertirá una partícula la cuál 
+
+		se utilizará para generar el cálculo para la simulación, otros
+
+
+		_ahora seleccionamos la mesh/motive, la cuál hara de soft body, y con esta seleccionada vamos ha
+
+		"Dynamics/Soft-Rigid Bodies/", y hacemos "Create Soft Body"
+
+
+
+			_así, se ha emparentado a la mesh/motive, soft body, se agregado "soft_blandoParticle", 
+
+			el cuál es un sistema de partículas emparentado dentro del objeto mesh/motive, este
+
+			sistema de partículas tiene las mismas propiedades de un sistema "particle1"
+
+
+			_y a su vez, se ha agregado a cada vertex, existente en la geometría de mesh/motive, 
+
+			soft body, una partícla por cada uno de éstos, asumiento como emisión de las partículas
+
+			ó perticle/brush, la topología del objeto mesh/native, a través de sus vertices	
+			
+
+
+			_como también a la mesh/motive, soft body, se le ha agregado la "Tab", ej:
+
+			"soft-blandoParticleShape", en la cuál tendremos todo el control del sistema
+
+
+
+
+		_luego creamos un mesh/motive, que hará de colosionador sobre el sistema blando "soft body",
+
+		esta mesh/motive, la colocamos con la lógica correspondiente para que esta forma mesh/motive,
+
+
+
+			_primero seleccionamos la mesh/motive, y con esta seleccionada vamos ha 
+
+			"Dynamics/Fields/Gravity", así, ésta responderá a las fuerzas/fields, agregadas
+
+
+
+			_luego volvemos a seleccionar la mesh/motive, que hará de colosionador y vamos ha
+
+			"Dynamics/Particles/Make Collide", así, este se convertirá en un elemento de colisión
+
+
+			_ahora tenemos que asignar el elemento colisionador que hemos creado con las 
+
+			partículas del sistema de soft body, que hemos creado previamente
+
+
+				_primero seleccionamos el elementos mesh/motive, "soft body", y vamos
+
+				ha "Window/Relashionship Editors/Dynamics Relationship", así, se abrirá el panel
+
+				de "Dynamic Relationship Editor"
+
+
+				_luego en outliner del "Dynamic Relationship Editor", buscamos el 
+
+				"soft_blandoParticle", correspondiente al sistema blando, soft body
+
+
+				_luego vamos la pestaña "Dynamic Relationship Editor/Collisions", y 
+
+				buscamos el "Tab", "ColisionaShape", creado y agregado en el elemento
+
+				mesh/motive, "Collide", y lo seleccionamos para relacionar ambos elementos,
+
+				así, veremos que al reproducir la simulación el mesh/motive, colisionador
+
+				altera colosionando la mesh/motive, soft body
+
+
+			_ahora vemos que la interacción de deformación del cuerpo blando es descontrolada, esto
+
+			sucede por que no tenemos un sistema que mantenga el volúmen de la superficie del soft body,
+
+			el volúmen en base a las partículas que se dispersan sin ningún tipo de control, 
+
+			a continuación presentamos algunos sistemas disponible para mejorar estas interacciones
+
+			entre el elementos colisionados, el soft body, y el sistema de partículas incorporado 
+
+			en el cuerpo blando ó soft body:
+
+
+				1_el primero se trata dentro de la creación de los mismos soft body
+
+
+				2_asígnación de un sistema de colisión a la misma geometría en la cuál está
+
+				implementando el soft body
+
+
+				_así, primero seleccionamos la mesh/geometría, que con conforma el elemento 
+
+				soft body, no el grupo de elementos "group"
+
+
+				_y la geometría seleccionada vamos ha "Dynamics/Particles/Make Collide"
+
+
+				_luego vamos ha "window/Relationship Editor/Dynamics Relationships"
+
+
+			_ahora tenemos que asignar ambos elemento colisionadores que hemos creado con las 
+
+			partículas del sistema de soft body, que hemos creado previamente
+
+
+				_ahora vamos al outliner del panel "Dynamic Relationship Editor", y seleccionamos
+
+				"softBodyParticle"
+
+
+				_luego vamos ha "Dynamic Relationship Editor/Collisions", y procedemos a relacionar
+
+				ambos elementos colisionadores, estos sonen este caso: "ColisionadorProShape", y 
+
+				"softBodyShape"
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Springs:
+________
+
+
+			_y para conservar la distancia entre las diferentes partículas debemos agregar un controlador
+
+			de tipo "Spring", ó muelles ó limitadores por geometría
+
+			
+				_primero seleccionamos al elementos "soft Body", en este caso "softBodyParticle"
+
+
+				_y con este seleccionamos vamos ha "Dynamics/Soft-Rigid Bodies/", y hacemos "Create Spring"
+
+
+				_y a continuación veremos las opciones del sistema de "Spring":
+
+
+
+					_Spring name: 
+
+						indicar un nombre al sistema de spring
+
+			
+					_Spring Methods:
+
+
+						_Add to existing spring: (indeterminado)
+
+						_Don't duplicate spring: (indeterminado)
+
+						_Set exclusive: (indeterminado)
+ 
+						_Creation method: (indeterminado)
+
+							_Min Max:
+
+								Cáculo entre un rango mínimo y máximo
+
+
+							_All:
+
+
+							_wareframe:
+
+								Cálculo aproximado de maya (el más recomendado)
+
+
+						_Wire walk length:
+
+							Aumenta la distancia ó longitud de reacción
+
+
+					_Spring Attributes:
+
+
+						_Use per-spring stffness: (indeterminado)
+
+
+						_Use per-spring damping: (indeterminado)
+
+
+						_Use per-spring restlenghth: (indeterminado)
+
+	
+						_Stiffness: 
+
+							Capacidad de deformación periférica ó estructural de la mesh/maya, entre 
+	
+							mayor sea el valor mayor será el suavizado y resistencia de la superficie
+
+
+						_Damping:
+
+							Capacidad de reacción elástica del elemento soft body, entre mayor sea
+
+							valor menor será la flexibilidad ó capacidad de ser maleable ó receptivo
+
+							del elemento soft body
+
+
+						_Rest length:
+
+							(indeterminado)
+
+
+						_End1 weight:
+
+							(indeterminado)
+
+
+						_End2 weight:
+
+							(indeterminado)
+
+
+
+
+			ahora vamos hacer que el elemento rigid body, activo, interactúe con las partículas
+
+			del sistema de soft body:
+
+
+			_priemro seleccionamos el mesh/motive, rigid bodies, active
+
+			
+			_y con este seleccionamos vamos ha "rigidBody1/Ridig Body Attributes",
+
+			y activamos la opción de "Particle Collision"
+
+			
+			_como también aumentamos el valor de su masa "Mass", de "1 a 30", por ejemplo, para que 
+
+			así, esta mesh/motive, colisionadora tiene el suficiente peso para que al colisionar
+
+			no salga esta despedida del elemento soft body
+
+
+			_también podemos ajustar los pesos/weights, del sistema de partículas del soft body,
+
+
+				_para esto seleccionamos el sistema de partículas del elemento "soft body",
+
+				y vamos ha "softBody/ParticleShape/Gemeral Attributes/", y bajamos el valor
+
+				de "Conserve", para que el sistema soft body, mantenga ó conserve su proporción
+
+				natural ó nativa ante los impactos de colisiones y fuerzas externas
+
+					
+
+

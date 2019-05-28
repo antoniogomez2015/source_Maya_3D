@@ -1,0 +1,93 @@
+
+
+
+DETALLES:
+
+
+Tutorial:
+
+	3D Maya 125 Novedades Maya 2014 Paint Effects
+
+		https://www.youtube.com/watch?v=EhKiEOai9Qg&list=PLVnqjpSwnYEdWyuwBP5YP5TULZJGPbrkG&index=125
+	
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+Mental Ray:
+___________
+
+
+	Unified Sampling:
+	_________________
+
+
+	1_ahora el sistema del sampliado de antialiasing, ha cambiado en mental ray, ahora disponemos del nuevo 
+
+	sistema de "Unified Sampling", el cuál nos permite aplicar sus características a todos los elementos
+
+	en general de la escena que hagan uso de esta calidad como luces, surfaces, otros
+
+
+
+___________________________________________________________________________________________________________
+
+
+
+Nodes:
+______
+
+
+	Substance: (no compatible con mental ray)
+	__________
+
+
+	_también se ha agregado un nuevo nodo procedural, el cuál permite generar y configurar una gran cantidad
+
+	de materiales predefinidos dentro de los mismos recursos de maya
+
+	_este nodo se agregará e unidad a un material ya existente, no sustituirá uno existente
+
+
+	_para esto creamos una mesh/motive, y ha este mesh, le agregamos un nuevo material ej: un "Phon",
+
+	luego vamos ha "Window/Rendeirng Editors/Hypershade/2d Textures/", y allí, arrastramos el nuevo
+
+	material "Substance", sobre la mesh/motive
+
+
+	_así, veremos como en el channel, color, se ha agregado el "Substancer"
+
+	
+	_y entrando en el substancer, veremos que este nos pide que busquemos una textura, y vamos ha 
+
+	"C:\Program Files\Autodesk\Maya2014\substance\substances", en donde encontraremos todas texturas
+
+	disponibles y compatibles con "substancer", node
+
+	_luego de haber aplicado tendremos a nuestra disposición una gran serie de controles para su ajuste
+
+
+
+___________________________________________________________________________________________________________
+
+
+
+Nodes:
+______
+
+
+	Directx 11 (no compatible con mental ray)
+	__________
+
+
+	_también disponinemos de acontinuación del nodo anterior, de un nodo de "Directx 11", con el cuál podremos
+
+	visualizaciones increibles a través de materiales disponibles en el mismo sistema de maya, haciendo uso
+
+	de toda la calidad de la tarjeta gráfica
+
+
+

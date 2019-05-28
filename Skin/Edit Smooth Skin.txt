@@ -1,0 +1,172 @@
+
+Animation/Skin/Edit Smooth Skin
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	_edición por componente ó sub-elementos:  "Component Editor"
+		
+
+	para hacer ajustes detallados en el proceso de skin: primero seleccionamos los vertices a los cuales deseamos modificar su influente ejecida y vamos al menú
+
+	Window/General Editor/Component Editor/y dentro de este panel vamos ha "Smooth Skin"
+
+		_así, aparecerá una lista con los vertex, seleccionados por un lado y por otro lado los joints, y
+
+		bones, que influyen ó ejercen fuerzas sobre estos vertex
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	Add Influence / Remove Influence:
+
+		esta opción permite agregar más huesos posteriormente al proceso de skinnning, con el objetivo
+
+		de ejercer más influencia en el proceso de skin  rigging,
+
+		_para esto, primero seleccionamos el bone ó chain, hueso ó cadenada generada posteriormente, 
+
+		_luego seleccionamos la mesh/character, ya con el proceso de skin, aplicado y vamos al menú
+
+		Animation/Skin/Edit Smooth Skin/Add Influence
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	Set Max Influence..:
+
+		esta opción permite indicar la cantidad de elementos ó joints ó bones, ejercerán incluencia
+
+		en los elementos seleccionados a los cuales le estamos aplicando "Set Max Incluences.."
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	Reset Weight to Default:
+
+		esta opción nos permite volver a la posición inicial de skin, hasta su punto de creación
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	Move Skined Joints Toos:
+
+		esta opción nos permite mover bones/huesos a los cuales ya le hemos aplicado el proceso de Skin,
+
+		para seleccionamos el bone, deseado y vamos al menú Animtation/Skin/Edit Smooth Skin/"Move Skinned Joint Tool",
+
+		y movemos ó editamos el hueso en cuestión
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	Paint Skin Weight Tool: (edición de "Smooth Bind", process)
+
+		esta opción nos permite editar el mapa del alcance de la influencia de cada hueso en relación
+
+		a los demás huesos, sobre la mesh/character
+
+
+		_primero seleccionamos la mesh/character
+
+		_luego vamos al menú ANimation/Skin/Edit Smooth Skin/"Paint Skin Weight Tool"
+
+		_si hacemos doble click sobre la herramienta "Paint Skin Weight Tool", veremos sus opciones de edición
+
+
+			_Profile/brush: esta opción nos permite seleccionar el tipo de pincel, entre suaves y duros
+
+			
+			_Radio: esta opción nos permite ajustar el dámetro de la herramienta brush tool, shortcut "B + mouse left click + drag left/right"
+
+
+			_Tools: estas opciones nos permiten ajulizar el trabajo
+
+				_copy/paste: esta opción nos permite intercambiar los valores de weights/pesos
+
+				de unas áreas de unos vertices a otras áreas
+
+					_copy/paste: esta opción la podemos hacer desde los accesos directos de esta sección tool/copy - paste
+
+					_copy/paste: ó desde el menú Animation/Skin/Edit Smooth Skin/"Copy Vertex Weights" - "Paste Vertex Weights"
+
+				_Weight Hammers:
+
+					_primero seleccionamos vetices en "Mode Paint Select"
+
+					_luego con los tertex, seleccionamos aplicamos la herramienta 
+
+					"Weight Hammers", pintando en el "Mode Paint Select"
+
+					_incluso en esta misma modalidad de vertex, aplicar el 
+
+					Animation/Skin/Edit Smooth Skin/"Smooth Skin Weights"
+
+				_Move weight: indeterminado
+
+				_Show weight: indeterminado
+
+
+			_Normaliza Weights: esta opción nos permite seleccionar como deseamos que realiza la normalización de los pesos
+
+				_Post: posterior
+
+				_Interactive: interactiva
+
+				_Off: sin normalización
+
+			_tmabién disponemos de un listado de los "Joints", para seleccionar en cuál de estos
+
+
+			deseamos modificar la influencia que éste ejerse sobre la mesh/character
+
+
+
+			_Mode: 
+
+				_Paint: esta opción nos permite editar el mapa de weights/pesos, del skinning
+
+				_Select: esta opción nos permite seleccionar vertex, al igual que el modo normal sub-elementos/vertex
+
+				_Paint Select: modo de selección de vertices
+
+
+
+			_Paint operation:
+
+				Shortcut de uso de los brush: "Value"
+
+					_agregar influencia: mouse left click + drag
+
+					_eliminar influencia: control + mouse left click + drag	
+
+				_opacity: gradua la fuerza le herramienta
+
+				_value: gradua la fuerza le herramienta			
+
+				_replace: esta opción permite cambiar de un estado a otro (influencia on/off)
+
+				_Add: esta opción permite agregar más tramas exponencialmente lo ya pintado
+
+				_Scale: esta opción permite multiplicar exponencialmente lo ya pintado
+
+				_Smooth: esta opción permte suavizar la interpolación entre los estados on/off
+			
+
+
+			_al seleccionar un joint, para editar su influencia veremos partes blancas y negras en mapa de influencia
+
+				_zonas blancas: indican el alcance de influencia ó deformación del joint en cuestión
+
+				_zonas negras: indican las partes en las cuales el joint, en cuestión no ejerse influencia
+

@@ -1,0 +1,114 @@
+
+
+DETALLES:
+
+
+también disponemos de la opción crear cuerpos blandos con características especiales como lodo, mermelada, otros
+
+
+	_los cuales no repelan los objetos colisionadores ó las fuerzas que ejercen sobre estos
+
+
+	_como tampoco la propiedad de recobrar su forma original más sí, tomar la forma resultante
+
+	de la colisión entre ambos cuerpos ó entre las Fields/Fuerzas y el cuerpo soft body
+
+
+el proceso es el mismo que para cualquier sistema de soft body, más el atributo de "Conserve"
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	_primero creamos la mesh, que hará de soft body, ésta la colocamos en su posición y según la lógica
+
+	deseada
+
+
+		_esta mesh, debe tener una alta resolución
+
+		
+		_esta mesh, no debe de tener historia
+
+	
+		_luego la seleccionamos y vamos ha "Dynamic/Soft-Rigid Bodies/Create Soft Body/Options",
+
+		y creamos un sistema de soft body/Goals
+
+
+
+	_luego creamos la mesh/motive, que hará de colisionador 
+
+
+		_la cuál la colocaremos según la lógica de escena
+
+
+		_esta mesh, no debe de tener historia
+
+		
+		_ha esta mesh, debemos hacer "Modify/Free Transformations"
+
+
+		_luego la seleccionamos y vamos ha "Dynamic/Particles/Make Collide"
+
+		
+		_luego procedemos ha animar la mesh, hace de colisionador sobre la mesh, soft body
+
+
+	_ahora vamos ha "Window/Relationship Editor/Dynamics relationship", así abriremos el panel
+
+	"Dynamic Relationship Editor"
+
+
+		_luego vamos al outliner, del panel y seleccionamos el sistema de partículas del soft body
+
+
+		_ahora vamos a la pestala "Collision", y seleccionamos los elementos colisionadores deseados
+
+		para que así, éstos queden relacionados con el sistema de partículas de soft body
+
+
+	_y por último prodemos a controlar el sistema ó simulación, para esto disponemos de los siguientes parámetros:
+
+
+		_primero seleccionamos el sistema de partículas que conforma el soft body, y vamos ha "copyOfBarroParticle
+
+		/Attribute Editor/", y configuramos los los atributos:
+
+
+			_General Control Attributes:
+
+
+				_Conserve: colocamos el valor en "0"
+
+					de esta menera el sistema no tratará de recuperar la forma original
+
+					de la mesh/motive, soft body, de forma relativa
+
+
+			_Goal Weights and Objects:
+
+
+				_Goal Smoothness:
+
+					es recomendable colocar esta valor relativamente alto "3", para que
+
+					así, el sistema tenga más flexibilidad y no trate de recuperar la forma
+	
+					de la mesh/motive, soft body
+
+
+				_BarroShape:
+
+					es altamente recomendable colocar este valor bajo entre "0.1 - 0.3",
+
+					para que así, el sistema tenga más flexibilidad y no trate de recuperar la forma
+	
+					de la mesh/motive, soft body
+					
+
+
+
+
+

@@ -1,0 +1,122 @@
+
+
+DETALLES:
+
+
+las opciones de los sistemas de "Fluid Effects", tenemos la posibilidad de condicionar la creación
+
+de fluidos a través, de formas personalizadas, creadas a partir de formar generadas por el modo "paint",
+
+por medio de la herramienta "Paint Fluid Tool", ó a través, de una spline/path/trayectoria, y otros métodos
+
+
+de esta manera podremos generar una máscara de manera que la simulación se generará ó creará sólo dentro
+
+ó enmarcada dentro de la forma/máscara, personalizada que hemos generado
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Falloff personalizados:
+_______________________
+
+
+
+	_primero creamos un contenedor con un emisor
+
+
+	_ahora vamos ha "fluidShape1/Contents Method/Falloff Method/", y elegimos la opción
+
+	"Static Grid"
+
+
+	_ahora vamos ha "fluidShape1/Shading/Dropoff Shape/", y seleccionamos la opción "Use Fallow Grid"
+
+	(este modo de visualización lo activamos temporalmente para el proceso de pintado de falloff)
+
+
+	_ahora vamos ha "Dynamics/Fluid Effects/Add-Edit Contents/Paint Fluids Tool/Options", así,
+
+	se nos abrirá el panel de opciones de la herramienta de pintado de fluidos:
+
+
+		_por lo general la herramienta utiliza los mismos criterio de pintura de las demás
+
+		modalidades de pintado, por ende sólo debemos tomar en relevancia para este caso
+
+		las siguiente opciones de la herramienta:
+
+
+		_Paintable attributes:
+
+			_en esta opción debemos seleccionar la opción de "Falloff", para que así,
+
+			pintemos sobre el mapa de desvanecimiento ó máscara del fluido
+
+
+	así, antes de empezar a pintar es conveniente asegurarse de que nos encontramos en el 
+
+	fotograma "1", para que este se creará como un inicial estado al inicializar la simulación
+
+	del fluido posteriormente
+
+
+	_luego procedemos con el proceso de pintado entendiendo que las zonas que pintemos serán las 
+
+	zonas donde se generará la simulación posteriormente
+
+
+	_al finalizar el proceso de pintado podemos salir de la herramienta y del modo de pintado "w",
+
+	para posteriormente ir a las opciones de "fluidShape1/Shading/Dropoff Shape/", y seleccionamos 
+
+	la opción "As Render", así al reproducir la simulaciones podremos ver que la simulación se generará
+
+	sólo en las áreas correspondientes a la máscara que hemos pintado
+
+	
+	_para elimianr máscaras de falloff, seleccionamos el contenedor y con este seleccionado vamos ha
+
+	"Dynamics/Fluid Effects/", y seleccionamos la opción "Clear Initial State"
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+	_ahora, para crear un mapa de falloff, a través, de una spline/path, a parte de tener ya generado
+
+	un contenedor y un emisor, debemos de crear una spline, la cuál, servirá de path/trayectoria 
+
+	del fluido, 
+
+
+	_posteriormente seleccionamos el contenedor y luego seleccionamos la spline, deseada y ambos 
+
+	elementos seleccionamos vamos ha "Dynamics/Fluid Effects/Add-Edit Contents/With Curve/Options",
+
+	y en las opciones desactivamos todos los atributos menos el atributo "Falloff", y, dejamos
+
+	también la opción activada de "Set Initial State"
+
+
+	así, podremos ver que se creará un mapa de máscara en relación a la trayectoria de la spline/path,
+
+	en relación al diámetro escogido en las opciones de su creación
+
+
+	_posteriormente vamos a las opciones de "fluidShape1/Display/Shaded Display/", y pasamos de la 
+	opción "Falloff", a la opción "Ass Render", así, al reproducir la simulación esta se representará
+
+	sólo en el área correspondiente a la dimesión y longitud de la spline/path
+	
+
+
+	_luego, procedemos a reproducir la simulación hasta un punto deseado	
+
+
+	
+		

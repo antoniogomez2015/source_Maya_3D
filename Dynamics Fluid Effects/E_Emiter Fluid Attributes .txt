@@ -1,0 +1,192 @@
+
+
+DETALLES:
+
+
+en los sistemas de contenedores de fluidos, podemos ajustar las características que tendrá los
+
+emisores que accionarán dentro de el contenedor, así, podremos activar ó desactivar opciones
+
+y características de emisión
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+FuidEmitter1:
+_____________
+
+	
+	Fluid Attributes:
+	_________________
+
+
+	_Density Method:
+
+		podemos seleccionar un método para la densidad ó volúmen ó transparencia de la 
+		simulación, estos métodos son
+
+
+			_No Emission:
+
+				podemos desactivar la densidad en la emisión, en este caso la 
+				ausencua de densidad, hará desaparecer la simulación
+
+
+			_Add:
+
+				podemos Add/Agregar, densidad a la sumulación
+
+
+			-Replace:
+
+				podemos reemplazar la densidad a un densidad existente previamente
+	
+				de una sumulación anterior ó de una "Star Emission"
+
+
+	_Density/Voxel/Sec:
+
+		del método seleccionado podemos indicar un valor para este relación a la resolución
+
+		del contenedor y las fuerzas implícitas en el contendor
+
+
+	_Density Emission Map_
+
+		en un emisor personalizado a través, de una geometría podemos también, hacer que
+
+		este amita partículas a través de una textura a través, de sus valores de luminancia
+
+		por medio de un mapa de texturas
+
+
+	-----------------------------------------------------------------------------------------
+
+
+
+	_Heat Method:
+
+		podemos seleccionar un método para el Heat/Calor, de la simulación, estos métodos 
+		son
+
+
+			_No Emission:
+
+				podemos desactivar el calor en la emisión, de la simulación
+
+				
+
+			_Add:
+
+				podemos Add/Agregar, calor a la sumulación
+
+
+			-Replace:
+
+				podemos reemplazar el calor a un calor existente previamente
+	
+				de una sumulación anterior ó de una "Star Emission"
+
+
+	_Heat/Voxel/Sec:
+
+		del método seleccionado podemos indicar un valor para este relación a la resolución
+
+		del contenedor y las fuerzas implícitas en el contendor
+
+
+	_Heat Emission Map_
+
+		en un emisor personalizado a través, de una geometría podemos también, hacer que
+
+		este amita partículas a través de una textura a través, de sus valores de luminancia
+
+		por medio de un mapa de texturas
+
+
+	-----------------------------------------------------------------------------------------
+
+
+
+	_Fuel Method:
+
+		podemos seleccionar un método fuel/fuego, de la simulación, estos métodos son
+
+
+			_No Emission:
+
+				podemos desactivar el fuego en la emisión, de la simulación
+
+
+			_Add:
+
+				podemos Add/Agregar, fuego a la sumulación
+
+
+			-Replace:
+
+				podemos reemplazar el fuego a un fuego existente previamente
+	
+				de una sumulación anterior ó de una "Star Emission"
+
+
+	_Density/Voxel/Sec:
+
+		del método seleccionado podemos indicar un valor para este relación a la resolución
+
+		del contenedor y las fuerzas implícitas en el contendor
+
+
+	_Density Emission Map_
+
+		en un emisor personalizado a través, de una geometría podemos también, hacer que
+
+		este amita partículas a través de una textura a través, de sus valores de luminancia
+
+		por medio de un mapa de texturas
+
+
+	-----------------------------------------------------------------------------------------
+
+
+	_Fluid Dropoff
+
+		podemos indicar un calor reajuste entre los puntos de la simulación y las 
+		superficies de los emisores pesonalizados y en el comportamiento general de la 
+		simulación, mejorando su aspecto y desenvolvimiento entre más alto el valor, ej: (6)
+
+
+	_Emit Fluid Color:
+
+		podemos indicar que directamente desde el emisor, los puntos de las dimulación
+
+		ya se emitar con color antes de llegar ha Shading/color
+
+
+	_Fluid Color:
+
+		podemos
+
+
+	_Motion Streak
+
+		podemos activar opción la cuál crear comportamiento en los movimientos y morfología
+
+		de la simulación aunque disminuye su tamaño y relentiza la reproducción de la
+
+		simulación
+
+
+	_Jilter:
+
+		podemos activar esta opción la cuál mejora la representación de los gráficos
+		
+
+		
+
+
+
+
+

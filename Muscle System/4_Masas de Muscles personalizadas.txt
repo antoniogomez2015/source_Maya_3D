@@ -1,0 +1,155 @@
+
+DETALLES:
+
+	Todas las opciones de muscle, con splines, cuentan con la opción natural de "mass muscle", ó la reacción la masa 
+
+	que conforma el músculo ante las fuerzas cintrífuga y centrípeta (reacciones visibles sólo cuando los muscles, 
+
+	están en un proceso de animación)
+
+
+
+
+
+
+	Animation/Msucle/Bonus Rigging/Create Msucle Spline...:
+	_______________________________________________________
+
+
+	DETALLES: este sistema es idoneo para ser emparentado a partes de un caracter ó sistema mecánico personalizado
+
+
+	Esta opción nos permite crear una estructura de deformadores manejados a través de una spline, la cuál los conecta y hará 
+
+	de deformador al esta ser movida ó desplazada 
+
+	esta estructura la podemos relacionar con una mesh, personalizada por nosotros 	la cuál hará de músculo de influencia 
+
+	para deformar una mesh/motive, a continuación presentamos el proceso de creación y edición de de este tipo de muscle system:
+
+	
+
+	_primero vamo ha "Animation/Msucle/Bonus Rigging/Create Msucle Spline...", así se abrirá una ventana con las opciones de
+
+	creación de la estructura deformadora, dichas opciones son:
+
+		_Name: para indicar un nombre para la estructura
+
+		_Num Insertion Controls y type: cantidad de rigs/handles, controladores por el usuario
+
+		_Num Driven y type: cantidad de "joints", controladoras de la deformación
+
+		_Contrain Mid Controls: rigs, deformadores de interpolación media de la influencia
+
+		_Create Muscle Spline Rig: botón para crear la estructura
+
+
+
+	Animation/Muscle/Simple Muscle/Apply Muscle Spline Deformer...:
+	_______________________________________________________________
+
+
+	DETALLES: este sistema es idoneo para ser emparentado a partes de un caracter ó sistema mecánico personalizado
+
+
+	_primero creamos la mesh, que hará de muscle, personalizado
+
+	_con dicha mesh, seleccionada vamo ha Animation/Muscle/Simple Muscle/Apply Muscle Spline Deformer..., así,
+
+	se abrirá un ventana con las opciones de creación de esta estrura de simple muscle, estas opciones son:
+
+		_Name: asignarle un nombre al sustema de simple muscle
+
+		_Num Controls / Type: número de rigs/handles, que tendrá el sistema
+
+		_Make Muscle Object: hacer estrutura de objetos
+
+		_Setup Muscle Spline Deformer: crear sistema con los parámetros definidos sobre la mesh/muscle
+
+
+
+	
+	Animation/Muscle/Simple Muscles/Custom muscle Shapes..:
+	_______________________________________________________
+
+
+	DETALLES: esta opción nos permite editar la forma que tendrá el muscle, creado en determinadas posiciones ó estados 
+
+	del muscle, tanto con la opción de "Animation/Msucle/Bonus Rigging/Create Msucle Spline...", como de la opción 
+
+	"Animation/Muscle/Simple Muscle/Apply Muscle Spline Deformer..."
+
+
+
+	_primero vamos ha "Animation/Muscle/Simple Muscles/Custom muscle Shapes..", así se abrirá una ventana con las opciones
+
+	de edición del simple muscle, creado, estas opciones son:
+
+		_Geo: aqui podemos cargar la geometría/mesh, a deformar
+
+		_Prep for Sculp / slider: prepara la geometría para esculpir sobre esta y la coloca en sub-elementos activos,
+
+		el slider, es para graduar la asígnación o fuerza ejercida sobre la mesh, en el proceso de esculpido
+
+		_Create New: para crear un nuevo estado de deformación de la mesh, ej: como se deformará en esta en el estado de "flexión"
+
+		_Edit: opción para volver a editar los estados creados
+
+		_Rename: posibilidad de volver ha renombrar los nombre de los estados de deformación creados
+
+		_Delete: posibilidad de borrar estados de deformación creados
+
+		_Blend / slider: permite funsionar el estado natural ó nativo de la mesh con el de las deformaciones generadas
+
+		_Current State / slider: indica el valor de la fuerza ejercida entre una deformació influyente aplicada a la mesh/muscle
+
+
+	_workflow:
+
+		_para crear un estado debemos seguir los siguientes pasos, estos son:
+
+			_primero debemos colocar la mesh/muscle, en el estado en el cuál deseamos hacer una deformación, 
+
+			para esto seleccionamos uno de sus rigs/handles, de sus extremos y lo movemos hacia uno de los estados
+
+			posibles, por lo general "squash", "stretch"
+
+
+			_luego, Prep for Sculpt: para activar la mesh/muscle, en modo de esculpido
+
+			_luego debemos modificar la mesh, a través de sus sub-elementos, vertex u otros
+
+			_Create New: para crear un nuevo estado con la deformación que hemos hecho
+
+			_así, debemos repetir estos pasos para cuantos estados desiemos que contenga el mesh/muscle, creado
+
+	
+
+
+	Animation/Muscle/Simple Muscles/Apply Muscle Stretch Deformer:
+	______________________________________________________________
+
+
+	DETALLES: esta opción es similar ha "Animation/Muscle/Simple Muscle/Apply Muscle Spline Deformer...", pero con menos
+
+	controles y capacidad de detalle en los movimientos y deformaciones
+
+
+	
+	_primero seleccionamos la mesh/muscle, que hara de muscle
+
+	_luego con la mesh/muscle, seleccionada vamos ha Animation/Muscle/Simple Muscles/Apply Muscle Stretch Deformer, así, 
+
+	se generará un sistema de muscles es cuál constará de tres "Locators", uno a cada extremos de la mesh/muscle, 
+	
+	y uno en el medio de esta
+
+	_con estos locators, podemos moverlos para generar las deformaciones deseadas sobre la mesh/muscle, com también
+
+	emparentarlos con sistemas de articulaciones así, como de characters
+	
+
+
+
+
+

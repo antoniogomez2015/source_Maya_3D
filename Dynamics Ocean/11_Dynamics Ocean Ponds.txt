@@ -1,0 +1,65 @@
+
+
+
+
+DETALLES:
+
+
+también disponemos de sistemas para la creación de "Oceanos y Mares ó Rios", los cuales son altamente configurables
+
+prácticos y de poco peso y ocreacen un alto realismo para lograr "Oceanos y Mares ó Rios"
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Ocen Systems Ponds: (estanques)
+___________________
+
+
+
+	tenemos la posibilidad de crear también, sistemas de oceanos más reducidos pero con mejores características
+
+	y controles que nos permitirán tener mejores resultados, especialmente útil para hacer lagos, charcos, pscinas,
+
+	otros
+
+
+
+	_para crar un Ponds/estanque, vamos ha "Dynamics/Fluid Effects/Ponds/Create Pond",
+
+
+	_así, se creará un sistema de ponds, el cuál, se compone de un container/contenedor y, una geometría interna
+
+	que representará el líquido simulado
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+	_así, en los sistemas de ponds/estanques, tenemos la posibilidad de agregar ha estos las mismas características
+
+	que los sistemas ocean, estas características son:
+
+
+		_Create Wake
+
+		_Add Pond Surface Locator
+
+		_Add Dynamics Locator
+
+		_Add Boat Locator
+
+		_Add Dynamic Buoy
+
+		_Float Selected Objects
+
+		_Make Boats
+
+		_Make Motor Boats
+
+
+	dichos atributos tienen las mismas características y controles que en los sistema oceans

@@ -1,0 +1,52 @@
+
+
+
+DETALLES:
+
+
+tenemos la posbilidad de hacer "Caches", de los sistemas de partículas para así, poder reproducir 
+
+los sistemas de partículas directamente desde el desplazamiendo del slider, del timeline, a través,
+
+del movimiento manual de cabezal, sin la necesidad de volver a realizar la simulación una y otra vez
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	_primero creamos un sistema de partículas, sea este a través de un emisor ó un particle/brush, etc:
+
+
+	_luego reproducimos la simulación de las partículas desde el frame/fotograma, inicial deseado hasta
+
+	el frame/fitigrama, final deseado
+
+
+	_luego ajustamos la duración del timeline, hasta esa longitud de fotogramas deseados inicial/final,
+
+	para no hacer un cache, de partes de la simulación no deseada
+
+
+	_luego seleccionamos en el "outliner/", el sistemas de partículas deseados, ej: "particle1", luego
+
+	de seleccionar el sistema de partículas deseado vamos ha "Dynamics/Solvers/Create Particles Disk Cache/"
+
+	y entramos a sus opciones "Options",
+
+
+	_y, en las opciones de exportación del cache, podremos indicar el modo de duración de la simulación así,
+
+	los sistemas de partículas incluidos, otros
+
+
+	_y, para finalizar la creación del cache, del sistema de partículas deseado, hacemos "Apply", ó "Create"
+
+
+	_así, podremos ver, que el mover el slider, del cabezal del timeline, el sistema de partículas deseado
+
+	se reproduce de forma precargada y no dinámica para un mejor manejo y apreciación
+	
+
+			

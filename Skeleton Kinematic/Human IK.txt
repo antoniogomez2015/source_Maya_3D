@@ -1,0 +1,24 @@
+
+(maya 2013)
+
+_Animation/Skeleton/Human IK... (Skeleton Generator panel)
+
+
+	_Icon/Create/Skeleton, así, se creará un skeleton bípedo
+
+	_Skeleton:
+
+		_character scale: aqui podemos escalar el skeleton a un tamaño deseado
+
+		_como también podemos configurar la contidad de huesos para las diferentes parte del bípedo
+
+		como spine, neck, shoulder,roll,fingers,toes..
+
+		_(opcional para versión 2012), al terminar de editar como necesitamos el skeleton a utilizar debemos activar el candado para
+
+		bloquear el skeleton, indicando así, que esta disponible para el siguiente proceso
+
+		_luego para aplicar el rigiing, al skeleton creado en el proceso anterior vamos al Icono/Create/ Control Rig
+
+		_a su vez, se creará en el outliner panel, un elemento "Character Set", respectivo
+

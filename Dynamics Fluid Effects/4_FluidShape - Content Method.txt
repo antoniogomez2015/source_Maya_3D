@@ -1,0 +1,235 @@
+
+
+DETALLES:
+
+
+tenemos la posibilidad de personalizar tanto los emisores como los contenedores a través, de la 
+
+paridad de sus controles, de esta menera podemos ppersonalizar las características de un contenedor
+
+en relación a las características configuradas previamente en un emisor
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+NOTA	los métodos de los contenedores se equiparan ó reflejan con los métodos de los emisores en
+
+	fluidEmitter1/Fluid Attributes/ Density - Heat - Fuel - Fluid Dropoff - Fluid Color Method
+
+
+	de esta manera es lógico hacerlos coincidir en cierta manera para que se correlacionen tanto
+
+	en su emisión/Emitter, como en su reacción/Fluid Container
+
+
+---------------------------------------------------------------------------------------------
+
+
+Métodos de contenido:
+____________________
+
+	
+
+	_Densidad:
+
+		_podemos escoger el modo de emisión de densidad así, como desactivarla si es preciso
+
+		y disponemos de las siguientes opciones:
+
+
+			_Off (Zero):
+
+				_podemos desactivar la smisión de densidad en el contenedor
+
+				(al desactivar la densisdad no serán visibles las simulaciones)
+
+
+			_Static Grid:
+
+				_este método permite agregar densidad a una simulación de forma
+
+				dinámica e interactiva a través, de todos los elementos y fuerzas
+
+			
+			_Dinamic Grid:
+
+				_este método permite agregar densidad de forma manual a través,
+
+				de la herramienta "Paint Fluid Tool", al contenedor
+
+
+			_Gradient:
+
+				_esta opción permite llenar el contenedor de forma ponderada con
+
+				el sistema de imisción para generar un estado inicial así, podremos
+
+				también, escoger la cordenada de trabajo
+
+
+	-------------------------------------------------------------------------------------
+
+
+	_Velocity:
+
+		_podemos escoger el modo de emisión de velocidad así, como desactivarla si es 
+		preciso y disponemos de las siguientes opciones:
+
+
+			_Off (Zero):
+
+				_podemos desactivar la smisión de densidad en el contenedor
+
+				
+			_Static Grid:
+
+				_este método permite agregar velocidad a una simulación de forma
+
+				dinámica e interactiva a través, de todos los elementos y fuerzas
+
+			
+			_Dinamic Grid:
+
+				_este método permite agregar velocidad de forma manual a través,
+
+				de la herramienta "Paint Fluid Tool", al contenedor
+
+
+			_Gradient:
+
+				_esta opción permite llenar el contenedor de forma ponderada con
+
+				el sistema de imisción para generar un estado inicial así, podremos
+
+				también, escoger la cordenada de trabajo
+
+
+	-------------------------------------------------------------------------------------
+
+
+	_Temperature:
+
+		_podemos escoger el modo de emisión de temperatura así, como desactivarla si es 
+		preciso y disponemos de las siguientes opciones:
+
+
+			_Off (Zero):
+
+				_podemos desactivar la smisión de temperatura en el contenedor
+
+				
+			_Static Grid:
+
+				_este método permite agregar temperatura a una simulación de forma
+
+				dinámica e interactiva a través, de todos los elementos y fuerzas
+
+			
+			_Dinamic Grid:
+
+				_este método permite agregar temperatura de forma manual a través,
+
+				de la herramienta "Paint Fluid Tool", al contenedor
+
+
+			_Gradient:
+
+				_esta opción permite llenar el contenedor de forma ponderada con
+
+				el sistema de imisción para generar un estado inicial así, podremos
+
+				también, escoger la cordenada de trabajo 
+
+	-------------------------------------------------------------------------------------
+
+
+	_Fuel:
+
+		_podemos escoger el modo de emisión de combustión así, como desactivarla si es 
+		preciso y disponemos de las siguientes opciones:
+
+
+			_Off (Zero):
+
+				_podemos desactivar la smisión de combustión en el contenedor
+
+				(al desactivar la densisdad no serán visibles las simulaciones)
+
+
+			_Static Grid:
+
+				_este método permite agregar combustión a una simulación de forma
+
+				dinámica e interactiva a través, de todos los elementos y fuerzas
+
+			
+			_Dinamic Grid:
+
+				_este método permite agregar combustión de forma manual a través,
+
+				de la herramienta "Paint Fluid Tool", al contenedor
+
+
+			_Gradient:
+
+				_esta opción permite llenar el contenedor de forma ponderada con
+
+				el sistema de imisción para generar un estado inicial así, podremos
+
+				también, escoger la cordenada de trabajo
+
+		
+
+	-------------------------------------------------------------------------------------
+
+
+	-Color Method:
+
+		_podemos escoger el criterio de color que tendrá el contenedor, estos son:
+
+
+			_Use Shading Color:
+
+				_esta opción indica que el color a la simulación se agregará
+
+				a través, de "fluidShape1/Shading/Color"
+
+
+			_Static Grid
+
+				_esta opción indica que el color a la simulación se agregará
+
+				a través, de "Static Grid"
+
+
+			_Dinamic Grid:
+
+				_esta opción indica que el color a la simulación se agregará
+
+				a través, de "Dinamic Grid"
+
+
+	_Felloff Method:
+
+		_esta opción indica el método de decaimineto, y, disponemos de los siguientes:
+
+
+			_Statid Grid:
+
+				_esta opción indicar que el control de decaimiento por 
+
+				el "Static Grid"
+
+
+			_Off (Zero):
+
+				_esta opción indicar que el control de decaimiento estará 
+				desactivado
+
+
+
+
+---------------------------------------------------------------------------------------------
+
+

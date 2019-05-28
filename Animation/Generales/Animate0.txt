@@ -1,0 +1,107 @@
+
+///////////////////////////////////////////
+
+Consideraciones:
+_______________
+
+Preferences/Time Slider/real Time [24Fps], esta opción permite reproducir las animaciones a tiempo real en relación al FPS, indicado
+
+
+
+///////////////////////////////////////////
+
+General:
+________
+
+
+_borrar fotogramas sin acción ó interpolación en el tiempo: seleccionamos el motivo/mesh, deseado y aplicamos
+
+Edti/Delete by Type/Static Cahnnels, así, se borrarán los fotogramas que se han creado automáticamente en propiedades que no hemos animado
+
+
+
+
+///////////////////////////////////////////
+
+Timeline:
+_________
+
+
+_ajuste del timing: shift + mouse left click + drag, en el segmento de fotogramas en el tiemeline, esta sección se volverá de color rojo
+
+	_así, podremos mover este bloque de fotogramas ajustando su ubicación en el timeline, a través de un handle central
+
+	_así, como también hacer ajustes de velocidad estrechando la duración lo longitud del bloque de keygrames seleccionados a través de unos handles laterales
+
+
+
+
+///////////////////////////////////////////
+
+Animación Conducida "Set Driven Key":
+_____________________________________
+
+
+Animation/Animate/Set Driven Key/Set
+
+
+Set Driven key Editor:
+
+	_Load Driver: esta opción nos permite cargar la mesh, manejadora
+
+	_load Driven: esta opción nos permite cargar la mesh, manejada
+
+	_ahora colocamos las meshes, en el estado inicial en relación a las propiedades que deseamos relacionar entre estas para que mantengan la lógica
+
+	_luego debemos seleccionar las propidades que quedarán relacionadas entre ambos elementos mesh, ej: translate "Y"...
+
+	_luego de haber seleccionado las propiedades y cordenadas relacionadas hacemos "Key", para fijar un estado inicial de animación
+
+	_posteriormente movemos la meshes, hasta el estado secundario de la acción relacionada entre ambas (esta acción no requiere la acción de fotogramas en el tiemeline)
+
+	_y finalmente aplicamos nuevamente "Key", para fijar la acción que relaciona las propiedades vinculadas
+
+
+
+
+
+
+
+///////////////////////////////////////////
+
+Trails de animación:
+____________________
+
+_Animation/Animate/Create  Editable Motion Trail: para ver las trayectorias de animación para visualización y edición
+
+
+
+
+
+
+
+///////////////////////////////////////////
+
+Path animation:
+_______________
+
+
+	_primero creamos la spline, que hará de trayectoria de animación
+
+	_luego creamos el modito/mesh, que será aniamada sobre la trayectoria "Path"
+
+	_ahora seleccionamos el motive/mesh, y luego con shift, seleccionamos el path/trazado, spline
+
+	_luega con ambos elementos seleccionados vamos ha Animation/Animate/Motion Paths/Attach to Motion Path
+
+	así, el motivo se señirá al path de animación y al mover el timeline, el motive recorrerá el path, de animación
+
+	_para más control ver las opciones de "Attach to Motion Path"
+
+	_para configurar las dirección ó ángulo que sigue el motivo/mesh, en relación a la trayectoria del path/spline,
+
+	podemos hacer en las opciones del motive/mesh, que han agregado, estas son: "motionPath1"
+	
+
+
+
