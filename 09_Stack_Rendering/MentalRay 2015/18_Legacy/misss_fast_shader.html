@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Misss Fast Shader:
+    __________________
+
+        _el nodo "Misss Fast Shader", nos permitirá crear materiales realistas de cuerpos blandos y orgánicos, tanto animales como humanos
+
+        _para emular tejidos y piel de diferentes densidades y características propias de elementos con vida
+
+        _como también, para la creación de elementos mixtos como gomas, cauchos, ceras, parafinas, gelatinas, celulosas, frutas, dulces, otros
+
+        _alternativamente también, se pueden emular algunos plásticos y cristales los cuales requieran representar diferentes densidades en relación a su complejidad, otros
+
+
+    Parámetros:
+    ___________
+
+        _Optical Properties:
+
+            _Diffuse Shader:
+
+                _éste parámetro nos permitirá determinar una material personalizado ó nodo 
+                
+                _para controlar así, la apariencia principal del canal diffuso, en los casos que desiemos que sea más allá de un color plano 
+                
+                _por ejemplo; para los cosas en los que tengamos mapeado un motivo, piel, otros
+
+            _Diffuse Color:
+
+                _éste parámetro nos permitirá determinar un color base para el material principal 
+                
+                _el cuál, representará un punto de partida para la generación del sistema 
+                
+                _de ésta manera, por defecto tiene un color blanco, para no influir de forma nativa en los colores de densidad tanto frontal como posterior
+
+            _Diffuse Weight:
+
+                _éste parámetro nos permitirá determinar un umbral ó fuerza de influencia tanto del "diffuse color", como del "diffuse weight"
+
+            _Specular Shader:
+
+                _éste parámetro nos permitirá agregar un nodo auxiliar para generación, control y mapeo de la especularidad del sistema
+
+                _de ésta manera, mentalray, dispone del nodo "mentalray/legacy/misss_skin_specular"
+
+            _Front SSS Color:
+
+                _éste parámetro nos permitirá determinar un color para el área más próxima del sistema de sub surface scattering
+
+            _Front SSS Weight:
+
+                _éste parámetro nos permitirá determinar un umbral ó fuerza de influencia del color frontal del sistema de sub surface scattering
+
+                _entendiendo así, que éste valor por lo general deberá de ser un valor medio
+
+                _para que así, éste parámetro deje pasar información del color de fondo, mientras que a su vez, deje ó conserve información del color frontal ó color principal
+
+            _Back SSS Color:
+
+                _éste parámetro nos permitirá determinar un color para el área más alejada ó fondo del sistema de sub surface scattering
+
+            _Back SSS Weight:
+
+                _éste parámetro nos permitirá determinar un umbral ó fuerza de influencia del color tracero ó secundario del sistema de sub surface scattering
+
+                _entendiendo así, que éste valor por lo general deberá de ser un valor medio - alto
+
+                _para que así, éste parámetro deje pasar cierta información de la iluminación del fondo y ambiente de la escena
+                
+                _mientras que a su vez, proyecte información al color frontal ó color principal
+
+            _Bump:
+
+                _éste parámetro nos permitirá agregar un nodo auxiliar para generación, control y mapeo del efecto de relieves del sistema de sub surface scattering, como parámetro adicional
+
+            _Light Map:
+
+                _éste parámetro es controlado por defecto a través, del mapa ó nodo "mentalrayTexture"
+
+                _a través, del cuál, se procesa la información de la iluminación de la escena sobre la geometría con el material "misss fast shader"
+
+        _Algorithm Control:
+
+            _Front SSS Radius:
+
+                _éste parámetro nos permitirá indicar el umbral ó alcance que tendrá el color frontal del sistem de sub surface scatering
+
+                _de ésta manera, con un valor bajo, ej "1", el grado de pronfundidad ó alcance del color frontal será menor ó más reducido
+
+                _lo que quiere decir que se comprimirá la capacidad gradación y detección del color de fondo y su información lumínica 
+                
+                _lo que se traducirá en que en éste punto ahora será más dificil a travesar el color frontal 
+                
+                _ya que ahora el color frontal por ente, ahora tendrá más presencia al tener más acutancia por así decirlo 
+                
+                _y a su vez, separación con el color de fondo y vieceversa con un valor alto, ej: "20"
+
+            _Back SSS Radius:
+
+                _éste parámetro nos permitirá indicar el umbral ó alcance que tendrá el color de fondo del sistem de sub surface scatering
+
+                _de ésta manera, con un valor bajo, ej "1", el grado de pronfundidad ó alcance del color de fondo será menor ó más reducido
+
+                _lo que quiere decir que se comprimirá la capacidad gradación y alcance hacia el color frontal y su información lumínica 
+                
+                _lo que se traducirá en que en éste punto ahora será más dificil llegar hasta el color frontal, y vieceversa con un valor alto, ej: "20"
+
+            _Back SSS Depth:
+
+                _éste parámetro nos permitirá expander ó contraer el umbral ó alcance general de la información lumínica que atraviza el color de fondo
+
+                _para que así, ésta información lumínica pueda llegar al color frontal en mayor ó menor medida
+
+                _de ésta manera, el parámetro "Back SSS Depth", será un parámetro complementario de "Back SSS Radius"
+
+            _Scale Conversion:
+
+                _éste parámetro nos permitirá cambiar el comportamiento del efecto sub surface scattering
+
+                _ya que en cuando vayamos indicando un mayor de forma exponencial se irá creando más acutancia ó distancia en los colores 
+                
+                _es decir, el objeto respectivo se irá ofrecerá más resistencia al paso de luminancia a través, de el
+
+                _y entre éstos colores se creará un gradiente en el cuál, predominará la penumbra 
+                
+                _para que así, denote ó resalte más el área iluminada bien separada del área oscura
+
+                _de ésta manera, éste parámetro nos permitirá crear materiales con una densidad más ancha ó gruesa, ó sólida, otros
+                
+                _lo cuál, es especialmente útil en cuerpos con geometrías complejas y con profundidad, otros
+
+                NOTA: el orden natural de la escala es de un valor de "1"
+
+            _Falloff:
+
+                _éste parámetro nos permitirá determinar el umbral de penetración de la pendiente del grandiente ó degradado generado entre ambos colores, tanto el color frontal, como el color tracero
+
+                _éste parámetro es especialmente útil cuando se usa de forma complementaria con el parámetro anterior de "Scale Conversion"
+
+                _ya de ésta manera, podremos jugar ó variar el grado de interpolación entre la seperación que hemos configurado entre ambos colores
+
+            _Samples:
+
+                _éste parámetro nos permitirá indicar la cantidad de sampleos ó pases por medio de los cuáles, se calculará el sistem sub surface scattering
+
+                _de ésta manera, entre mayor sea la cantidad e samples indicado, mayor será la calidad y capacidad de cálculo 
+                
+                _para obtener así, un resultado más refinado y con un mayor detalle y calidad
+
+            _Screen Composite:
+
+                _éste parámetro resaltará en gran manera las áreas con mayor luminancia, sin importa si éstas áreas se encuentran en el color frontal ó en el color tracero ó ambos
+
+                _a través, de modo pre multiplicado ha modo de fusión, de ésta manara, para ciertos efectos podremos resaltar el volúmen y la plástica general del efecto obtenido
+
+            _Scattered Contribution Only:
+
+                _(indeterminado)
+
+        _Data Storage:
+
+            _Lightmap:
+
+                _éste parámetro será controlado de forma automática a través, del nodo asignado "mentalrayTexture"
+
+                _a través, del cuál, se calculará y se almacerá la luminancia que atravieza la geometría respectiva sobre la cuál, se haya aplicado la textura ó nodo de "misss fast shader"
+
+            _Depthmap:
+
+                _éste parámetro nos permitirá indicar un nodo para generar y controlar y mapear la densidad del sistema de sub surface scattering
+
+                _de ésta manera, a través, de un maya de densidad podremos controlar todo el sistema de profundidad y alcance del sistema de sub surface scattering
+
+        Upgrade Shader:
+        _______________
+
+            _Upgrade shader to misss_fast_shader_x:
+
+                _éste parámetro nos permitirá actualizar el material "misss_fast_shader", para convertir éste ha un tipo de material "misss_fast_shader_x"
+
+                _para que así, de ésta manera, podamos ahora hacer de los multi pass render, nativos de maya
+
+            _Upgrade shader to misss_fast_shader_x_passes:
+
+                _éste parámetro nos permitirá actualizar el material "misss_fast_shader_x", para convertir éste ha un tipo de material "misss_fast_shader_x_passes"
+
+                _para que así, de ésta manera, podamos ahora hacer de los multi pass render, avanzados y por separados nativos de maya
+
+        Light Linking:
+        ______________
+
+            _Mode:
+
+                _Maya Linking:
+
+                    _(indeterminado)
+
+                _Custom Linking:
+
+                    _(indeterminado)
+
+                _Inclusive Linking:
+
+                    _(indeterminado)
+
+                _Exclusive Linking:
+
+                    _(indeterminado)
+
+        Hardware Texturing:
+        ___________________
+
+            _Textured channel:
+
+                _(indeterminado)
+
+            _Texture Resolution:
+
+                _(indeterminado)
+
+            _Texture Filter:
+
+                _(indeterminado)
+
+
+
+
+
+    Nodes Complementarios:
+    ______________________
+
+        _para ver los nodes, alternativos relacionados con el nodo en éste caso "misss fast shader", debemos ir ha "Windows/Rendering Editors", y una vez allí, debemos de abrir el panel "Hypershade"
+
+        _y una vez allí, debemos seleccionar el manterial "misss fast shader", y posteriormente darle al botón de "Input and Output Conections"
+
+        _para que así, podamos ver los nodos relacionados al material respectivo, de ésta manera, podremos ver en éste caso el nodo "misss fast shader1SG"
+
+        _a través, del cuál, podremos configurar los atributos relacionados de "Surface Material", "Volumen Material", y "Displacement Mat", "Contours", entre otros shaders, posibles disponibles
+
+        _así, como también, en éste caso, el nodo "misss fast shader", tendrá relacionado el nodo "mentalrayTexture1"
+
+        _en su apartado de "Data Storage/Lightmap"
+
+        
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

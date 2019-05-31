@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Write To Label Buffer:
+    ______________________
+
+
+        Tutorial:
+        _________
+
+            4.7.1 writetocolorbuffer节点 [mental ray渲染] [Maya 2011 白金手册]
+                https://www.youtube.com/watch?v=qKvoUx4tDcM
+
+
+
+        _tenemos la posibilidad de utilizar materiales originales ó antiguos ó con el workflow, manual de mentalray
+
+        _de ésta manera, ahora podremos relacionar éstos material con la extensión por lo general con el sufijo "X"
+
+
+        Custom - Passes:
+        ________________
+
+        _primeramente debemos de ir ha "Windows/Rendering Editors", y una vez allí, abrir el panel "Render Settings"
+
+        _de ésta manera, una vez en el panel "render setting", debemos de ubicar el tag, ó sección "Passes"
+
+        _para que así podamos ubicar el botón "Create New Render Pass", en la parte derecha de esa sección del panel
+
+        _para que así, nos aparezca una ventana contextual en la cuál, podremos seleccionar entre una lista de pases posibles ha realizar
+
+        _y en la cuál, podremos seleccionar entre los pases personalizables: 
+
+            _Custom Color
+            _Custom Depth
+            _Custom Label
+            _Custom Vector
+
+        _de ésta manera, podremos renombrar éstos pases con un nombre descriptivo en relación al procedimiento específico ha ralizar, ej: "Label_Front", "Label Back"
+
+        _para que así, una vez creados e identificados los pases personalizados debemos de cargarlos al sistema de render para que estén listos y disponibles para usar
+
+        _para lo cuál, debemos de ubicar el botón de "Associate Selected Pases With Current Render Layer"
+
+
+        Write - Pass:
+        _____________
+
+        _una vez creados, configurados y cargados los pases de render, debemos ahora de ir ha "Windows/Rendering Editors/", y una vez allí abrir el panel "Hypershade"
+
+        _para que así, podamos seleccionar el material que deseamos renderizar con pases personalizados, ej; "Mi Material X"
+
+        _para posteriormente ir a la sección de "Mentalray/Miscellaneous/", y una vez allí, proceder ha cargar nodo de configuración de render, ej; "writeToLabelBuffer"
+
+        _para luego abrir las opciones del nodo "writeToLabelBuffer", y en las opciones de "Custom Label Pass"
+
+        _proceder ha seleccionar el nombre del pass, personalizado en el parámetro "writeToLabelBuffer/Frame Buffer Options/Custom Label Pass:", que hemos creado y definido previamente de forma personalizada 
+        
+        _y en dicha lista sólo nos aparecerán los nombres de pases personalizados del mismo tipo al nodo de render que hemos cargado ej; de tipo "writeToLabelBuffer"
+
+        _de ésta manera, ahora el nodo de "writeToLabelBuffer", habrá quedado relacionado con el pass personalizado que hemos creado
+
+
+
+        Relationship:
+        _____________
+
+        _para posteriormente proceder ha relacionar el material ha renderizar con pases personalizados con el nodo de render "writeToLabelBuffer"
+
+        _para lo cuál, debemos de hacer "mouse midle click and drag", sobre el material ha renderizar
+
+        _y soltarlos sobre el nodo "writeToLabelBuffer", para que así, nos aparezca un menú contextual en el cuál, podremos seleccionar la opción por ejemplo de "default"
+
+        _para que así, nos aparezca el panel "Connection Editor", en el cuál, podremos configurar los parámetros especificos ha relacionar
+
+        _de ésta manera, en éste ejemplo, procederemos ha relacinar "mi car paint phen x/nodeState"
+
+        _con "writeToLabelBuffer/Label", de ésta manera, ambos nodos quedarán relacionados por éstos parámetros como configuración de render final
+
+        _también, podríamos relacionar ambos nodos haciendo "mouse midle click an drag", sobre el nodo "mi car paint phen x" 
+        
+        _y soltarlo sobre la propiedad de "writeToLabelBuffer/Input/Label", de ésta manera, igualmente se abrirá el panl "Connection Editor"
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

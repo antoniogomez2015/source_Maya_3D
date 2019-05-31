@@ -44,11 +44,43 @@
             _éste parámetro nos permitirá indicarle al sistema que no contemple el efecto bump en el material
 
             NOTA: ésta es la única opción en el material "mia material", original
+
+
+
+    Multi-Pass Settings:
+    ____________________
+
+        _el nodo "Mi Car Paint Phen X", es idéntico al nodo "Mi Car Paint Phen"
+
+        _con la única diferencia de que el nodo "Mi Car Paint Phen X"
+
+        _tiene la posibiilidad de integrarse con el módulo de render de maya a través, de pases de render personalizados
+
+        _para lo cuál, se requerirá de un nodo especial para enviar la información al módulo de render de maya
+
+        _de ésta manera, primeramente debemos de ir ha "Windows/Rendering Editors"
+
+        _y una vez allí, debemos abrir el panel "Hypershade", y en el cuál, debemos de ubicar la sección de nodos de mentalray, de "Miscellaneous"
+    
+        _dentro de la cuál, encontraremos la serie de nodos:
+
+            _writeToColorBuffer
+            _writeToDepthBuffer
+            _writeToLabelBuffer
+            _writeToVectorBuffer
+
+        _donde el nodo más utilizado será "writeToColorBuffer" 
+    
+    
+        NOTA: para ver la configuración y workflow, de pases de render personalizados para materiales de mentalray 
+    
+        _debemos ir a la sección "09_Stack_Rendering/MentalRay 2015/17_Miscellaneous/" 
+    
+        _y una vez allí, encontraremos las especificaciones para cada tipo de pass, personalizado disponible para mentalray
+
     
         
         
-
-
 
 
     Nodes Complementarios:

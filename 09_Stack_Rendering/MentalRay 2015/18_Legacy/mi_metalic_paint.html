@@ -9,14 +9,99 @@
 <body>
 <!--
 
-    Mi Car Paint Phen:
-    __________________
+    Mi Metalic Paint:
+    _________________
 
-    _el nodo "Mi Car Paint Phen", nos permitirá crear un material complejo y realista 
+    _el nodo "Mi Metalic Paint", nos permitirá crear un material complejo y realista 
 
     _con un control de los colores del material tanto en las áreas próximas, medias y traceras, e igualmente para reflexiones del material
     
-    _para emular metal ó específicamente pintura para automóviles y similares
+    _para emular la mayoría de metales ó estructuras y demás elementos metálicos como escarchados, otros
+
+    _éste material tiene una gran similitud ó es un derivado de el nodo de "mi car paint phen", con cierta diferencias 
+
+
+    NOTA:
+    _____
+
+    _de ésta manera, a través, de el material "Mi Metalic Paint", dispodnremos de todas las opciones que el material "Mi Car Paint Phen", excepto
+
+        _Reflections
+        _Fake
+
+    _más éstas características ó módulos los prodremos obtener a través, de nodos adicionales agregado al nodo "Mi Metalic Paint"
+
+        NOTA: el efecto de "Fake", se podrá recuperar sólo en las altas luces ó en el área de "Lit_Color"
+
+            _para su configuración ir ha "Flake Parameters/Fake Bump"
+
+        NOTA: para agregar la propiedad "Reflections", debemos de agregar el nodo "Mentalray/Legacy/mib_glossy_reflection"
+
+            _para posteriormente abrir las opciones del nodo "mib_glossy_reflection", para posteriormente hacer "mouse right click and drag", sobre el nodo "mi_metalic_paint"
+
+            _y soltarlo sobre "mib_glossy_reflection/Base Material", para que así, podamos configurar posteriormente el color sobre donde aplicarán las reflexión y en que área del materia aplicarán exactamente, otros
+
+            _para por último, proceder ha hacer "mouse midle click and drag, sobre el nodo "mib_glossy_reflection", y soltarlo sobre la geometría sobre la cuál, se desea aplicar el material 
+
+            _para que así, se abra el panel "Connection Editor", en el cuál, podremos conectar el parámetro "/mib_glossy_reflection/reflection_color", con el parámetro "initialShadingGroup/imageShader" de la geometría
+            
+            _de ésta manera, habremos aplicado el nodo "mib_glossy_reflection", especial a la geometría para que así, aplique el efecto "Reflections", sea visible correctamente
+
+
+
+    COMPARE:
+    ________
+    
+    _de ésta manera, el nodo "Mi Metalic Paint", prescinde de ciertos parámetros y secciónes y agrega otros parámetros nuevos, los cuáles son:
+
+        _Diffuse Parameters:
+
+            _Irradiance Weight: (agregado)
+
+        _Fake Parameters:            
+
+            _Fake Stregth: (eliminado)
+
+            _Fake Scale: (eliminado)
+
+            _Fake Bump: (agregado)
+
+        _Reflection Parameters: (eliminado)        
+
+            _Reflection Color: (eliminado)
+
+            _Edge Factor: (eliminado)
+
+            _Reflection Edge Weight: (eliminado)
+
+            _Reflection Base Weight (eliminado)
+
+            _Samples: (eliminado)
+
+            _Glossy Spread: (eliminado)
+
+            _Max Distance: (eliminado)
+
+            _Single Env Sample: (eliminado)
+
+        _Dirt Parameters: (eliminado)      
+
+            _Dirt Color: (eliminado)
+
+            _Dirt Weight: (eliminado)
+
+
+        Advanced Parameters: (eliminado)
+        ____________________
+
+            _Irradiance Weight: (eliminado)           
+
+            _Global Weight: (eliminado)          
+
+
+        _Additionnal Parmeters: (agregado)
+
+            _Global Weight: (agregado)
 
    
 
@@ -71,6 +156,11 @@
                 _más como valores altos, ej: "5", ó más, en éste caso, ya dejará de existir el color central por que éste color será desplazado 
                 
                 _y en los colores restantes del desplazamineto ó compresión, tanto el color frontal como el color traceo existirá una acutancia más acusada o presente
+
+            _Irradiance Weight:
+
+                _(indeterminado)
+
 
         Specular Parameters:
         ____________________
@@ -148,116 +238,34 @@
 
                 _de ésta manera, con un valor menor, podremos generar un efecto con pocas esquirlas de pintura distribuidas en todo el material y viceversa
 
-            _Fake Decay:
+            _Fake Bump:
 
-                _éste parámetro nos permitirá hacer un decaimiento ó desvanecimiento del efecto
+                _éste parámetro nos permitirá agregar nodo a través, del cuál, podremos controlar y generar el efecto de "fake bump"
 
-                _de ésta manera, podremos suavizar el efecto ha nivel global como también, podremos desactivar el efecto por completo
+                _para lo cuál, requeriremos el nodo "mentalray/texture/", una ve allí, debemos cargar el nodo "mia_bump_flakes"
 
-                NOTA: indicar un valor de "1", equivaldrá ha desactivar éste módulo de "Fake"
-
-            _Fake Strength:
-
-                _éste parámetro nos permitirá indicar una separación mínima y a su vez promediada entre las diferentes esquirlas de pintura existente
-
-                _de ésta manera, éste parámetro trabaja en conjunción con los parámetros de "Fake Density", y "Fake Scale"
-
-                _ya que de ésta manera, podremos controlar tanto el tamaño, la cantidad y separación de las esquirlas de pintura sobre el material
-
-            _Fake Scale:
-
-                _éste parámetro nos permitirá indicar la escala general del efecto en relación al tamaño de la geometría en la cuál, se ha aplicado el material
-
-                _más para que éste parámetro tenga efecto ó aplique, será necesario que a las partes de la geoemtría respectiva 
-                
-                _le hayamos hecho un "Free Transformation", para que así, ésta partes de geometría tengas sus parámetros de "transformation/scale", en "0"
+                NOTA: es requerido cargar el nodo "mia_bump_flakes", en éste parámetro para que el módulo "Flake Parameters", sea activado, ya que e lo contrario el efecto no podrá ser visible con los parámetros básicos del nodo
 
         Reflection Parameters:
         ______________________
 
-            _Reflection Color:
-
-                _éste parámetro nos permitirá determinar el color de las reflexiones del material
-
-            _Edge Factor:
-
-                _éste parámetro nos permitirá determinar el umbral ó capacidad de penetración de la reflexión que va desde color tracero ó borde, hasta el color frontal, pasando por el color base ó color central, ó viceversa 
-                
-                _en relación a la configuración de los parámetros de "Weights.." según la lógica del material deseado y configurado
-
-                _de ésta manera, a través, de éste parámetro podremos determinar cuán reflectivo será el material en general
-
-            _Reflection Edge Weight:
-
-                _éste parámetro nos permitirá determinar cuán reflectivo será el material el color de fondo ó color de borde
-
-            _Reflection Base Weight:
-
-                _éste parámetro nos permitirá determinar cuán reflectivo será el material en el color base ó color medio 
-                
-                _y como también, en el color frontal a la vez
-
-            _Samples:
-
-                _éste parámetro nos permitirá determinar la cantidad de pases ó sampleos realizados para el cálculo de las reflextiones
-
-                _de ésta manera, entre mayor sea la cantidad de pases la calidad de las reflexiones será mayor
-
-            _Glossy Spread:
+            _GLobal Weight:
 
                 _(indeterminado)
-
-            _Max Distance:
-
-                _éste parámetro nos permitirá desplazar todo el sistema de reflexiones del material
-
-                _lo más recomendado es dejarlo en su valor por defecto "0"
-
-            _Single Env Sample:
-
-                _(indeterminado)
-
-        Dirt Parameters:
-        ________________
-
-            _Dirt Color:
-
-                _éste parámetro nos permitirá agregar un color ó una textura que hará de "suciedad", sobre el material en general
-
-                _de ésta manera, a través, de una textura podremos contaminar el material base, tando en su distribución como apariencia en general
-
-            _Dirt Weight:
-
-                _éste parámetro nos permitirá controlar la influencia ó fuerza con la que afectará el color ó textura agregada como "sucio", sobre el material
-
-                _de ésta manera, incluso podremos utilizar una textura en blanco y negro ha modo de mapa de densidad 
-                
-                _a través, de la cuál, podremos controlar el comportamiento del efecto "suciedad", sobre diferentes áreas del material y sobre la apariencia en general del mismo
-
-        Advanced Parameters:
-        ____________________
-
-            _Irradiance Weight:
-
-                _(indeterminado)
-
-            _Global Weight:
-
-                _(indeterminado)
-
+      
 
         Upgrade Shader:
         _______________
 
-            _Upgrade shader to mi car paint phen x:
+            _Upgrade shader to mi metalic paint x:
 
-                _éste parámetro nos permitirá actualizar el material "mi_car_paint_phen", para convertir éste ha un tipo de material "mi_car_paint_phen_x"
+                _éste parámetro nos permitirá actualizar el material "mi_metalic_paint", para convertir éste ha un tipo de material "mi_metalic_paint_x"
 
                 _para que así, de ésta manera, podamos ahora hacer de los multi pass render, nativos de maya
 
-            _Upgrade shader to mi car paint phen x passes:
+            _Upgrade shader to mi metalic paint x passes:
 
-                _éste parámetro nos permitirá actualizar el material "mi_car_paint_phen", para convertir éste ha un tipo de material "mi_car_paint_phen_x_passes"
+                _éste parámetro nos permitirá actualizar el material "mi_metalic_paint", para convertir éste ha un tipo de material "mi_metalic_paint_x_passes"
 
                 _para que así, de ésta manera, podamos ahora hacer de los multi pass render, avanzados y por separados nativos de maya
 
