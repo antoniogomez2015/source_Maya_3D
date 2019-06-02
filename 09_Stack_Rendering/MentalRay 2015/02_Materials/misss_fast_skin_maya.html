@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Misss Fast Skin Maya:
+    _____________________
+
+        _el nodo "Misss Fast Skin Maya", nos permitirá representar piel y tejido de forma más realista 
+        
+        _éste el nodo dedicado para la representación de cuerpor blandos humanos de mentalray
+
+
+        Parámetros:
+        ___________
+
+            Diffuse Layer:
+            ______________
+
+                _Ambient:
+
+                    _éste parámetro nos permitirá indicar un color ambiental el cuál, podrá afector al tono y aspecto del material en general
+
+                    _donde por defecto es de color negro lo cuál, indicará que en éste caso no afectará el ambiente al material
+
+                _Overall Color:
+
+                    _éste parámetro nos pemritirá indicar el color en general del material
+
+                    _también, podría interpretarse como una dominante de color adicional que podrá afectar a todo el materialen general
+
+                _Diffuse Color:
+
+                    _éste parámetro nos pemritirá indicar el color base a partir del cuál, se generará el efecto sub sufacer scattering
+
+                    NOTA: por lo general para la creacíon de piel humana, es recomendable empezar con una color base de un rosado muy claro ó rosado pálido
+
+                    _de ésta manera, éste color estará por debajo del color general ó "Overall Color"
+
+                    _para que así, podamos crear diferentes efectos de muzcla entre ambos colores 
+                    
+                    _en relación a las diferentes densidades del material en relacíon a la complejidad de la geometría sobre la cuál, se ha aplicado el material
+
+                _Diffuse Weight:
+
+                    _éste parámetro nos permtirá determinar el umbral ó fuerza con la cuál, se aplicará el color difuso y el color general sobre el material
+
+                    _de ésta manera, con un valor bajo, el color base será más sutil, como es lo más recomendado, y viceversa
+
+            Subsurface Scattering Layer:
+            ____________________________
+
+                _Epidermal Scatter Color:
+
+                    _éste parámetro nos permitirá indicar el color el cuál, corresponderá al color exterior ó visible a primera vista de la piel
+
+                _Epidermal Scatter Weight:
+
+                    _éste parámetro nos permitirá determinar el umbral ó influencia que tendrá el color y la densidad de la piel
+
+                    _de ésta manera, si indicamos un valor bajo cercano ha "0", la piel será muy fina ó delgada 
+                    
+                    _lo cuál, dejará ver en mayor proporción al color de fondo de "Subdermal", más fácilmente, y viceversa
+
+
+                _Epidermal Scatter Radius:
+
+                    _éste parámetro nos permitirá indicar un umbral ó capacidad de gradación ó penetración del color frontal en relación al color medio
+
+                    _de ésta manera, entre mayor sea al velor indicado mayor la gradación e integración entre ambos colores, y viceversa
+
+
+                Subdermal Scatter Color:
+
+                    _éste parámetro nos permitirá indicar el color el cuál, corresponderá al color medio ó sub cutáneo 
+                    
+                    _no visible a simple vista más si a través, de la luminancia
+
+                _Subdermal Scatter Weight:
+
+                    _éste parámetro nos permitirá determinar el umbral ó influencia que tendrá el color y la densidad sub cutánea de la piel
+
+                    _de ésta manera, si indicamos un valor bajo cercano ha "0", el área sub cutánea será muy fina ó delgada 
+                    
+                    _lo cuál, dejará ver en mayor proporción al color de fondo de "Back", más fácilmente, y viceversa
+
+                _Subdermal Scatter Radius:
+
+                    _éste parámetro nos permitirá indicar un umbral ó capacidad de gradación ó penetración del color medio ó sub cutáneo en relación al color de fondo ó "Back"
+
+                    _de ésta manera, entre mayor sea al velor indicado mayor la gradación e integración entre ambos colores, y viceversa
+
+
+                _Back Scatter Color:
+
+                    _éste parámetro nos permitirá indicar el color el cuál, corresponderá al color de fondo ó sub cutáneo 
+                    
+                    _no visible a simple vista más si a través, de la luminancia
+
+                    _aunque en éste caso sólo será visible en los zonas más blandas y delgadas a contra luz en relación a la luminancia directa
+
+                _Back Scatter Weight:
+
+                    _éste parámetro nos permitirá determinar el umbral ó influencia que tendrá el color y la densidad sub cutánea de la piel
+
+                    _de ésta manera, si indicamos un valor bajo cercano ha "0", el área sub cutánea será muy fina ó delgada
+                    
+                    _lo cuál, representará una zona, área ó color menos incidente y viceversa
+
+                _Back Scatter Radius:
+
+                    _éste parámetro nos permitirá indicar un umbral ó capacidad de gradación ó penetración del color tracero ó "Back", y el color medio
+
+                    _de ésta manera, entre mayor sea al velor indicado mayor la gradación e integración entre ambos colores, y viceversa
+
+                _Back Scatter Depth:
+
+                    _(indeterminado)
+
+            Specularity:
+            ____________
+
+                _Overall Weight:
+
+                    _éste parámetro nos permitirá indicar la cantidad general de brillos especulares sobre el material
+
+                    _de ésta manera, con valores bajos la especularidad será menor ó más sutil y viceversa
+
+                _Edge Factor:
+
+                    _éste parámetro nos permitirá indicar un umbral a partir del cuál, se podrá intencificar la especularidad en las zonas de bordes y relives en la geometría sobre la cuál, se ha aplicado material
+                
+                Primary Specular Color:
+
+                    _éste parámetro nos permitirá determinar el color que tendrá la especularidad en el punto de destello más fuerte ó central
+
+                    _de ésta manera, podremos generar una especularidad con la parte de la especularidad más brillante de un color personalizado
+
+                _Primary Weight:
+
+                    _éste parámetro nos permitirá determinar un umbral ó fuerza a partir de la cuál, será más ó menos acentuada la especularidad con más brillo de dentello central
+
+                    _de ésta manera, con un valor bajo, podremos crear una especularidad casi sin altos brillos especulares, y viceversa
+
+                _Primary Edge Weight:
+
+                    _éste parámetro nos permitirá determinar el umbral ó peso que tendrá la especularidad de los brillos ó destellos más altos 
+                
+                    _de ésta manera, con valores altos, se resaltarán los brillos especulares en los relives y bordes de la geometría sobre la cuál, fué aplicado el material, y viceversa
+
+                _Primary Shinnyness:
+
+                    _éste parámetro nos permitirá determinar cuán puntual ó gradado será la especularidad central
+                
+                    _entre los puntos de destellos centrales ó más intensos y el área perimetral del área especular 
+                
+                    _como valores secundarios de la especularidad
+
+                    _de ésta manera, con valores bajos, la especularidad será más gradada ó interpoladas entre ambas especularidades 
+                
+                    _tanto la central como la perimetral y viceversa
+
+                Secondary Specular Color:
+
+                    _éste parámetro nos permitirá determinar el color que tendrá la especularidad en el área perimetral de la especularidad en general
+
+                    _de ésta manera, podremos generar una especularidad con la parte de más distante ó perimetral de un color personalizado
+
+                _Secondary Weight:
+
+                    _éste parámetro nos permitirá determinar el umbral ó peso que tendrá la especularidad perimetral
+                
+                    _de ésta manera, con valores altos, se hará más visible la especularidad en el área perimetral y viceversa
+
+                _Secondary Edge Weight:
+
+                    _éste parámetro nos permitirá determinar el umbral ó peso que tendrá la especularidad perimetral
+                
+                    _de ésta manera, con valores altos, se resaltarán la especularidad en los relives y bordes de la geometría sobre la cuál, fué aplicado el material, y viceversa
+
+                _Secondary Shinnyness:
+
+                    _éste parámetro nos permitirá determinar cuán puntual ó gradado será la especularidad perimetral
+                
+                    _entre los puntos de destellos centrales ó más intensos y el área perimetral del área especular 
+                
+                    _como valores secundarios de la especularidad
+
+                    _de ésta manera, con valores bajos, la especularidad será más gradada ó interpoladas entre ambas especularidades 
+                
+                    _tanto la central como la perimetral y viceversa
+                
+
+                Reflect Weight:
+
+                    _éste parámetro nos permitirá indicar un umbral para las reflexiones en relación a la especularidad ha modo de contribución
+
+                _Reflect Edge Weight:
+
+                    _éste parámetro nos permitirá determinar un umbral para las reflexiones 
+                
+                    _de los bordes y áreas con relives de la geometría sobre la cuál, se ha aplicado el material
+
+                _Reflect Shinnyness:
+
+                    _éste parámetro nos permitirá determinar cuál, puntual ó "roughtness", será la reflexión en relación a la especuladad sobre el material
+
+
+
+            Bump Shader:
+            ____________
+
+                _Bump:
+
+                    _éste parámetro nos permitirá a través, de un nodo auxiliar controlar el efecto bump map
+
+                    _por medio del cuál, podremos controlar los relieves de la geometría a través, de material "misss fast skin maya"
+
+
+            Lightmap:
+            _________
+
+                _Lightmap:
+
+                    _éste parámetro estará controlado por defecto de forma nativa, por medio de un nodo auxiliar, "mantalrayTexture"
+
+                    _a través, del cuál, se controlará todos los valores de luminancia para la generación del efecto de sub surface scattering
+
+                _Samples:
+
+                    _éste parámetro nos permitirá determinar la cantidad de sampleos ó pases para el cálculo y definición del efecto sub surfce scattering
+
+                    _de ésta manera, entre más samples indiquemos, mayor será la calidad y definición del efecto sub surface scattering
+
+            Algorithm Control:
+            __________________
+
+                _Scale Conversion:
+
+                    _éste parámetro nos permitirá amplicar ó contraer el umbral del efecto de sub surface scattering, entre los tres colores, tanto el color frontal, central y tracero
+
+                    _de ésta manera, con valores bajos los colores se comprimirán ó separarán entre si, lo cúál, limitará el efecto de sub surface scattering, y vicceversa
+
+                _Falloff:
+
+                    _éste parámetro nos permitirá aumentar ó disminuir el umbral entre los tres colores del sistema de sub surface scattering
+
+                    _los cuáles, ya hayan sido expandidos ó comprimidos a través, del parámtro "scale conversion", de paso anterior
+
+                _Screen Composite:
+
+                    _éste parámetro nos permitirá pre multiplicar el efecto lo cuál, aumentará el efecto de forma exponencial
+
+                    _de ésta manera, si dejamos activado éste parámetro, el efecto se mantendrá de forma contenido ó normal 
+                    
+                    _ésta es la opción por defecto y la más recomendada
+
+                    
+        Light Linking:
+        ______________
+
+            _Mode:
+
+                _Maya Linking:
+
+                    _(indeterminado)
+
+                _Custom Linking:
+
+                    _(indeterminado)
+
+                _Inclusive Linking:
+
+                    _(indeterminado)
+
+                _Exclusive Linking:
+
+                    _(indeterminado)
+
+        Hardware Texturing:
+        ___________________
+
+            _Textured channel:
+
+                _None:
+
+                    _(indeterminado)
+
+                _Diffuse:
+
+                    _(indeterminado)
+
+                _Combined Textures:
+
+                    _(indeterminado)
+
+            _Texture Resolution:
+
+                _(indeterminado)
+
+            _Texture Filter:
+
+                _Use Global Settings:
+
+                    _(indeterminado)
+
+                _Nearest (Unfiltered):
+
+                    _(indeterminado)
+
+                _Bilinear:
+
+                    _(indeterminado)
+
+                _Mipmap Nearest:
+
+                    _(indeterminado)
+
+                _Mipmap Linear:
+
+                    _(indeterminado)
+
+                _Mipmap Bilinear:
+
+                    _(indeterminado)
+
+                _Mipmap Trilinear:
+
+                    _(indeterminado)
+        
+
+            
+        
+        
+
+
+
+
+    Nodes Complementarios:
+    ______________________
+
+        _para ver los nodes, alternativos relacionados con el nodo en éste caso"Mia Material", debemos ir ha "Windows/Rendering Editors", y una vez allí, debemos de abrir el panel "Hypershade"
+
+        _y una vez allí, debemos seleccionar el manterial "Mia Material", y posteriormente darle al botón de "Input and Output Conections"
+
+        _para que así, podamos ver los nodos relacionados al material respectivo, de ésta manera, podremos ver en éste caso el nodo "mentalrayTexture1", y "misss_fast_lmap_maya"
+
+        _a través, del cuál, podremos configurar los atributos de luminancia y mapas de densidad, otros
+
+
+            
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

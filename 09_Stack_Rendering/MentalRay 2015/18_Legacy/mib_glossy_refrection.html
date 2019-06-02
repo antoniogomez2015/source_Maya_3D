@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Mib Glossy Refrection:
+    ______________________
+
+        NOTA: éste parámetro estará superditado a las configuraciones de render optimas para un rendimiento correcto
+
+        _para lo cuál, debemos de ir ha "Windows/Rendering Editors/Render Settings/Quality/Raytracing"
+
+        _para que así, una vez allí, podamos aumentar los parámetros de "Refrections", y "Max Trace Depth"
+
+
+
+        Shading:
+        ________
+
+            _Base Material:
+
+                _éste parámetro nos permitirá asignar un nodo auxiliar para la generación del material difuso principal
+
+                _de ésta manera, la reflexión inicial se generará a partir de éste color ó mapa de densidad en relación ha a la vista de la cámara
+
+            _Reflection Color:
+
+                _éste parámetro nos permitirá determinar un color ó mapa de densidad a partir del cuál, se generarán las reflexiones
+
+            _Max Distance:
+
+                _éste parámetro nos permitirá indicar el umbral ó alcance que tendrán las refrexiones
+
+                _lo que se traducirá también, como la cantidad de superficies sobe las cuáles podrá colisionar la reflexión
+
+                _de ésta manera, con un valor bajo, podremos indicar un alcance para las reflexiones de pocos milímtros ó centimetros ó viceversa, en relación al material ha emular
+
+            Falloff:
+
+                _éste parámetro nos permitirá determinar la interpolación ó acutancia que tendrá el efecto
+
+                _de ésta manera, podemos generar un efecto de refrexión bastante gradado ó suavizado 
+                
+                _ó por el contrario, podremos crear un efecto de interpolación más definido y cortante 
+                
+                _entre las caras reflejadas sobre las cuáles se genera el efecto y las caras ó superficies que no están afectadas por la reflexión
+          
+            _Enviroment Color:
+
+                _éste parámetro nos permitirá determinar el color ambiental que podrá influir ó contaminar el color de las reflexiones ha nivel general de todo el sistema           
+
+            _Refrection Base Weight:
+
+                _éste parámetro nos permitirá determinar el umbral ó peso que tendrá el efecto de refracción en general
+
+                _de ésta manera, con valores bajos, podremos crear un efecto de refracción más sutil a imperceptible y viseversa
+
+            _Refrection Edge Weight:
+
+                _éste parámetro nos permitirá indicar un umbral de la interpolación del efecto en los bordes y relieves de la geometría sobre la cuál, se ha aplicado el efecto, en relación a la dirección de la luminancia y la vista de la cármara
+
+                de ésta manera, con valores altos, podremos crear un efecto de refracción reslatado en los bordes y relieves más acusado y viseversa
+
+            _Edge Factor:
+
+                _éste parámetro nos permitirá determinar el umbral ó fuerza que tendrá el factor de detección de borde para el cálculo de las refracciones
+
+            _Enviroment:
+
+                _éste parámetro nos permitirá seleccionar un nodo auxiliar a través, del cuál, podremos controlar tanto el color del entorno, la luminancia y textura del fondo
+
+            _Single Env Sample:
+
+                _(indeterminado)           
+
+            _Samples:
+
+                _éste parámetro nos permitirá determinar la cantidad de samples ó pases 
+                
+                _a través, de los cuáles se calculará la calidad y definición de refrexiones, entre mayor sea la cantidad de samples realizados
+
+            _U Spread:
+
+                _éste parámetro nos permitirá dispersar ó hacer "roughtness", internamente sobre el material 
+                
+                _ó por el contrario, hacer brillos dereflexión afilados y hasta reflectantes, en el sentido horizontal
+
+                _de ésta manera, el valor por defecto es de "0.100", más si indicamos un valor bajo ha ej; "0.010", el efecto se hara más afilado y reflectivo
+
+                _más si por el contrario, si indicamos un valor de "0.500", el efecto se hará totalmente esmerilado ó "roughtness"
+
+            _V Spread:
+
+                _éste parámetro nos permitirá dispersar ó hacer "roughtness", internamente sobre el material 
+                
+                _ó por el contrario, hacer brillos reflection afilados y hasta reflectantes, en el sentido vertical
+
+                _de ésta manera, el valor por defecto es de "0.100", más si indicamos un valor bajo ha ej; "0.010", el efecto se hara más afilado y reflectivo
+
+                _más si por el contrario, si indicamos un valor de "0.500", el efecto se hará totalmente esmerilado ó "roughtness"
+
+            _U Axis:
+
+                _éste parámetro nos permitirá hacer desplazamientos del efecto en eje "X"
+
+                _para que así, podamos personalizar el efecto en relación al grado de orientación deseado
+
+            _V Axis:
+            
+                _éste parámetro nos permitirá hacer desplazamientos del efecto en eje "Y"
+
+                _para que así, podamos personalizar el efecto en relación al grado de orientación deseado
+
+        Spectrum:
+        _________
+
+            _Add New Item:
+
+                _(indeterminado)
+
+
+        Hardware Texturing:
+        ___________________
+
+            _Textured channel:
+
+                _None:
+
+                    _(indeterminado)
+
+                _Diffuse:
+
+                    _(indeterminado)
+
+                _Combined Textures:
+
+                    _(indeterminado)
+
+            _Texture Resolution:
+
+                _(indeterminado)
+
+            _Texture Filter:
+
+                _Use Global Settings:
+
+                    _(indeterminado)
+
+                _Nearest (Unfiltered):
+
+                    _(indeterminado)
+
+                _Bilinear:
+
+                    _(indeterminado)
+
+                _Mipmap Nearest:
+
+                    _(indeterminado)
+
+                _Mipmap Linear:
+
+                    _(indeterminado)
+
+                _Mipmap Bilinear:
+
+                    _(indeterminado)
+
+                _Mipmap Trilinear:
+
+                    _(indeterminado)
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>
