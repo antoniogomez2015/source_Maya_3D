@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Render Caustics:
+    ________________
+
+        _el efecto caustics, nos permitirá proyectar la forma del motivo sobre otra superficie 
+        
+        _a través, de la luminancia fotónica emitida por una fuente de luz que es capaz de atravesar el motivo
+
+
+    Caustics:
+    _________
+
+        _Accuracy:
+
+            _éste parámetro nos permitirá determinar la exactitud con la que se generará el efecto caustics
+
+            _de ésta manera, con valores cercanos ha "0", el efecto caustics, será más imperfecto 
+            
+            _por que cada haz luminoso tenderá ha juntarse con otro haz contiguo lo que generará puntos concéntricos de haces luminosos 
+            
+            _que se superponen uno con otros lo que no permitirá una conformación fluida de la forma del motivo general proyecta por el efecto caustic
+
+            _más si indicamos valor alto como "100", ó superiores, el efecto será más suavizado y fluido en relación a la forma del motivo proyectada
+            
+            _de ésta manera, el valor por efecto es de "100", y es el valor recomendado
+
+        _Scale:
+
+            _éste parámetro nos permitirá determinar tanto el color como la intensidad luminancia para la generación del efecto caustics
+
+            _de ésta manera, a través, del valor "H/S/V", podremos controlar tanto el tono como brillo de la luminancia a proyectar
+
+            _de ésta manera, el valor por defecto de la liminancia ó brillo es de "1", más podremos incrementar ó disminuir éste valor en relación al efecto deseado
+
+        _Radius:
+
+            _éste parámetro nos permitirá determinar el umbral a partir del cuál, se comenzará ha crear una interpolación entre cada haz lumínico
+
+            _de ésta manera, con un valor de "0", la interpolación será total, lo que generará un suavizado los rayos lumínimos 
+            
+            _los cuáles proyectarán la forma del motivo sin ruido ni aglutinamientos de rayos lumínicos
+            
+            _y viceversa, con valores superiore, ej: "0.100", ya se comenzarán ha agrutinar y ha superponer los rayos luminosos 
+            
+            _creando así, ruido y perdida de calidad en la forma proyectada
+
+        _Marge Distance:
+
+            _éste parámetro nos permetirá determinar la distancia mínima a la que podrá estar un haz lumínico de otro sin que éste se fusione con otro haz contiguo
+
+            _de ésta manera, podremos controlar el comportamiento del efecto caustics
+
+            _ya que si indicamos un valor superior ha "0", ej: "0.100", la separación entre haces luminosos será mínima lo que formará puntos luminosos separados y superpuestos
+
+            _más si indicamos un valor "0", la separación mínima entre haces de luz será muy ámplia
+            
+            _lo generará una interpolación visual de los rayos de forma suavizada, lo que permitirá una formación de la imágen del motivo de forma fiel y clara
+
+        _Caustic Filter Type:
+
+            _éste parámetro nos permitirá seleccionar entre una serie de algoritmos a través, de los cuáles, podremos suavizar ó nó la interpolación de los rayos luminosos que formarán la imágen del motivo
+
+            _de ésta manera, disponemos de los siguientes algoritmos:
+
+                _Box:
+
+                    _éste algoritmo casi no hará interpolación extra de los rayos luminosos 
+
+                _Cone:
+
+                    _éste algoritmo si hará interpolación extra de los rayos luminosos para suavizar más la proyección de la imágen del motivo
+
+                _Gauss:
+
+                    _éste algoritmo es similar ha "Box", de ésta manera, el algoritmo "Gauss", tampoco hará casi interpolación sobre los rayos luminosos
+
+        _Caustic Filter Kernel:
+
+            _éste parámetro tiene un umbral de "1-4", el cuál, tratará siempre de suavizar e interpolar los rayos lumínicos para mejorar la imágen proyectada
+
+            _de éste manera, con valores mayores, la interpolación y suavizado será mayor ó más acusado
+
+
+        
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

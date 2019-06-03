@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Workflow Caustics:
+    __________________
+
+        _el efecto caustics, nos permitirá proyectar la forma del motivo sobre otra superficie 
+        
+        _a través, de la luminancia fotónica emitida por una fuente de luz que es capaz de atravesar el motivo
+
+
+        Scene:
+        ______
+
+            _primeramente debemos de crear una escena la cuál, debe estar conformado por una superficie sobre la cuál, se posará el motivo 
+            
+            _y así, como tambíen, la proyección del efecto caustics, de la luz direccionada al motivo
+
+            _de ésta manera, también, debemos de crear un motivo y una luz la cuál, debemos de direccionar al motivo
+
+
+        Shading:
+        ________
+
+            _para posteriormente proceder ha aplicar un material al motivo el cuál, podrá tener ó nó, "transparency", ó "refractions", para la generación del efecto caustics
+
+            _más si las opciones de transparencia y causticas están activadas ayudarán e la generación del efecto de causticas, más no es obligatorio
+
+            NOTA: más la superficie que hará de fondo debe tener aplicado un material nativo de maya, ej; un "Lambert", ya que si le aplicamos un material mentalray, el efecto no se producirá
+
+
+        Redering Settings:
+        __________________
+
+            _para luego ir ha "Windows/Rendering Editors", y una vez allí, abrir el panel "Render Settings"
+
+            _en el cuál, debemos de ubicar el tag, "Features/Rendering Features", y una vez allí, debemos activar la opción de "Caustics"
+            
+            _más tambíen, podremos hacer lo mismo yendo ha "Indirect Lighting", y una vez allí 
+            
+            _ubicar la sección de "Caustics", para que así, podamos activar la opcíon de "Caustics"
+
+
+        Lighting:
+        _________
+
+            _para posteriormente seleccionar la luz que hemos direccionado hacia el motivo para que así, podamos entrar en sus opciones
+
+            _para que así, podamos ubicar el tag, "mental ray", y una vez allí, ubicar la sección "Caustic and Global Illumination"
+
+            _de ésta manera, podremos acceder a los parámetros de:
+
+                _Photon Color:
+
+                    _a través, de éste parámetro podremos controlar tanto el color como la intensidad del efecto causitcs, por medio del brillo y tono
+
+                _Photon Intensity:
+
+                    _éste parámetro nos permitirá aumentar la intensidad de los photones existentes y emitidos por la luz respectiva
+
+                _Exponent:
+
+                    _éste parámetro nos permitirá indicar un factor de multiplicación para la intensidad de los photones, emitidos en la escena por la luz respectiva
+
+                _Caustic Photons:
+
+                    _éste parámetro nos permitirá aumentar ó disminuir la cantidad de photones existentes en la escena
+
+                    _de ésta manera, entre mayor sea la cantidad de photones en la escena, mayor la calidad y resolución del efecto caustics, y viceversa
+
+
+        Render:
+        _______
+
+            _para por último, proceder ha hacer pruebas de render en relación a los parámetros expuestos anteriormente
+
+            _hasta lograr el efecto deseado de caustics, en relación a la forma del motivo proyectada, otros
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>
