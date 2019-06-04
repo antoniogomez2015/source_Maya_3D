@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Importons:
+    __________
+
+        Características:
+        ________________
+
+        _los importons, son incorporados en maya 2009, y mentalray 3.6
+
+        _tienen como objetivo suavizar y mejorar el trabajo de los photones, los mapas de render de Global Illumination y de Irradiant Particles
+
+        _los importons, pueden trabajar tanto con "Global Illumination", como con "Irradiant Particles"
+
+        _los importons, funcionan similar a "Final Gathring", y pueden ser visualizados en el viewport 3d, a través, de las opciones de "Photon Map"
+
+        _endendiendo así, que los photones, de global illumination, son despedidos desde una fuente de luz 
+        
+        _para rebotar sobre todas las superficies disponibles sin importar el punto de vista y la posición de la cámara
+
+        _a diferencia de los fotones, los importons, se emiten desde la cámara y rebotan hacia las luces, es decir, en la dirección opuesta a los fotones. 
+        
+        _Sin embargo, la dualidad de las luces permite aplicar sombreadores de fotones a los importons. 
+        
+        _Para simplificar, mental ray no introduce un nuevo tipo de sombreado, sino que también utiliza fotones para los importons
+
+        _importons/Density, éste parámetro especifica cuantos photones serán disparados por cada pixel de la imágen de render
+
+        _de ésta manera, la cantidad de photones, o su densidad estará superditada por el tamaño de imágen de render
+
+        _de ésta manera, si el render es SD, ó HD, ó 4D, influirá de gran manera en la cantidad de importons, itilizados 
+
+        _lo más recomendado es utilizar valores bajos, entre "0.100"
+
+
+
+
+
+
+
+
+
+        _Los importones son "partículas virtuales". En algunos aspectos son similares a los fotones: rebotan en la escena. Sin embargo, existen diferencias significativas: a diferencia de los fotones, los importones no distribuyen energía. En su lugar, contienen un color que describe con qué factor una iluminación en un lugar determinado contribuiría a la imagen final. Como resultado, proporcionan información al núcleo de representación sobre cómo deben distribuirse los esfuerzos computacionales para obtener una imagen de la mejor calidad perceptiva con recursos computacionales limitados.
+
+        _
+
+        _Las importaciones se utilizan como un mecanismo complementario que mejora la calidad y el rendimiento de la representación. Se utiliza como el mecanismo principal para impulsar la calidad de las partículas de irradiancia. Otro uso en mental ray actual es mejorar la calidad del mapa de fotones de globillum. Permite reducir drásticamente el tamaño (y por lo tanto acelerar la búsqueda) de los mapas de fotones con la ayuda de la fusión dentro de una distancia de fusión variable que se determina con la ayuda de importons. Dicha distancia de fusión variable es superior a la distancia de fusión constante existente.
+
+        _Si está habilitado, los importones se disparan antes de crear los mapas de fotones. Se utilizan durante la creación del mapa de fotones globillum. Como no son relevantes para las búsquedas de vecinos más cercanos del mapa de fotones de globillum, los importones se descartan una vez que se crea el mapa de fotones.
+
+        _El mapa de importación se controla mediante las opciones de representación de la escena. Se aplican algunas limitaciones conocidas.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>
