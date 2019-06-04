@@ -22,27 +22,96 @@
 
         _Rebuild Photon Map:
 
-            _
+            _éste parámetro nos permitirá hacer un re cálculo de todo el sistema de caustics, cada vez que se realiza un cambio en las configuraciones del sistema de caustics, cada vez que realice un render
+
+            _de ésta manera, el sistema de caustics, siempre estará actuazliado tanto para su visualización como para su almacenado en un archivo externo y anidado al proyecto de maya
+
+            _de ésta manera, el objetivo de la acumulación de la proyección del sistema de caustics, sobre el motivo y la escena 
+            
+            _es poder ser reutilizardo para la acumulación en diferentes proyecciones cada vez que la luz cambie de dirección ó ángulo de proyección 
+            
+            _y alternativa y aunque no afecte, desde diferentes ángulos de la cámara lo cuál, es opcional
+            
+            _para que así, ya no tengan que calcularse nuevamente las partes ya calculadas y almacenadas 
+            
+            _y que son coincidentes con una proyección anterior de cara a la posición de la luz lo cuál, a largo plazo aligerará el proceso
+
+            _más si el ámgulo de la luz no cambiara de posición es aconsejable dejar ésta opción desactivada, ya que de ésta manera, un render que inicialmente durará en realizarse por ejemplo; "4:10", minutos 
+            
+            _y mientras para realizar éste render nuevamente con algún cambio durará en realizarse nuevamente tan sólo "15", segundos desde el mismo ángulo de la luz
+
+            NOTA: ésta opción es aconsejable desactivarla mientras hacemos pruebas de configuración ya que ésto aligerará en gran manera los procesos de cálculo del sistema de caustics
+
+            NOTA: ésta opción es conveniente activarla sólo cuando vayamos ha hacer uso del guardado del sistema caustics, en un archivo extenrno
 
         _Photon Map File:
 
-            _
+            NOTA: maya por defecto al tener las opciones de "Caustics", activadas generará un archivo de forma automática para guardar el sistema de caustic, en las opciones de "Photon Map File", con el nombre de "default.map", de ésta manera, si no deseamos alamacenar ningún archivo debemos de eliminar éste nombre
+
+            NOTA: por defecto, cuando tenemos activada la opción de "Rebuild Photon Map", maya, no guardará el sistema de caustics, en un archivo externo de forma automática
+
+            _si no que en vez de eso, debemos de indicar un nombre para el archivo ha generar con la información del sistema de caustics            
+
+            _de ésta manera, sólo a partir de éste punto es que se grabará el archivo externo con toda la información del sistema de caustic, generado
+            
+            _una vez se realize un nuevo render, más no es necesario u obligatorio que la opción de "Rebuild Photon Map"
+            
+            _esté activada para que el archivo pueda ser generado ó guardado ó visualizado en el viewport 3d
+
+            _de ésta manera, el archivo generado se guardará en la ruta del proyecto: "ProjectName/renderData/mentalray/photonMap/NameFile"
+
+            _más para la generación del archivo con la información del sistema de caustics, será necesario el re cálculo nuevamente del sistema de caustics, lo que extenderá el tiempo de render para éste proceso únicamente
+
+
+            UTILIZACIÓN: de ésta manera, podremos cerrar el archivo ó maya, para posteriormente volver ha abrir maya y cargar el archivo 
+            
+            _para que así, podamos ir a las opciones de "Render Settings/Indirect Lighting/Photon Map", y una vez allí, indicar el nombre del archivo generado con el sistema de caustics 
+            
+            _ej "caustic_cup2", para que así, al generar un nuevo render con el mismo ángulo de la luz, el render dure a penas "15", segundos ó menos 
+            
+            _gracias a la utilización del sistema de caustics, guardado previamente en el archivo externo
 
         _Enable Map Visualizer:
 
-            _
+            _ésta opción nos permitirá visualizar todo el sistema de caustics, directamente en el viwport 3d, de la interface
+
+            _más la visualización del sistema de caustics, directamente en el viewport 3d, requiere la generación de un archivo que almacene el sistema de caustics
+
+            _de ésta manera, si no hay un archivo aún creado cuando artivemos la opción de visualización, en éste caso el sistema creará uno con el nombre de "default.map"
+
+            _y comenzará ha hacer el re cálculo nuevamente desde cero, más también podremos indicar el nombre de un archivo que hayamos generado previamente 
+            
+            _para que así, el render y la visualización en el viewport 3d, se realizen práctivamente de inamediato
+
+            NOTA: más si posteriormente deseamos eliminar la visualización del sistema de caustics, del viewport 3d, tendremos que abrir el panel de "Outliner", en el cuál, podremos ubicar el archivo "mapVlz1", el cuál, tendremos que eliminar ó suprimir
 
         _Direct Illumination Shadow Effects:
 
-            _
+            _(interminado)
 
         _Diagnose Photon:
 
-            _
+            _Off:
+
+                _éste parámetro desactiva ó activa las opciones de los algoritmos de visualización del efecto del sistema de caustics
+
+            _Density:
+
+                _éste parámetro nos permitirá visualizar la densidad de rayos luminosos proyectados sobre la escena y despedidos desde la luz 
+                
+                ha modos de puntos coloreados como áreas de densidad, de ésta manera, podremos visualizar el comportamiento de los rayos luminosos en la ventana de render
+
+            _Irradiance:
+
+                _éste parámetro nos permitirá visualizar las áreas de radiación de los rayos luminosos proyectados sobre la escena y despedidos desde la luz 
+                
+                ha modos de zonas coloreadas con colores planos y plenos de ésta manera, podremos visualizar el comportamiento de los rayos luminosos en la ventana de render
 
         _Photon Density:
 
-            _
+            _éste parámetro nos permitirá indicar el umbral para el cálculo del sistema de caustics, para la visualización en la ventana de render 
+            
+            _con las caracteríticas de "Diagnose Photon", lo más recomendado es indicar valor muy bajos, entre "0.100", ha "0.010"
         
 
 

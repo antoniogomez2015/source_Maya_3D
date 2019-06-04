@@ -36,6 +36,8 @@
 
             NOTA: más la superficie que hará de fondo debe tener aplicado un material nativo de maya, ej; un "Lambert", ya que si le aplicamos un material mentalray, el efecto no se producirá
 
+            NOTA: cuando utilizamos un material nativo de maya, y no deseamos que características de éste material como por ejemplo; el color de transparencia entre otros afecte color de las caustics, es aonsejable desactivar las opciones de; "mental ray/Photon Attributes", para que así, éstas características no sean controladas por el material de maya de forma automática, si no que seamos nosotros los que controlemos todos los parámetros
+
 
         Redering Settings:
         __________________
@@ -86,6 +88,8 @@
             _para por último, proceder ha hacer pruebas de render en relación a los parámetros expuestos anteriormente
 
             _hasta lograr el efecto deseado de caustics, en relación a la forma del motivo proyectada, otros
+
+            NOTA: para acelerar el proceso de render y flujo de trabajo, es altamente recomendable ir ha "Windows/Rendering Editors", y una vez allí abrir el panel de "Render Settings/Indirect Lighting", y una vez allí, ir a las opciones de "Photon Map", para que así, podamos desactivar la opción de "Rebuild Photon Map"
 
 
 
