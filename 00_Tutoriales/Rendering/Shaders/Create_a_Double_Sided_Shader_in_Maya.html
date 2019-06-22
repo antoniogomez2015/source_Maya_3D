@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Create a Double-Sided Shader in Maya:
+    _____________________________________
+
+        Tutorial:
+        _________
+
+            Create a Double-Sided Shader in Maya
+                https://www.youtube.com/watch?v=0C5TXuPW58w
+
+
+
+        UVs:
+        ____
+
+        _primeramente la geometría respectiva tendrá que tener realizado el proceso de uv map, previamente
+
+
+        Hypershade:
+        ___________
+
+        _para posteriormente proceder ha ir ha "Windows/Rendering Editors", y una vez allí, abrir el panel "Hypershade"
+
+        _en el cuál, debemos de crear un nuevo material para la geometría 3d, ej un material "phong"
+
+
+        Files:
+        ______
+
+        _para posteriormente agregar dos nuevos nodos de tipo "File", yendo ha "2D Textures/" 
+        
+        _en los cuáles, debemos de cargar las imágenes que deseamos cargar sobre la geometría 3d,  respectiva, tanto para su reverso como para su anverso
+
+
+        Condition:
+        __________
+
+        _para posteriormenete ir ha "Utilities/", y una vez allí agregar un nuevo nodo "Condition"
+
+
+        Connection Editor:
+        __________________
+
+        _para posteriormente proceder ha hacer "mouse midle click and drag", sobre la textura ó nodo de tipo "file", que hará de textura frontal
+
+        _y para que así, podamos arrastar ésta sobre el nodo de "Condition", para que así, nos aparezca un menú contextual en el cuál, podremos seleccionar la opción de "Other"
+
+        _para que así, se abra el panel "Connection Editor", en el cuál, podremos relacionar los parámetros ha controlar
+
+        de ésta manera, podremos relacionar el parámetro "outColor", del nodo de tipo "File"
+
+        _con el parámetro "colorIfTrue" para que así, ahora ambos parámetros queden relacionados
+
+        _para posteriormente repetir el mismo proceso para el otro nodo de tipo "File" 
+        
+        _el cuál, lo relacionaremos con el parámetro "colorIfFalse", del nodo "Condition"
+
+
+        SamplerInfo:
+        ____________
+
+        _para posteriormente ir ha "Utilities/", y una vez allí, agregar un nuevo nodo "samplerInfo1"
+
+        _para posteriormente proceder ha hacer "mouse midle click and drag", sobre el nodo "samplerInfo1"
+
+        _y para que así, podamos arrastar ésta sobre el nodo de "Condition", para que así, nos aparezca un menú contextual en el cuál, podremos seleccionar la opción de "Other"
+
+        _para que así, se abra el panel "Connection Editor", en el cuál, podremos relacionar los parámetros ha controlar
+
+        _de ésta manera, podremos relacionar el parámetro "flippedNormal", del nodo "samplerInfo1"
+
+        _con el parámetro "firstTerm", del nodo "condition1", en éste caso
+
+
+
+        Phong:
+        ______
+
+        _para posteriormente proceder ha hacer "mouse midle click and drag", sobre el nodo "condition"
+
+        _y arrastrar éste sobre el nodo "Phong", en éste caso para que así, nos aparezca un menú contextural en el cuál, debemos de seleccionar "Color", para que así, ambos nodos queden relacionados
+
+        _para por último proceder ha aplicar el nodo del material final a la geometría respectiva
+
+
+
+        Use:
+        ____
+        
+        _para que así, ahora al cambiar ó el punto de vista de la cámara y al verse el reverso de la geometría respectiva 
+        
+        _ahora se renderizará la cara opuesta que corresponderá a la otra textura
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+
+</body>
+</html>
