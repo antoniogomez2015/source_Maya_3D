@@ -87,20 +87,24 @@
 
     _adicionalmente las spline, de tipo bezier, disponen de dos menús contextuales extras
 
-    _donde el primero aplica cuando seleccionamos un sublemente de spline, de tipo vertex
+    _donde el primero aplica cuando seleccionamos un sublemento de la spline, de tipo vertex
 
     _para que así, podamos aplicar "Shift + Mouse Right Click", para que así, dispongamos de las siguientes opciones las cuáles controlarán el comportamiento de la spline, a partir de ese vertex
 
 
         _Bezier Corner:
 
-            _ésta opción aleará los handles, de vertex, respectivo a la orientación del vector spline, por cada lado
+            _primeramente ésta opción hará que aparezcan los handles, en un vertex que no posea handles, ó controladores, respetando la orientación de los vectores de la spline, previamente creada, a diferencia de la opcíón de "Bezier", que no respeta esta característica
+
+            _ésta opción alineará los handles, de vertex, respectivo a la orientación del vector spline, por cada lado
 
             _mientras que a su vez, desvinculará los handles, uno del otro para que así, ambos splines, trabajen independientemente
 
         _Bezier:
 
-            _ésta opción convertirá los handles, separados ha handles, vinculados aleneando sus tangentes 
+            _primeramente ésta opción hará que aparezcan los handles, en un vertex que no posea handles, ó controladores
+
+            _como también, convertirá los handles, existentes separados ha handles, vinculados aleneando sus tangentes 
             
             _sin tomar en cuenta la orientación del vertor de la spline, respectiva
 

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Ambient Occlusion Pass:
+    _______________________
+
+
+    Render Layer:
+    _____________
+
+    _primeramente debemos de primeramente crear una layer, de render en el panel channel box, shortcut, "Control + A/A", con todos los elementos de la escena deseados
+
+
+
+    Materials:
+    __________
+
+    _para posteriormente ir ha "Windows/Rendering Editors/", y una vez allí, debemos abrir el panel "Hypershade"
+
+    _en el cuál, debemos de ir ha "Mentalray/Textures", y una vez allí, debemos de agregar el nodo "mb_amb_occlusion"
+
+    _para posteriormente en el mismo hypershade, ir a los nodos nativos de maya yendo ha "Surface", y una vez estando allí, debemos de agregar el nodo "Surface Shader"
+
+
+
+    Nodos Settings:
+    _______________
+
+    _para posteriormente posarnos sobre el nodo "mb_amb_occlusion", y aplicar "mouse midle click and drag", sobre éste
+
+    _y arrastrar sobre el nodo "Surface Shader", y soltar el botón para que así, nos aparezca un menú contextural en el cuál, escogeremos la opción de "Default", para que así, la conexión sea en el "Output Color", del material "Surface Shader"
+
+
+    Apply Nodes:
+    ____________
+
+    _para aplicar el nodo final para la generación del ambient occlusion, debemos seleccionar el nodo que hemos configurado "Surface Shader"
+
+    _y sobre el cuál, debemos hacer "Mouse Right Click", para que así, nos aparezca un menú contextual en el cuál, debemos de seleccionar la opcíon de:
+
+        _Assign Override Material for "render layer name"
+
+
+    _para que así, el material respectivo sea aplicado ha todos los elementos del pase de render respectivo y de forma automática
+
+
+
+    mb_amb_occlusion:
+    _________________
+
+    _para posteriormente entrar en las opciones del nodo "mb_amb_occlusion", en las cuáles dispondremos de los siguientes parámetros:
+
+
+        _Samples:
+
+            _
+
+        _Bright:
+
+            _
+
+        _Dark:
+
+            _
+
+        _Spread:
+
+            _
+
+        _Max Distance:
+
+            _
+
+        _Reflective:
+
+            _
+
+        _Output Mode:
+
+            _
+
+        _Falloff:
+
+            _
+
+        _Id Indexd:
+
+            _
+
+        _Id Nonself:
+
+            _
+
+
+    Override Render Opciones:
+    _________________________
+
+    _más para la generación del pase de ambient occlusion no necesitaremos global illumination o final gathering
+
+    _de ésta manera, podremos desactivar éstas opciones de modo de override ó de forma sobre escrita sobre los demás pases de render 
+    
+    _para que así, ésta configuración sólo aplique ha éste pase en específico
+    
+    _para lo cuál, debemos de posarnos sobre la propiedad respectiva en las opciones de render
+
+    _y una vez allí, debemos de hacer "Mouse Right Click", para que así, nos aparezca un menú contextual en el cuál, debemos de seleccionar la opción de "Create Layer Override"
+
+    _de ésta manera, éste parámetro se coloreará de color naranja lo cuál, nos indicará que éste configuración sólo aplicará ha éste render pass el cuál, esté seleccionado previamente en el panel render layer, en el channel box 
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>
