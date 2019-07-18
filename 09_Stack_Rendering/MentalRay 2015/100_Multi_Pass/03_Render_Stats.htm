@@ -18,9 +18,14 @@
 
     _para muchas operaciones de pases de renders, requeriremos desactivar las visualización de ciertos elementos de tipo geometría
 
-    _para que así, éstos elementos de tipo geometría no se renderizen en ciertos pases en específico
+    _como por ejemplo en caso común de renderizar la layer "masterLayer (Normal)", y en dado caso de que tengamos varios elementos de escena separados en otros render layers
+
+    _en tal caso, por lo general, requeriremos que la render layer "masterLayer (Normal)", no se renderizen los elementos que tenemos ya en otras render layers
+
+    _para que así, éstos elementos de tipo geometría no se renderizen y haga obstrucción en layer de render base o master, ya que éstos elementos serán renderizados por a parte en otros passes
 
 
+    
     Settings:
     _________
 

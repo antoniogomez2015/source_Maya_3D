@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Contribution Map Pass Render:
+    _____________________________
+
+    _los render passes de contribución son creados a partir de la render layer, principal, es decir, son creados a partir de "masterLayer (Normal)"
+
+    _de ésta manera, a través, de los passes de contribución podremos crear partitions ó isolates ó extracciones de elementos de tipo geometría dentro de la escena para que así, éstos elementos sean renderizado por a parte
+
+
+    Create Pass Contribution:
+    _________________________
+
+    _para lo cuál, primeramente debemos de seleccionar uno ó más elementos de tipo geometría 3d, como luz de la escena
+
+    _para posteriormente ir al channel box, shortcut, "Control + A/A", en el cuál, en parte inferior de éste encontraremos el tag "Render"
+
+    _en el cuál, por defecto encontraremos el render layer, "masterLayer (Normal)", de ésta manera, debemos de posarnos sobre el nombre de éste render layer
+
+    _para posteriormente hacer "Mouse Right Click", para que así, nos aparezca un menú contextual en el cuál, debeos de seleccionar la opción de
+
+
+        _Pass Contribute Maps/
+
+            _"Create Pass Contribute Map and Add Selected"
+
+
+    _para que así, a partir de éste punto sea generado un nuevo sub elemento dentro del render layer "masterLayer (Normal)", con el nombre por defecto de "passContributionMap1"
+
+    _de ésta manera, ahora se habrá agregado un "arrow", precediendo al nombre del render layer "masterLayer (Normal)"
+
+    _para que así, dicha arrow, la podremos desplegar pudiendo así, visualizar los passes de contribución que vayamos agregando al render layer, master
+
+    _de ésta manera, podremos renombrar éste passe de contribución que se ha creado con un nombre descriptivo, ej:
+
+        _motive1_passContributionMap
+
+
+    
+    Pre Cargar Passes:
+    __________________
+
+    _para luego ir ha "Rendering Settings/Passes/Render Passes/", y una vez allí darle al botón "Create New Render Passes" 
+    
+    _para que así, se abra un menú contextual en el cuál, podremos seleccionar los passes que desiamos pre cargar 
+    
+    _para que así, éstos passes que hemos seleccionado estén disponibles para el render layer master y sus passes de contribución
+
+    _los cuáles, podremos organizar a través, de sufijos y prefijos como también a través, de Set, de render passes lo cuál, es lo más recomendado
+
+
+
+    Associate Pass Contributions Maps:
+    __________________________________
+
+    _en éste caso, debemos de hacer una doble asignación, donde primeramente debemos de asignar los "Set Passes", que previamente hemos configurado para un mejor manejo de los render pass, con el render layer, "masterLayer (Normal)"
+
+    _para posteriormente una vez asignados los "set passes", respectivos al render layer mater principal, podremos ahora relacionar los contribute maps passes respectivos
+
+    _para lo cuál, debemos de ir ha "Rendering Settings/Passes/Render Passes/", y una vez allí, debemos de bajar hasta las opciones de "Associate Passes", y una vez allí debemos de seleccionar el "set pass", deseado
+
+    _para posteriormente bajar en la misma ubicación hasta las opciones de, "Associate Pass Contribution Map", en la cuál, podremos seleccionar el nombre del paase de contribución que hemos creado previamente
+
+    _para que así, de ésta manera, podremos relacionar los render pass, que hemos configurado previamente con los passes de contribución que también, hemos creado previamente, ej:
+
+
+        _(Set) envir_set
+
+            _envir_passContributionMap
+
+        _(Set) motive1_set
+
+            _motive1_passContributionMap
+
+        _(Set) motive2_set
+
+            _motive2_passContributionMap
+
+
+    _de ésta manera, una vez hemos relacionado ambos elementos podremos hacer la segunda asignación a través, del botón 
+    
+
+        _"Associate Selected Passes with current Pass Contribution Map"
+
+
+    _de ésta manera, tendremos listos los passes de render para su procesado final
+    
+    
+    
+
+    Consolidar Render Passes:
+    _________________________
+
+    _más tambén, en éste caso podremos consolidar todos los render passes, en una misma carpeta personalizada
+    
+    _para que así, evitemos la generación sub carpetas innecesarias así, como la generación de nombres genéricos para los render passes lo cuál, puede generar conflicto posteriormente en post producción
+
+    _para lo cuál, debemos ir ha "Rendering Settings/Common/File Output/", y una vez allí, ubicar la opción de "File name profix"
+
+    _en éste campo podremos indicar un nombre descriptivo para los passes de render ha generar, ej:
+
+
+        _motivo
+
+
+    _así, como también, podremos posarnos sobre éste campo y haer "Mouse Right Click", para que así, nos aparezca un menú contextual en el cuál, podremos seleccionar la opción de "Insert Pass Name <RenderName>", quedando de la siguiente manera;
+
+
+        _motivo<RenderPass>
+
+
+    _más para crear una carpeta personalizada sobre la cuál, sean volcados todos los render passes, debemos de hacer una pequeña modificación a lo anteriormente expresado
+
+    _agregando así, sólamente un "slash", ó barra inclinada seguida del nombre del pass ha generar, quedando de la siguiente manera:
+
+        _motivo/<RenderPass>
+
+
+    _para finalmente hacer batch render para obtener la renderización de los render passes según la configuración que hemos hecho
+
+
+    
+
+    NOTA: una forma más interactiva y hasta cierto punto práctiva es la de crear un mapa de contribución de render en render layer master y asignarle passes de render, directamente en el panel de render layer
+
+    _para lo cuál, tendremos que hacer "mouse right click", para que así, nos aparezca un menú contextual en el cuál, podremos escoger la opción de:
+
+        _Add New Render Pass
+
+
+    _para que así, de ésta manera, nos aparezcan listados todos los render passes, posibles y disponibles como contribution map pass
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

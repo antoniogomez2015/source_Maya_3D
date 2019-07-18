@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Render Layer Mix Directories:
+    _____________________________
+
+    _tenemos la posibilidad de unificar los render passes, dentro de una misma render layer
+
+
+    Render Layers Folders:
+    ______________________
+
+    _cuando utilizamos render layers, el sistema de mentalray por defecto generará folders independientes para cada render layers, y render pass
+
+    _en las cuáles vaciará todos los passes asignados a cada render layer, con el inconveniente de que todos los render passes para cada render layers, tendrán el mismo nombre en común
+
+    _es decir, por ejemplo:
+
+        _MasterLayer Folfer:
+
+            _diffuse folder
+
+                _renderLayerName.extension
+
+            _specular folder
+
+                _renderLayerName.extension
+
+            _beauty folder
+
+                _renderLayerName.extension
+
+
+        _MotiveLayer:
+
+            _diffuse folder
+
+                _renderLayerName.extension
+
+            _specular folder
+
+                _renderLayerName.extension
+
+            _beauty folder
+
+                _renderLayerName.extension
+
+
+    _como podemos ver en éste ajejmplo, los passes generados en ambos passes, se encuentran en diferentes carpetas pero ambos comparten los mismos nombre
+
+    _lo cuál, en ciertos casos puede ser un inconveniente a la hora de fusionar los render passes, en post producción al éstos tener los mismos nombre y pertenecer a su vez, a diferentes render layers
+
+
+
+    Unificar Render Layer Folders:
+    ______________________________
+
+    _para lo cuál, disponemos de una solución yendo ha "Rendering Settings/Common", y una vez allí, debemos de ubicar la sección de "File Output/File Name Prefirx"
+
+    _y en la cuál, maya asignará un nombre por defecto al render ha generar, "(not set; using scene name)"
+
+    _de ésta maenra, en éste campo de texto debemos de hacer "mouse right click", para que así, nos aparezca un menú contextual en el cuál, debemos de escoger la opción de:
+
+
+        _Insert Pass Name <RenderPass>
+
+
+    _para que así, en el campo de "File Name Prefix", podamos darle un nombre descriptivo quedando ahora de la siguiente manera:
+
+            _occlock<RenderPass>
+
+
+    _para que así, el path, de salida de render el sistema nos muestra la ruta y nomenclatura de estino, ej:
+
+            _Path: d:/PROYECTOS/3D Demos/Reloj Camara/Reloj/Images/ File name: masterLayer/occlock<RenderPass>.iff
+
+
+    _de ésta manera, en éste punto igualmente se seguirán generando una carpeta principal para cada render layer
+
+    _más no será una carpeta para cada render pass, dentro de cada render layer, respectivamente, ej:
+
+
+        _MasterLayer Folfer:
+
+            _renderLayerName_diffuse.extension
+
+            _renderLayerName_specular.extension
+
+            _renderLayerName_beauty.extension
+
+
+        _MotiveLayer:
+
+            _renderLayerName_diffuse.extension
+
+            _renderLayerName_specular.extension
+
+            _renderLayerName_beauty.extension
+
+
+    _como podremos ver en éste caso, se ha agregado igualmente el nombre del render layer, seguido ahora del nombre del render pass, específico y por último del tipo de extensión del archivo igualmente
+
+    _lo cuál, le permite al sistema poder unificar todos los render pass, de una misma render layer, en una misma folder
+
+    _ya que así, no hay forma de que los passes se confundan lo cuál, nos pemritirá las flexibilidad en el flujo de post producción posteriormente
+    
+    
+    
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

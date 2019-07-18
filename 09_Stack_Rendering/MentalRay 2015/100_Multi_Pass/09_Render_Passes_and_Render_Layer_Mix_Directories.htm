@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Render Passes and Render Layer Mix Directories:
+    _______________________________________________
+
+    _tenemos la posibilidad incluso de unificar los render passes, y las render layer, existentes dentro de una misma carpeta
+
+
+
+   Unificar Render Layer Folders y Render Passes:
+    _____________________________________________
+
+    _para lo cuál, disponemos de una solución yendo ha "Rendering Settings/Common", y una vez allí, debemos de ubicar la sección de "File Output/File Name Prefirx"
+
+    _y en la cuál, maya asignará un nombre por defecto al render ha generar, "(not set; using scene name)"
+
+    _de ésta maenra, en éste campo de texto debemos de hacer "mouse right click", para que así, nos aparezca un menú contextual en el cuál, debemos de escoger la opción de:
+
+
+        _Insert Pass Name <RenderPass>
+
+
+    _para posteriormente volver a hacer, en éste campo de texto "mouse right click", para que así, nos aparezca un menú contextual en el cuál, debemos de escoger la opción de:
+
+
+        _Insert Layer Name <RenderLayer>
+
+
+    _para que así, en el campo de "File Name Prefix", podamos darle un nombre descriptivo quedando ahora de la siguiente manera:
+
+            _occlock<RenderPass>
+
+
+    _de ésta manera, ahora nos quedará el nombre y configuración de render de la siguiente manera:
+
+            _occlock_<RenderPass><RenderLayer>
+
+
+    _para que así, el path, de salida de render el sistema nos muestra la ruta y nomenclatura de estino, ej:
+
+            _Path: d:/PROYECTOS/3D Demos/Reloj Camara/Reloj/Images/ File name: masterLayer/occlock<RenderPass>.iff
+
+
+    _de ésta manera, en éste punto no se generará ninguna carpeta ni para las render layers, respectivas ni tampoco para los render passes pases generados para cada render layer
+
+    _de ésta manera, los render passes se generarán directamente en la carpeta principal de "images", dentro de la esctructura de proyecto de maya
+
+
+        _Images Folfer:
+
+            _nameRender+RenderLayerName+PassName+RenderLayerName+ExtensionFile
+            _nameRender+RenderLayerName+PassName+RenderLayerName+ExtensionFile
+            _nameRender+RenderLayerName+PassName+RenderLayerName+ExtensionFile
+            _nameRender+RenderLayerName+PassName+RenderLayerName+ExtensionFile
+            _nameRender+RenderLayerName+PassName+RenderLayerName+ExtensionFile
+            _nameRender+RenderLayerName+PassName+RenderLayerName+ExtensionFile
+            ...
+            ...
+
+
+
+    _ésta opción es muy conveniente ya que nos evita que nevegar por sub carpetas creadas innecesariamente en la mayoría de los casos
+
+    _así, como también para el manejo de archivos a la hora de post producción
+
+
+
+    Sub Folder:
+    ___________
+
+    _más también, tendremos la posbilidad de crear un carpeta personalizada en la cuál, serán volcados todos los passes de render
+
+    _para que así, mantengamos un orden y no todo sea volcado en la carpeta imágenes sin catalogar
+
+    _para lo cuál, sólo tendremos que hacer una variación a la expresión que hemos configurado en el paso anterior
+
+    _para lo cuál, sólo tendremos que agregar una barra inclinada ó "slash", seguida del nombre que le hemos dado al render
+
+    _como también, opcionalmente es aconsejable colocar un underscore, "_" entre los tags "<RenderPass>", y <RenderLayer>, para que así, sea más legible el render pass posteriormente
+
+    _de ésta manera, el nombre que le hemos dado al render también, será el nombre que tomanrá la nueva carpeta ha generar donde serán volcados todos los passes de render ha generar
+
+
+        _occlock<RenderPass><RenderLayer>
+
+        _occlock/<RenderPass>_<RenderLayer>
+
+
+    _de ésta manera, los render passes, ahora se organizarán de la siguiente manera:
+
+
+            _occlock folder:
+
+                _motive1_Diffuse_motive1
+
+                _motive1_specular_motive1
+
+                _motive1_matte_motive1
+
+                _motive1_bauty_motive1
+
+                _motive2_Diffuse_motive2
+
+                _motive2_specular_motive2
+
+                _motive2_matte_motive2
+
+                _motive2_bauty_motive2
+
+
+    _con la diferencia en éste caso de que se ha simplicado la nomenclatura de los render passes a la siguiente:
+
+            _renderLayerName+RenderPassName+RenderLayerName+ExtensionFile
+    
+    
+    
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

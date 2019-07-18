@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Position Pass:
+    ______________
+
+    
+        Tutorial:
+        _________
+
+            Maya - Mental Ray - Rendering A Position Pass
+                https://www.youtube.com/watch?v=O9ahmKPUQ0k
+
+
+
+    Scene:
+    ______
+
+        _primeramente debemos de tener una escena creada con una cámara, geometría 3d, según la lógica de la escena, iluminación, otros
+
+
+
+    Render Settings:
+    ________________
+
+
+        Format:
+        _______
+
+        _para lo cuál, debemos de ir ha "Windows/Rendering Editors/Rendering Settings/Common/File Output", y una vez allí, debemos de ubicar la sección de "Image Format", en la cuál, debemos de escoger la opcíon de:
+
+            _OpenEXR (exr)
+
+
+
+        Render Camara:
+        ______________
+
+        _para posteriormente, ir ha "Windows/Rendering Editors/Rendering Settings/Common/Renderable Camaras", y una vez allí, debemos de ubicar la sección de "Renderable Camara", en la cuál, debemos de escoger la opcíon de:
+
+            _Camara1
+
+
+
+        Render Options:
+        _______________
+
+        _para posteriormente, ir ha "Windows/Rendering Editors/Rendering Settings/Common/Render Options", y una vez allí, debemos de ubicar la sección de "Enable Default Light", la cuál, debemos de desactivar en éste caso
+
+            
+
+        Frame Buffer:
+        _____________
+
+        _para posteriormente ir ha "Windows/Rendering Editors/Rendering Settings/Quality/Framebuffer", y una vez allí, debemos de ubicar la sección de "Data Type", en la cuál, debemos de escoger la opcíon de:
+
+            _RGBA (Float) 4x32 Bit
+
+
+    NOTA: para la genración del position pass, no es requerido ningún tipo de iluminación global, final gather, importons, otros..
+
+
+
+    Nodes Relationships:
+    ____________________
+
+    _para lo cuál, debemos de ir ha "Windows/Rendering Editors/", y una vez allí, abrir el panel de "Hypershade"
+
+    _para que así, podamos ir a los nodos nativos de maya y proceder ha ubicar la sección de "Utilities", en la cuál, debemos de ubicar el nodo de 
+    
+        _"SamplerInfo"
+
+    _de ésta manera, debemos de cargar éste nodo
+
+    _para posteriormente igualmente ir a la sección de nodos "Surface", en la cuál, debemos de ubicar el nodo de 
+    
+        _"Surface Shader"
+
+    _de ésta manera, debemos de cargar éste nodo
+
+    _para posteriormente posarnos sobre el nodo "SamplerInfo", y hacer "Mouse Midle Click", para a continuación arrastrar hasta posarnos sobre el nodo "Surface Shader"
+
+    _para posteriormente soltar el midle button del mouse para que así, nos aparezca un menú contextual en el cuál, debemos de escoger la opción de "Other.."
+
+    _para que así, se abra el panel "Connection Editor", a través, del cuál, podremos relacionar las propiedades entre ambos nodos según las necesitamos
+
+    _de ésta manera, ahora en el panel connection editor, podremos relacionar las propiedades:
+
+        _pointWorld
+
+            _pointWorldX
+            _pointWorldY
+            _pointWorldZ
+
+
+    _del nodo "SamplerInfo", las cuáles debemos de relacionar con las propiedades:
+
+        _putColor
+
+            _putColorR
+            _putColorG
+            _putColorB
+
+
+    _para que así, ambos nodos queden relacionados correctamente y se produzca el efecto para la generación de position pass
+
+    _para posteriormente proceder ha aplicar el material que "Surface Shader", que hemos configurado sobre los elementos de tipo geometría de la escena
+
+    _para por último proceder ha crear en render pass
+
+
+
+
+
+    
+        
+
+        
+    
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>
