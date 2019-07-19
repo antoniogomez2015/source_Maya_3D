@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Volumetrics Lights:
+    ___________________
+
+    
+        Tutorial:
+        _________
+
+            Maya: Creating Volumetric Lights in Mental Ray (Long Version)
+
+
+                https://www.youtube.com/watch?v=m_eRdZQZ4kw
+
+
+    _tenemos la posibilidad de crear iluminación en la escena que sea visible en el espacio 3d
+
+
+
+    Scene:
+    ______
+
+    _primeramente debemos de crear una escena con geometría 3d, donde colisionará la iluminación, otros, como mínimo una luz de tipo "spot", y una cámara, otros
+
+
+
+    Raytrace Shadow:
+    ________________
+
+    _para a continuación seleccionar la luz de tipo spot, que hemos creado previamente y proceder ha entrar a sus atributos shortcut, "Control + A/A", para que así, podamos bajar hasta las opciones de
+
+        _"Shadows/Raytrace Shadow Attributes/"
+
+    _para que así, podamos artivar el parámetro 
+    
+
+        _"Use Ray Trace Shadows" 
+        
+
+    _para que así, los objetos de tipo geometría 3d, puedan proyectar sombras emitidas de ésta luz
+
+    _de ésta manera, si desiamos difuminar los bordes de las sombras proyectadas a partir de ésta luz dispondremos del parámetro de:
+
+
+        _"Shadows/Raytrace Shadow Attributes/Use Ray Trace Shadows"
+
+            _Light Radius:
+
+
+    _de ésta manera, si aumentamos éste parámetro por ejemplo, ha "0.5", los bordes de las sombras proyectadas ahora se harán más suaves
+
+
+    NOTA: más si desiamos suavizar los bordes del área perimetral de cono de la luz proyectada, disponemos del parámetro de:
+
+
+        _"Spot Light Attributes/Penumbra Angle"
+
+
+    _de ésta manera, si aumentamos éste valor ejemplo, ha "20", los bordes de cono de luz proyecta serán suavizados en proproción
+
+
+
+
+    Volume Shapes:
+    ______________
+
+    _para posteriormente ia ha "Create/Volume Primitives", y una vez allí, proceder ha crear una primitiva en éste caso de tipo "Cube"
+
+    _de ésta manera, ahora debemos de re escalar éste cubo de tipo volumétrico que hemos creado para que así, toda geometría y la proyección de la luz emitida queden circuscritas dentro del cubo ha modo de contenedor dinámico
+
+    _para que así, la sumulación quede correctamente representada según la lógica de la escena
+
+    _de ésta manera, la geometría volumétrica que hemos creado tiene las siguientes tags
+
+
+        _boxShape:
+
+            _a través de éste tag, podremos configurar el tamaño y dimensión de la forma geométrica como los elementos que serán visibles, otros
+
+
+        _cubeFog:
+
+            _a través de éste tag, podremos configurar el color, transparencia, difuminación, opacidad, y demás comportamientos e interacciones que tendrá el sistema con los demás elementos de la escena
+
+            _de ésta manera, dispondremos de los siguientes parámetros:
+
+
+
+            Color:
+
+                _éste parámetro nos permitirá indicar el color que tendrá el sistema a través, de un picker
+
+            _Selected Position:
+
+                _éste parámetro nos permitirá desplazar un color del grandiente que tengamos seleccionado previamente
+
+            _Selected Color:
+
+                _éste parámetro nos permitirá indicar un color personalizado a través, de un picker, para cada uno de los colores que conformarán el grandiente
+
+            _Interpolation:
+
+                _éste parámetro nos permitirá determinar el tipo de interpolación ó fusión entre los color colores que conforman el gradiente
+
+                _de ésta manera, dispondremos de interpolaciones con más acutancia ha más suavizadas respectivamenta, "Node-Linear-Smooth-Spline"
+
+            _Color Ramp Input:
+
+                _éste parámetro nos permitirá determinar a que parámetro aplicará el gradiente, de ésta manera, dispondremos de las siguientes opciones:
+
+
+                    _Ignore:
+
+                        _éste es la opción por defecto la cuál, descartará el sistema de gradiente para que así, el sistema se siña a sólo un color sólidos como representación de color
+
+                    _Transparency:
+
+                        _éste parámetro hará el sistema semi translúcido permitiéndonos así, visualizar la forma geométrica volumétrica a su vez mientras vemos su color y densidad
+
+                    _Cocentric:
+
+                        _éste parámetro hará que el sistema tenga una densisdad intersa, es decir, que ahora la parte interna y central del sistema estará vacía ó se verá hueca y la parte externa del sistema se verá totalmente sólida
+
+                    _Y Gradient:
+
+                        _éste parámetro tendrá un comportamiento similar al de un color sólido en general
+
+
+            _Transparency:
+
+                _éste parámetro determinar la opacidad ó densidad del sistema en general a través, de un mapa alpha
+
+                _de ésta manera, con un color negro, la densidad u opacidad serán nulas y con un color blanco, la densidad u opacidad será total
+
+                _en la mayoría de los casos requeriremos controlar éste parámetro a través, de nodos como ejemplo, un nodo de ruido 3d
+
+                _para lo cuál, debemos hacer uso del ícono del plugins para que así, podamos cargar un nuevo nodo 
+                
+                _yendo ha "3D Textures/", y una vez allí, poder cargar el nodo de "Volume Noise", el cuál, podremos configurar y personalizar en sus parámetros y opciones
+
+                _más en el viewport, se agregará un cubo de mapeo 3d, el cuál, podremos re escalar en relación a la densidad y profusión del ruido ha generar
+
+                _más para una mejor visualización, profundidad y calado del efecto de truido 3d, debemos de aumentar los sampleos de renderización para lo cuál, debemos de ir ha
+
+                    _"Windows/Rendering Editor/Render Settings/Features/Extra features"
+
+
+                _y una vez allí, aumentar el valor de "Valume Samples", ej, ha un valor de 20
+
+
+            _Incandescence:
+
+                _éste parámetro nos permitirá determinar si el sistema emitirá luz propida como altas luces a través, de un mapa alpha
+
+                _de ésta manera, con un color negro, la luminocidad será nula y con un color blanco, la luminocidad será total
+
+            _Glow Intensity:
+
+                _éste parámetro generará un efecto similar al parámetro anterior de "Incandescence"
+
+            _Density:
+
+                _éste parámetro determinará la densidad ó opacidad del sistema de forma absoluta a través, de un mapa alpha
+
+                _de ésta manera, con un color negro, la densidad u opacidad serán nulas y con un color blanco, la densidad u opacidad será total
+
+                _donde el valor de "1", equivale a la densisdad natural y valores cercanos ha "0", harán el sistema transparente, más valores superiores ha "1", harán el sistema denso y más sólido
+
+            _Density Mode:
+
+                _dispondremos de dos algoritmos por medio de los cuales generar el sistema, los cuales son:
+
+                    _ObjectSpace:
+
+                        _ésta es la opción por defecto y más recomendada por que sólo toma las dimensiones y características básicas de la forma volumétrica para la generación del sistema lo cuál, es más predecible y configurable
+
+                    _WorldSpace:
+
+                        _ésta opción contempla todo el enviroment y entorno 3d, lo cuál, requerirá re cálculos para lograr la misma densidad deseada ó similar a la por defecto
+
+
+            _Illuminated:
+
+                _éste parámetro nos permitirá hacer visible el sistema sólo en las áreas donde exista luz proyectada, ejemplo; del cono de luz de una luz proyectada
+
+                NOTA: para que ésta opción funcione correctamente habrá que previamente haber activado y configurado las siguientes opciones yendo ha:
+
+                    _"Windows/Rendering Editor/Render Settings/Features/Extra features"
+
+
+                        _Volume Shaders
+
+                        _Volume Samples
+
+                        _Audo Volume
+
+
+                _ya que de no activar y configurar éstas opciones el cono de luz no será visible en el viewport 3d, a la hora de hacer el render
+
+
+            _Light Scatter:
+
+                _éste parámetro nos pemritirá aumentar ó disminuir la iluminación propia del sistema
+
+                _de ésta manera, para no afectar el aspecto del ssitema lo más recomendable es colocar éste parámetro en un valor de "1"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

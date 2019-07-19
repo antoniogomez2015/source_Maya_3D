@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Area Lights:
+    ____________
+
+    
+        Tutorial:
+        _________
+
+            Lighting in Mental Ray - Area Lights - 01
+                https://www.youtube.com/watch?v=9EQEYf01IOI
+
+
+    Scene:
+    ______
+
+    _primeramente debemos de tener una escena creada con elementos de tipo geometría 3d, una cámara y al menos una luz nativa de maya, por ejemplo de tipo area light, u otras
+
+    NOTA: con una light seleccionada de tipo "Area", aplicando el shortcut, "T", se creará un punto de mira ó ancla al centro del viewport, para que así, el área light, ahora siempre a punte al centro del viewport, automáticamente
+
+
+    Light Options:
+    ______________
+
+    _para posteriormente proceder ha seleccionar el área light, y aplicar el shortcut, "Control + A/A", para que así, vayamos el panel "Attribute Editor"
+
+    _a través, del cuál, podremos configurar las opciones generales del área light, para lo cuál, debemos de bajar hasta encontrar el tag, ó sección de "Raytrace Shadow Attributes", en la cuál, debemos de desactivar las opciones de:
+
+
+        _Use Ray Trace Shadows
+
+
+    _de ésta manera, debemos de desactivar éstas opciónes para que así, posteriormente podamos hacer de las opciones de mentalray
+
+
+    Mentalray Options:
+    __________________
+
+    _para que así, podamos bajar hasta las opciones de mentalray, para que así, podamos ubicar el tag, en éste caso de "Area Light", para que así, podamos activar las opciones de
+    
+
+        _Use Light Shape
+
+
+    _para que así, podamos configurar todas las opciones siguientes hasta encontrar el resultado deseado:
+
+
+        _Type:
+
+            _Rectangle:
+
+                _ésta es la forma por defecto y aplica para la mayoría de los casos y es la más recomendada
+
+                _de ésta manera, podremos escalar la forma cuadrada a rectangular física del área light, hasta encontrar la forma más a decuada
+
+            _Disc:
+
+                _ésta forma hará más envolvente la sombra desdivijando totalmente el rectángulo básico lo cuál, generará variaciones sobre la sombra base u original
+
+            _Sphere:
+
+                _la forma esférica dará resultados prácticamente idénticos a los generados por la forma de disco, ya que ambas formas partes de la misma forma primeraria que es el círculo
+               
+            _Cylinder:
+
+                _la forma cilíndrica ofrece una alternativa bastante interente, ya que ésta forma nos permitirá emular formas como luces de tipo fluorecender y demás tipos de luces alargadas, otros
+
+
+        Hight Samples:
+
+            _éste parámetro nos permitirá controlar la calidad del sistema de sombras generadas ha nivel general
+
+            _de ésta manera, para aumentar la calidad y resolución de las sombras proyectadas, tendremos que aumentar exponencialmente por lo general
+
+            _en valores que van desde:
+
+                _8 / 16 / 32 / 64 / 128 / 256 / 512 / 1024
+
+            _hasta encontrar la calidad y resolución deseados a un coste de un mayor tiempo de render
+
+        _Hight Sample Limit:
+
+            _éste parámetro nos permitirá indicar la cantidad de sampleos simultáneos ha realizar, por lo general éste parámetro funciona muy bien en un valor de "1"
+
+        _Low Samples:
+
+            _éste parámetro nos permitirá indicar la mínima cantidad de sampleos simultáneos ha realizar, por lo general éste parámetro funciona muy bien en un valor de "1"
+
+        _Visible:
+
+            _artivar éste parámetro hará visible el área light, en el viewport, más no en el render, en pruebas realizadas (revisar)
+
+        _Shape Intensity:
+
+            _éste parámetro aparentemente permite aumentar la intensidad de luz visible en el viewport, y en el render
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

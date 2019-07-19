@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Light Fog:
+    __________
+
+    
+        Tutorial:
+        _________
+
+            Maya Light Fog Tutorial by Stuart Christensen
+                https://www.youtube.com/watch?v=8AUba28QUlM
+
+
+    _tenemos la posibilidad de crear iluminación en la escena que sea visible en el espacio 3d, de forma fácil y práctiva y liviana
+
+    _éste es una excelente alternativa para la generación de de luz ambiental, en que de la opción de "Volumetric Light", sobre todo más liviana y práctica
+
+
+
+    Scene:
+    ______
+
+    _primeramente debemos de crear una escena con geometría 3d, donde colisionará la iluminación, otros, como mínimo una luz de tipo "spot", y una cámara, otros
+
+
+
+    Raytrace Shadow:
+    ________________
+
+    _para a continuación seleccionar la luz de tipo spot, que hemos creado previamente y proceder ha entrar a sus atributos shortcut, "Control + A/A", para que así, podamos bajar hasta las opciones de
+
+        _"Shadows/Raytrace Shadow Attributes/"
+
+    _para que así, podamos artivar el parámetro 
+    
+
+        _"Use Ray Trace Shadows" 
+        
+
+    _para que así, los objetos de tipo geometría 3d, puedan proyectar sombras emitidas de ésta luz
+
+    _de ésta manera, si desiamos difuminar los bordes de las sombras proyectadas a partir de ésta luz dispondremos del parámetro de:
+
+
+        _"Shadows/Raytrace Shadow Attributes/Use Ray Trace Shadows"
+
+            _Light Radius:
+
+
+    _de ésta manera, si aumentamos éste parámetro por ejemplo, ha "0.5", los bordes de las sombras proyectadas ahora se harán más suaves
+
+
+    NOTA: más si desiamos suavizar los bordes del área perimetral de cono de la luz proyectada, disponemos del parámetro de:
+
+
+        _"Spot Light Attributes/Penumbra Angle"
+
+
+    _de ésta manera, si aumentamos éste valor ejemplo, ha "20", los bordes de cono de luz proyecta serán suavizados en proproción
+
+
+
+
+    Light Fog:
+    __________
+
+    _una vez hemos configurado los parámetros de luz expresados anteriormente podremos navegar en las opciones de luz y bajar hasta encontrar las opciones de 
+
+        _Light Effects
+
+
+    _en las cuáles, encontraremos la opción de "Light Fog", de ésta manera, debemos de hacer mouse left click, sobre ícono de plugins, de ésta propiedad
+
+    _para que sea agregado un nuevo tag, "lightFog1" como parámetro extensible de la luz respectiva
+
+    _para que así, a través, de éstos nuevos parámetros podamos ahora activar y controlar el efecto fog, de luz generada
+    
+    _y a partir de ésta punto también, se habrá agregado en el viewport, una extensión visual de la proyección de la luz las cuál, representará al efecto fog
+
+    _y a su vez, podremos cambiar el comportamiento de la luz y del efecto fog, a través, de los parámetro de:
+
+
+        _Light Effects:
+
+
+            _Fog Spread:
+
+                _éste parámetro nos permitirá determinar la dispersión del efecto fog, en relación al ángulo de proyección de la luz configurada previamente
+
+            _Fog Intensity:
+
+                _éste parámetro nos permitirá determinar la intensidad ó fuerza del efecto fog, lo cuál, hará que el efecto fog, se más visible ó nó en el viewport 3d, y en el render final
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

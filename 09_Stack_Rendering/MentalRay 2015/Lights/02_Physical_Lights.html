@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    Physical Lights:
+    ________________
+
+    
+        Tutorial:
+        _________
+
+            Maya - Lighting in Mental Ray - Area Lights - 02
+
+                https://www.youtube.com/watch?v=JKPM0roj7Rc
+
+
+    _tenemos la posibilidad de crear un sistema de iluminación más avanzado en el cuál, podremos emular mucho mejor el comportamiento de la iluminación en el espacio como el mundo real
+
+    _para lo cuál, sólo tendremos que hacer unas variaciones en el uso de las luces en mentalray, dicho proceso de expresa a continuación:
+
+
+    NOTA: éste proceso parte exactamente a partir del proceso realizado "01_Area_Lights.html"
+
+
+
+    Hypershade:
+    ___________
+
+    _primeramente debemos ir ha "Windows/Rendering Editor/", y una vez allí, debemos abrir el panel "Hypershade"
+
+    _en el cuál, debemos de ubicar tag, ó sección de "Lights", en el cuál, podremos ubicar el "Area Light", que hemos creado previamente 
+    
+    _para que así, podamos darle al botón "input connections", para que así, el area light, pase a primer plano y podanos configurar nodos y demás características
+
+
+
+    Physical Light:
+    ______________
+
+    _de ésta manera, ahora debemos de ubicar la sección de "MentalRay Lights", en la cuál, debemos de cargar el nodo:
+
+        _Physical Lights
+
+
+    _para que así, podamos entrar en las opciones del Area Light en el attribute editor, en el cuál, podremos bajar hasta encontrar la opción de "Custom Shaders"
+
+    _en las cuáles, encontraremos la opción de "Light Shader", para que así, podamos volver ha hypershade panel
+
+    _en el cuál, podremos posarnos sobre el nodo "Physical Light", que hemos creado previamente
+
+    _para que así, podamos hacer "Mouse Midle Click and Drag", hasta posarnos sobre la propiedad "Attribute Editor/Custom Shaders/Light Shader"
+
+    _para que así, a partir de éste punto ambos nodos queten relacionados en éstos parámetros
+
+
+
+    Blackbody:
+    __________
+
+    _para a continuación volver al panel hypershade, en el cuál, debemos de ir nuevamente a la sección de nodos "mentalRay Lights"
+
+    _en el cuál, debemos de seleccionar y cargar un nuevo nodo de "mib_blackbody"
+
+    _para que así, podamos ahora seleccionar y entras en las opciones del nodo "Physical Light"
+
+    _de ésta manera, ahora podremos navegar entre sus opciones hasta la sección de "Physical Light Attribute"
+
+    _para que podamos volver al panel hypershade, en el cuál, debemos de posarnos sobre el nodo "mib_blackbody", y hacer "Mouse Midle CLick and Drag"
+
+    _hasta la propiedad "Attribute Editor/Physical Light Attribute/Color", y una vez allí sobre ésta debemos de soltar el botón del mouse
+
+    _para que así, ambos nodos queden relacionados en ésta propiedad que hemos definido
+
+    _de ésta manera, a través, del nodo "mib_blackbody", es que vamos ha controlar la indensidad lumínica y su temperatura de ahora en adelando, por medio de los siguintes parámetros:
+
+
+        _Temperature
+
+        _Intensity
+
+
+    _ha nivel comparativo de sus parámetro el nodo de "mib_blackbody", es idéntico al nodo de "MentalRay Lights/mib_cie_d"
+
+
+
+    Rendering:
+    __________
+
+    _de ésta manera, ahora podremos renderizar la escena con el mismo proceso que lo hacíamos anteriormente con la diferencia de que ahora la iluminación ahora tendrá un comportamiento más realista 
+    
+    _quizás a un coste más lento en el proceso de renderizado pero en lo general vale la pena el tiempo extra de render
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>

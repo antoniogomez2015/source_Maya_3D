@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--
+
+    UV Pass:
+    ________
+
+    
+        Tutorial:
+        _________
+
+            Maya - Mental Ray - Rendering A UV Pass
+                https://www.youtube.com/watch?v=wUzbHWd6Qsc
+
+
+
+    Scene:
+    ______
+
+    _primeramente debemos de tener creado una escena con elemento de tipo geometría, asi, como también, luces y una cámara
+
+
+
+    Nodes Setting:
+    ______________
+
+    _para lo cuál, primeramente debemos de ir ha "Windows/Rendering Editor/", y una vez allí, debemo abrir el panel de "Hypershade"
+
+    _en el cuál, debemos navegar hasta nodos nativos de maya "Surface", para que así, una vez allí, carguemos el nodo de: 
+    
+
+        _"Surface Shaders"
+
+
+    _para posteriormente volver ha la lista nodos ubicar la seccion de "MentalRay/Legacy", y una ve allí, cargar el nodo:
+
+
+        _"mib_texture_vector"
+
+
+    _para posteriormente proceder ha entrar a ver las opciones del nodo "Surface Shaders", shortcut, "Control + A/A"
+
+
+    _para que así, podamos posarnos sobre el nodo "mib_texture_vector", y hacer "Mouse Midle Click and Drag", para luego posarnos sobre el nodo parámetro "Out Color" del nodo "Surface Shaders", y soltar el mouse
+
+    _para que así, ambos nodos queden ahora relacionados a través, de éste parámetro
+
+
+
+    Render Layer Pass:
+    __________________
+
+    _para posteriormente proceder ha seleccionar todos los elementos de tipo geometría de la escena
+
+    _para luego ir al Channel Box, shortcut, "Control + A/A", en el cuál, pdoremos ubicar el tag, de "Render"
+
+    _en el cuál, podremos crear un nueva layer de render, con todos los elementos seleccionados de la escena previamente 
+    
+    _de ésta manera, ésta nueva layer de render la podremos renombrar ej: "UV_Pass"
+
+    _para pos último proceder ha hacer el batch render, para que así, podamos obtener todos los pases de la escena uncluyendo el UV_Pass, que hemos configurado
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+</body>
+</html>
